@@ -1,5 +1,5 @@
 // Meta
-:project-name: <Projektname (T00)>
+:project-name: <Projektname (I6 Inventur Verleih)>
 // Settings:
 :toc:
 :toc-title: Inhaltsverzeichnis
