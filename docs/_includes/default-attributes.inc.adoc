@@ -21,7 +21,3 @@ ifndef::plantumlsdir[:plantumlsdir: plantuml]
 // Hyphenation for PDF dokumente
 :lang: DE
 :hyphens:
-
-
-//:project-email: Fabian Krähmer <s82628@htw-dresden.de>; Jamal Alkharrat <s82035@htw-dresden.de>; Anja Claus <s81009@htw-dresden.de>;  Silko Grellmann <s82695@htw-dresden.de>; Felix Helmert <s82049@htw-dresden.de>; Jonas Koloska <s82066@htw-dresden.de>; Moritz Lehmann <s82015@htw-dresden.de>; Dominique Linzmajer <s82063@htw-dresden.de>; Hans Kuntsche <s00000@htw-dresden.de>
-// {project-email}
