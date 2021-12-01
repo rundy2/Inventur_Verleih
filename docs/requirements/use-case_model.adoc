@@ -11,8 +11,23 @@ include::../_includes/default-attributes.inc.adoc[]
 
 == Identifizierte Use Cases
 // Liste aller identifizierten Use Cases (priorisiert)
-* *UC01*: ...
-* *UC02*: ...
+* *UC01*: Ausleih?
+* *UC02*: Nach Scannen Anzeige Lagerort (Rückgabe)
+* *UC03*: Deinventarisierung (Entsorgung)
+* *UC04*: Neu Aufnahme von Gegenständen (Leeres Fach finden)
+* *UC05*: Suchen von Objekten
+* *UC06*: User/Admin? Status ändern (Ausleih/Rückgabe)
+* *UC07*: Admin Anlegen User
+* *UC08*: Admin Bearbeiten User
+* *UC08*: Admin Bearbeiten User Rechte
+* *UC09*: Admin Löschen User
+* *UC10*: Übersicht Anzeigen (User)
+* *UC11*: Übersicht Wartung (User/Reperatur Dienstleister)
+* *UC12*: Nutzungsverlauf (Gegenstände)
+* *UC13*: Backup Erstellung
+* *UC14*: System Rückmeldung bei Änderungen (an User)
+* *UC15*: Verschlüsselung der Kommunikation zwischen DB und WebAnwendung
+* *UC16*: Authentifikation der Clients
 
 
 == Use Case Diagramm
