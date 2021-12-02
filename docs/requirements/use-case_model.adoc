@@ -12,29 +12,37 @@ include::../_includes/default-attributes.inc.adoc[]
 == Identifizierte Use Cases
 // Liste aller identifizierten Use Cases (priorisiert)
 *für Akteur User:*
-A* *UC01*: Ausleih
-F* *UC02*: Rückgabe (eingabe ID -> Anzeige Lagerort)
-A* *UC03*: Neu Aufnahme von Gegenständen (Leeres Fach finden)
-A* *UC04*: Deinventarisierung (Entsorgung)
-A* *UC05*: User Status ändern (Ausleih/Rückgabe)
-A* *UC06*: Suchen von Objekten
-A* *UC07*: Übersicht Anzeigen (User)
-S* *UC08*: Übersicht Wartung (User/Reperatur Dienstleister)
-S* *UC09*: System Rückmeldung bei Änderungen (an User)
-S* *UC10*: Nutzungsverlauf (Gegenstände)
-F* *UC11*: Nach Scannen ID (->Rückgabe)
+
+* *UC01*: Ausleih
+* *UC02*: Rückgabe (eingabe ID -> Anzeige Lagerort)
+* *UC03*: Neu Aufnahme von Gegenständen (Leeres Fach finden)
+* *UC04*: Deinventarisierung (Entsorgung)
+* *UC05*: User Status ändern (Ausleih/Rückgabe)
+* *UC06*: Suchen von Objekten
+* *UC07*: Übersicht Anzeigen (User)
+* *UC08*: Übersicht Wartung (User/Reperatur Dienstleister)
+* *UC09*: System Rückmeldung bei Änderungen (an User)
+* *UC10*: Nutzungsverlauf (Gegenstände)
+* *UC11*: Nach Scannen ID (->Rückgabe)
 
 *für Akteur Admin:* (nur User Verwaltung?)
-S* *UC12*: Admin Anlegen User
-S* *UC13*: Admin Bearbeiten User Rechte
-S* *UC14*: Admin Bearbeiten User
-F* *UC15*: Admin Löschen User
-F* *UC16*: Backup Erstellung (Admin) Automatisch?
 
-F* *UC17*: Authentifikation der Clients
-F* *UC18*: Verschlüsselung der Kommunikation zwischen DB und WebAnwendung
+* *UC12*: Admin Anlegen User
+* *UC13*: Admin Bearbeiten User Rechte
+* *UC14*: Admin Bearbeiten User
+* *UC15*: Admin Löschen User
+* *UC16*: Backup Erstellung (Admin) Automatisch?
 
+*Allgemein*
 
+* *UC17*: Authentifikation der Clients
+* *UC18*: Verschlüsselung der Kommunikation zwischen DB und WebAnwendung
+
+A: 1-3-4-5-6-7
+
+F: 2-11-15-16-17-18
+
+S: 8-9-10-12-13-14
 
 == Use Case Diagramm
 // ...
