@@ -6,13 +6,13 @@ include::../_includes/default-attributes.inc.adoc[]
 
 
 == Einführung
-Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des <Projektname-Systems> zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das <Projektname-System> diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
+Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäten des Digitalen Inventur und Verleih Systems zu sammeln, zu analysieren und zu definieren. Der Fokus liegt auf den Fähigkeiten, die von Stakeholdern und adressierten Nutzern benötigt werden, und der Begründung dieser Bedarfe. Die  Details, wie das Digitale Inventur und Verleih System diese Bedarfe erfüllt, werden in der Use-Case und Supplementary Specification beschrieben.
 
 === Zweck
 Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System aus Sicht und mit den Begriffen der künftigen Anwender zu beschreiben.
 
 === Gültigkeitsbereich (Scope)
-Dieses Visions-Dokument bezieht sich auf die Digitale Inventur und Verleihliste, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, <Hauptfunktionen> zu nutzen, um damit <Vorteile> zu erreichen / <Aufgabe> zu erleichtern / <Problem> zu lösen.
+Dieses Visions-Dokument bezieht sich auf das Digitale Inventur und Verleih System, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, <Hauptfunktionen> zu nutzen, um damit <Vorteile> zu erreichen / <Aufgabe> zu erleichtern / <Problem> zu lösen.
 
 === Definitionen, Akronyme und Abkürzungen
 //Verweis passend zum Belegabgabe-Template se1_belegabgabe_t00.adoc
@@ -90,16 +90,20 @@ Beispiel Produkt:
 | 
 
 | HTW Rechenzentrum / Sever Informatik/Mathematik
-|
+| stellt Betriebsumgebung
 | - Bereitstellung der VM - Regelung zum Betrieb der VM - Bereitstellung/Berieb Intranet
 
 | Gesetzgeber 
-| 
-| (Datenschutz/Gefahrstoffe)
+| gibt rechtliche Rahmenbedingungen vor,
+z.B. durch Gesetze für Datenschutz und Lagerung von Gefahrstoffen
+| überwacht Gesetze und Regelungen
+hinsichtlich des Umgang mit
+personenbezogenen Daten und Gefahrstoffen
 
-| Anwender
-| 
-| Ausleih / Rückgabe
+
+| Anwender (User)
+| Jeder Mitarbeiter der Gegenstände leiht
+| Einfache Ausleih / Rückgabe von Gegenständen
 
 | Reperatur Dienstleister
 | 
