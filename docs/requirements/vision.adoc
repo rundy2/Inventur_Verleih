@@ -12,7 +12,7 @@ Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäte
 Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System aus Sicht und mit den Begriffen der künftigen Anwender zu beschreiben.
 
 === Gültigkeitsbereich (Scope)
-Dieses Visions-Dokument bezieht sich auf das Digitale Inventur und Verleih System, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, <Hauptfunktionen> zu nutzen, um damit <Vorteile> zu erreichen / <Aufgabe> zu erleichtern / <Problem> zu lösen.
+Dieses Visions-Dokument bezieht sich auf das Digitale Inventur und Verleih System, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, Ausleihen und zurückgeben von Geggenständen zu dokumentieren, Benutzer im System anzulegen und desen Rechte zu bearbeiten, sich per Login zu authentifizieren und Backups anzulegen, um damit eine strukturierte Inventarverwaltung zu erreichen und Wartungen besser zu planen.
 
 === Definitionen, Akronyme und Abkürzungen
 //Verweis passend zum Belegabgabe-Template se1_belegabgabe_t00.adoc
@@ -102,12 +102,12 @@ personenbezogenen Daten und Gefahrstoffen
 
 
 | Anwender (User)
-| Jeder Mitarbeiter der Gegenstände leiht
+| Jeder Mitarbeiter der als User im System Regestriert ist
 | Einfache Ausleih / Rückgabe von Gegenständen
 
 | Reperatur Dienstleister
 | 
-|
+| Zurücksetzung/Neusetzen vom Wartungstermin
 
 |===
 
@@ -133,7 +133,36 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 [%header, cols="4,1,4,1"]
 |===
 | Bedarf | Priorität | Features | Geplantes Release
-| xx | xx | xx | xx
+| Gegstände Anschauen
+| hoch
+| Anzeige Lagerplatz/Status
+| xx
+
+| Gegstände Hinzufügen
+| hoch
+| Suche nach Leeren Lagerplatz, Eingabe von Gegeständs Daten 
+| xx
+
+| Authentifikation der Clients
+| mittel
+| Sichere Datenübermittlung, Login
+| xx
+
+| Gegstände Ausleihen
+| hoch
+| Suchen und Status ändern
+| xx
+
+| Gegstand Rückgabe
+| mittel
+| eingabe ID -> Anzeige Lagerort, Status ändern
+| xx
+
+| Erstellung von Backups
+| niedrig
+| Kopierung der Datenbank
+| xx
+
 |===
 
 
@@ -150,5 +179,14 @@ Hinweise:
 [%header, cols="4,1,1"]
 |===
 | Anforderung | Priorität | Geplantes Release
-| xx | xx | xx
+|einfache Bedienbarkeit mittels GUI| hoch | xx
+
+|System kann nur online im HTW-Netz genutzt werden (nicht offline/ auserhalb) | mittel | xx
+
+|System muss auf allen gängigen Browsern sowie auf mobilen
+Endgeräten lauffähig sein | mittel | xx
+
+| Software muss modular aufgebaut sein | mittel | xx
+
+| Einsatz einer relationales Datenbankmodell | hoch | xx
 |===
