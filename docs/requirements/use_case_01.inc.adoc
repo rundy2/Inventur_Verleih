@@ -1,18 +1,23 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <use-case name>
+== Use-Case: Ausleihe 
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
+Der Use Case beschreibt den Vorgang einen Gegenstand auszuleihen. 
 
 === Kurzbeschreibung der Akteure
 
-==== <Akteur 1 Name>
+==== Anwender
+Möchte sich einen Gegenstand ausleihen. 
+
+==== HTW Smart Production Systems 
+Möchte den Anwendern die Möglichkeit bieten, Gegenstände auszuleihen. 
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
-<Vorbedingung 1>
+Anwender hat den Gegenstand im System gefunden. 
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
