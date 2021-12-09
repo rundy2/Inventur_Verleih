@@ -14,7 +14,7 @@ include::../_includes/default-attributes.inc.adoc[]
 *für Akteur User:*
 
 * *UC01*: Ausleih
-* *UC02*: Rückgabe (eingabe ID -> Anzeige Lagerort)
+* *UC02*: Rückgabe
 * *UC03*: Neu Aufnahme von Gegenständen (Leeres Fach finden)
 * *UC04*: Deinventarisierung (Entsorgung)
 * *UC05*: User Status ändern (Ausleih/Rückgabe)
@@ -23,7 +23,7 @@ include::../_includes/default-attributes.inc.adoc[]
 * *UC08*: Übersicht Wartung (User/Reperatur Dienstleister)
 * *UC09*: System Rückmeldung bei Änderungen (an User)
 * *UC10*: Nutzungsverlauf (Gegenstände)
-* *UC11*: Nach Scannen ID (->Rückgabe)
+* *UC11*: Login für Anwender
 
 *für Akteur Admin:* (nur User Verwaltung?)
 

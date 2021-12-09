@@ -1,9 +1,9 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Rückgabe>
+== Use-Case: <Login>
 
 === Kurzbeschreibung
-Der Use Case beschreibt die Rückgabe eines Gegenständs durch einen Benutzer.
+Der Use Case beschreibt den prozess das Logins durch einen Benutzer oder Admin.
 
 === Kurzbeschreibung der Akteure
 
@@ -11,29 +11,23 @@ Der Use Case beschreibt die Rückgabe eines Gegenständs durch einen Benutzer.
 
 === Vorbedingungen
 
-Der Anwender hat die Webseite ausgewählt und ist eingeloggt.
 
 === Standardablauf (Basic Flow)
 
-. Der Use Case beginnt, wenn der Anwender einen Barcode eines Gegenstandes scannt. 
-. Das System findet den Gegenstand in der Datenbank und zeigt die Informationen (u.a. den Status) an. 
-. Der Anwender wählt "Rückgabe" aus
-. Das System zeigt den geplanten Lagerort an.
-. Der Anwender legt den Gegeenstand in das geplannte Fach
-. Der Anwender bestätigt die Statusänderung von "ausgeliehen" auf "auf Lager" sowie den neuen Lagerort
+. Der Use Case beginnt, wenn der Anwender/Admin die Webseite aufgerufen hat.
+. Der Anwender gibt seine Zugangsdaten aus Benutzername und Passwort ein und wählt "Login".
+. Das System findet Benutzer in der Datenbank und prüft seine Berechtigungen.
+. Das System leitet den Benutzer auf die Hauptseite weiter.
 . Der Use Case ist abgeschlossen.
-
-
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
 ==== Alternativer Ablauf Manuelle Eingabe
-Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt. 
+Abbruch wenn:
+. Passwort oder Benutzername nicht gefunden.
+. Login für Nutzer gesperrt ist (gelöscht)
 
-. Der Anwender wählt im Barcode Scanner die Manuelle Eingabe aus.
-. Der Anwender sucht in der Suche Maske durch nutzung von Filtern den passenden Gegenstand. 
-. Der Use Case wird im Schritt 2 fortgesetzt.
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
@@ -62,4 +56,3 @@ Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt.
 ==== <Besondere Anforderung 1>
 
 ==== Erweiterungen
-* Anzeige aller Aktuell vom Anwender ausgeliehenen Gegenstände. Zur schnelleren Manueller Auswahl -> gegebenfalls in Suchmaske als Filter Funktion.
