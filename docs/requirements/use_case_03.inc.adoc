@@ -1,0 +1,78 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+
+== Use-Case: Neuaufnahme von Gegenständen 
+
+=== Kurzbeschreibung
+//<Kurze Beschreibung des Use Case>
+Der Use Case beschreibt den Vorgang einen neuen Gegenstand ins System aufzunehmen und einen Platz zu finden. 
+
+=== Kurzbeschreibung der Akteure
+
+==== Anwender / HTW Smart Production Systems 
+Hat einen neuen Gegenstand und will für diesen einen Platz finden, sowie ihn in das System aufnehmen. 
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+
+- Es gibt noch Lagerplätze mit dem Status "leer". 
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Anwender oder Mitglieder der HTW Smart Production Systems (Arbeitsgruppe) sich die Fächer anzeigen lässt, die den Status "leer" haben 
+. Anwender oder Mitglieder der Arbeitsgruppe wählt ein geeignetes Fach für den Gegenstand aus 
+. System erfragt Informationen zu dem neuen Gegenstand 
+. Anwender oder Mitglied der Arbeitsgruppe gibt die Informationen ein 
+. System zeigt Übersicht über die Daten an 
+. Anwender oder Mitglied der Arbeitsgruppe bestätigt die Daten 
+. System erfragt ob ein Barcode für den Gegenstand generiert werden soll 
+. Anwender oder Mitglied der Arbeitsgruppe bestätigt und druckt den Barcode aus 
+. System erfragt den Barcode. 
+. Kunde scannt den Barcode
+. System speichert die Daten und ändert den Status des Faches von "leer" auf "Gegenstand Y befindet sich im Fach"
+. Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+==== unzureichende Informationseingabe 
+Wenn Anwender oder Mitglied der Arbeitsgruppe im Schritt 4 des Standardablauf keine oder unzureichende Informationen eingbibt, dann wird der Use Case im Schritt 3 fortgesetzt. 
+
+
+//=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+//==== <Unterablauf 1>
+//. <Unterablauf 1, Schritt 1>
+//. …
+//. <Unterablauf 1, Schritt n>
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+
+==== erfolgreiche Neufaufnahme 
+. System findet geeignetes Leeres Fach
+. Anwender gibt Informationen ein, fordert den Barcode an und scannt diesen 
+. System speichert Informationen und neuen Status des Faches. 
+
+==== fehlgeschlagene Neuaufnahme (kein freier Platz)
+. Anwender oder Mitglied der Arbeitsgruppe lässt sich freie Lagerplätze anzeigen
+. System findet keine und zeigt diese Information an 
+. Neuaufnahme wird abgebrochen 
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+nach erfolgreicher Durchführung des Use Case: 
+
+- Anwender oder Mitglied der Arbeitsgruppe hat alle Informationen eingegeben. 
+- alle Daten wurden gespeichert. 
+- das Lagerfach hat einen neuen Status. 
+- Gegenstand und Lagerfach wurden einander zugewießen. 
+
+=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+
+==== Usability
+Der Use Case ist eine der wichtigsten Funktionen des Systems und muss deshalb einfach zu bedienen sein. 
+// z.B. exakte Beschreibungen was zu tun ist 
+

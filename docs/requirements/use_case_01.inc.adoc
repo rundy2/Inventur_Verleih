@@ -1,63 +1,70 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: Ausleihe 
+
+== Use-Case: <Ausleihe>
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
-Der Use Case beschreibt den Vorgang einen Gegenstand auszuleihen. 
+Der Use Case beschreibt den Vorgang sich einen Gegenstand auszuleihen. 
 
 === Kurzbeschreibung der Akteure
 
-==== Anwender
+==== Anwender 
 Möchte sich einen Gegenstand ausleihen. 
 
 ==== HTW Smart Production Systems 
-Möchte den Anwendern die Möglichkeit bieten, Gegenstände auszuleihen. 
+Möchte Anwender die Möglichkeiten geben, sich einen Gegenstand auszuleihen. 
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+Der Gegenstand muss im System aufgeführt sein und als verfügbar angezeigt werden. Der Anwender hat auch den Lagerplatz des Gegenstandes gefunden. 
 
-Anwender hat den Gegenstand im System gefunden. 
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn <akteur> <macht>…
-. <Standardablauf Schritt 1>
-. …
-. <Standardablauf Schritt n>
+. Der Use Case beginnt, wenn der Anwender einen Barcode eines Gegenstandes scannt. 
+. Das System findet den Gegenstand in der Datenbank und zeigt die Informationen (u.a. den Status) an. 
+. Der Anwender ändert den Status von "auf Lager" zu "ausgeliehen". 
+. Das System ändert automatisch den Status des Fachs auf "Gegenstand, der in dieses Fach gehört wurde ausgeliehen". 
+. Der Anwender bestätigt die Statusänderung. 
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
-. <Ablauf beschreiben>
-. Der Use Case wird im Schritt <y> fortgesetzt.
+==== Ungültiger Barcode 
+Wenn Anwender im Schritt 1 des Standardablauf einen unbekannten Barcode scannt, dann geht der Use Case nicht weiter zum nächsten Schritt. Der Use Case bleibt im Schritt 1 stehen und wartet auf einen gültigen Barcode. 
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
-==== <Unterablauf 1>
-. <Unterablauf 1, Schritt 1>
-. …
-. <Unterablauf 1, Schritt n>
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Szenario 1>
-. <Szenario 1, Schritt 1>
-. …
-. <Szenario 1, Schritt n>
+==== erfolgreiche Durchführung 
+. Herr X möchte einen bestimmten Gegenstand mit der Bezeichnung YZ ausleiehen.
+. Herr X scannt den Barcode und ändert den Status des Gegenstandes. Das Fach mit der Bezeichnung XZ in dem der Gegenstand vorher lag wird als leer angezeigt. 
+
+==== falscher Barcode
+. Herr X scannt einen falschen Barcode.
+. Das System bleibt im Schritt 1 stehen. 
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 
-==== <Nachbedingung 1>
+==== erfolgreiche Durchführung
+Der Anwender hat den richtigen Gegenstand ausgewält und den Status erfolgreich geändert. Der Status beleibt solange erhalten, bis zur nächsten Änderung. 
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
-==== <Besondere Anforderung 1>
+==== Usability 
+Statusänderung muss schnell, einfach und standardisiert möglich sein.
+ 
+==== Performance 
+Nach dem Scannen des Barcodes muss der Gegenstand in unter 5 s in der Datenbank gefunden werden. 
+
+==== Regeln
+Anwender muss die nötigen Rechte haben, sich diesen Gegenstand ausleihen zu können. 

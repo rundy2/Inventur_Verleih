@@ -1,39 +1,46 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Rückgabe>
+== Use-Case: <Admin Löscht Anwender>
 
 === Kurzbeschreibung
-Der Use Case beschreibt die Rückgabe eines Gegenständs durch einen Benutzer.
+Der Use Case beschreibt das Löschen eines Benutzers durch einem Admin
 
 === Kurzbeschreibung der Akteure
 
-==== Anwender
+==== Admin
+Admin möchte einen Benutzer Löschen
 
 === Vorbedingungen
+Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 
-Der Anwender hat die Webseite ausgewählt und ist eingeloggt.
+<Vorbedingung 1>
 
 === Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Anwender einen Barcode eines Gegenstandes scannt. 
-. Das System findet den Gegenstand in der Datenbank und zeigt die Informationen (u.a. den Status) an. 
-. Der Anwender wählt "Rückgabe" aus
-. Das System zeigt den geplanten Lagerort an.
-. Der Anwender legt den Gegeenstand in das geplannte Fach
-. Der Anwender bestätigt die Statusänderung von "ausgeliehen" auf "auf Lager" sowie den neuen Lagerort
+. Der Use Case beginnt, wenn <akteur> <macht>…
+. <Standardablauf Schritt 1>
+. …
+
+. Der Use Case beginnt, wenn der Admin die Benutzerverwaltung öffnet.
+. Das System zeigt alle Anwender an.
+. Der Admin kann durch Filter die Auswahl verkleinern.
+. Der Admin wählt den Anwender aus.
+. Das System zeigt die Information zu diesem Anwender an.
+. Der Admin wählt den Lösch Button
+. Der Admin bestätigt die Sicherheitsmeldung
+. Der Admin muss sich durch eingabe vom Passwort authentifizieren
+. Das System ändert Anwender Status auf "gelöscht".
+. Das System meldet "Anwender x gelöscht" und zeigt die Benutzerverwaltung an.
 . Der Use Case ist abgeschlossen.
-
-
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== Alternativer Ablauf Manuelle Eingabe
-Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt. 
-
-. Der Anwender wählt im Barcode Scanner die Manuelle Eingabe aus.
-. Der Anwender sucht in der Suche Maske durch nutzung von Filtern den passenden Gegenstand. 
-. Der Use Case wird im Schritt 2 fortgesetzt.
+==== Alternativer Ablauf
+Abbruch wenn:
+. Sicherheitsmeldung nicht bestätigt wird
+. Passwort authentifizieren fehlschlägt
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
@@ -60,6 +67,4 @@ Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt.
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
 ==== <Besondere Anforderung 1>
-
-==== Erweiterungen
-* Anzeige aller Aktuell vom Anwender ausgeliehenen Gegenstände. Zur schnelleren Manueller Auswahl -> gegebenfalls in Suchmaske als Filter Funktion.
+* Was passiert mit ausgeliehen Gegenständen?

@@ -1,0 +1,70 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+
+== Use-Case: Deinventarisierung | Entsorgung
+
+=== Kurzbeschreibung
+//<Kurze Beschreibung des Use Case>
+Der Use Case beschreibt den Vorgang einen Gegenstand aus dem System zu entfernen. 
+
+=== Kurzbeschreibung der Akteure
+
+==== Anwender oder Mitglieder der Arbeitsgruppe 
+Möchte Gegenstände aus dem System entfernen können. 
+
+==== Mitglieder von HTW Smart Production Systems 
+Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder nicht mehr gelagert werden, aus dem System entfernen 
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+
+- es muss mindestens ein Gegenstand im System vorhanden sein 
+
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Anwender den Barcode eines Gegenstands gescannt hat
+. System findet den Gegenstand in der Datenbank und zeigt Informationen zu diesem Gegenstand an
+. Anwender oder Mitglied der Arbeitsgruppe ändert den Status von "auf Lager" zu "entsorgt"
+. System erfragt eine Bestätigung der Stausänderung
+. Kunde bestätigt diese 
+. System ändert und speichert den Status des Fachs von "Gegenstand Z befindet sich in dem Fach" zu "leer" und des Gegenstandes von "auf Lager" zu "entsorgt"
+. Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+==== keine Bestätigung der Sicherheitsabfrage 
+Wenn im Schritt 5 des Standardablauf keine Bestätigung erfolgt, dann wird die Statusänderung zurückgesetzt und der Use Case wird im Schritt 2 fortgesetzt. 
+//. <Ablauf beschreiben>
+//. Der Use Case wird im Schritt <y> fortgesetzt.
+
+//=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+//==== <Unterablauf 1>
+//. <Unterablauf 1, Schritt 1>
+//. …
+//. <Unterablauf 1, Schritt n>
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+
+==== erfolgreiche Entsorgung 
+. Anwender oder Mitglied der Arbeitsgruppe scannt den Barcode und sieht alle Informationen des Gegenstandes im System 
+. Anwender oder Mitglied der Arbeitsgruppe ändert den Status und bestätigt die Sicherheitsabfrage
+. Statusänderung von Fach und Gegenstand wird gespeichert
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+- Der Anwender oder das Mitglied der Arbeitsgruppe hat den Status des Gegenstandes geändert
+- Das Fach und der Gegenstand hat einen neuen Status 
+
+//==== <Nachbedingung 1>
+
+=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+
+==== Usability 
+- einfache Bedinbarkeit 
+- Sicherheitsabfrage und gute Beschreibungen 
