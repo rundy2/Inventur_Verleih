@@ -12,7 +12,7 @@ Der Use Case beschreibt den Vorgang einen Gegenstand aus dem System zu entfernen
 Möchte Gegenstände aus dem System entfernen können. 
 
 ==== Mitglieder von HTW Smart Production Systems 
-Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder nicht mehr gelagert werden, aus dem System entfernen 
+Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder nicht mehr gelagert werden, aus dem System entfernen.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
