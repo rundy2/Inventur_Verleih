@@ -1,20 +1,22 @@
 = Iteration Plan 01: {project-name}
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+Anja Claus <anja.claus@htw-dresden.de>; Felix Helmert <felix.helmert@htw-dresden.de>; Jamal Alkharrat <jamal.alkharrat@htw-dresden.de>; Dominique Linzmajer <dominique.linzmajer@htw-dresden.de>; Moritz Lehmann <moritz.lehmann@htw-dresden.de>; Silko Grellmann <silko.grellmann@htw-dresden.de>; Jonas Koloska <jonas.koloska@htw-dresden.de>; Fabian Krähmer <fabian.kraehmer@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
 // Platzhalter für weitere Dokumenten-Attribute
 
 
 == Meilensteine
-//Meilensteine zeigen den Ablauf der Iteration, wie z.B. den Beginn und das Ende, Zwischen-Meilensteine, Synchronisation mit anderen Teams, Demos usw.
+//Meilensteine zeigen den Ablauf der Iteration, wie z.B. den Beginn und das Ende, Zwischen-Meilensteine, Synchronisation mit anderen Teams, Demos usw. 
 
 [%header, cols="3,1"]
 |===
-| Meilenstein | Datum
+| Meilenstein 1| Datum
 
-| Beginn der Iteration | -
-| ... | -
-| Ende der Iteration | -
+| Beginn der Iteration | 25.11.2021
+| Ausarbeitung Stakeholder | 05.12.2021
+| Ausarbeitung Use-Cases | 07.12.2021
+| Ausarbeitung Glossar | 14.12.2021
+| Ende der Iteration | 15.12.2021
 |===
 
 
@@ -23,9 +25,9 @@ include::../_includes/default-attributes.inc.adoc[]
 
 Beispiele:
 
-* Beheben der Usability-Probleme, die von Abteilung X berichtet wurden
-* Ausliefern der Hauptszenarios, die die Integration mit System Y zeigen
-* Present a technical demonstration (demo).
+* Stichprobenartige Analyse der Stakeholder, Use-Cases
+* Festlegung Szenarien
+* Definition Glossar
 
 
 == Aufgabenzuordnung
