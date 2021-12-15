@@ -31,6 +31,10 @@ Kann die Werte verfügbar, ausgeliehen, in Wartung annehmen.
 |
 | Userrechte, Anwenderrechte
 
+| Gegenstand
+|
+| Objekt
+
 |===
 
 
