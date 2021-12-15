@@ -1,59 +1,39 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Admin add User>
+== Use-Case: <Übersicht Wartung>
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Anlegen eines neuen Benutzers durch einem Admin
+Der Use Case beschreibt das Aufrufen einer Übersicht, welche alle Gegenstände auflistet, die in die Wartung müssen.
 
 === Kurzbeschreibung der Akteure
 
-==== <Admin>
-Will neuen Benutzer anlgen
+==== <User>
+Will wissen welche Gegenstände in die Wartung müssen.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
-<Vorbedingung 1>
+. Der User muss eingeloggt sein.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn <akteur> <macht>…
-. <Standardablauf Schritt 1>
-. …
-. <Standardablauf Schritt n>
+. Der Use Case beginnt, wenn sich der User erfolgreich eingeloggt hat.
+. Der User bekommt sofort eine Übersicht mit allen Gegenständen angezeigt, die in der nächten Woche zur Wartung müssen.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
-. <Ablauf beschreiben>
-. Der Use Case wird im Schritt <y> fortgesetzt.
-
-=== Unterabläufe (subflows)
-//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
-
-==== <Unterablauf 1>
-. <Unterablauf 1, Schritt 1>
-. …
-. <Unterablauf 1, Schritt n>
+==== <Es muss kein Gegenstand zur Wartung>
+Wenn in der nächsten Woche kein Gegenstand zur Wartung muss, wird eine entsprechende Meldung ausgegeben.
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Szenario 1>
-. <Szenario 1, Schritt 1>
-. …
-. <Szenario 1, Schritt n>
+==== <Es muss mindestens ein Gegenstand in der nächsten Woche zur Wartung>
+. Es wird dem User eine Tabelle mit den Gegenständen angezeigt, die zur Wartung müssen.
+. In der Tabelle ist der Gegenstand, die Gegenstandskennung (z.B. Seriennummer), der Lagerort, der Status und das genaue Datum aufgelistet.
 
-=== Nachbedingungen
-//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
-
-==== <Nachbedingung 1>
-
-=== Besondere Anforderungen
-//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
-
-==== <Besondere Anforderung 1>
+==== <Es muss kein Gegenstand in der nächsten Woche zur Wartung>
+. Es wird dem User eine Meldung angezeigt, dass in der nächsten Woche kein Gegenstand zur Wartung muss.

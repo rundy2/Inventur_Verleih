@@ -1,44 +1,46 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Admin add User>
+== Use-Case: <User bearbeiten>
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Anlegen eines neuen Benutzers durch einem Admin
+Der Use Case beschreibt das Bearbeiten von Daten eines Benutzers durch einen Admin
 
 === Kurzbeschreibung der Akteure
 
-==== <Admin>
-Will neuen Benutzer anlgen
+==== Admin
+Admin möchte einen Benutzerdaten bearbeiten
 
 === Vorbedingungen
-//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-
-<Vorbedingung 1>
+Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn <akteur> <macht>…
-. <Standardablauf Schritt 1>
-. …
-. <Standardablauf Schritt n>
+. Der Use Case beginnt, wenn der Admin die Benutzerverwaltung öffnet.
+. Das System zeigt alle Anwender an.
+. Der Admin kann durch Filter die Auswahl verkleinern.
+. Der Admin wählt den Anwender aus.
+. Das System zeigt die Information zu diesem Anwender an.
+. Der Admin wählt den Bearbeiten-Button.
+. Der Admin bearbeitet die Anwenderdaten und/oder Userrechte.
+. Der Admin wählt den Speichern-Button.
+. Der Admin bestätigt die Sicherheitsmeldung.
+. Der Admin muss sich durch Eingabe seines Passworts authentifizieren.
+. Das System ändert die Anwenderdaten.
+. Das System meldet "Anwender x bearbeitet" und zeigt die Benutzerverwaltung an.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
-. <Ablauf beschreiben>
-. Der Use Case wird im Schritt <y> fortgesetzt.
+==== Alternativer Ablauf
+Abbruch wenn:
+. Sicherheitsmeldung nicht bestätigt wird
+. Passwort authentifizieren fehlschlägt
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
-==== <Unterablauf 1>
-. <Unterablauf 1, Schritt 1>
-. …
-. <Unterablauf 1, Schritt n>
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
@@ -51,9 +53,9 @@ Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 
-==== <Nachbedingung 1>
+. Die Anwenderdaten sind bearbeitet und gespeichert.
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
-==== <Besondere Anforderung 1>
+* Das Userpasswort darf durch Admin nicht eingesehen werden.

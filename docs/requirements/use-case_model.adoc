@@ -28,7 +28,7 @@ include::../_includes/default-attributes.inc.adoc[]
 *für Akteur Admin:* (nur User Verwaltung?)
 
 * *UC12*: Admin Anlegen User
-* *UC13*: Admin Bearbeiten User Rechte
+//* *UC13*: Admin Bearbeiten User Rechte
 * *UC14*: Admin Bearbeiten User
 * *UC15*: Admin Löschen User
 * *UC16*: Backup Erstellung (Admin) Automatisch?

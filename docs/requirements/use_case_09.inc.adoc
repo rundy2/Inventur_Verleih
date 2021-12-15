@@ -1,59 +1,55 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Admin add User>
+== Use-Case: <System Rückmeldung bei Änderungen>
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Anlegen eines neuen Benutzers durch einem Admin
+Der Use Case beschreibt den Erhalt von Systembenachrichtigungen bei jeder Änderung.
 
 === Kurzbeschreibung der Akteure
 
+==== <User>
+Will eine Rückmeldung über erfolgreiche Änderungen an der Datenbank
+
 ==== <Admin>
-Will neuen Benutzer anlgen
+Will eine Rückmeldung über erfolgreiche Änderungen an der Datenbank
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
-<Vorbedingung 1>
+. Der User/Admin muss erfolgreich eingeloggt sein.
+. Der User/Admin muss die Berechtigungen zum Ändern besitzen
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn <akteur> <macht>…
-. <Standardablauf Schritt 1>
-. …
-. <Standardablauf Schritt n>
+. Der Use Case beginnt, wenn der User/Admin eine Änderung an der Datenbak vornimmt.
+. Der User/Admin Bestätigt das Ausführen einer Aktion (Gegenstand ausleihen, neuen Gegenstand hinzufügen, Gegenstand deinventarisieren, neues Userkonto anlegen, bestehendes Userkonto berbeiten).
+. Der User/Admin erhält eine Mitteilung das die Aktion erfolgreich war.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
-. <Ablauf beschreiben>
-. Der Use Case wird im Schritt <y> fortgesetzt.
-
-=== Unterabläufe (subflows)
-//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
-
-==== <Unterablauf 1>
-. <Unterablauf 1, Schritt 1>
-. …
-. <Unterablauf 1, Schritt n>
+==== <Aktion ist fehlgeschlagen>
+Wenn das Schreiben der Änderung in der Datenbank fehlgeschlagen ist:
+. erhält der User/Admin eine Mitteilung über das Fehlschlagen der Aktion und der Bitte es erneut zu versuchen
+. der User/Admin muss die Änderung neu veranlassen.
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Szenario 1>
-. <Szenario 1, Schritt 1>
-. …
-. <Szenario 1, Schritt n>
+==== <User leiht einen Gegenstand erfolgreich aus>
+Der User wählt einen verfügbaren Gegenstand aus, gibt das Datum der Rückgabe an und wählt "ausleihen" aus. Danach bestätigt er die Aktion. Anschließend erhält er die Meldung, dass die Aktion erfolgreich war.
+
+==== <User leiht einen Gegenstand nicht erfolgreich aus>
+Der User wählt einen verfügbaren Gegenstand aus, gibt das Datum der Rückgabe an und wählt "ausleihen" aus. Danach bestätigt er die Aktion. Anschließend erhält er die Meldung, dass 
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 
-==== <Nachbedingung 1>
+Die Änderungen sind erfolgreich in der Datenbank gespeichert.
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
-==== <Besondere Anforderung 1>
+Es müssen Systemmeldungen aus dem Backend ausgelesen werden können.
