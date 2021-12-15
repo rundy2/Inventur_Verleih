@@ -13,7 +13,24 @@ In diesem Dokument werden die wesentlichen Begriffe aus dem Anwendungsgebiet (Fa
 |===
 | Begriff | Definition und Erläuterung | Synonyme
 //| Kommissionierung | Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags | (keine)
-| xx | xx | xx
+
+| Adminestrator
+| Kann Anwender anlegen, bearbeiten und löschen.
+| Admin
+
+| Anwender
+| 
+| User
+
+| Status
+| Beschreibt den Verfügbarkeitszustand eines Gegenstandes. +
+Kann die Werte verfügbar, ausgeliehen, in Wartung annehmen.
+| Zustand
+
+| Rechte
+|
+| Userrechte, Anwenderrechte
+
 |===
 
 
