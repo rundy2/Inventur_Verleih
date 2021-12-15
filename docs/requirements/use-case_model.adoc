@@ -2,6 +2,7 @@
 Anja Claus <anja.claus@htw-dresden.de>; Felix Helmert <felix.helmert@htw-dresden.de>; Silko Grellmann <silko.grellmann@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
+imagesdir: images
 // Platzhalter für weitere Dokumenten-Attribute
 
 
