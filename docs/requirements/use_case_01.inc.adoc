@@ -1,7 +1,7 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
 
-== Use-Case: <Ausleihe>
+== Use-Case: Objekte ausleihen
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
@@ -17,7 +17,10 @@ Möchte Anwender die Möglichkeiten geben, sich einen Gegenstand auszuleihen.
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
-Der Gegenstand muss im System aufgeführt sein und als verfügbar angezeigt werden. Der Anwender hat auch den Lagerplatz des Gegenstandes gefunden. 
+- Gegenstand ist im System aufgeführt und als verfügbar angezeigt 
+- Anwender hat den Lagerplatz des Gegenstandes gefunden
+- Anwender ist angemeldet 
+- System ist aufgerufen 
 
 
 === Standardablauf (Basic Flow)
@@ -35,6 +38,9 @@ Der Gegenstand muss im System aufgeführt sein und als verfügbar angezeigt werd
 
 ==== Ungültiger Barcode 
 Wenn Anwender im Schritt 1 des Standardablauf einen unbekannten Barcode scannt, dann geht der Use Case nicht weiter zum nächsten Schritt. Der Use Case bleibt im Schritt 1 stehen und wartet auf einen gültigen Barcode. 
+
+==== manuelles Eingeben der Seriennummer
+Wenn der Anwender im Schritt 1 den Barcode nicht scannen kann oder möchte, dann kann er die Seriennummer des Gegenstandes auch manuell eingeben. Der Use Case wird im Schritt 2 fortgesetzt. 
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern

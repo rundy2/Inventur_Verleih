@@ -46,15 +46,16 @@ Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt.
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Szenario 1>
-. <Szenario 1, Schritt 1>
-. …
-. <Szenario 1, Schritt n>
+==== erfolgreiche Rückgabe 
+. Anwender scannt Barcode und ändert den Status des Gegenstandes 
+. Status des Fachs wird automatisch geändert 
+. alle Statusänderungen werden gespeichert 
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 
-==== <Nachbedingung 1>
+==== bei erfolgreicher Rückgabe 
+- Statusänderungen von Gegenstand und Fach wurden gespeichert 
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.

@@ -1,0 +1,73 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+
+== Use-Case: Objekte suchen
+
+=== Kurzbeschreibung
+//<Kurze Beschreibung des Use Case>
+Der Use Case beschreibt den Vorgang einen bestimmten Gegenstand zu suchen, sodass der Anwender herrauffindet ob der Gegenstand ausgliehen ist und von wem oder in welchem Lagerfach er sich befindet. 
+
+=== Kurzbeschreibung der Akteure
+
+==== Anwender | HTW Smart Production System
+Möchte herrausfinden wo sich ein Gegenstand befindet. 
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+
+- Anwender ist angemeldet 
+- System ist aufgerufen 
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Anwender eine Objektbezeichnung im System sucht
+. System zeigt Suchergebnisse und deren Status bzw. Lagerort an
+. Anwender wählt einen Gegenstand aus 
+. System zeigt weitere Informationen zum Gegenstand 
+. Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+==== Gegenstand nicht vorhanden 
+Wenn Anwender im Schritt 1 des Standardablauf eine Objektbezeichnung eingibt, die es nicht gibt, dann erscheint eine Meldung, dass dieses Objekt sich nicht im System befindet. Der Use Case ist damit abschlossen. 
+
+//=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+//==== <Unterablauf 1>
+//. <Unterablauf 1, Schritt 1>
+//. …
+//. <Unterablauf 1, Schritt n>
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+
+==== erfolgreiches Herausfinden der Lagerposition
+. Anwender gibt die Objektbezeichnung ein 
+. System zeigt die Lagerposition an 
+- Bsp. Kunde kann sich beispielsweise den Gegenstand ausleihen / ihn entsorgen etc. 
+
+==== erfolgreiches Herausfinden des Status 
+. Anwender gibt die Objektbezeichnung ein 
+. System zeigt an das der Gegenstand nicht verfügbar ist, weil der Status auf "ausgeliehen" steht 
+. Anwender wählt den Gegenstand aus 
+. System zeigt an wann und von wem der Gegenstand ausgleihen wurde 
+
+==== Objekt nicht vorhanden 
+. Anwender gibt die Objektbezeichnung ein 
+. System gibt eine Meldung, dass sich ein solches Objekt nicht im System befindet 
+- Bsp. Anwender weiß nun, dass er sich den Gegenstand anderweitig beschaffen muss 
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+
+==== Bei erfolgreicher Suche 
+- Anwender weiß an welchem Lagerort oder bei welcher Person sich der Gegenstand befindet 
+- zusätzliche Informationen wurden über den Gegenstand eingeholt 
+
+=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+
+==== Usability 
+- schnelle und einfache Suche, da der Use Case eine grundlegende Hauptfunktion des Systems ist 

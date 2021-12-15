@@ -25,6 +25,7 @@ In diesem Dokument werden die wesentlichen Begriffe aus dem Anwendungsgebiet (Fa
 | Status
 | Beschreibt den Verfügbarkeitszustand eines Gegenstandes. +
 Kann die Werte verfügbar, ausgeliehen, in Wartung annehmen.
+Oder beschreibt den Verfügbarkeitszustand eines Lagerfachs. Kann die Werte Gegenstand in diesem Fach wurde ausgliehen, Gegenstand befindet sich in diesem Fach, leer annehmen. 
 | Zustand
 
 | Rechte

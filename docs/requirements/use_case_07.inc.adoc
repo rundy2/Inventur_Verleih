@@ -1,0 +1,64 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+
+== Use-Case: Übersicht anzeigen 
+
+=== Kurzbeschreibung
+//<Kurze Beschreibung des Use Case>
+Der Use Case bescheibt das Anzeigen von Übersichten nach bestimmten Filterkriterien oder das Anzeigen einer Gesamtübersicht über alle Gegenstände die im System erfasst sind. 
+
+=== Kurzbeschreibung der Akteure
+
+==== Anwender
+Möchte sich Gesamtübersichten oder Übersichten beispielsweise sortiert nach Zimmer, nach Art des Gegenstands, nach Verfügbarkeit etc. anzeigen lassen 
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+
+- Benutzer ist angemeldet
+- System ist aufgerufen 
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnt, wenn der Anwender die Filterfunktion aufruft 
+. System zeigt Auswahl an Filterkriterien an 
+. Kunde wählt einen Filter aus 
+. System zeigt all die Gegenstände an, die in dem Filterkriterium inbegriffen sind 
+. Der Use Case ist abgeschlossen.
+
+=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+==== Alle Objekte sollen angezeigt werden 
+Wenn Anwender im Schritt 3 des Standardablauf "alles anzeigen" auswählt, dann werden im Schritt 4 alle Gegenstände alphabetisch aufgelistet. Der Use Case ist damit auch abgeschlossen. 
+
+//=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+//==== <Unterablauf 1>
+//. <Unterablauf 1, Schritt 1>
+//. …
+//. <Unterablauf 1, Schritt n>
+
+=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+
+==== erfolgreiches Anzeigen einer Übersicht 
+. Anwender wählt Filterkriterum aus 
+. System zeigt alle Gegenstände gemäß des Kriteriums an 
+
+==== keine Übersicht für das Filterkriterum 
+. Anwender wählt Filterkriterum aus 
+. System erkennt, dass kein Gegenstand zu dem Kriterium passt und gibt diese Information an den Anwender 
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+
+==== bei erfolgreichem Anzeigen 
+- Anwender bekommt Überblick über alle Gegenstände, die auf sein Filterkriterum passen 
+
+=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+
+==== Usability
+- schnelles und einfaches Bedienen, da es sich um eine Hauptfunktion des Systems handelt 

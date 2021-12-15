@@ -1,6 +1,6 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: Deinventarisierung | Entsorgung
+== Use-Case: Gegenstände entsorgen oder deinventarisieren
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
@@ -18,6 +18,8 @@ Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder n
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
 - es muss mindestens ein Gegenstand im System vorhanden sein 
+- Anwender ist angemeldet 
+- System ist aufgerufen 
 
 
 === Standardablauf (Basic Flow)
