@@ -56,12 +56,23 @@ Beispiel:
 
 [cols="1,3"]
 |===
-| Für | [Zielkunde / Nutzer]
-| der / die | [Angabe des Bedarfs oder Chance]
-| Das Produkt / die Lösung ist ein | [Produktkategorie]
-| Die / Das | [Aussage zum Hauptvorteil / Alleinstellungsmerkmal]
-| Im Gegensatz zu | [wesentliche Lösungsalternative]
-| Unser Produkt | [Aussage zum Hauptunterschied]
+| Für
+| HTW Smart Production Systems
+
+| der / die
+| verbesserte Inventarverwaltung mit Ausleihsystem
+
+| Das Produkt / die Lösung ist eine
+| Datenbankanwendung
+
+| Die / Das
+| Finden von verfügbaren und dem Gegenstand entsprechenden Lagerplätzen.
+
+| Im Gegensatz zu
+| einer Excel-Tabelle
+
+| Unser Produkt
+| ist struktureiert, modular aufgebaut, besitzt eine User- und Rechteverwaltung und es erlaubt parallelen Zugriff.
 |===
 
 ////
@@ -85,9 +96,10 @@ Beispiel Produkt:
 |===
 | Name | Beschreibung | Verantwortlichkeiten
 
-| HTW Smart Production Systems (Auftraggeber)
-| 
-| 
+| HTW Smart Production Systems
+| Auftraggeber
+| - erteilen einer präzise Aufgabenstellung +
+- überprüfen, ob Lösungsvorschläge mit Erwartungen übereinstimmen
 
 | HTW Rechenzentrum / Sever Informatik/Mathematik
 | stellt Betriebsumgebung
@@ -105,9 +117,9 @@ personenbezogenen Daten und Gefahrstoffen
 | Jeder Mitarbeiter der als User im System Regestriert ist
 | Einfache Ausleih / Rückgabe von Gegenständen
 
-| Reperatur Dienstleister
-| 
-| Zurücksetzung/Neusetzen vom Wartungstermin
+// | Reperatur Dienstleister
+// | 
+// | Zurücksetzung/Neusetzen vom Wartungstermin
 
 |===
 

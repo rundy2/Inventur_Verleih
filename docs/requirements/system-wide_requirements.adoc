@@ -18,6 +18,17 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 == Systemweite funktionale Anforderungen
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
 
+Kommunikation zwischen Clients und Server muss abhörsicher sein.
+Test: Ist eine durchgängige Verschlüsselung vorhanden?
+
+Die Clients/User müssen sich am Server authentifizieren.
+Test: Werden CSRF-Token verwendet? Sicher gegen Session-Hijacking?
+
+Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein.
+Test: SQL-Injection
+
+Zeitgesteuerte Prozesse müssen auf Server ausgeführt werden können. (z.B. Backups, Wartungsplan)
+Test: Testaufgabe anlegen und auf Erfolg prüfen.
 
 == Qualitätsanforderungen für das Gesamtsystem
 //Qualitätsanforderungen repräsentieren das "URPS" im FURPS+ zu Klassifikation von Anforderungen
@@ -28,8 +39,17 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
 
+Wiederherstellbarkeit durch Backups aller x Tage muss vollständig gewährleistet sein.
+Test: Überprüfung auf Inkonsistenz der Daten.
+
+Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
+Test: Überprüfung auf Inkonsistenz der Daten.
+
 === Effizienz (Performance)
 // Die Performanz Charakteristiken des Systems sollten in diesem Bereich ausgeführt werden. Beispiele sind Antwortzeit, Durchsatz, Kapazität und Zeiten zum Starten oder Beenden.
+
+10 User müssen gleichzeitig das System nutzen können.
+Test: Mehr Nutzerzugriffe gleichzeitig ausführen.
 
 === Wartbarkeit (Supportability)
 // Dieser Bereich beschreibt sämtliche Anforderungen welche die Supportfähigkeit oder Wartbarkeit des zu entwickelnden Systems verbessern, einschließlich Anpassungsfähigkeit und Erweiterbarkeit, Kompatibilität, Skalierbarkeit und Anforderungen bezüglich der System Installation sowie Maß an Support und Wartbarkeit.
@@ -54,3 +74,4 @@ NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern m
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
 * Lizensierung der Anwendung
 * Datenschutz
+* Urheberrechtsschutz
