@@ -40,6 +40,9 @@ Hat einen neuen Gegenstand und will für diesen einen Platz finden, sowie ihn in
 ==== unzureichende Informationseingabe 
 Wenn Anwender oder Mitglied der Arbeitsgruppe im Schritt 4 des Standardablauf keine oder unzureichende Informationen eingbibt, dann wird der Use Case im Schritt 3 fortgesetzt. 
 
+==== manuelles Statusändern durch Admin 
+include::use_case_05.inc.adoc[lines=22..29]
+
 
 //=== Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern

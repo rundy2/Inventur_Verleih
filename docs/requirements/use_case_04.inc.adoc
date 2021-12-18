@@ -38,6 +38,11 @@ Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder n
 
 ==== keine Bestätigung der Sicherheitsabfrage 
 Wenn im Schritt 5 des Standardablauf keine Bestätigung erfolgt, dann wird die Statusänderung zurückgesetzt und der Use Case wird im Schritt 2 fortgesetzt. 
+
+==== manuelles Statusändern durch Admin 
+include::use_case_05.inc.adoc[lines=22..29]
+
+
 //. <Ablauf beschreiben>
 //. Der Use Case wird im Schritt <y> fortgesetzt.
 

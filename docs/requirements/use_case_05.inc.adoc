@@ -1,0 +1,61 @@
+//Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
+
+== Use-Case: manuelles Ändern des Stauts 
+
+=== Kurzbeschreibung
+//<Kurze Beschreibung des Use Case>
+Der abhängige Use Case beschreibt den Vorgang den Status manuell zu ändern. 
+
+=== Kurzbeschreibung der Akteure
+
+==== Administrator 
+Möchte die Möglichekeit den Status eines Gegenstandes zu ändern. 
+
+=== Vorbedingungen
+//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+- System ist aufgerufen
+- Administrator ist angemeldet
+
+=== Standardablauf (Basic Flow)
+//Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
+
+. Der Use Case beginnen, wenn der Admin im Barcodescanner die manuelle Eingabe auswählt. 
+. Der Admin sucht durch Nutzung der Filter oder Eingabe der Seriennummer den Gegenstand 
+. Das System findet den Gegenstand in der Datenbank und zeigt die Informationen an. 
+. Der Admin ändert den Status. 
+. Das System ändert automatisch den Stuatus des Faches.
+. Der Admin bestätigt die Statusänderung. 
+. Das System speichert die Änderung. 
+. Der Use Case ist abgeschlossen.
+
+//=== Alternative Abläufe
+//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+//==== <Alternativer Ablauf 1>
+//Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
+//. <Ablauf beschreiben>
+//. Der Use Case wird im Schritt <y> fortgesetzt.
+
+//=== Unterabläufe (subflows)
+//Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
+
+//==== <Unterablauf 1>
+//. <Unterablauf 1, Schritt 1>
+//. …
+//. <Unterablauf 1, Schritt n>
+
+//=== Wesentliche Szenarios
+//Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
+
+
+
+=== Nachbedingungen
+//Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
+- Status von Gegenstand und Fach wurden erfolgreich geändert 
+- Statusänderung wurde gespeichert 
+
+
+//=== Besondere Anforderungen
+//Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
+
+//==== <Besondere Anforderung 1>

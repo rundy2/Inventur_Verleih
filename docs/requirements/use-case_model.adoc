@@ -14,12 +14,12 @@ imagesdir: images
 // Liste aller identifizierten Use Cases (priorisiert)
 *für Akteur User:*
 
-* *UC01*: Ausleih
-* *UC02*: Rückgabe
-* *UC03*: Neu Aufnahme von Gegenständen (Leeres Fach finden)
-* *UC04*: Deinventarisierung (Entsorgung)
-* *UC05*: User Status ändern (Ausleih/Rückgabe)
-* *UC06*: Suchen von Objekten
+* *UC01*: Objekte ausleihen 
+* *UC02*: Objekte zurückgeben 
+* *UC03*: Gegenstände neuaufnehmen (Leeres Fach finden)
+* *UC04*: Gegenstände entsorgen oder deinventarisieren 
+* *UC05*: manuelles Ändern des Status 
+* *UC06*: Gegenstände suchen 
 * *UC07*: Übersicht Anzeigen (User)
 * *UC08*: Übersicht Wartung (User/Reperatur Dienstleister)
 * *UC09*: System Rückmeldung bei Änderungen (an User)
@@ -57,7 +57,7 @@ include::use_case_03.inc.adoc[]
 <<<
 include::use_case_04.inc.adoc[]
 <<<
-//include::use_case_05.inc.adoc[]
+include::use_case_05.inc.adoc[]
 <<<
 include::use_case_06.inc.adoc[]
 <<<

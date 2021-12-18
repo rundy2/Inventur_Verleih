@@ -115,7 +115,7 @@ personenbezogenen Daten und Gefahrstoffen
 
 | Anwender (User)
 | Jeder Mitarbeiter der als User im System Regestriert ist
-| Einfache Ausleih / Rückgabe von Gegenständen
+| Einfache Ausleihe / Rückgabe von Gegenständen
 
 // | Reperatur Dienstleister
 // | 
@@ -145,14 +145,14 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 [%header, cols="4,1,4,1"]
 |===
 | Bedarf | Priorität | Features | Geplantes Release
-| Gegstände Anschauen
+| Gegstände anschauen
 | hoch
 | Anzeige Lagerplatz/Status
 | xx
 
-| Gegstände Hinzufügen
+| Gegstände hinzufügen
 | hoch
-| Suche nach Leeren Lagerplatz, Eingabe von Gegeständs Daten 
+| Suche nach leeren Lagerplatz, Eingabe von Gegeständs Daten 
 | xx
 
 | Authentifikation der Clients
@@ -160,19 +160,19 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 | Sichere Datenübermittlung, Login
 | xx
 
-| Gegstände Ausleihen
+| Gegstände ausleihen
 | hoch
 | Suchen und Status ändern
 | xx
 
-| Gegstand Rückgabe
+| Gegstände zurückgeben
 | mittel
 | eingabe ID -> Anzeige Lagerort, Status ändern
 | xx
 
 | Erstellung von Backups
 | niedrig
-| Kopierung der Datenbank
+| Kopieren der Datenbank
 | xx
 
 |===

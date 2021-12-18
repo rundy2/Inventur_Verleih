@@ -31,6 +31,7 @@ Möchte Anwender die Möglichkeiten geben, sich einen Gegenstand auszuleihen.
 . Der Anwender ändert den Status von "auf Lager" zu "ausgeliehen". 
 . Das System ändert automatisch den Status des Fachs auf "Gegenstand, der in dieses Fach gehört wurde ausgeliehen". 
 . Der Anwender bestätigt die Statusänderung. 
+. Das System speichert die Änderungen. 
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
@@ -39,8 +40,10 @@ Möchte Anwender die Möglichkeiten geben, sich einen Gegenstand auszuleihen.
 ==== Ungültiger Barcode 
 Wenn Anwender im Schritt 1 des Standardablauf einen unbekannten Barcode scannt, dann geht der Use Case nicht weiter zum nächsten Schritt. Der Use Case bleibt im Schritt 1 stehen und wartet auf einen gültigen Barcode. 
 
-==== manuelles Eingeben der Seriennummer
-Wenn der Anwender im Schritt 1 den Barcode nicht scannen kann oder möchte, dann kann er die Seriennummer des Gegenstandes auch manuell eingeben. Der Use Case wird im Schritt 2 fortgesetzt. 
+==== manuelles Statusändern durch Admin 
+include::use_case_05.inc.adoc[lines=22..29]
+
+//Wenn der Anwender im Schritt 1 den Barcode nicht scannen kann oder möchte, dann kann er die Seriennummer des Gegenstandes auch manuell eingeben. Der Use Case wird im Schritt 2 fortgesetzt. 
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
