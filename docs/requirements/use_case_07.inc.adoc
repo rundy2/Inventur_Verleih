@@ -20,11 +20,14 @@ Möchte sich Gesamtübersichten oder Übersichten beispielsweise sortiert nach Z
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Anwender die Filterfunktion aufruft 
-. System zeigt Auswahl an Filterkriterien an 
-. Kunde wählt einen Filter aus 
-. System zeigt all die Gegenstände an, die in dem Filterkriterium inbegriffen sind 
+. Der Use Case beginnt, wenn der Anwender die Suchfunktion aufruft.
+. Der Anwender gibt keine Suchkriterien ein.
+. System zeigt alle Gegegenstände und deren Status und Lagerort an
+. Der Anwender kann die Ergebnisliste durch Klicken auf die Spaltenüberschrift neusortier. 
+. Anwender wählt einen Gegenstand aus 
+. System zeigt weitere Informationen zum Gegenstand 
 . Der Use Case ist abgeschlossen.
+
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf

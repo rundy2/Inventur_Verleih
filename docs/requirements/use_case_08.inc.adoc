@@ -18,8 +18,12 @@ Will wissen welche Gegenstände in die Wartung müssen.
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn sich der User erfolgreich eingeloggt hat.
-. Der User bekommt sofort eine Übersicht mit allen Gegenständen angezeigt, die in der nächten Woche zur Wartung müssen.
+//. Der Use Case beginnt, wenn sich der User erfolgreich eingeloggt hat.
+//. Der User bekommt sofort eine Übersicht mit allen Gegenständen angezeigt, die dem nächst (bsp. nächste Woche) zur Wartung müssen.
+//. Der Use Case ist abgeschlossen.
+
+. Der Anwender ruft die Wartungsplanung auf
+. Das System nutzt die Filtersuche (Use Case 6) um alle Gegenstände mit demnächst (bsp. nächste Woche) geplanter Wartung anzuzeigen
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe

@@ -20,14 +20,17 @@ Möchte herrausfinden wo sich ein Gegenstand befindet.
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Anwender eine Objektbezeichnung im System sucht
-. System zeigt Suchergebnisse und deren Status bzw. Lagerort an
+. Der Use Case beginnt, wenn der Anwender die Suchfunktion aufruft.
+. Der Anwender gibt seine Suchkriterien ein.
+. System zeigt Suchergebnisse und deren Status und Lagerort an
 . Anwender wählt einen Gegenstand aus 
 . System zeigt weitere Informationen zum Gegenstand 
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
-//Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
+
+. Werden keine Suchkriterien eingegeben, werden alle Gegenstände angezeigt. (Use Case 7)
+
 
 ==== Gegenstand nicht vorhanden 
 Wenn Anwender im Schritt 1 des Standardablauf eine Objektbezeichnung eingibt, die es nicht gibt, dann erscheint eine Meldung, dass dieses Objekt sich nicht im System befindet. Der Use Case ist damit abschlossen. 
@@ -62,9 +65,10 @@ Wenn Anwender im Schritt 1 des Standardablauf eine Objektbezeichnung eingibt, di
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
 
-==== Bei erfolgreicher Suche 
-- Anwender weiß an welchem Lagerort oder bei welcher Person sich der Gegenstand befindet 
-- zusätzliche Informationen wurden über den Gegenstand eingeholt 
+==== Bei erfolgreicher Suche
+- Anwender bekommt Überblick über alle Gegenstände, die auf sein Filterkriterum passen  
+- Anwender weiß an welchem Lagerort oder bei welcher Person sich bestimmte Gegenstände befinden
+- zusätzliche Informationen werden über Gegenstände eingeholt 
 
 === Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
