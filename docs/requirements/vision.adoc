@@ -145,12 +145,12 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 [%header, cols="4,1,4,1"]
 |===
 | Bedarf | Priorität | Features | Geplantes Release
-| Gegstände anschauen
+| Gegenstände anschauen
 | hoch
 | Anzeige Lagerplatz/Status
 | xx
 
-| Gegstände hinzufügen
+| Gegenstände hinzufügen
 | hoch
 | Suche nach leeren Lagerplatz, Eingabe von Gegeständs Daten 
 | xx
@@ -160,12 +160,12 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 | Sichere Datenübermittlung, Login
 | xx
 
-| Gegstände ausleihen
+| Gegenstände ausleihen
 | hoch
 | Suchen und Status ändern
 | xx
 
-| Gegstände zurückgeben
+| Gegenstände zurückgeben
 | mittel
 | eingabe ID -> Anzeige Lagerort, Status ändern
 | xx
