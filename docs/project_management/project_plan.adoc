@@ -12,11 +12,38 @@ Er soll unter anderem die Kommunikationsmittel und Werkzeuge definieren.
 
 == Projektorganisation
 //Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.
+Die Aufgaben der Softwareentwicklung werden wie folgt aufgeteilt:
 
+. Anja Claus (Wing) – Analyse – Analyst 
+. Felix Helmert – Analyse und Entwurf 
+. Jamal Alkharrat – Entwurf – Architect 
+. Dominique Linzmajer – Entwurf und Implementierung - Technical Writer 
+. Moritz Lehmann – Implementierung - Developer 
+. Silko Grellmann (Verwaltungsinfo) – Analyse/Test – Deployment Engineer  
+. Jonas Koloska (Winfo) – Test - Tester 
+. Fabian Krähmer – Projektmanagement  
 
 == Praktiken und Bewertung
 //Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
+=== Kommunikationsmedien
+Microsoft Teams - Plattform für Meetings
 
+Discord/WhatsApp - Plattform für Chats und Ideenfindung
+
+=== Transportmedien
+Github - Plattform für Austausch des Programmcodes und Aufgabenverteilung
+
+OneDrive - Plattform für Datenablage
+
+NextCloud - Plattform für Backups
+
+=== Entwicklungsumgebung
+VS Code - Plattform für Entwicklung
+
+=== Textverarbeitung
+Microsoft Word - Anfertigung von Protokollen für Meetings
+
+Microsoft Excel - Kurzfristige Ordnung von Daten/Aufgabenzuordnung
 
 == Meilensteine und Ziele
 //Define and describe the high-level objectives for the iterations and define milestones. For example, use the following table to lay out the schedule. If needed you may group the iterations into phases and use a separate table for each phase
@@ -34,14 +61,14 @@ Er soll unter anderem die Kommunikationsmittel und Werkzeuge definieren.
 * Aufgabe verstehen
 * Vision erarbeiten
 | Date from/Date to
-| 15
+| KW50
 
 | LCA/1
 |
 * Analyse
 * Use-Cases erarbeiten
 | Date from/Date to
-| 16
+| KW52
 |===
 
 
