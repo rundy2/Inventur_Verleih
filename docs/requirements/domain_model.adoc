@@ -1,12 +1,11 @@
 = Domain Model: {project-name}
-Anja Claus <anja.claus@htw-dresden.de>; Felix Helmert <felix.helmert@htw-dresden.de>; Jamal Alkharrat <jamal.alkharrat@htw-dresden.de>; Dominique Linzmajer <dominique.linzmajer@htw-dresden.de>; Moritz Lehmann <moritz.lehmann@htw-dresden.de>; Silko Grellmann <silko.grellmann@htw-dresden.de>; Jonas Koloska <jonas.koloska@htw-dresden.de>; Fabian Krähmer <fabian.kraehmer@htw-dresden.de>
-
+Jamal Alkharrat <jamal.alkharrat@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
 // Platzhalter für weitere Dokumenten-Attribute
 
 
 == Allgemeine Informationen
+.Domänenmodell für die Datenbank
+image::Domain_Model.png[]
 
-
-== ...
