@@ -35,6 +35,20 @@ Test: Testaufgabe anlegen und auf Erfolg prüfen.
 
 === Benutzbarkeit (Usability)
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlernen, Standards für die Benutzerfreundlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.)
+- NFRU-1: Die Sprache der Benutzeroberfläche ist Deutsch. 
+- NFRU-2: Die Startseite soll alle möglichen Aktionen anzeigen, für die der Benutzer die Rechte hat. 
+Test: Unterschiedliche Personen (Admin/ normaler Benutzer) werden unterschiedliche Aktionen auf der Startseite angezeigt. 
+- NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt. 
+Test: Eingabe von nur den ersten 3 Buchstaben eines Gegenstandes in die Suchfunktion. Es wird überprüft, ob der vollständige Name des Gegenstandes angezeigt wird. 
+// Frage: ist das zu viel Arbeit? wollen wird so was überhaupt? 
+- NFRU-4: Es werden pro Ansicht nur 10 Gegenstände angezeigt. 
+// um eine Touchbedienung z.B. auf dem Smartphone zu ermöglichen 
+Test: Es werden mindestens 11 Gegenstände im System eingefüht. Es wird überprüft, wie viele Gegenstände auf der Ansicht dargestellt werden. 
+- NFRU-5: Ein Gegenstand, der sich im System befindindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können. 
+Test: Unterschiedliche Gegenstände werden ausgeliehen oder zurückgegeben und die Klicks werden gezählt. 
+- NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ. 
+Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Anschließend wird kontrolliert, ob das System das Datum im richtigen Format gespeichert hat. 
+
 
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
