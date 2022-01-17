@@ -12,26 +12,25 @@ In diesem Dokument werden die systemweiten Anforderungen für das Projekt <Thema
 * Qualitätsanforderungen für Benutzbarkeit, Zuverlässigkeit, Effizienz und Wartbarkeit (URPS) sowie
 * zusätzliche Anforderungen (+) für technische, rechtliche, organisatorische Randbedingungen
 
-NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem separaten Dokument festgehalten. [hier ggf. Verweis einfügen]
-
+NOTE: Die funktionalen Anforderungen, die sich aus der Interaktion von Nutzern mit dem System ergeben, sind als Use Cases in einem separaten Dokument festgehalten. 
 
 == Systemweite funktionale Anforderungen
 //Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
 
-- SWFA-1: Das System muss alle Inventar-, Ausleih- und Benutzerdaten persistent speichern. +
+- *SWFR-1: Das System muss alle Inventar-, Ausleih- und Benutzerdaten persistent speichern.* +
 Test: Die Datenbank(en) wird/werden mit Testdaten gefüllt. Anschließend wird das System aus­-
 geschaltet. Die Daten müssen bei Wiederinbetriebnahme vollständig vorhanden sein.
 
-- SWFA-2: Die Kommunikation zwischen Clients und Server muss verschlüsselt sein. +
+- *SWFR-2: Die Kommunikation zwischen Clients und Server muss verschlüsselt sein.* +
 Test: Vorhandensein von (TLS) Bei einem MitM-Angriff dürfen keine Daten in Klartext lesbar sein.
 
-- SWFA-3: Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren. +
+- *SWFR-3: Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren.* +
 Test: Werden Security-Token verwendet, ist dies sicher gegen Session-Hijacking?
 
-- SWFA-4: Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein. +
+- *SWFR-4: Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein.* +
 Test: Das Ausführen von SQL-Injections darf nicht möglich sein.
 
-- SWFA-5: Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden. +
+- *SWFR-5: Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden.* +
 Test: In der Datenbank nach Passwörtern suchen (sollten nicht in Klartext sein)
 
 
@@ -40,59 +39,62 @@ Test: In der Datenbank nach Passwörtern suchen (sollten nicht in Klartext sein)
 
 === Benutzbarkeit (Usability)
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlernen, Standards für die Benutzerfreundlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.)
-- NFRU-1: Die Sprache der Benutzeroberfläche ist Deutsch. 
-- NFRU-2: Die Startseite soll alle möglichen Aktionen anzeigen, für die der Benutzer die Rechte hat. 
+- *NFRU-1: Die Sprache der Benutzeroberfläche ist Deutsch.*
+- *NFRU-2: Die Startseite soll alle möglichen Aktionen anzeigen, für die der Benutzer die Rechte hat.* +
 Test: Unterschiedliche Personen (Admin/ normaler Benutzer) werden unterschiedliche Aktionen auf der Startseite angezeigt. 
-- NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt. 
+- *NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt.* + 
 Test: Eingabe von nur den ersten 3 Buchstaben eines Gegenstandes in die Suchfunktion. Es wird überprüft, ob der vollständige Name des Gegenstandes angezeigt wird. 
 // Frage: ist das zu viel Arbeit? wollen wird so was überhaupt? 
-- NFRU-4: Es werden pro Ansicht nur 6 Gegenstände angezeigt. 
+- *NFRU-4: Es werden pro Ansicht nur 6 Gegenstände angezeigt.* +
 // um eine Touchbedienung z.B. auf dem Smartphone zu ermöglichen 
 Test: Es werden mindestens 7 Gegenstände im System eingeführt. Es wird überprüft, wie viele Gegenstände auf der Ansicht dargestellt werden. 
-- NFRU-5: Ein Gegenstand, der sich im System befindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können. 
+- *NFRU-5: Ein Gegenstand, der sich im System befindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können.* + 
 Test: Unterschiedliche Gegenstände werden ausgeliehen oder zurückgegeben und die Klicks werden gezählt. 
-- NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ. 
+- *NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ.* +
 Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Anschließend wird kontrolliert, ob das System das Datum im richtigen Format gespeichert hat. 
 
 
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
 
-NFAR-1: Es darf kein falsches Passwort eingegeben werden.
+- *NFRR-1: Es darf kein falscher Benutzername oder falsches Passwort angegeben werden.* +
+Test: Zur Überprüfung wird getestet, ob in diesen Anwendungsfällenin entsprechender Hinweistext angezeigt wird.
+
+- *NFRR-2: Ein neuer Benutzername darf kein breits vergeben Namen erhalten.*
+
+- *NFRR-3: Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.* +
 Test: Überprüfung auf Inkonsistenz der Daten.
 
-NFAR-2 Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
-
-- NFAR-1: Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. 
-  Zur Überprüfung wird getestet, ob in diesen Anwendungsfällenin entsprechender Hinweistext angezeigt wird.
-
-- NFAR-2: Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
-
-- NFAR-3: Vollständige Backups werden aller x Tage automatisch erstellt.
-Test: Überprüfung auf Inkonsistenz der Daten.
-
-- NFAR-4: Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
-Test: Überprüfung auf Inkonsistenz der Daten.
+- *NFRR-4: Das System sollte eine Verfügbarkeit von 95% gewährleisten.* +
+Test: System gezielt zum Absturz bringen, Zeit bis System wieder verfügbar messen
 
 === Effizienz (Performance)
 // Die Performanz Charakteristiken des Systems sollten in diesem Bereich ausgeführt werden. Beispiele sind Antwortzeit, Durchsatz, Kapazität und Zeiten zum Starten oder Beenden.
 
-10 User müssen gleichzeitig das System nutzen können.
+- *NFRP-1: 10 User müssen gleichzeitig das System nutzen können.* +
 Test: Mehr Nutzerzugriffe gleichzeitig ausführen.
 
 === Wartbarkeit (Supportability)
 // Dieser Bereich beschreibt sämtliche Anforderungen welche die Supportfähigkeit oder Wartbarkeit des zu entwickelnden Systems verbessern, einschließlich Anpassungsfähigkeit und Erweiterbarkeit, Kompatibilität, Skalierbarkeit und Anforderungen bezüglich der System Installation sowie Maß an Support und Wartbarkeit.
-
+- *NFRS-1: Vorliegen einer Bedienungsanleitung* +
+Test: Ausführen/Starten des Servers von einer projektfremden Person.
 
 == Zusätzliche Anforderungen
 
 === Einschränkungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Ressourcenbegrenzungen
-* zu nutzende Komponenten / Bibliotheken / Frameworks
-* Vorgaben für die Programmiersprache
-* zu unterstützende Plattformen / Betriebssysteme
-* Physische Begrenzungen für Hardware, auf der das System betrieben werden soll
+* SpringBoot
+* ReactJS 
+* min Java 8; empfohlen Java 11
+* Systeme: 
+** Windows Vista bis 11, Windows Server 2008 R2 SP1 bis 2022 +
+Linux Oracle / Red Hat / Suse / Ubuntu +
+ macOS X 10.8.3+ (Mountain Lion) bis macOS 12
+
+NOTE: Systemanforderungen +
+ ca. 4 GB RAM, 2 GHz Prozessor (min. 1,4 GHz x64), Speicherplatz Festplatte ca. 7 GB
+
+
 
 === Organisatorische Randbedingungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
