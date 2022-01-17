@@ -58,10 +58,15 @@ Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Ansch
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
 
-Wiederherstellbarkeit durch Backups aller x Tage muss vollständig gewährleistet sein.
+- NFAR-1: Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. 
+  Zur Überprüfung wird getestet, ob in diesen Anwendungsfällenin entsprechender Hinweistext angezeigt wird.
+
+- NFAR-2: Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
+
+- NFAR-3: Vollständige Backups werden aller x Tage automatisch erstellt.
 Test: Überprüfung auf Inkonsistenz der Daten.
 
-Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
+- NFAR-4: Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
 Test: Überprüfung auf Inkonsistenz der Daten.
 
 === Effizienz (Performance)
