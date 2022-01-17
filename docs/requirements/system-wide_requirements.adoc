@@ -23,16 +23,16 @@ Test: Die Datenbank(en) wird/werden mit Testdaten gefüllt. Anschließend wird d
 geschaltet. Die Daten müssen bei Wiederinbetriebnahme vollständig vorhanden sein.
 
 - SWFA-2: Die Kommunikation zwischen Clients und Server muss verschlüsselt sein. +
-Test: Vorhandensein von TLS? Bei einem MitM-Angriff dürfen keine Daten in Klartext lesbar sein.
+Test: Vorhandensein von (TLS) Bei einem MitM-Angriff dürfen keine Daten in Klartext lesbar sein.
 
 - SWFA-3: Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren. +
-Test: Werden CSRF-Token verwendet? Sicher gegen Session-Hijacking?
+Test: Werden Security-Token verwendet, ist dies sicher gegen Session-Hijacking?
 
 - SWFA-4: Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein. +
 Test: Das Ausführen von SQL-Injections darf nicht möglich sein.
 
 - SWFA-5: Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden. +
-Test: ?
+Test: In der Datenbank nach Passwörtern suchen (sollten nicht in Klartext sein)
 
 
 == Qualitätsanforderungen für das Gesamtsystem
@@ -46,10 +46,10 @@ Test: Unterschiedliche Personen (Admin/ normaler Benutzer) werden unterschiedlic
 - NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt. 
 Test: Eingabe von nur den ersten 3 Buchstaben eines Gegenstandes in die Suchfunktion. Es wird überprüft, ob der vollständige Name des Gegenstandes angezeigt wird. 
 // Frage: ist das zu viel Arbeit? wollen wird so was überhaupt? 
-- NFRU-4: Es werden pro Ansicht nur 10 Gegenstände angezeigt. 
+- NFRU-4: Es werden pro Ansicht nur 6 Gegenstände angezeigt. 
 // um eine Touchbedienung z.B. auf dem Smartphone zu ermöglichen 
-Test: Es werden mindestens 11 Gegenstände im System eingefüht. Es wird überprüft, wie viele Gegenstände auf der Ansicht dargestellt werden. 
-- NFRU-5: Ein Gegenstand, der sich im System befindindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können. 
+Test: Es werden mindestens 7 Gegenstände im System eingeführt. Es wird überprüft, wie viele Gegenstände auf der Ansicht dargestellt werden. 
+- NFRU-5: Ein Gegenstand, der sich im System befindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können. 
 Test: Unterschiedliche Gegenstände werden ausgeliehen oder zurückgegeben und die Klicks werden gezählt. 
 - NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ. 
 Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Anschließend wird kontrolliert, ob das System das Datum im richtigen Format gespeichert hat. 
@@ -58,10 +58,10 @@ Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Ansch
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
 
-Wiederherstellbarkeit durch Backups aller x Tage muss vollständig gewährleistet sein.
+NFAR-1: Es darf kein falsches Passwort eingegeben werden.
 Test: Überprüfung auf Inkonsistenz der Daten.
 
-Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
+NFAR-2 Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.
 Test: Überprüfung auf Inkonsistenz der Daten.
 
 === Effizienz (Performance)
