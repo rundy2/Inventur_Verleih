@@ -98,11 +98,11 @@ NOTE: Systemanforderungen +
 
 === Organisatorische Randbedingungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Anforderungen an Betrieb, Management und Wartung der Anwendung
-* zu beachtende Standards, Normen und Regeln
+* Das System muss von geschultem Personal gepflegt und gewartet werden.
+* Neue User sollten mit der Software vor der ersten Nutzung vertraut gemacht werden.
 
 === Rechtliche Anforderungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* Lizensierung der Anwendung
-* Datenschutz
-* Urheberrechtsschutz
+* Die Lizensierung der Anwendungen wird vorausgesetzt.
+* Die Einhaltung der DSGVO wird vorausgesetzt und ist vom Anwender zu prüfen.
+* Der Urheberrechtsschutz muss vom Anwender gewährleistet werden.
