@@ -101,6 +101,7 @@ NOTE: Systemanforderungen +
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
 * Das System muss von geschultem Personal gepflegt und gewartet werden.
 * Neue User sollten mit der Software vor der ersten Nutzung vertraut gemacht werden.
+* Die Software ist nur in englischer Sprache gehalten.
 
 === Rechtliche Anforderungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
