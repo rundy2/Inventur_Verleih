@@ -1,7 +1,8 @@
 = Architecture Notebook: {project-name}
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+Jamal Alkharrat <s82035@htw-dresden.de>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
+imagesdir: images
 // Platzhalter für weitere Dokumenten-Attribute
 
 
@@ -20,19 +21,61 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 
 == Annahmen und Abhängigkeiten
+*Annahmen:*
+
+- Jeder Benutzer besitzt eine stabile Internetverbindung und eine ausreichende Bandbreite.
+
+- Jeder Benutzer verfügt über HTW Login.
+
+- Jeder Benutzer stellt die ausgeliehenen Artikel am richtigen Ort zurück.  
+
+*Abhängigkeiten:*
+
+- Wir sind von der HTW Server und von unserer Datenbank abhängig.
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
 
 == Architektur-relevante Anforderungen
 //Fügen Sie eine Referenz / Link zu den Anforderungen ein, die implementiert werden müssen, um die Architektur zu erzeugen.
 
+*Funktion:*
+
+- *SWFR-1:* Das System muss alle Inventar-, Ausleih- und Benutzerdaten persistent speichern. +
+
+- *SWFR-2:* Die Kommunikation zwischen Clients und Server muss verschlüsselt sein. +
+
+- *SWFR-3:* Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren.+
+
+- *SWFR-4:* Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein. +
+
+- *SWFR-5:* Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden. +
+
+*Effizienz (Performance):*
+
+- *NFRP-1:* 10 User müssen gleichzeitig das System nutzen können. +
+
+*Zuverlässigkeit (Reliability):*
+
+ - *NFRR-1:* Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. +
+
+
+- *NFRR-2:* Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
+
+- *NFRR-3:* Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden. +
+
+
+- *NFRR-4:* Das System sollte eine Verfügbarkeit von 95% gewährleisten. +
+
+
 
 == Entscheidungen, Nebenbedingungen und Begründungen
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.]
 
-. Entscheidung oder Einschränkung oder Begründung 1
-. Entscheidung oder Einschränkung oder Begründung 2
+. Wir haben in der Analyse die Entscheidung getroffen, dass unsere Daten persistent (SWFR-1) sein müssen. //[Auf der Grundlage dieser Ausgangspunkte hatten wir im Entwurf verschiedene Möglichkeiten, unsere Daten zu speichern. Von den drei Möglichkeiten SQL-Datenbanken, NoSQL-Datenbanken oder einfache Dateien entschieden wir uns für eine SQL-Datenbank, da dies unsere Datentypen gut abbilden kann und wir bereits Erfahrung mit diesen haben. In der Implementierung hatten wir die Wahl zwischen verschiedenen Datenbanken. Letztendlich entschieden wir uns für Maria-DB, da diese eine gute Open-Source-Lösung darstellt.] WAS IST UNSER DBS ???
 
+. Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Diese Entscheidungen haben wir aufgrund von Sicherheitsgrunden getroffen. Damit ist das System vor Cyper-Angriffe oder externe Beschädigung geschützt.
+
+. USER INTERFACE HIER!
 
 == Architekturmechanismen
 https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
@@ -49,6 +92,19 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 == Wesentliche Abstraktionen
 //[List and briefly describe the key abstractions of the system. This should be a relatively short list of the critical concepts that define the system. The key abstractions will usually translate to the initial analysis classes and important patterns.]
 
+*Typen:* Typen werden gebildet, um die Daten, die zur Laufzeit im Programm benötigt werden, zur Verfügung zu haben und zwar an unterschiedlichen Stellen im System.
+
+- Room: enthält der Name des entsprechenden Raums an der Hochschule.
+
+- Storage: enthält die Bezeichnung des Lagerplatzes.
+
+- Section: enthält die genauere Beschreibung, wo die Artikel gelagert sind.
+
+- Object: enthält alle relevante Informationen zum Artikel.
+
+*Services:* Services werden genutzt, um die Verarbeitung von Daten zu übernehmen. Dies geschieht optimalerweise für jeden Typen separat, um eine möglichst geringe Kopplung zu erhalten.
+
+*Workflows:* Workflows beschreiben den Arbeitsablauf des Programms und bilden die Reihenfolge ab, mit welcher in einem Programm gearbeitet wird.
 
 == Schichten oder Architektur-Framework
 //[Describe the architectural pattern that you will use or how the architecture will be consistent and uniform. This could be a simple reference to an existing or well-known architectural pattern, such as the Layer framework, a reference to a high-level model of the framework, or a description of how the major system components should be put together.]
@@ -67,3 +123,7 @@ Folgende Sichten werden empfohlen:
 
 === Use cases
 //Eine Liste oder ein Diagramm der Use Cases, die architektur-relevante Anforderungne enthalten.
+
+Diagramm der Use Cases, die architektur-relevante Anforderungen enthalten:
+
+image::Use_Case_Model_v2.jpg[]
