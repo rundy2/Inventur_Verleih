@@ -21,6 +21,9 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 //Formulieren Sie eine Reihe von Zielen, die die Architektur in ihrer Struktur und ihrem Verhalten erfüllen muss. Identifizieren Sie kritische Fragen, die von der Architektur adressiert werden müssen, z.B. besondere Hardware-Abhängigkeiten, die vom Rest des Systems isoliert werden sollten oder Sicherstellung der Funktionsfähigkeit unter besonderen Bedingungen (z.B. Offline-Nutzung).
 
+Das System ist für die Verwaltung der Inventur konzipiert. Die Anwendung ist mit HTW Login zugänglich. Das System ermöglicht den Mitarbeitenden eine bessere Orginisation der Gegenständen sowie Verbrauchsmaterialen. 
+
+Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfache Bedienbarkeit erforderlich.
 
 == Annahmen und Abhängigkeiten
 *Annahmen:*
