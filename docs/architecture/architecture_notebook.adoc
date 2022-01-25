@@ -1,12 +1,14 @@
 = Architecture Notebook: {project-name}
-Jamal Alkharrat <s82035@htw-dresden.de>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+Jamal Alkharrat <s82035@htw-dresden.de>;
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
 imagesdir: images
 // Platzhalter für weitere Dokumenten-Attribute
 
 
+
 == Zweck
+
 Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Begründungen, wesentliche Elemente und andere übergreifende Aspekte des Systems, die Einfluss auf Entwurf und Implementierung haben.
 
 //Hinweise: Bearbeiten Sie immer die Abschnitte 2-6 dieser Vorlage. Nachfolgende Abschnitte sind empfohlen, aber optional und sollten je nach Umfang der künftigen Wartungsarbeiten, Fähigkeiten des Entwicklungsteams und Bedeutung anderer architektureller Belange.
@@ -71,11 +73,15 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 == Entscheidungen, Nebenbedingungen und Begründungen
 //[List the decisions that have been made regarding architectural approaches and the constraints being placed on the way that the developers build the system. These will serve as guidelines for defining architecturally significant parts of the system. Justify each decision or constraint so that developers understand the importance of building the system according to the context created by those decisions and constraints. This may include a list of DOs and DON’Ts to guide the developers in building the system.]
 
-. Wir haben in der Analyse die Entscheidung getroffen, dass unsere Daten persistent (SWFR-1) sein müssen. //[Auf der Grundlage dieser Ausgangspunkte hatten wir im Entwurf verschiedene Möglichkeiten, unsere Daten zu speichern. Von den drei Möglichkeiten SQL-Datenbanken, NoSQL-Datenbanken oder einfache Dateien entschieden wir uns für eine SQL-Datenbank, da dies unsere Datentypen gut abbilden kann und wir bereits Erfahrung mit diesen haben. In der Implementierung hatten wir die Wahl zwischen verschiedenen Datenbanken. Letztendlich entschieden wir uns für Maria-DB, da diese eine gute Open-Source-Lösung darstellt.] WAS IST UNSER DBS ???
+. Wir nutzen MySQL Datenbanksystem, damit wir Datentypen gut abbilden können.
 
-. Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Diese Entscheidungen haben wir aufgrund von Sicherheitsgrunden getroffen. Damit ist das System vor Cyper-Angriffe oder externe Beschädigung geschützt.
+. Wir nutzen React beim Frontend (User-Interface)
 
-. USER INTERFACE HIER!
+. Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern.
+
+. Wir definieren Typen, um eine einfache Erweiterbarkeit zu ermöglichen
+
+
 
 == Architekturmechanismen
 https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
@@ -85,8 +91,12 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 
 //Beschreiben Sie den Zweck, Eigenschaften und Funktion der Architekturmechanismen.
 
-. Architekturmechanismus 1
-. Architekturmechanismus 2
+. Wir haben in der Analyse die Entscheidung getroffen, dass unsere Daten persistent (SWFR-1) sein müssen. Auf der Grundlage dieser Ausgangspunkte hatten wir im Entwurf verschiedene Möglichkeiten, unsere Daten zu speichern. Von den drei Möglichkeiten SQL-Datenbanken, NoSQL-Datenbanken oder einfache Dateien entschieden wir uns für eine SQL-Datenbank, da dies unsere Datentypen gut abbilden kann und wir bereits Erfahrung mit diesen haben. In der Implementierung hatten wir die Wahl zwischen verschiedenen Datenbanken. Wir haben uns für MySQL entschieden, da diese Open Source ist.
+
+. Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Damit kein ungewollte Zugriff auf unsere Anwendung und deren Daten hat, müssen sich Nutzer zunächst mit ihrer Email und einem Passwort registrieren. Die Email und das Passwort werden in der Datenbank gespeichert, wobei das Passwort verschlüsselt wird, also nicht im Klartext in der Datenbank steht. Wenn sich ein registrierter Nutzer dann einloggt generiert unsere Anwendung einen Sicherheitstoken, welcher einen Tag gültig sein wird. Wir haben uns für die Verwendung des Bearer Tokens entschieden. Die Dauer der Gültigkeit des Sicherheitstoken kann ggf. angepasst werden. Dieser Token wird bei Abfragen von Daten mit an das Backend geschickt welches seine Gültigkeit prüft. Ist der Token gültig werden die Daten an das Frontend bzw. an den Nutzer gesendet. Wenn der Token ungültig ist wird eine entsprechende Fehlermeldung ausgegeben.
+
+
+. Beim User-Interface haben wir uns für React entschieden, weil React eine Vielzahl von Funktionen und schöne User-Elemente bietet. Außerdem ist es kostenlos und einfach zu verwenden.
 
 
 == Wesentliche Abstraktionen
@@ -109,6 +119,7 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 == Schichten oder Architektur-Framework
 //[Describe the architectural pattern that you will use or how the architecture will be consistent and uniform. This could be a simple reference to an existing or well-known architectural pattern, such as the Layer framework, a reference to a high-level model of the framework, or a description of how the major system components should be put together.]
 
+- Frontend -> Backend -> Datenbanksystem 
 
 == Architektursichten (Views)
 //[Describe the architectural views that you will use to describe the software architecture. This illustrates the different perspectives that you will make available to review and to document architectural decisions.]
@@ -118,8 +129,23 @@ Folgende Sichten werden empfohlen:
 === Logische Sicht
 //Beschreibt die Struktur und das Verhalten Systemteilen, die hohen Einfluss auf die Architektur haben. Dies kann die Paketstruktur, kritische Schnittstellen, wichtige Klassen und Subsysteme sowie die Beziehungen zwischen diesen Elementen enthalten. Zudem sollten die physische und logische Sicht persistenter Daten beschrieben werden, wenn es diesen Aspekt im System gibt. Dies ist ein hier dokumentierter Teilaspekt des Entwurfs.
 
+image::logische_sicht.jpeg[]
+
+- request: prüft Anfrage des Nutzers und leitet diese passend weiter
+
+- security: prüft ob der Nutzer befugt für entsprechende Anfrage ist
+
+- conntroller: leitet bestimmte Funktion anhand der Anfrage ein (Daten abfragen/ändern/löschen)
+
+- repository: Kommunikation mit Datenbank
+
+- entity: Abbildung der realen Objekte mit denen die Anwendung arbeiten soll
+
+
 === Physische Sicht (Betriebssicht)
 //Beschreibt die physischen Knoten (Rechner) des Systems, der Prozesse, Threads und Komponenten, die in diesen Knoten ausgeführt werden. Diese Sicht wird nicht benötigt, wenn das System in einem einzelnen Prozess oder Thread ausgeführt wird.
+
+- Server-Client
 
 === Use cases
 //Eine Liste oder ein Diagramm der Use Cases, die architektur-relevante Anforderungne enthalten.
