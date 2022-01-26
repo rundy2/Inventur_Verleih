@@ -128,11 +128,9 @@ personenbezogenen Daten und Gefahrstoffen
 Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 
 //Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
-. Der Benutzer soll eine Endgeräteunabhängige Website zur Verfügung gestellt bekommen
+. Der Benutzer steht im Lager, eine Verbindung zum System ist per Drahtloser Datenverbindung möglich
 
-. Die Website sollte sich möglichst selbst an die Verhältnisse und Bedingungen (Auflösung, Datenverbrauch) des Endgerätes anpassen.
-
-. Der Benutzer bekommt ein Login zugewiesen.
+. Der Benutzer hat ein mobiles Endgerät (bspw. Android, iOS) zur Verfügung
 
 
 == Produkt-/Lösungsüberblick
