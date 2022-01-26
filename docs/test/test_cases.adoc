@@ -1,14 +1,51 @@
 = Test Cases: {project-name}
-Vorname Nachname <email@domain.org>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
+Moritz Lehmann <s82015@htw-dresden.de>; Vorname2 Nachname2 <email2@domain.org>; Vorname3 Nachname3 <email3@domain.org>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
 // Platzhalter für weitere Dokumenten-Attribute
 
 
 == Allgemeine Informationen
+Die Test Cases sollen festellen ob verschiedene Funktionen innerhalb des Programms wie erwartet funktionieren.
 
-== Test Cases
+== Test Cases für "Accountmanagment"
 
-=== Test Case 01
+=== TC01 - Anmelden eines Users/Administrator
+*Vorbedingungen* +
 
-=== Test Case 02
+- Es besteht eine Internetverbindung +
+
+*Beschreibung* +
+
+Der Anwender oder Administrator gibt seine Anmeldedaten an und loggt sich ein. +
+
+*Eingabedaten* +
+
+- gültige Anmeldedaten +
+
+*Erwartetes Ergebnis* +
+
+. Das Login ist erfolgreich. +
+. Das Login ist nicht erfolgreich. +
+
+== Test Cases für "Inventar-/ Datenbankverwaltung"
+
+=== TC02 - Ausleihen von einem Gegenstand
+*Vorbedingungen* +
+
+- Anwender ist mit gültigen Anmeldedaten angemeldet +
+- Es besteht eine Internetverbindung +
+- Der Gegenstand ist Verfügbar +
+
+*Beschreibung* +
+
+Der Anwender leiht ein Gegenstände aus und dieser wird dem Inventar hinzugefügt. +
+
+*Eingabedaten* +
+
+- keine +
+
+*Erwartetes Ergebnis* +
+
+. Der Gegenstand wird erfolgreich ausgeliehen. +
+. Das Ausleihen des Gegenstandes ist fehlgeschlagen. +
