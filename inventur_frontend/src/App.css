@@ -6,6 +6,7 @@
   grid-template-columns: 6fr minmax(100px,1fr);
   grid-template-rows: 100px ,  500px ;
   gap: 10px;
+  padding-left: 15p;
 }
 
 .website{
