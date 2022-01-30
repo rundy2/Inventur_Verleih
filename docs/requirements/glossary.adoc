@@ -19,7 +19,7 @@ In diesem Dokument werden die wesentlichen Begriffe aus dem Anwendungsgebiet (La
 | Admin
 
 | Anwender
-| Kann Lager einsehen, Zustand und Status des Inventars auslesen, Inventar ausleihen und zurückgeben
+| Kann Lager einsehen, Zustand und Status des Inventars auslesen, Inventar ausleihen und zurückgeben.
 | User
 
 | Status
@@ -33,8 +33,12 @@ Oder beschreibt den Verfügbarkeitszustand eines Lagerfachs. Kann die Werte Gege
 | Userrechte, Anwenderrechte
 
 | Gegenstand
-| Gegenzeichnet durch eine eindeutige Nummer
+| Gekennzeichnet durch eine eindeutige Nummer.
 | Objekt
+
+|Anmeldung
+|... ist der Vorgang der Authentifizierung durch Benutzernamen und Passwort.
+|Login
 
 |===
 
