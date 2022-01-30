@@ -1,6 +1,6 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: Objekte zurückgeben 
+== Use-Case: Gegenstände zurückgeben 
 
 === Kurzbeschreibung
 Der Use Case beschreibt die Rückgabe eines Gegenständs durch einen Benutzer.

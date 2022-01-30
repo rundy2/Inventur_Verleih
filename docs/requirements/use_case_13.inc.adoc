@@ -1,36 +1,36 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Admin add User>
+== Use-Case: Backup erstellen
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Anlegen eines neuen Benutzers durch einem Admin
+Der Use Case beschreibt das Erstellen eines Backup durch einen Admin.
 
 === Kurzbeschreibung der Akteure
 
-==== <Admin>
-Will neuen Benutzer anlgen
+==== Admin
+Admin möchte einen Backup erstellen.
 
 === Vorbedingungen
-//Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
+Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 
-<Vorbedingung 1>
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn <akteur> <macht>…
-. <Standardablauf Schritt 1>
-. …
-. <Standardablauf Schritt n>
+. Der Use Case beginnt, wenn der Admin die Schaltfläche Backup wählt.
+. Der Adminnwender bestätigt die Meldung zum erstellen das Backups.
+. Das System erstellt eine komprimierte Datei mit allen Daten der Datenbank und legt diese im Archiv-Ordner ab.
+. Das System zeigt dem Admin die Bestätigung der Backup erstellung sowie den Dateiname (Zeitstempel) an.
+. Das System leitet den Admin zurück zum Hauptseite.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Alternativer Ablauf 1>
-Wenn <Akteur> im Schritt <x> des Standardablauf <etwas macht>, dann
-. <Ablauf beschreiben>
-. Der Use Case wird im Schritt <y> fortgesetzt.
+==== Alternativer Ablauf
+Abbruch wenn:
+. Meldung nicht bestätigt wird
+. Rückkehr zum Hauptseite
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern

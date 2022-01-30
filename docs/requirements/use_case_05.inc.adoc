@@ -1,10 +1,10 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: manuelles Ändern des Stauts 
+== Use-Case: Status manuell ändern 
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
-Der abhängige Use Case beschreibt den Vorgang den Status manuell zu ändern. 
+Der abhängige Use Case beschreibt den Vorgang den Status eiens Gegenstands manuell zu ändern. 
 
 === Kurzbeschreibung der Akteure
 

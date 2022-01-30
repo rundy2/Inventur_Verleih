@@ -14,25 +14,25 @@ imagesdir: images
 // Liste aller identifizierten Use Cases (priorisiert)
 *für Akteur User:*
 
-* *UC01*: Objekte ausleihen 
-* *UC02*: Objekte zurückgeben 
-* *UC03*: Gegenstände neuaufnehmen (Leeres Fach finden)
-* *UC04*: Gegenstände entsorgen oder deinventarisieren 
-* *UC05*: manuelles Ändern des Status 
-* *UC06*: Gegenstände suchen 
-* *UC07*: Übersicht Anzeigen (User)
-* *UC08*: Übersicht Wartung (User/Reperatur Dienstleister)
-* *UC09*: System Rückmeldung bei Änderungen (an User)
-* *UC10*: Nutzungsverlauf (Gegenstände)
-* *UC11*: Login für Anwender
-
-*für Akteur Admin:* (nur User Verwaltung?)
-
-* *UC12*: Admin Anlegen User
-//* *UC13*: Admin Bearbeiten User Rechte
-* *UC14*: Admin Bearbeiten User
-* *UC15*: Admin Löschen User
-* *UC16*: Backup erstellen
+* *UC01*: Gegenstände ausleihen 
+* *UC02*: Gegenstände zurückgeben 
+* *UC03*: neue Gegenstände aufnehmen
+// und leeres Fach finden
+* *UC04*: Gegenstände deinventarisieren 
+* *UC05*: Status manuell ändern
+* *UC06*: Gegenstände suchen
+* *UC07*: Übersicht anzeigen
+* *UC08*: Übersicht für Wartung anzeigen
+* *UC09*: Systemmeldungen prüfen
+* *UC10*: Nutzungsverlauf anlegen
+* *UC11*: Anmeldung ermöglichen
+* *UC12*: User verwalten
+* *UC13*: Backup erstellen
+//* *UC12*: User anlegen
+//* *UC13*: Userrechte bearbeiten
+//* *UC14*: User bearbeiten
+//* *UC15*: User löschen
+//* *UC16*: Backup erstellen
 
 //*Allgemein*
 
@@ -73,10 +73,4 @@ include::use_case_11.inc.adoc[]
 <<<
 include::use_case_12.inc.adoc[]
 <<<
-//include::use_case_13.inc.adoc[]
-<<<
-include::use_case_14.inc.adoc[]
-<<<
-include::use_case_15.inc.adoc[]
-<<<
-include::use_case_16.inc.adoc[]
+include::use_case_13.inc.adoc[]

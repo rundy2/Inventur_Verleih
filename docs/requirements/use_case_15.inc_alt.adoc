@@ -1,14 +1,14 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Backup erstellen>
+== Use-Case: User löschen
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Erstellen eines Backup durch einen Admin.
+Der Use Case beschreibt das Löschen eines Benutzers durch einem Admin
 
 === Kurzbeschreibung der Akteure
 
 ==== Admin
-Admin möchte einen Backup erstellen.
+Admin möchte einen Benutzer Löschen
 
 === Vorbedingungen
 Der Admin hat die Webseite ausgewählt und ist eingeloggt.
@@ -22,11 +22,16 @@ Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 . <Standardablauf Schritt 1>
 . …
 
-. Der Use Case beginnt, wenn der Admin die Schaltfläche Backup wählt.
-. Der Adminnwender bestätigt die Meldung zum erstellen das Backups.
-. Das System erstellt eine komprimierte Datei mit allen Daten der Datenbank und legt diese im Archiv-Ordner ab.
-. Das System zeigt dem Admin die Bestätigung der Backup erstellung sowie den Dateiname (Zeitstempel) an.
-. Das System leitet den Admin zurück zum Hauptseite.
+. Der Use Case beginnt, wenn der Admin die Benutzerverwaltung öffnet.
+. Das System zeigt alle Anwender an.
+. Der Admin kann durch Filter die Auswahl verkleinern.
+. Der Admin wählt den Anwender aus.
+. Das System zeigt die Information zu diesem Anwender an.
+. Der Admin wählt den Lösch Button
+. Der Admin bestätigt die Sicherheitsmeldung
+. Der Admin muss sich durch eingabe vom Passwort authentifizieren
+. Das System ändert Anwender Status auf "gelöscht".
+. Das System meldet "Anwender x gelöscht" und zeigt die Benutzerverwaltung an.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
@@ -34,8 +39,8 @@ Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 
 ==== Alternativer Ablauf
 Abbruch wenn:
-. Meldung nicht bestätigt wird
-. Rückkehr zum Hauptseite
+. Sicherheitsmeldung nicht bestätigt wird
+. Passwort authentifizieren fehlschlägt
 
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
@@ -62,3 +67,4 @@ Abbruch wenn:
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
 ==== <Besondere Anforderung 1>
+* Was passiert mit ausgeliehen Gegenständen?

@@ -1,6 +1,6 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Login>
+== Use-Case: Anmeldung ermöglichen
 
 === Kurzbeschreibung
 Der Use Case beschreibt den prozess das Logins durch einen Benutzer oder Admin.
