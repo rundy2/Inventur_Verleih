@@ -32,7 +32,7 @@ imagesdir: images
 //* *UC13*: Admin Bearbeiten User Rechte
 * *UC14*: Admin Bearbeiten User
 * *UC15*: Admin Löschen User
-* *UC16*: Backup Erstellung (Admin) Automatisch?
+* *UC16*: Backup erstellen
 
 //*Allgemein*
 

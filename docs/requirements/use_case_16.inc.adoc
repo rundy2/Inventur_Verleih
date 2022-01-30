@@ -1,14 +1,14 @@
 //Nutzen Sie dieses Template als Grundlage für die Spezifikation *einzelner* Use-Cases. Diese lassen sich dann per Include in das Use-Case Model Dokument einbinden (siehe Beispiel dort).
 
-== Use-Case: <Admin erstellt Backup>
+== Use-Case: <Backup erstellen>
 
 === Kurzbeschreibung
-Der Use Case beschreibt das Erstellen eines Backup durch einem Admin
+Der Use Case beschreibt das Erstellen eines Backup durch einen Admin.
 
 === Kurzbeschreibung der Akteure
 
 ==== Admin
-Admin möchte einen Backup erstellen
+Admin möchte einen Backup erstellen.
 
 === Vorbedingungen
 Der Admin hat die Webseite ausgewählt und ist eingeloggt.
