@@ -63,22 +63,22 @@ image::Projektmap.png[]
 |
 * Aufgabe verstehen
 * Vision erarbeiten
-| Date from/Date to
+| Date 15.11.21
 | KW50
 
 | LCA/1
 |
 * Analyse
-* Use-Cases erarbeiten
-| Date from/Date to
+* Use-Cases, Stakeholder erarbeiten
+| Date 10.12.21
 | KW52
 
 | LCA/2
 |
 * Analyse
-* Use-Cases erarbeiten
-| Date from/Date to
-| KW52
+* Design, Wireframes, Design, Domain Model, Vision, SWR
+| Date 01.01.22
+| KW04
 |===
 
 == Deployment

@@ -1,5 +1,5 @@
 = Iteration Plan 01: {project-name}
-AFabian Krähmer <fabian.kraehmer@htw-dresden.de>
+Fabian Krähmer <fabian.kraehmer@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
 // Platzhalter für weitere Dokumenten-Attribute
@@ -23,8 +23,6 @@ include::../_includes/default-attributes.inc.adoc[]
 == Wesentliche Ziele
 //Nennen Sie 1-5 wesentliche Ziele für die Iteration.
 
-Beispiele:
-
 * Stichprobenartige Analyse der Stakeholder, Use-Cases
 * Festlegung Szenarien
 * Definition Glossar
@@ -33,15 +31,16 @@ Beispiele:
 == Aufgabenzuordnung
 //Dieser Abschnitt sollte einen Verweis auf die Work Items List enthalten, die die für diese Iteration vorgesehenen Aufgaben dokumentiert sowie die Zuordnung dieser Aufgaben zu Teammitgliedern. Alternativ können die Aufgaben für die Iteration und die Zuordnung zu Teammitgliedern in nachfolgender Tabelle dokumentiert werden - je nach dem, was einfacher für die Projektbeteiligten einfacher zu finden ist.
 
-Die in dieser Iteration geplanten Aufgaben sind in der Work Items List dargestellt (hier Verweis einfügen).
+Die in dieser Iteration geplanten Aufgaben sind in der Work Items List dargestellt.
 
-_alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
-[%header, cols="3,1,1,1,2,1,1,1,1"]
-|===
-| Aufgabe bzw. Beschreibung | Priorität | Schätzung der Größe (Punkte) |Status | Referenzen | geplante Iteration | Zugewiesen (Name) | Gearbeite Stunden | Schätzung der verbleibenden Stunden
+image:LCO.png[]
+//_alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
+//[%header, cols="3,1,1,1,2,1,1,1,1"]
+//|===
+//| Aufgabe bzw. Beschreibung | Priorität | Schätzung der Größe (Punkte) |Status | Referenzen | geplante Iteration | Zugewiesen (Name) | Gearbeite Stunden | Schätzung der verbleibenden Stunden
 
-| x | x | x | x | x | x | x | x | x
-|===
+//| x | x | x | x | x | x | x | x | x
+//|===
 
 
 == Probleme (optional)
@@ -51,18 +50,12 @@ _alternativ:_ Die folgenden Aufgaben werden in dieser Iteration bearbeitet:
 |===
 | Problem | Status | Notizen
 
-| x | x | x
+| Hans Kuntsche nicht verfügbar | gelöst | wird von anderen Teammitgliedern ausgeglichen
 |===
 
 
 == Bewertungskriterien
 //Eine kurze Beschreibung, wie Erfüllung die o.g. Ziele bewertet werden sollen.
-
-Beispiele:
-
-* 97% der Testfälle auf Systemebene sind erfolgreich.
-* Gemeinsame Inspektion des Iterations-Ergebnisses (Inkrement) mit den Abteilungen X und Y ergibt positive Rückmeldung.
-* Technische Präsentation / Demo erhält positive Rückmeldungen.
 
 
 == Assessment
