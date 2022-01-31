@@ -2,10 +2,8 @@
 Jamal Alkharrat <s82035@htw-dresden.de>;
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
-imagesdir: images
+
 // Platzhalter für weitere Dokumenten-Attribute
-
-
 
 == Zweck
 
