@@ -147,10 +147,3 @@ image::logische_sicht.jpeg[]
 //Beschreibt die physischen Knoten (Rechner) des Systems, der Prozesse, Threads und Komponenten, die in diesen Knoten ausgeführt werden. Diese Sicht wird nicht benötigt, wenn das System in einem einzelnen Prozess oder Thread ausgeführt wird.
 
 - Server-Client
-
-=== Use cases
-//Eine Liste oder ein Diagramm der Use Cases, die architektur-relevante Anforderungne enthalten.
-
-Diagramm der Use Cases, die architektur-relevante Anforderungen enthalten:
-
-image::Use_Case_Model_v2.jpg[]

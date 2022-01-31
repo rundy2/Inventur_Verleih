@@ -1,4 +1,4 @@
-= Iteration Plan (Analyse) 01: {project-name}
+= Iteration Plan (Analyse) 02: {project-name}
 Anja Claus <s81009@htw-dresden.de>;  Silko Grellmann <s82695@htw-dresden.de>;  Felix Helmert <s82049@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
@@ -12,10 +12,15 @@ include::../_includes/default-attributes.inc.adoc[]
 |===
 | Meilenstein | Datum
 
-| Beginn der Iteration | 15.12.2021
-| Ausarbeitung Wireframes | 28.12.2021
-| Ausarbeitung Design | 28.12.2021
-| Ende der Iteration | 31.12.2021
+| Beginn der Iteration | 01.01.2022
+| Ausarbeitung Vision | 04.01.2022
+| Ausarbeitung Domain Model | 04.01.2022
+| Ausarbeitung System-wide requirements | 16.01.2022
+| Backend Entwurf entwickeln | 18.01.2022
+| Frontend Entwurf entwickeln | 24.01.2022
+| Lauffähiger Prototyp | 26.01.2022
+| Ende der Iteration | 28.01.2022
+
 
 |===
 
@@ -41,7 +46,7 @@ image:LCA.png[]
 |===
 | Problem | Status | Notizen
 
-| Jamal oft nicht anwesend | gelöst | Einführung von Standards für Kommunikation (Zweischienen-System)
+| Dominiques Fachwissen ungeordnet | gelöst | Teilnahme am Spring-Boot-Camp
 |===
 
 
@@ -51,4 +56,4 @@ image:LCA.png[]
 
 == Assessment
 //In diesem Abschnitt werden die Ergebnisse und Maßnahmen der Bewertung erfasst und kommuniziert. Die Bewertung wird üblicherweise am Ende jeder Iteration durchgeführt. Wenn Sie diese Bewertungen nicht machen, ist das Team möglicherweise nicht in der Lage, die eigene Arbeitsweise ("Way of Working") zu verbessern.
-image:Alpha_LCA_1.png[]
+image:Alpha_LCA_2.png[]
