@@ -27,8 +27,9 @@ include::../_includes/default-attributes.inc.adoc[]
 
 == Wesentliche Ziele
 //Nennen Sie 1-5 wesentliche Ziele für die Iteration.
-
-
+* Vision, Domain Model und SWR entwickeln und verstehen
+* Erste Programmierarbeit und frühzeitig Probleme erkennen
+* Besonderes Augenmerk auf Backend und Test von diesem
 
 
 == Aufgabenzuordnung
