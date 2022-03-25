@@ -61,7 +61,6 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
  - *NFRR-1:* Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. +
 
-
 - *NFRR-2:* Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
 
 - *NFRR-3:* Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden. +
