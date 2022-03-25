@@ -1,4 +1,4 @@
-= Iteration Plan 01: {project-name}
+= Iteration Plan 00: {project-name}
 Fabian Krähmer <fabian.kraehmer@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
