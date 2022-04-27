@@ -4,4 +4,5 @@
 *.pdf
 !se1_belegabgabe_I6_2-1.pdf
 .asciidoctor/
+.vscode/
 **/images/diagrams/
