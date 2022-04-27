@@ -73,5 +73,5 @@ include::use_case_05.inc.adoc[lines=22..29]
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
 ==== Usability 
-- einfache Bedinbarkeit 
+- einfache Bedienbarkeit 
 - Sicherheitsabfrage und gute Beschreibungen 

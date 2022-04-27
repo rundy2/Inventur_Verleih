@@ -20,7 +20,7 @@ Der Anwender hat die Webseite ausgewählt und ist eingeloggt.
 . Das System findet den Gegenstand in der Datenbank und zeigt die Informationen (u.a. den Status) an. 
 . Der Anwender wählt "Rückgabe" aus
 . Das System zeigt den geplanten Lagerort an.
-. Der Anwender legt den Gegeenstand in das geplannte Fach
+. Der Anwender legt den Gegenstand in das geplante Fach
 . Der Anwender bestätigt die Statusänderung von "ausgeliehen" auf "auf Lager" sowie den neuen Lagerort
 . Der Use Case ist abgeschlossen.
 

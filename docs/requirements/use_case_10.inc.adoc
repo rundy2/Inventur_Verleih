@@ -7,7 +7,7 @@ Der Use Case beschreibt das automatische Anlegen einer Gegenstandshistorie.
 
 === Kurzbeschreibung der Akteure
 
-==== <User>
+==== User
 Will die Ausleih- und Wartungshistorie eines Gegenstandes sowie dessen erste Aufnahme in die Datenbank einsehen
 
 === Vorbedingungen
@@ -37,7 +37,7 @@ Will die Ausleih- und Wartungshistorie eines Gegenstandes sowie dessen erste Auf
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Ausleihen eines Gegenstandes>
+==== Ausleihen eines Gegenstandes
 . Der User x will Gegenstand y bis zum Datum z ausleihen, gibt alle dafür notwendigen Daten ein und bestätigt die Aktion.
 . Anschließend kann der User x seine Änderung in der Historie von Gegenstand y einsehen.
 

@@ -12,7 +12,7 @@ Der Zweck dieses Dokuments ist es, die wesentlichen Bedarfe und Funktionalitäte
 Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System aus Sicht und mit den Begriffen der künftigen Anwender zu beschreiben.
 
 === Gültigkeitsbereich (Scope)
-Dieses Visions-Dokument bezieht sich auf das Digitale Inventur und Verleih System, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, Ausleihen und zurückgeben von Geggenständen zu dokumentieren, Benutzer im System anzulegen und desen Rechte zu bearbeiten, sich per Login zu authentifizieren und Backups anzulegen, um damit eine strukturierte Inventarverwaltung zu erreichen und Wartungen besser zu planen.
+Dieses Visions-Dokument bezieht sich auf das digitale Inventur und Verleih System, das von Team I6 entwickelt wird. Das System wird es der HTW Arbeitsgruppe für Smart Production Systems erlauben, Ausleihen und zurückgeben von Gegenständen zu dokumentieren, Benutzer im System anzulegen und desen Rechte zu bearbeiten, sich per Login zu authentifizieren und Backups anzulegen, um damit eine strukturierte Inventarverwaltung zu erreichen und Wartungen besser zu planen.
 
 === Definitionen, Akronyme und Abkürzungen
 //Verweis passend zum Belegabgabe-Template se1_belegabgabe_t00.adoc
@@ -72,7 +72,7 @@ Beispiel:
 | einer Excel-Tabelle
 
 | Unser Produkt
-| ist struktureiert, modular aufgebaut, besitzt eine User- und Rechteverwaltung und es erlaubt parallelen Zugriff.
+| ist strukturiert, modular aufgebaut, besitzt eine User- und Rechteverwaltung und es erlaubt parallelen Zugriff.
 |===
 
 ////
@@ -101,7 +101,7 @@ Beispiel Produkt:
 | - erteilen einer präzise Aufgabenstellung +
 - überprüfen, ob Lösungsvorschläge mit Erwartungen übereinstimmen
 
-| HTW Rechenzentrum / Sever Informatik/Mathematik
+| HTW Rechenzentrum / Server Informatik/Mathematik
 | stellt Betriebsumgebung
 | - Bereitstellung der VM - Regelung zum Betrieb der VM - Bereitstellung/Berieb Intranet
 
@@ -182,7 +182,7 @@ Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 | Anforderung | Priorität | Geplantes Release
 |einfache Bedienbarkeit mittels GUI| hoch | xx
 
-|System kann nur online im HTW-Netz genutzt werden (nicht offline/ auserhalb) | mittel | xx
+|System kann nur online im HTW-Netz genutzt werden (nicht offline/ außerhalb) | mittel | xx
 
 |System muss auf allen gängigen Browsern sowie auf mobilen
 Endgeräten lauffähig sein | mittel | xx

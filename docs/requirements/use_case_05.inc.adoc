@@ -4,12 +4,12 @@
 
 === Kurzbeschreibung
 //<Kurze Beschreibung des Use Case>
-Der abhängige Use Case beschreibt den Vorgang den Status eiens Gegenstands manuell zu ändern. 
+Der abhängige Use Case beschreibt den Vorgang, den Status eines Gegenstands manuell zu ändern. 
 
 === Kurzbeschreibung der Akteure
 
 ==== Administrator 
-Möchte die Möglichekeit den Status eines Gegenstandes zu ändern. 
+Möchte die Möglichkeit den Status eines Gegenstandes zu ändern. 
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
@@ -23,7 +23,7 @@ Möchte die Möglichekeit den Status eines Gegenstandes zu ändern.
 . Der Admin sucht durch Nutzung der Filter oder Eingabe der Seriennummer den Gegenstand 
 . Das System findet den Gegenstand in der Datenbank und zeigt die Informationen an. 
 . Der Admin ändert den Status. 
-. Das System ändert automatisch den Stuatus des Faches.
+. Das System ändert automatisch den Status des Faches.
 . Der Admin bestätigt die Statusänderung. 
 . Das System speichert die Änderung. 
 . Der Use Case ist abgeschlossen.

@@ -61,7 +61,7 @@ Test: EAN-13 Barcode aus Seriennummer generieren und mit einem Barcodeleser scan
 - *NFRR-1: Es darf kein falscher Benutzername oder falsches Passwort angegeben werden.* +
 Test: Zur Überprüfung wird getestet, ob in diesen Anwendungsfällenin entsprechender Hinweistext angezeigt wird.
 
-- *NFRR-2: Ein neuer Benutzername darf kein breits vergeben Namen erhalten.*
+- *NFRR-2: Ein neuer Benutzername darf keinen bereits vergebenen Namen erhalten.*
 
 - *NFRR-3: Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.* +
 Test: Überprüfung auf Inkonsistenz der Daten.
