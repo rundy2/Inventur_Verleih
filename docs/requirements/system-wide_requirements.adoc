@@ -30,8 +30,8 @@ Test: Werden Security-Token verwendet, ist dies sicher gegen Session-Hijacking?
 - *SWFR-4: Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein.* +
 Test: Das Ausführen von SQL-Injections darf nicht möglich sein.
 
-- *SWFR-5: Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden.* +
-Test: In der Datenbank nach Passwörtern suchen (sollten nicht in Klartext sein)
+- *SWFR-5: Die Passwörter der Useraccounts müssen sicher und verschlüsselt in der Datenbank gespeichert werden.* +
+Test: in der Datenbank nach Passwörtern suchen (sollten nicht in Klartext zu finden sein)
 
 
 == Qualitätsanforderungen für das Gesamtsystem
@@ -39,7 +39,7 @@ Test: In der Datenbank nach Passwörtern suchen (sollten nicht in Klartext sein)
 
 === Benutzbarkeit (Usability)
 //Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlernen, Standards für die Benutzerfreundlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.)
-- *NFRU-1: Die Sprache der Benutzeroberfläche ist Deutsch.*
+- *NFRU-1: Die Sprache der Benutzeroberfläche ist Englisch.*
 - *NFRU-2: Die Startseite soll alle möglichen Aktionen anzeigen, für die der Benutzer die Rechte hat.* +
 Test: Unterschiedliche Personen (Admin/ normaler Benutzer) werden unterschiedliche Aktionen auf der Startseite angezeigt. 
 - *NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt.* + 
@@ -52,8 +52,8 @@ Test: Es werden mindestens 7 Gegenstände im System eingeführt. Es wird überpr
 Test: Unterschiedliche Gegenstände werden ausgeliehen oder zurückgegeben und die Klicks werden gezählt. 
 - *NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ.* +
 Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Anschließend wird kontrolliert, ob das System das Datum im richtigen Format gespeichert hat. 
-- *NFRU-7: Die Gegenstände müssen über einen Barcode gefunden werden können* + 
-Test: EAN-13 Barcode aus Seriennummer generieren und mit einem Barcodeleser scannen.
+- *NFRU-7: Die Gegenstände müssen über einen Barcode gefunden werden können.* + 
+Test: Ein Objekt durch scannen eines Barcodes finden.
 
 === Zuverlässigkeit (Reliability)
 // Zuverlässigkeit beinhaltet die Fähigkeit des Produkts und/oder des Systems unter Stress und ungünstigen Bedingungen am laufen zu bleiben. Spezifizieren Sie Anforderungen für zuverlässige Akzeptanzstufen, und wie diese gemessen und evaluiert werden. Vorgeschlagene Themen sind Verfügbarkeit, Häufigkeit und Schwere von Fehlern und Wiederherstellbarkeit.
@@ -84,18 +84,17 @@ Test: Ausführen/Starten des Servers von einer projektfremden Person.
 
 === Einschränkungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
-* SpringBoot
-* ReactJS 
-* min Java 8; empfohlen Java 11
-* Systeme: 
-** Windows Vista bis 11, Windows Server 2008 R2 SP1 bis 2022 +
-Linux Oracle / Red Hat / Suse / Ubuntu +
- macOS X 10.8.3+ (Mountain Lion) bis macOS 12
-
-NOTE: Systemanforderungen +
- ca. 4 GB RAM, 2 GHz Prozessor (min. 1,4 GHz x64), Speicherplatz Festplatte ca. 7 GB
-
-
+Unsere Anwendung besteht aus 2 Teilen, dem Frontend und dem Backend. 
+Für das Entwickeln des Backends nutzen wir das SpringBoot Framework, da unser Team bereits einige Vorerfahrungen dazu hat und die Anbindung und Verwendung einer Datenbank damit einfach und flexibel ist.
+Für das Frontend verwenden wir die ReactJS Bibliothek, da diese eine Vielzahl von schönen Nutzerelementen mit verschiedenen Animationen und Layouts bereitstellt.
+        
+Die Hardwareanforderungen unserer Anwendung orientieren sich an den Anforderungen des von uns verwendeten Frameworks. Für SpringBoot ist mindestens Java 8 vorausgesetzt, empfohlen wird aber Java 11, woraus sich folgende Hardwareanforderungen ergeben:
+        
+        2 GHz Prozessor (min 1,4 GHz x64)
+        4 GB RAM
+        7 GB freier Festplattenspeicher
+        
+        Wir empfehlen die Nutzung unserer Anwendung unter einem Linux Ubuntu Betriebssystem, da wir die Anwendung unter diesem entwickelt haben. Die Anwendung sollte aber auch auf jedem anderen System laufen, welches Java unterstützt.
 
 === Organisatorische Randbedingungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
