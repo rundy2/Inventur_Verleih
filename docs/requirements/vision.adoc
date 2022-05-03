@@ -141,12 +141,12 @@ Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 [%header, cols="4,1,4,1"]
 |===
 | Bedarf | Priorität | Features | Geplantes Release
-| keine schnelle, einheitliche Übersicht über alle Gegenstände vorhanden
+| keine schnelle, aussagekräftige, zentrale Übersicht über alle Gegenstände vorhanden, die von überall aus abrufbar ist
 | hoch
 | strukturierte Anzeige mit Lagerplatz/Status aller Gegenstände
 | xx
 
-| digitales hinzufügen von Gegenständen ins Inventar nicht möglich (neue Gegenstände gehen in der Menge unter)
+| zentrales, einfaches und übersichtliches Hinzufügen von Gegenständen ins Inventar nicht möglich 
 | hoch
 | über Suche nach leerem Lagerplatz, Eingabe von Gegestands Daten neue Gegenstände zum Inventar hinzufügbar
 | xx
@@ -156,17 +156,17 @@ Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
 | Authentifikation der Client per Login, Sichere Datenübermittlung
 | xx
 
-| Ausleihen von Gegenständen nur über Papierform machbar/festhaltbar
+| Unübersichtliches, umständliches Suchen und Ausleihen der Geräte 
 | hoch
-| digitales Ausleihen der Gegenstände über suchen und Status ändern
+| vereinfachtes Ausleihen der Gegenstände über suchen und Status ändern
 | xx
 
-| Rückgabe von ausgeliehenen Gegenständen nur über Papierform machbar/festhaltbar
+| Unübersichtliches, umständliches Suchen und Zurückgeben der Geräte 
 | mittel
-| digitale Rückgabe der ausgeliehenen Gegenstände über Eingabe der ID -> Anzeige Lagerort, Status ändern 
+| vereinfachte Rückgabe der ausgeliehenen Gegenstände über Eingabe der ID -> Anzeige Lagerort, Status ändern 
 | xx
 
-| Falls Inventurzettel oder Ausleihzettel verloren gehen, besteht keine Chance auf Wiedererlangung
+| Falls Exceltabelle verloren geht, besteht wenig Chance auf Wiedererlangung, außerdem keine älteren Datenstände (Versionen) abrufbar
 | niedrig
 | Erstellung von Backups durch Kopieren der Datenbank
 | xx
