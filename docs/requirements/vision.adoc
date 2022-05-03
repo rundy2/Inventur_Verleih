@@ -125,12 +125,9 @@ personenbezogenen Daten und Gefahrstoffen
 
 
 === Benutzerumgebung
-Beschreiben Sie die Arbeitsumgebung des Nutzers. Hier sind einige Anregungen:
-
-//Zutreffendes angeben, nicht zutreffendes streichen oder auskommentieren
-. Der Benutzer steht im Lager, eine Verbindung zum System ist per Drahtloser Datenverbindung möglich
-
-. Der Benutzer hat ein mobiles Endgerät (bspw. Android, iOS) zur Verfügung
+. Der Benutzer steht im Lager, die Verbindung zum System wird per Drahtloser Datenverbindung (eduroam Wlan) hergestellt. Dabei könnte das Problem auftreten, dass der Benutzer schlechten oder gar kein Wlan empfang hat. 
+. Eine Internetverbindung ist zur Nutzung des Systems zwingend erforderlich.
+. Der Benutzer hat ein mobiles Endgerät (bspw. Smartphone, Tablett) zur Verfügung. Alternative kann auch ein Desktop PC genutzt werden. 
 
 
 == Produkt-/Lösungsüberblick
