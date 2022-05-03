@@ -14,21 +14,22 @@ Er soll unter anderem die Kommunikationsmittel und Werkzeuge definieren.
 //Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.
 Die Aufgaben der Softwareentwicklung werden wie folgt aufgeteilt:
 
-. Anja Claus (Wing) – Analyse – Analyst 
 . Felix Helmert – Analyse und Entwurf 
 . Jamal Alkharrat – Entwurf – Architect 
 . Dominique Linzmajer – Entwurf und Implementierung - Technical Writer 
+. Jonas Koloska (Winfo) – Implementierung - Frontend
 . Moritz Lehmann – Implementierung - Developer 
 . Silko Grellmann (Verwaltungsinfo) – Analyse/Test – Deployment Engineer  
-. Jonas Koloska (Winfo) – Test - Tester 
+. Nico Papke - Test - Tester
 . Fabian Krähmer – Projektmanagement  
 
-== Praktiken und Bewertung
-//Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
+
 === Kommunikationsmedien
 Microsoft Teams - Plattform für Meetings
 
 Discord/WhatsApp - Plattform für Chats und Ideenfindung
+
+Doodle - Plattform zum Planen von Meetings
 
 === Transportmedien
 Github - Plattform für Austausch des Programmcodes und Aufgabenverteilung
@@ -44,6 +45,22 @@ VS Code - Plattform für Entwicklung
 Microsoft Word - Anfertigung von Protokollen für Meetings
 
 Microsoft Excel - Kurzfristige Ordnung von Daten/Aufgabenzuordnung
+
+=== Arbeitsweise
+Wir führen unsere zweiwöchentlichen internen Meetings immer über MS Teams aus und stellen dabei das Erreichte vor. MS Teams eignet sich dafür besonders, da man direkt aus Doodle eine Einladung an alle Teilnehmer versenden kann und diese dann einfach teilnehmen können. In diesen Meetings werden Fragen und Probleme geklärt um in der Iteration weiter voran zu kommen oder diese abzuschließen. Die großen Meetings mit dem Coach sowie den Themenerstellern finden ebenfalls über MS Teams statt und werden von einem, vorher definierten, Protokollführer protokolliert. Dieses wird dann in der MS Teams Datenablage und im OneDrive gesichert und ist somit jedem jederzeit zugänglich. Außerdem haben wir die Entwicklung in unterschiedliche Teams eingeteilt: *Analyse*, *Entwurf*, *Implementierung* und *Test/Deployment*. Der Projektleitung hilft dies immens weiter, da es für jedes Team einen Ansprechpartner gibt, welcher intern die Aufgaben verteilt und betreut. Des Weiteren existiert ein Discordserver für den konstanten Informationsfluss und kurze Wege zum Besprechen von eventuellen Randnotizen oder Meetings für die einzelnen oben genannten *Teams*.
+Github nutzen wir für die Synchronisation und zum entwickeln des eigentlichen Programmcodes, die Funktion der *branches* und *stashes* hilft uns verschieden Wege auszuprobieren und sie letztendlich durch einen *merge* zu vereinen. Außerdem lässt sich über die Funktion der Milestones und Issues ein guter Arbeitsfluss gewährleisten. Jede Arbeitanweisung wird als eigener Issue generiert und in die Stati *To Do*, *In Progress* und *Done* gepackt.00000
+
+== Praktiken und Bewertung
+//Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).
+. Managment Practices:
+.. Iterative Development
+
+. Technical Practices
+.. Evolutionary Architecture
+
+. Deployment Practices
+.. Documentation and Training
+
 
 == Meilensteine und Ziele
 //Define and describe the high-level objectives for the iterations and define milestones. For example, use the following table to lay out the schedule. If needed you may group the iterations into phases and use a separate table for each phase

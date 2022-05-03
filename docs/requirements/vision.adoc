@@ -103,7 +103,7 @@ Beispiel Produkt:
 
 | HTW Rechenzentrum / Server Informatik/Mathematik
 | stellt Betriebsumgebung
-| - Bereitstellung der VM - Regelung zum Betrieb der VM - Bereitstellung/Berieb Intranet
+| - Bereitstellung der VM - Regelung zum Betrieb der VM - Bereitstellung/Betrieb Intranet
 
 | Gesetzgeber 
 | gibt rechtliche Rahmenbedingungen vor,
@@ -189,5 +189,5 @@ Endgeräten lauffähig sein | mittel | xx
 
 | Software muss modular aufgebaut sein | mittel | xx
 
-| Einsatz einer relationales Datenbankmodell | hoch | xx
+| Einsatz eines relationales Datenbankmodell | hoch | xx
 |===
