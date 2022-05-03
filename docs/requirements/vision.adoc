@@ -153,6 +153,11 @@ personenbezogenen Daten und Gefahrstoffen
 | Authentifikation der Client per Login, Sichere Datenübermittlung
 | xx
 
+| Webseitenansicht im Querformat
+| mittel
+| Webseitenansicht für Mobile Geräte Optimiert (Hochkant, große Buttons)
+| xx
+
 | Unübersichtliches, umständliches Suchen und Ausleihen der Geräte 
 | hoch
 | vereinfachtes Ausleihen der Gegenstände über suchen und Status ändern
