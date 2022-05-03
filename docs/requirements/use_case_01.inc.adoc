@@ -18,7 +18,7 @@ Möchte Anwender die Möglichkeiten geben, sich einen Gegenstand auszuleihen.
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 - Gegenstand ist im System aufgeführt und als verfügbar angezeigt 
-- Anwender hat den Lagerplatz des Gegenstandes gefunden
+- Anwender hat den Gegenstand im Lager gefunden
 - Anwender ist angemeldet 
 - System ist aufgerufen 
 
