@@ -8,7 +8,7 @@ Der Use Case bescheibt das Anzeigen von Übersichten nach bestimmten Filterkrite
 
 === Kurzbeschreibung der Akteure
 
-==== Anwender
+==== Benutzer
 Möchte sich Gesamtübersichten oder Übersichten beispielsweise sortiert nach Zimmer, nach Art des Gegenstands, nach Verfügbarkeit etc. anzeigen lassen 
 
 === Vorbedingungen
@@ -22,10 +22,10 @@ Möchte sich Gesamtübersichten oder Übersichten beispielsweise sortiert nach Z
 
 . Der Use Case beginnt, wenn der Anwender die Suchfunktion aufruft.
 . Der Anwender gibt keine Suchkriterien ein.
-. System zeigt alle Gegegenstände und deren Status und Lagerort an
+. System zeigt alle Gegegenstände und deren Status und Lagerort an.
 . Der Anwender kann die Ergebnisliste durch Klicken auf die Spaltenüberschrift neusortier. 
-. Anwender wählt einen Gegenstand aus 
-. System zeigt weitere Informationen zum Gegenstand 
+. Anwender wählt einen Gegenstand aus.
+. System zeigt weitere Informationen zum Gegenstand.
 . Der Use Case ist abgeschlossen.
 
 

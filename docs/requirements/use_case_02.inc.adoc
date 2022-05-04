@@ -18,10 +18,10 @@ Der Anwender hat die Webseite ausgewählt und ist eingeloggt.
 
 . Der Use Case beginnt, wenn der Anwender einen Barcode eines Gegenstandes scannt. 
 . Das System findet den Gegenstand in der Datenbank und zeigt die Informationen (u.a. den Status) an. 
-. Der Anwender wählt "Rückgabe" aus
-. Das System zeigt den geplanten Lagerort an.
-. Der Anwender legt den Gegenstand in das geplante Fach
-. Der Anwender bestätigt die Statusänderung von "ausgeliehen" auf "auf Lager" sowie den neuen Lagerort
+. Der Anwender wählt "Rückgabe" aus.
+. Das System zeigt den reservierten Lagerort an.
+. Der Anwender legt den Gegenstand an den reservierten Ort.
+. Der Anwender bestätigt die Statusänderung von "ausgeliehen" auf "auf Lager" sowie den neuen Lagerort.
 . Der Use Case ist abgeschlossen.
 
 
@@ -67,4 +67,4 @@ include::use_case_05.inc.adoc[lines=22..29]
 //==== <Besondere Anforderung 1>
 
 ==== Erweiterungen
-* Anzeige aller Aktuell vom Anwender ausgeliehenen Gegenstände. Zur schnelleren Manueller Auswahl -> gegebenfalls in Suchmaske als Filter Funktion.
+* Anzeige aller aktuell vom Anwender ausgeliehenen Gegenstände zur schnelleren manuellen Auswahl -> gegebenfalls in Suchmaske als Filterfunktion.
