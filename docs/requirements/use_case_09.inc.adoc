@@ -7,17 +7,17 @@ Der Use Case beschreibt den Erhalt von Systembenachrichtigungen bei jeder Änder
 
 === Kurzbeschreibung der Akteure
 
-==== <User>
+==== Benutzer
 Will eine Rückmeldung über erfolgreiche Änderungen an der Datenbank
 
-==== <Admin>
+==== Admin
 Will eine Rückmeldung über erfolgreiche Änderungen an der Datenbank
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
 . Der User/Admin muss erfolgreich eingeloggt sein.
-. Der User/Admin muss die Berechtigungen zum Ändern besitzen
+. Der User/Admin muss die Berechtigungen zum Ändern besitzen.
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
@@ -30,19 +30,20 @@ Will eine Rückmeldung über erfolgreiche Änderungen an der Datenbank
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Aktion ist fehlgeschlagen>
+==== Aktion ist fehlgeschlagen
 Wenn das Schreiben der Änderung in der Datenbank fehlgeschlagen ist:
+
 . erhält der User/Admin eine Mitteilung über das Fehlschlagen der Aktion und der Bitte es erneut zu versuchen
 . der User/Admin muss die Änderung neu veranlassen.
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <User leiht einen Gegenstand erfolgreich aus>
+==== User leiht einen Gegenstand erfolgreich aus
 Der User wählt einen verfügbaren Gegenstand aus, gibt das Datum der Rückgabe an und wählt "ausleihen" aus. Danach bestätigt er die Aktion. Anschließend erhält er die Meldung, dass die Aktion erfolgreich war.
 
-==== <User leiht einen Gegenstand nicht erfolgreich aus>
-Der User wählt einen verfügbaren Gegenstand aus, gibt das Datum der Rückgabe an und wählt "ausleihen" aus. Danach bestätigt er die Aktion. Anschließend erhält er die Meldung, dass 
+==== User leiht einen Gegenstand nicht erfolgreich aus
+Der User wählt einen verfügbaren Gegenstand aus, gibt das Datum der Rückgabe an und wählt "ausleihen" aus. Danach bestätigt er die Aktion. Anschließend erhält er die Meldung, dass der Ausleihvorgang nicht erfolgreich war.
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
