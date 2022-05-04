@@ -141,37 +141,37 @@ personenbezogenen Daten und Gefahrstoffen
 | keine schnelle, aussagekräftige, zentrale Übersicht über alle Gegenstände vorhanden, die von überall aus abrufbar ist
 | hoch
 | strukturierte Anzeige mit Lagerplatz/Status aller Gegenstände
-| xx
+| 01.06.2022
 
 | zentrales, einfaches und übersichtliches Hinzufügen von Gegenständen ins Inventar nicht möglich 
 | hoch
 | über Suche nach leerem Lagerplatz, Eingabe von Gegestands Daten neue Gegenstände zum Inventar hinzufügbar
-| xx
+| 01.06.2022
 
 | Unübersichtlichkeit wer welche Gegenstände zu welchem Zeitpunkt ausleiht, zurückgibt 
 | mittel
 | Authentifikation der Client per Login, Sichere Datenübermittlung
-| xx
+| 01.06.2022
 
 | Webseitenansicht im Querformat
 | mittel
 | Webseitenansicht für Mobile Geräte Optimiert (Hochkant, große Buttons)
-| xx
+| 01.06.2022
 
 | Unübersichtliches, umständliches Suchen und Ausleihen der Geräte 
 | hoch
 | vereinfachtes Ausleihen der Gegenstände über suchen und Status ändern
-| xx
+| 01.06.2022
 
 | Unübersichtliches, umständliches Suchen und Zurückgeben der Geräte 
 | mittel
 | vereinfachte Rückgabe der ausgeliehenen Gegenstände über Eingabe der ID -> Anzeige Lagerort, Status ändern 
-| xx
+| 01.06.2022
 
 | Falls Exceltabelle verloren geht, besteht wenig Chance auf Wiedererlangung, außerdem keine älteren Datenstände (Versionen) abrufbar
 | niedrig
 | Erstellung von Backups durch Kopieren der Datenbank
-| xx
+| 01.06.2022
 
 |===
 
