@@ -8,28 +8,28 @@ Der Use Case beschreibt den Vorgang einen bestimmten Gegenstand zu suchen, sodas
 
 === Kurzbeschreibung der Akteure
 
-==== Anwender | HTW Smart Production System
+==== Benutzer
 Möchte herrausfinden wo sich ein Gegenstand befindet. 
 
 === Vorbedingungen
 //Vorbedingungen müssen erfüllt, damit der Use Case beginnen kann, z.B. Benutzer ist angemeldet, Warenkorb ist nicht leer...
 
-- Anwender ist angemeldet 
+- Benutzer ist angemeldet 
 - System ist aufgerufen 
 
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Anwender die Suchfunktion aufruft.
-. Der Anwender gibt seine Suchkriterien ein.
-. System zeigt Suchergebnisse und deren Status und Lagerort an
-. Anwender wählt einen Gegenstand aus 
-. System zeigt weitere Informationen zum Gegenstand 
+. Der Use Case beginnt, wenn der Benutzer die Suchfunktion aufruft.
+. Der Benutzer gibt seine Suchkriterien ein.
+. System zeigt Suchergebnisse und deren Status und Lagerort an.
+. Benutzer wählt einen Gegenstand aus.
+. System zeigt weitere Informationen zum Gegenstand.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 
-. Werden keine Suchkriterien eingegeben, werden alle Gegenstände angezeigt. (Use Case 7)
+Werden keine Suchkriterien eingegeben, werden alle Gegenstände angezeigt. (Use Case 7)
 
 
 ==== Gegenstand nicht vorhanden 
