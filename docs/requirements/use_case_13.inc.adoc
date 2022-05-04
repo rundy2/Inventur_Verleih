@@ -29,9 +29,11 @@ Der Admin hat die Webseite ausgewählt und ist eingeloggt.
 
 ==== Alternativer Ablauf
 Abbruch wenn:
+
 . Meldung nicht bestätigt wird
 . Rückkehr zum Hauptseite
 
+////
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
@@ -57,3 +59,5 @@ Abbruch wenn:
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
 
 ==== <Besondere Anforderung 1>
+
+////
