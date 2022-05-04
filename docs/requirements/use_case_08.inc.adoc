@@ -7,7 +7,7 @@ Der Use Case beschreibt das Aufrufen einer Übersicht, welche alle Gegenstände 
 
 === Kurzbeschreibung der Akteure
 
-==== <User>
+==== Benutzer
 Will wissen welche Gegenstände in die Wartung müssen.
 
 === Vorbedingungen
@@ -22,22 +22,22 @@ Will wissen welche Gegenstände in die Wartung müssen.
 //. Der User bekommt sofort eine Übersicht mit allen Gegenständen angezeigt, die dem nächst (bsp. nächste Woche) zur Wartung müssen.
 //. Der Use Case ist abgeschlossen.
 
-. Der Anwender ruft die Wartungsplanung auf
-. Das System nutzt die Filtersuche (Use Case 6) um alle Gegenstände mit demnächst (bsp. nächste Woche) geplanter Wartung anzuzeigen
+. Der Anwender ruft die Wartungsplanung auf.
+. Das System nutzt die Filtersuche (Use Case 6) um alle Gegenstände mit demnächst (bsp. nächste Woche) geplanter Wartung anzuzeigen.
 . Der Use Case ist abgeschlossen.
 
 === Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
-==== <Es muss kein Gegenstand zur Wartung>
+==== Es muss kein Gegenstand zur Wartung
 Wenn in der nächsten Woche kein Gegenstand zur Wartung muss, wird eine entsprechende Meldung ausgegeben.
 
 === Wesentliche Szenarios
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
-==== <Es muss mindestens ein Gegenstand in der nächsten Woche zur Wartung>
+==== Es muss mindestens ein Gegenstand in der nächsten Woche zur Wartung
 . Es wird dem User eine Tabelle mit den Gegenständen angezeigt, die zur Wartung müssen.
 . In der Tabelle ist der Gegenstand, die Gegenstandskennung (z.B. Seriennummer), der Lagerort, der Status und das genaue Datum aufgelistet.
 
-==== <Es muss kein Gegenstand in der nächsten Woche zur Wartung>
+==== Es muss kein Gegenstand in der nächsten Woche zur Wartung
 . Es wird dem User eine Meldung angezeigt, dass in der nächsten Woche kein Gegenstand zur Wartung muss.
