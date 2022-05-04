@@ -3,19 +3,24 @@
 == Use-Case: Anmeldung ermöglichen
 
 === Kurzbeschreibung
-Der Use Case beschreibt den prozess das Logins durch einen Benutzer oder Admin.
+Der Use Case beschreibt den Prozess das Logins durch einen Benutzer oder Admin.
 
 === Kurzbeschreibung der Akteure
 
-==== Anwender
+==== Benutzer
+Möchte sich anmelden.
+
+==== Admin
+Möchte sich anmelden.
 
 === Vorbedingungen
+Der Benutzer/Admin hat die Webseite aufgerufen und "Login" ausgewählt.
 
 
 === Standardablauf (Basic Flow)
 
-. Der Use Case beginnt, wenn der Anwender/Admin die Webseite aufgerufen hat.
-. Der Anwender gibt seine Zugangsdaten aus Benutzername und Passwort ein und wählt "Login".
+. Der Use Case beginnt, wenn der Benutzer/Admin die Webseite aufgerufen hat und "Login" ausgewählt hat.
+. Der Benutzer gibt seine Zugangsdaten aus Benutzername und Passwort ein und wählt "Login".
 . Das System findet Benutzer in der Datenbank und prüft seine Berechtigungen.
 . Das System leitet den Benutzer auf die Hauptseite weiter.
 . Der Use Case ist abgeschlossen.
@@ -25,10 +30,12 @@ Der Use Case beschreibt den prozess das Logins durch einen Benutzer oder Admin.
 
 ==== Alternativer Ablauf Manuelle Eingabe
 Abbruch wenn:
+
 . Passwort oder Benutzername nicht gefunden.
 . Login für Nutzer gesperrt ist (gelöscht)
 
 
+////
 === Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
@@ -56,3 +63,4 @@ Abbruch wenn:
 ==== <Besondere Anforderung 1>
 
 ==== Erweiterungen
+////
