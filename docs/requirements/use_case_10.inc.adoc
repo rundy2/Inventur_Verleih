@@ -26,11 +26,11 @@ Will die Ausleih- und Wartungshistorie eines Gegenstandes sowie dessen erste Auf
 . Es werden alle Zustandsänderungen und Wartungen angezeigt.
 . Der Use Case ist abgeschlossen.
 
-=== Alternative Abläufe
+//=== Alternative Abläufe
 //Nutzen Sie alternative Abläufe für Fehlerfälle, Ausnahmen und Erweiterungen zum Standardablauf
 
 
-=== Unterabläufe (subflows)
+//=== Unterabläufe (subflows)
 //Nutzen Sie Unterabläufe, um wiederkehrende Schritte auszulagern
 
 
@@ -46,5 +46,5 @@ Will die Ausleih- und Wartungshistorie eines Gegenstandes sowie dessen erste Auf
 
 . Eine Logtabelle wurde angelegt oder verändert.
 
-=== Besondere Anforderungen
+//=== Besondere Anforderungen
 //Besondere Anforderungen können sich auf nicht-funktionale Anforderungen wie z.B. einzuhaltende Standards, Qualitätsanforderungen oder Anforderungen an die Benutzeroberfläche beziehen.
