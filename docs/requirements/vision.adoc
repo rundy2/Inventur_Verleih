@@ -126,11 +126,11 @@ personenbezogenen Daten und Gefahrstoffen
 
 === Benutzerumgebung
 . Der Benutzer steht im Lager, welches durch unterschiedliche Schränke, Fächer und Lagerflächen organisiert ist.
-. Alle Gegenstände im Lager besitzen einen eindeutigen Barcode (entweder bereits von Werk aus vorhanden oder selber ertellt), der mit einem mobilen Endgerät eingelesen werden kann.
+. Alle Gegenstände im Lager besitzen einen eindeutigen Barcode (entweder bereits von Werk aus vorhanden oder selbst ertellt), der mit einem mobilen Endgerät eingelesen werden kann.
 . Manche Gegenstände, insbesondere welche mit Akkumulatoren oder Verbrauchsmitteln, müssen in regelmäßigen Abständen zur Wartung.
 . Der Benutzer hat ein mobiles Endgerät (bspw. Smartphone, Tablett) zur Verfügung.
-. Die Verbindung zum System wird per drahtloser Datenverbindung (eduroam Wlan) hergestellt. Dabei könnte das Problem auftreten, dass der Benutzer schlechten oder gar kein Wlan empfang hat.
-. Alternative kann auch ein Desktop PC mit Lan-Anschluss genutzt werden.
+. Die Verbindung zum System wird per drahtloser Datenverbindung (eduroam WLAN) hergestellt. Dabei könnte das Problem auftreten, dass der Benutzer schlechten oder gar kein WLAN empfang hat.
+. Alternative kann auch ein Desktop PC mit LAN-Anschluss genutzt werden.
 . Eine Internetverbindung ist zur Nutzung des Systems zwingend erforderlich.
 
 
