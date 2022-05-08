@@ -1,52 +1,28 @@
-<html>
-    <head>
-        <title>
-            Login
-        </title>
-        <style>
-            html, body {
-                height: 100%;
-            }
-            body {
-                margin: 0;
-            }
-            .flex-container {
-                height: 100%;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .flex-item {
-                border: 2px solid black;
-                background-color: grey;
-                padding: 5px;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-            <section>
-                <div class="flex-container"><div class="flex-item"><table>
-                    <tbody>
-                    <tr>
-                    <th>Username:</th>
-                    <td>&ensp;<input type="text" name="user"></td>
-                    <td>
-                        <button class="button butlogin" onclick="window.location.href = 'https://www.htw-dresden.de/';">
-                            Login
-                        </button>
-                    </td>
-                    </tr>
-                    <tr>
-                    <th>Password:</th>
-                    <td>&ensp;<input type="password" name="password"></td>
-                    </tr>
-                    </tbody>
-                </table></div></div>
-            </section>
-        </main>
-    </body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style_login.css">
+  </head>
+  <body>
+    <!--form area start-->
+    <div class="form">
+      <!--login form start-->
+      <form class="login-form" action="" method="post">
+        <i class="fas fa-user-circle"></i>
+        <input class="user-input" type="text" name="" placeholder="Username" required>
+        <input class="user-input" type="password" name="" placeholder="Password" required>
+        <div class="options-01">
+          <label class="remember-me"><input type="checkbox" name="">Remember me</label>
+          <a href="forgot.html">Forgot your password?</a>
+        </div>
+        <input class="btn" type="submit" name="" value="LOGIN">
+                <div class="options-02">
+      </form>
+      <!--login form end-->
+    </div>
+    <!--form area end-->
+  </body>
 </html>
