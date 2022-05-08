@@ -1,0 +1,19 @@
+=== Test Cases
+
+. Webseite ist erreichbar.
+. Webseite ist von mobilen Geräten aus errreichbar. 
+. Authentifizierung per Login funktioniert. 
+. Inventarliste wird korrekt angezeigt. 
+. Scannen eines Gegenstands-Barcodes ist möglich. 
+. Gegenstand können ausgeliehen werden. 
+. Gegenstand kann zurückgegeben werden. 
+. Ein neuer Gegenstand kann aufgenommen werden.
+. Gegnstände können aus dem System entfernt werden.
+. Admin kann Status eines Gegenstandes manuell ändern.
+. Gegenstände können anhand von Suchkriterien in der Inventarliste gesucht werden.
+. Die Wartungsplanung ist aufrufbar.
+. Systemmitteilungen erscheinen nach erfolgreichen Aktionen (Gegenstand ausleihen, neuen Gegenstand hinzufügen, Gegenstand deinventarisieren, neues Userkonto anlegen, bestehendes Userkonto berbeiten).
+. Die Gegenstandshistorie wird automatisch vom System gepflegt.
+. Ein Admin kann neue User anlegen und verwalten.
+. Ein Admin User kann ein Backup der Datenbank als komprimierte Datei erstellen.
+ 
