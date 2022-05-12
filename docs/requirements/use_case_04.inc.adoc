@@ -27,7 +27,7 @@ Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder n
 
 . Der Use Case beginnt, wenn der Anwender den Barcode eines Gegenstands gescannt hat
 . System findet den Gegenstand in der Datenbank und zeigt Informationen zu diesem Gegenstand an
-. Anwender oder Mitglied der Arbeitsgruppe ändert den Status von "auf Lager" zu "entsorgt"
+. Anwender ändert den Status von "auf Lager" zu "entsorgt"
 . System erfragt eine Bestätigung der Stausänderung
 . Kunde bestätigt diese 
 . System ändert und speichert den Status des Fachs von "Gegenstand Z befindet sich in dem Fach" zu "leer" und des Gegenstandes von "auf Lager" zu "entsorgt"
@@ -58,13 +58,13 @@ include::use_case_05.inc.adoc[lines=22..29]
 //Szenarios sind konkrete Instanzen eines Use Case, d.h. mit einem konkreten Akteur und einem konkreten Durchlauf der o.g. Flows. Szenarios können als Vorstufe für die Entwicklung von Flows und/oder zu deren Validierung verwendet werden.
 
 ==== erfolgreiche Entsorgung 
-. Anwender oder Mitglied der Arbeitsgruppe scannt den Barcode und sieht alle Informationen des Gegenstandes im System 
-. Anwender oder Mitglied der Arbeitsgruppe ändert den Status und bestätigt die Sicherheitsabfrage
+. Anwender scannt den Barcode und sieht alle Informationen des Gegenstandes im System 
+. Anwender ändert den Status und bestätigt die Sicherheitsabfrage
 . Statusänderung von Fach und Gegenstand wird gespeichert
 
 === Nachbedingungen
 //Nachbedingungen beschreiben das Ergebnis des Use Case, z.B. einen bestimmten Systemzustand.
-- Der Anwender oder das Mitglied der Arbeitsgruppe hat den Status des Gegenstandes geändert
+- Der Anwender hat den Status des Gegenstandes geändert
 - Das Fach und der Gegenstand hat einen neuen Status 
 
 //==== <Nachbedingung 1>
