@@ -33,7 +33,7 @@ Der Anwender hat die Webseite ausgewählt und ist eingeloggt.
 Wenn Anwender im Schritt 1 des Standardablauf nicht den Barcode scannt. 
 
 . Der Anwender wählt im Barcode Scanner die Manuelle Eingabe aus.
-. Der Anwender sucht in der Suche Maske durch nutzung von Filtern den passenden Gegenstand. 
+. Der Anwender sucht in der Suche Maske durch Nutzung von Filtern den passenden Gegenstand. 
 . Der Use Case wird im Schritt 2 fortgesetzt.
 
 ==== manuelles Statusändern durch Admin 
