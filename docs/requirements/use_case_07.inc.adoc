@@ -23,7 +23,7 @@ Möchte sich Gesamtübersichten oder Übersichten beispielsweise sortiert nach Z
 . Der Use Case beginnt, wenn der Anwender die Suchfunktion aufruft.
 . Der Anwender gibt keine Suchkriterien ein.
 . System zeigt alle Gegegenstände und deren Status und Lagerort an.
-. Der Anwender kann die Ergebnisliste durch Klicken auf die Spaltenüberschrift neusortier. 
+. Der Anwender kann die Ergebnisliste durch Klicken auf die Spaltenüberschrift neusortieren. 
 . Anwender wählt einen Gegenstand aus.
 . System zeigt weitere Informationen zum Gegenstand.
 . Der Use Case ist abgeschlossen.
