@@ -29,7 +29,7 @@ Möchte die Möglichkeit haben Gegenstände, die physisch entsorgt wurden oder n
 . System findet den Gegenstand in der Datenbank und zeigt Informationen zu diesem Gegenstand an
 . Anwender ändert den Status von "auf Lager" zu "entsorgt"
 . System erfragt eine Bestätigung der Stausänderung
-. Kunde bestätigt diese 
+. Anwender bestätigt diese 
 . System ändert und speichert den Status des Fachs von "Gegenstand Z befindet sich in dem Fach" zu "leer" und des Gegenstandes von "auf Lager" zu "entsorgt"
 . Der Use Case ist abgeschlossen.
 
