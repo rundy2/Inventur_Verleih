@@ -1,19 +1,109 @@
-=== Test Cases
+== Test Cases
 
-. Webseite ist erreichbar.
-. Webseite ist von mobilen Geräten aus errreichbar. 
-. Authentifizierung per Login funktioniert. 
-. Inventarliste wird korrekt angezeigt. 
-. Scannen eines Gegenstands-Barcodes ist möglich. 
-. Gegenstand können ausgeliehen werden. 
-. Gegenstand kann zurückgegeben werden. 
-. Ein neuer Gegenstand kann aufgenommen werden.
-. Gegnstände können aus dem System entfernt werden.
-. Admin kann Status eines Gegenstandes manuell ändern.
-. Gegenstände können anhand von Suchkriterien in der Inventarliste gesucht werden.
-. Die Wartungsplanung ist aufrufbar.
-. Systemmitteilungen erscheinen nach erfolgreichen Aktionen (Gegenstand ausleihen, neuen Gegenstand hinzufügen, Gegenstand deinventarisieren, neues Userkonto anlegen, bestehendes Userkonto berbeiten).
-. Die Gegenstandshistorie wird automatisch vom System gepflegt.
-. Ein Admin kann neue User anlegen und verwalten.
-. Ein Admin User kann ein Backup der Datenbank als komprimierte Datei erstellen.
- 
+=== Webseite ist erreichbar.
+.. Test bei Verbindungsabbrüchen.
+.. Test, ob Zugriff außerhalb des HTW-Netzes (mit Hotspot).
+
+=== Webseite ist von mobilen Geräten aus errreichbar.
+.. Test bei Verbindungsabbrüchen.
+.. Test, ob Zugriff außerhalb des HTW-Netzes (mit mobilen Daten).
+.. Test auf korrekte Darstellung bei geänderter Bilschirmorientierung.
+
+=== Authentifizierung per Login funktioniert.
+.. Test mit falschem Usernamen.
+.. Test mit falschem Passwort.
+.. Test, dass beide Formaularfelder (sinnvoll) gefüllt sein müssen.
+.. Test auf "ordnungsgemäßen" Securitytoken.
+.. Test auf Brutforcing.
+.. Test auf Codeausführung in den Formularfeldern:
+... SQL-Injection
+... Cross-Site-Scripting
+.. Test auf Session-Hijacking.
+.. Test, was passiert wenn man das Securitytoken manipuliert.
+
+=== Inventarliste wird korrekt angezeigt.
+.. Test, dass bei sinnvollen und korrekten Eingaben die Ergebnisliste korrekt angezeigt wird.
+.. Test, ob sich die Einträge alphabetisch sortieren lassen.
+.. Test, ob man die Einträge nach bestimmten Kriterien filtern/sortiern kann.
+.. Test bei Sonderzeichen in Suchkriterium.
+.. Test, was bei zu langen Suchstrings passiert.
+.. Test, auf nicht vorhandenen Lagerort.
+.. Test, was bei falschen Datentypen passiert.
+
+=== Scannen eines Gegenstands-Barcodes ist möglich.
+.. Test, dass Barcode richtig erkannt wird und die Informationen zu dem Gegenstand angezeigt werden.
+.. Test, ob mit unterschiedlichen Barcodes unterschiedliche Informationen zu den unterschiedlichen Gegenständen korrekt zugeordnet sind und angezeigt werden.
+.. Test, was bei unleserlichen (beschädigten, manipulierten) Barcodes passiert.
+.. Test bei unterschiedlichen Helligkeiten.
+.. Test mit unterschiedlichen Barcodetypen (vorhandene, selbsterstellte).
+
+=== Gegenstand können ausgeliehen werden.
+.. Test mit Datum in der Vergangenheit.
+.. Test mit nicht existierenden Datum.
+.. Einen bereits ausgeliehenen oder nicht verfügbaren Gegenstand erneut ausleihen.
+.. Test, was bei unvollständigen Angaben zum Ausleihprozess passiert.
+.. (Test was bei unterbrochener Netzwerkverbindung während des Ausleihprozesses passiert.)
+
+=== Gegenstand kann zurückgegeben werden.
+.. Test mit nicht existierenden Barcode (bei manueller Eingabe).
+.. Test, was bei unvollständigen Angaben zum Rückgabeprozess passiert.
+.. Test, ob Gegenstand nach erfolgreicher Rückgabe wieder verfügbar ist.
+.. (Test was bei unterbrochener Netzwerkverbindung während des Ausleihprozesses passiert.)
+
+=== Ein neuer Gegenstand kann aufgenommen werden.
+.. Test, ob Fach nach erfolgreicher Aufnahme als belegt gekennzeichnet ist.
+.. Test ob ein neuer Gegenstand mit bereits vorhandenem Barcode aufgenommen werden kann.
+.. Test ob ein neuer Gegenstand mit bereits vorhandener Bezeichnung aufgenommen werden kann.
+.. Test auf fehlerhafte/unzureichende Suchkriterien nach freien Fächern.
+.. Test auf unvollständige Informationen zum Gegenstand.
+.. Test, was passiert, wenn man einen anderen Barcode einscannt, als das System generiert hat.
+.. Test, was bei Netzwerkunterbrechnung passiert.
+
+=== Gegnstände können aus dem System deinventarisiert werden.
+.. Test, ob Fach nach erfolgreicher Deinventarisierung als "leer" gekennzeichnet ist.
+.. Test, ob Gegenstand nach erfolgreicher Deinventarisierung als "entsorgt" gekennzeichnet ist.
+.. Test, ob "alles wie gehabt", wenn man Aktion bei der Bestätigung der Aktion abbricht.
+.. Test, was bei Netzwerkunterbrechnung passiert.
+
+=== Admin kann Status eines Gegenstandes manuell ändern.
+.. Test, dass man nicht "1000 Fenster" bestätigen muss.
+.. Test, dass Gegenstand nach erfolgreicher Korrektur wieder verfügbar ist bzw. die Ausleihdauer verändert ist.
+
+=== Gegenstände können anhand von Suchkriterien in der Inventarliste gesucht werden.
+.. Test bei Schreibfehler.
+.. siehe Punkt: Inventarliste wird korrekt angezeigt
+
+=== Die Wartungsplanung ist aufrufbar.
+.. Test, ob Daten korrekt.
+
+=== Systemmitteilungen erscheinen nach erfolgreichen Aktionen (Gegenstand ausleihen, neuen Gegenstand hinzufügen, Gegenstand deinventarisieren, neues Userkonto anlegen, bestehendes Userkonto berbeiten).
+.. Test, ob die Mitteilungen zu den Aktionen passend sind.
+.. Test, ob Meldungen aussagekräftig genug sind.
+.. Test, ob Meldungen keine sensible Daten beinhalten.
+
+=== Die Gegenstandshistorie wird automatisch vom System gepflegt.
+.. Test, ob Historie mit getätigten Aktionen überein stimmt.
+
+=== Ein Admin kann neue User anlegen und verwalten.
+.. Test mit bereits vorhandenem Usernamen.
+.. Test auf Mindest- und Maximallänge von Username.
+.. Test auf Mindest- und Maximallänge von Passwort.
+.. Test mit Sonder- und Leerzeichen im Usernamen.
+
+=== Ein Admin User kann ein Backup der Datenbank als komprimierte Datei erstellen.
+.. Test, ob Backup aktuell ist.
+.. Test, ob Backup korrekt ist.
+
+=== persistentes Speichern
+.. Die Datenbank(en) wird/werden mit Testdaten gefüllt. Anschließend wird das System aus­-
+geschaltet. Die Daten müssen bei Wiederinbetriebnahme vollständig vorhanden sein.
+
+=== verschlüsselte Kommunikation zwichen Server und Clients
+.. Vorhandensein von (TLS) Bei einem MitM-Angriff dürfen keine Daten in Klartext lesbar sein.
+
+=== Schutz der Daten auf dem Server vor unberechtigten Zugriff
+.. Test, ob man durch Sichtkontrolle der Datenbank keine Passwörter im Klartext lesen kann.
+.. Test mit SQL-Injection.
+
+=== Test auf englische Sprache auf der/den gesamten Webseite/-n.
+.. Test durch manuelles lesen.
