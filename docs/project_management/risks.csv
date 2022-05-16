@@ -1,4 +1,7 @@
 ﻿ID;Datum;Name;Beschreibung;Typ;IMP;PRB;MAG;Owner;Gegenmaßnahme
 1;25.11.2021;Teammeetings generell unorganisiert;Teammeetings finden zu lang statt und führen zu wenig Ergebnissen;keine Agenda festgelegt;3;25%;0,75;Fabian Krähmer;Agenda definieren und Meetings nur bei Ergebnissen ansetzen
-2;08.12.2021;Absage eines Teammitglieds;Mitglied des Teams kann dauerhaft nicht mehr am Projekt teilnehmen; wegen Krankheit;4;20%;0,8;Fabian Krähmer;Backup-Rollen nutzen und Know-How zwischen diesen Personen kontinuierlich teilen
+2;08.12.2021;Absage eines Teammitglieds;Mitglied des Teams kann dauerhaft nicht mehr am Projekt teilnehmen;wegen Krankheit;4;20%;0,8;Fabian Krähmer;Backup-Rollen nutzen und Know-How zwischen diesen Personen kontinuierlich teilen
 3;13.12.2021;Wissen eines Teammitglieds;Mitglied des Teams hat unzureichendes Wissen über die Vorgehensweise;keine Beschäftigung mit der Matrie;3;30%;0,9;Fabian Krähmer;Mitglied setzt sich erneut an die Vorlesungen/Übungen
+4;15.01.2021;Teammitglied ist hinter Erwartungen;Mitglied des Teams bringt sich nicht ausreichend in den Prozess mit ein, dadurch gerät das ganze Projekt ins stocken;Leistungsdruck, Prokrastination;5;60%;3;Fabian Krähmer;Es werden mehr Deadlines ausgemacht und Arbeitsstand überprüft
+5;24.01.2022;Präsentationen nicht zufriedenstellend;Präsentationen werden nicht gut und sauber vorgestellt, Gesamteindruck leidet dadurch;Keine Probe;3;30%;0,9;Fabian Krähmer;Stufenweise Probe der Präsentation und Test (es gibt nur 2 Präsentatoren)
+6;04.04.2022;Zeitplan nicht einhaltbar;Zeitplan ist entweder zu straff oder zu lang, Iterationen werden damit schwierig durchsetzbar;Keine genaue Planung;3;40%;1,2;Fabian Krähmer;Iterationen werde kürzer, mehr Deadlines
