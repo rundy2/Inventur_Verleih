@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 import Login from "./components/loginComponent";
+import BoardUser from "./components/boardUserComponent";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
