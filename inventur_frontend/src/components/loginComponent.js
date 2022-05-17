@@ -3,6 +3,9 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/authService";
+import BoardUser from "./boardUserComponent";
+import {BrowserRouter, withRouter} from 'react-router-dom';
+import ReactDOM from "react-dom";
 const required = value =>{
     if(!value){
         return(
@@ -43,10 +46,17 @@ export default class Login extends Component{
         });
         this.form.validateAll();
         if(this.checkBtn.context._errors.length === 0){
+            console.log(AuthService.login(this.state.email, this.state.password));
             AuthService.login(this.state.email, this.state.password).then(
                 () => {
-                    this.props.history.push("/profile");
-                    window.location.reload();
+                    ReactDOM.render(
+                        <BrowserRouter>
+                            <BoardUser />
+                        </BrowserRouter>,
+                        document.getElementById('root')
+                    );
+                    //this.props.history.push(/objects);
+                    //window.location.reload();
                 },
                 error => {
                     const resMessage =
@@ -69,7 +79,7 @@ export default class Login extends Component{
     }
     render(){
         return (
-            <html lang="en" dir="ltr">
+            /*<html lang="en" dir="ltr">
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta charSet="utf-8" />
@@ -78,20 +88,78 @@ export default class Login extends Component{
             </head>
             <body>
             <div className="form">
-                <Form className="login-form" action="" method="post">
+                <Form className="login-form" onSubmit={this.handleLogin} method="post">
                     <i className="fas fa-user-circle"></i>
-                    <Input className="user-input" type="text" name="" placeholder="Username" required />
-                        <Input className="user-input" type="password" name="" placeholder="Password" required />
+                    <Input className="user-input" type="text" name="email" placeholder="Email" required />
+                        <Input className="user-input" type="password" name="password" placeholder="Password" required />
                             <div className="options-01">
-                                <label className="remember-me"><input type="checkbox" name="" />Remember me</label>
+                                <label className="remember-me"><Input type="checkbox" name="" />Remember me</label>
                                 <a href="forgot.html">Forgot your password?</a>
                             </div>
-                            <Input className="btn" type="submit" name="" value="LOGIN" />
+                            <Input className="btn" type="submit" name="login" value="LOGIN" />
                                 <div className="options-02" />
                 </Form>
             </div>
             </body>
-            </html>
+            </html>*/
+
+            <div className="col-md-12">
+                <div className="card card-container">
+                    <Form
+                        onSubmit={this.handleLogin}
+                        ref={c => {
+                            this.form = c;
+                        }}
+                    >
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            <Input
+                                type="text"
+                                className="form-control"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.onChangeEmail}
+                                validations={[required]}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <Input
+                                type="password"
+                                className="form-control"
+                                name="password"
+                                value={this.state.password}
+                                onChange={this.onChangePassword}
+                                validations={[required]}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <button
+                                className="btn btn-primary btn-block"
+                                disabled={this.state.loading}
+                            >
+                                {this.state.loading && (
+                                    <span className="spinner-border spinner-border-sm"></span>
+                                )}
+                                <span>Login</span>
+                            </button>
+                        </div>
+                        {this.state.message && (
+                            <div className="form-group">
+                                <div className="alert alert-danger" role="alert">
+                                    {this.state.message}
+                                </div>
+                            </div>
+                        )}
+                        <CheckButton
+                            style={{ display: "none" }}
+                            ref={c => {
+                                this.checkBtn = c;
+                            }}
+                        />
+                    </Form>
+                </div>
+            </div>
         );
     }
 }
