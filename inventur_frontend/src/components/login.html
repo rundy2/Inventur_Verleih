@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Login Page</title>
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="login.css">
   </head>
   <body>
     <!--form area start-->
@@ -16,7 +16,11 @@
         <input class="user-input" type="password" name="" placeholder="Password" required>
         <div class="options-01">
           <label class="remember-me"><input type="checkbox" name="">Remember me</label>
-          <a href="forgot.html">Forgot your password?</a>
+          <a href="#forgot" onclick="forgotPW()">Forgot your password?</a>
+          <script>
+            function forgotPW() {
+              alert("If you have forgotten your password, please write an email to x@htw-dresden.de");}
+          </script>
         </div>
         <input class="btn" type="submit" name="" value="LOGIN">
                 <div class="options-02" />
