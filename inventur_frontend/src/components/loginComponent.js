@@ -94,7 +94,11 @@ export default class Login extends Component{
                         <Input className="user-input" type="password" name="password" placeholder="Password" required />
                             <div className="options-01">
                                 <label className="remember-me"><Input type="checkbox" name="" />Remember me</label>
-                                <a href="forgot.html">Forgot your password?</a>
+                                <a href="#forgot" onclick="forgotPW()">Forgot your password?</a>
+                                <script>
+                                    function forgotPW() {
+                                    alert("If you have forgotten your password, please write an email to x@htw-dresden.de");}
+                                </script>
                             </div>
                             <Input className="btn" type="submit" name="login" value="LOGIN" />
                                 <div className="options-02" />
