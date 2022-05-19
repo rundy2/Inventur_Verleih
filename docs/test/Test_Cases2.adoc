@@ -10,10 +10,12 @@
 .. Test auf korrekte Darstellung bei geänderter Bilschirmorientierung.
 
 === Authentifizierung per Login funktioniert.
-.. Test mit falschem Usernamen.
-.. Test mit falschem Passwort.
-.. Test, dass beide Formaularfelder (sinnvoll) gefüllt sein müssen.
-.. Test auf "ordnungsgemäßen" Securitytoken.
+.. Test, ob man sich mit richtigem Benutzernamen und Passwort anmelden kann. => [.underline]#funktioniert#
+.. Test, ob man sich mit unterschiedlichen Benutzern (Benutzernamen und Passwort) anmelden kann.
+.. Test mit falschem Usernamen. => [.underline]#man kann sich nicht anmelden, Fehlermeldung# #(verständlicher formulieren!)#
+.. Test mit falschem Passwort. => [.underline]#man kann sich nicht anmelden, Fehlermeldung#
+.. Test, dass beide Formaularfelder (sinnvoll) gefüllt sein müssen. => [.underline]#Fehlermeldungen an den Feldern#
+.. Test auf "ordnungsgemäßen" Securitytoken. => [.underline]#durch Verwendung von jwt sicher,# #aber durch Speicherung im Local-Storage des Browsers (und beim Vergessen des Logouts) kann es über js geklaut werden oder ein Fremder kann sich am PC des befugten Nutzer unbefugten Zugriff auf die Software verschaffen#
 .. Test auf Brutforcing.
 .. Test auf Codeausführung in den Formularfeldern:
 ... SQL-Injection
