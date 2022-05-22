@@ -162,8 +162,36 @@ export default class Login extends Component{
                             }}
                         />
                     </Form>
+                    <Form>
+                        <p></p>
+                        <h2>Overview</h2>
+                        <button className="button">Search</button>
+                        <h5>My lending list</h5>
+                        <table>
+                            <tr>
+                                <th>Object</th>
+                                <th>Return Until</th>
+                                <th>Room</th>
+                                <th>Locker</th>
+                                <th>Compartment</th>
+                                <th>Note</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>[Object]</td>
+                                <td>[ReturnDate]</td>
+                                <td>[Room]</td>
+                                <td>[Locker]</td>
+                                <td>[Compartment]</td>
+                                <td>[Note]</td>
+                                <td>
+                                    <button className="button">Return</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </Form>
                 </div>
             </div>
-        );
+        ); /*Start Ansicht*/
     }
 }
