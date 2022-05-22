@@ -6,6 +6,7 @@ import AuthService from "../services/authService";
 import BoardUser from "./boardUserComponent";
 import {BrowserRouter, withRouter} from 'react-router-dom';
 import ReactDOM from "react-dom";
+import './home.css';
 const required = value =>{
     if(!value){
         return(
@@ -164,6 +165,7 @@ export default class Login extends Component{
                     </Form>
                     <Form>
                         <p></p>
+                        <h2 className="header">Test</h2>
                         <h2>Overview</h2>
                         <button className="button">Search</button>
                         <h5>My lending list</h5>
