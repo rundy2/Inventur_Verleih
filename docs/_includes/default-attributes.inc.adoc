@@ -1,4 +1,4 @@
-// Meta
+//Meta
 :project-name: I6 Inventur Verleih
 // Settings:
 :toc:
@@ -15,9 +15,9 @@
 :!example-caption:
 :experimental:
 // folders
-ifndef::imagesdir[:imagesdir: images]
-ifndef::diagramsdir[:diagramsdir: diagrams]
-ifndef::plantumlsdir[:plantumlsdir: plantuml]
+ifndef::imagesdir[:imagesdir: ../images]
+ifndef::diagramsdir[:diagramsdir: ../diagrams]
+ifndef::plantumlsdir[:plantumlsdir: ../plantuml]
 // Hyphenation for PDF dokumente
 :lang: DE
 :hyphens:
