@@ -1,4 +1,4 @@
-= Iteration Plan (Entwurf) 04: {project-name}
+= Iteration Plan (Implementierung) 04: {project-name}
 Fabian Krähmer <s82628@htw-dresden.de>;  Silko Grellmann <s82695@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
