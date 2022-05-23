@@ -1,58 +1,82 @@
 import React, {Component} from "react";
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Table from "react-bootstrap/Table";
+import Form from "react-validation/build/form";
+import Input from "react-validation/build/input";
+import AuthService from "../services/authService";
 
-import './home.css';
+export default class Home extends Component{
 
-const table = ({ children }) => {
-    <Table Inventarliste>
-        <thead>
-        <tr>
-            <th>Objekt</th>
-            <th>Rückgabe bis</th>
-            <th>Zimmer</th>
-            <th>Schrank</th>
-            <th>Fach</th>
-            <th>Anmerkung</th>
-            <th>#</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Werners IPhone5s</td>
-            <td>20.12.2021</td>
-            <td>Z902</td>
-            <td>Schrank#1</td>
-            <td>1 Links</td>
-            <td></td>
-            <td><Button variant="Zurückgeben">Dark</Button>{' '}</td>
-        </tr>
-        <tr>
-            <td>Fernbedienung Beamer</td>
-            <td>19.12.2021</td>
-            <td>Z902</td>
-            <td>Schrank#1</td>
-            <td>2 Rechts</td>
-            <td>OK Knopf reagiert schwer</td>
-            <td><Button variant="Zurückgeben">Dark</Button>{' '}</td>
-        </tr>
-        </tbody>
-    </Table>
+constructor(props){
+    super(props);
 }
 
-const homeComponent = () => (
-    <Container className="p-4">
-        <Jumbotron>
-            <h1 className="header">Ausgeliehene Objekte</h1>
-            <table>
-           </table>
-        </Jumbotron>
-    </Container>
+    render(){
+        return(
+                            <Form>
+                                <p></p>
+                                <h2>Overview</h2>
+                                <button className="button">Search</button>
+                                <h5>My lending list</h5>
+                                <table>
+                                    <tr>
+                                        <th>Object</th>
+                                        <th>Return Until</th>
+                                        <th>Room</th>
+                                        <th>Locker</th>
+                                        <th>Compartment</th>
+                                        <th>Note</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>[Object]</td>
+                                        <td>[ReturnDate]</td>
+                                        <td>[Room]</td>
+                                        <td>[Locker]</td>
+                                        <td>[Compartment]</td>
+                                        <td>[Note]</td>
+                                        <td>
+                                            <button className="button">Return</button>
+                                        </td>
+                                    </tr>
+                                </table>
 
-);
 
-
-
-
+                            <p></p>
+                                <h2>Search</h2>
+                                <div>Object Name:</div>
+                                <Input
+                                        type="text"
+                                        className=""
+                                        name="search"
+                                    />
+                                <table>
+                                    <tr>
+                                        <th>Object</th>
+                                        <th>Return Date</th>
+                                        <th>Room</th>
+                                        <th>Locker</th>
+                                        <th>Compartment</th>
+                                        <th>Availability</th>
+                                        <th>Note</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>[Object]</td>
+                                        <td>[ReturnDate]</td>
+                                        <td>[Room]</td>
+                                        <td>[Locker]</td>
+                                        <td>[Compartment]</td>
+                                        <td>[Availability]</td>
+                                        <td>[Note]</td>
+                                        <td>
+                                            <button className="button">Borrow/Return</button>
+                                        </td>
+                                        <td>
+                                            <button className="button">Details</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </Form>
+        );
+    }
+}
