@@ -4,4 +4,13 @@
 3;13.12.2021;Wissen eines Teammitglieds;Mitglied des Teams hat unzureichendes Wissen über die Vorgehensweise;keine Beschäftigung mit der Matrie;3;30%;0,9;Fabian Krähmer;Mitglied setzt sich erneut an die Vorlesungen/Übungen
 4;15.01.2021;Teammitglied ist hinter Erwartungen;Mitglied des Teams bringt sich nicht ausreichend in den Prozess mit ein, dadurch gerät das ganze Projekt ins stocken;Leistungsdruck, Prokrastination;5;60%;3;Fabian Krähmer;Es werden mehr Deadlines ausgemacht und Arbeitsstand überprüft
 5;24.01.2022;Präsentationen nicht zufriedenstellend;Präsentationen werden nicht gut und sauber vorgestellt, Gesamteindruck leidet dadurch;Keine Probe;3;30%;0,9;Fabian Krähmer;Stufenweise Probe der Präsentation und Test (es gibt nur 2 Präsentatoren)
-6;04.04.2022;Zeitplan nicht einhaltbar;Zeitplan ist entweder zu straff oder zu lang, Iterationen werden damit schwierig durchsetzbar;Keine genaue Planung;3;40%;1,2;Fabian Krähmer;Iterationen werde kürzer, mehr Deadlines
+6;02.02.2022;Falsche Auswahl von Tools;Beim Entwickeln des Prototyps wurde festgestellt, dass die Auswahl von Tools falsch war;keine Beschäftigung mit der Matrie;3;30%;0,9;Fabian Krähmer;Prozess wird überdacht, Tools ausgiebig diskutiert und vorgestellt
+7;06.02.2022;Falsche Führungsstil ;Durch falschen Führungsstil werden Probleme nicht schnell genug erkannt und eliminert, Zeitlimits zu lasch gewählt;Fehlende Erfahrung;4;30%;1,2;Fabian Krähmer;Es wird mehr Feedback eingeholt und Deadlines gesetzt
+8;04.04.2022;Zeitplan nicht einhaltbar;Zeitplan ist entweder zu straff oder zu lang, Iterationen werden damit schwierig durchsetzbar;Keine genaue Planung;3;40%;1,2;Fabian Krähmer;Iterationen werde kürzer, mehr Deadlines
+9;06.04.2022;Mangelnde Motivitation;Ein Teammitglied ist hinter den Erwartungen seiner zugeteilten Aufgaben;Leistungsdruck, Prokrastination;4;30%;1,2;Fabian Krähmer;3x mal darauf hinweisen, danach rausschmiss aus dem Team
+10;09.04.2022;schlechte Zuarbeit durch den Themenersteller;Die Themenersteller geben nicht genug Feedback zu ihrer Vorstellung der entstehenden Software;Zuarbeit fehlt;2;25%;0,5;Fabian Krähmer;Kurze Mail an TS und *friendly reminder* nach einer Woche
+11;12.04.2022;Datenverlust;Daten werden nicht richtig übertragen und gehen dementsprechend verloren;Backup;4;20%;0,8;Fabian Krähmer;Mehrere Backupsysteme und Branches in Githup
+12;16.04.2022;Keine Hilfe geholt;Bei Problemen wird nicht oder zu spät beim Coach um Hilfe gebeten;Fehlende Erfahrung;3;30%;0,9;Fabian Krähmer;Mehr Problemanalyse betreiben 
+13;18.04.2022;schlechte Dokumentation;Die Dokumentation wird nicht ausreichend von allen gepflegt;Fehlende Erfahrung;4;30%;1,2;Fabian Krähmer;Protokollanfertigung und Commits müssen gemacht werden
+14;22.04.2022;schlechte Kommunikation;Kommunikation innerhalb des Teams funktioniert nicht zufriedenstellend;Keine genaue Planung;4;40%;1,6;Fabian Krähmer;"wöchentliche Meetings, kein ""Flaming"" "
+15;;;;;;;;;

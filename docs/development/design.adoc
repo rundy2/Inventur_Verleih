@@ -8,4 +8,9 @@ include::../_includes/default-attributes.inc.adoc[]
 == Allgemeine Informationen
 
 
-== ...
+== C4-Model
+.Klassendiagramm mit PlantUML
+[plantuml, "images/C4-Model", svg]
+....
+include::{plantumlsdir}/c4-diagram.puml[]
+....

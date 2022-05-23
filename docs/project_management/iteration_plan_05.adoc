@@ -1,4 +1,4 @@
-= Iteration Plan (Implementierung) 04: {project-name}
+= Iteration Plan (Implementierung) 05: {project-name}
 Fabian Krähmer <s82628@htw-dresden.de>;  Silko Grellmann <s82695@htw-dresden.de>
 {localdatetime}
 include::../_includes/default-attributes.inc.adoc[]
@@ -12,14 +12,11 @@ include::../_includes/default-attributes.inc.adoc[]
 |===
 | Meilenstein | Datum
 
-| Beginn der Iteration | 28.04.2022
-| Backend Nutzerverwaltung anlegen | 30.04.2022
-| Frontend Login designen | 05.05.2022
-| Frontend Login programmieren | 08.05.2022
-| Frontend Login mit Backend verknüpfen | 14.05.2022
-| Forgot Seite implementieren | 15.05.2022
-| Use-Case 11 testen | 16.05.2022
-| Ende der Iteration | 16.05.2022
+| Beginn der Iteration | 16.05.2022
+| Startseite programmieren | 16.05.2022
+| Startseite mit Backend verknüpfen | 20.05.2022
+| Use-Case 07 testen | 22.05.2022
+| Ende der Iteration | 23.05.2022
 
 
 |===
@@ -28,8 +25,8 @@ include::../_includes/default-attributes.inc.adoc[]
 == Wesentliche Ziele
 //Nennen Sie 1-5 wesentliche Ziele für die Iteration.
 * ein kompletter Querschnitt von Entwurf bis Test
-* Loginseite erstellen und testen
-* Beweis ob Team Sprintfähig und Arbeitsfähig
+* Startseite erstellen und testen
+
 
 
 == Aufgabenzuordnung
@@ -56,7 +53,6 @@ image:LCO1.png[]
 //Eine kurze Beschreibung, wie Erfüllung die o.g. Ziele bewertet werden sollen.
 * Austausch über Discord über Probleme und Lösungsansätze
 * Abstimmung über Features welche definitiv gebraucht werden
-* Meeting mit Herrn Anke am 18.05.2022 und vorstellen der Login Seite
 
 == Assessment
 //In diesem Abschnitt werden die Ergebnisse und Maßnahmen der Bewertung erfasst und kommuniziert. Die Bewertung wird üblicherweise am Ende jeder Iteration durchgeführt. Wenn Sie diese Bewertungen nicht machen, ist das Team möglicherweise nicht in der Lage, die eigene Arbeitsweise ("Way of Working") zu verbessern.

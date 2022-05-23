@@ -1,18 +1,16 @@
 // --- 1. Projektthema -------------------------
-= SE I - Belegabgabe: I6 Inventur Verleih
+= SE II - Belegabgabe: I6 Inventur Verleih
 // --- 2. Teammitglieder -----------------------
 
 Fabian Krähmer <s82628@htw-dresden.de> +
 Silko Grellmann <s82695@htw-dresden.de> +
-Jamal Alkharrat <s82035@htw-dresden.de> +
-Anja Claus <s81009@htw-dresden.de> +
 Felix Helmert <s82049@htw-dresden.de> +
-Jonas Koloska <s82066@htw-dresden.de> +
+Nico Papke <s80445@htw-dresden.de> +
 Moritz Lehmann <s82015@htw-dresden.de> +
 Dominique Linzmajer <s82063@htw-dresden.de> 
 
 // --- 3. Abgabedatum --------------------------
-*Abgabedatum: 31. Januar 2022*
+*Abgabedatum: 06. Juli 2022*
 
 // ---------------------------------------------
 :docs: ../docs
@@ -95,6 +93,15 @@ include::{docs-project-management}/iteration_plan_01.adoc[lines=1..1;4..-1,level
 <<<
 // Iteration 2
 include::{docs-project-management}/iteration_plan_02.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Iteration 3
+include::{docs-project-management}/iteration_plan_03.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Iteration 4
+include::{docs-project-management}/iteration_plan_04.adoc[lines=1..1;4..-1,leveloffset=+1]
+<<<
+// Iteration 5
+include::{docs-project-management}/iteration_plan_05.adoc[lines=1..1;4..-1,leveloffset=+1]
 <<<
 
 
