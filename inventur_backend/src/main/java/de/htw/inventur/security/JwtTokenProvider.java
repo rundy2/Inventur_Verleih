@@ -11,6 +11,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
+//Collects all functions about security-token
 @Component
 @Slf4j
 public class JwtTokenProvider {

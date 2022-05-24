@@ -5,10 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
+//Communication between Backend and Database
+//Spring will automatically generate SQL from function-name
 @Repository
 public interface ObjectRepository extends JpaRepository<Object, Integer> {
 
     List<Object> findAllBySectionId(int sectionId);
+
+    List<Object> findAll();
 }

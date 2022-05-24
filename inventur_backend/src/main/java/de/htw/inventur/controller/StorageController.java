@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Controller for storages
 @RestController
 @RequestMapping("/")
 public class StorageController {
@@ -16,6 +17,7 @@ public class StorageController {
         this.storageRepository = storageRepository;
     }
 
+    //Get all storages from a special room
     @GetMapping("/room/{roomId}/storage")
     public List<Storage> index(@PathVariable("roomId") Integer roomId){
         return storageRepository.findAllByRoomId(roomId);
