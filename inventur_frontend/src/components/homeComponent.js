@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import AuthService from "../services/authService";
+import './home.css';
 
 export default class Home extends Component{
 
@@ -11,7 +12,8 @@ constructor(props){
 
     render(){
         return(
-                            <Form>
+            <div className="Form-Group">
+                <Form>
                                 <p></p>
                                 <h2>Overview</h2>
                                 <button className="button">Search</button>
@@ -37,7 +39,30 @@ constructor(props){
                                             <button className="button">Return</button>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>[Object]</td>
+                                        <td>[ReturnDate]</td>
+                                        <td>[Room]</td>
+                                        <td>[Locker]</td>
+                                        <td>[Compartment]</td>
+                                        <td>[Note]</td>
+                                        <td>
+                                            <button className="button">Return</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>[Object]</td>
+                                        <td>[ReturnDate]</td>
+                                        <td>[Room]</td>
+                                        <td>[Locker]</td>
+                                        <td>[Compartment]</td>
+                                        <td>[Note]</td>
+                                        <td>
+                                            <button className="button">Return</button>
+                                        </td>
+                                    </tr>
                                 </table>
+                                <button className="button">Alle Elemente</button>
 
 
                             <p></p>
@@ -77,6 +102,7 @@ constructor(props){
                                     </tr>
                                 </table>
                             </Form>
+            </div>
         );
     }
 }
