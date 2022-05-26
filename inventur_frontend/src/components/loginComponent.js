@@ -6,7 +6,7 @@ import AuthService from "../services/authService";
 import Home from "./homeComponent"
 import {BrowserRouter, withRouter} from 'react-router-dom';
 import ReactDOM from "react-dom";
-import './login2.css';
+import './login.css';
 
 const required = value =>{
     if(!value){
