@@ -1,3 +1,90 @@
-.header {
-    text-align: right;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#Head {
+    font-size: 10px;
+}
+
+body {
+    width: 70%;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+header h1{
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+header p{
+    font-size: 1.5rem;
+    margin-left: 30rem;
+}
+
+header p img{
+    align-items: center;
+    width: 3rem;
+    height: auto;
+}
+
+main {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+main div {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+main div li {
+    text-align: left;
+    padding-left: 3rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+}
+main div img{
+    width: 15%;
+    height: auto;
+    margin-left: 25rem;
+    margin-top: -10rem;
+}
+
+.Tabelle{
+    overflow: hidden;
+    max-width: 80%;
+}
+.Tabelle thead tr{
+    background-color: grey;
+}
+.Tabelle th,
+.Tabelle td{
+    padding: 12px 16px;
+    text-align: center;
 }

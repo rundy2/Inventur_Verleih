@@ -13,48 +13,44 @@ export default class ObjectDetails extends Component{
 
     render(){
         return(
-            <div>
-            <Container className="p-4">
-                    <h1 className="header">Ausgeliehene Objekte</h1>
-                    <table>
+            <div id="Head">
+            <body>
+            <header>
+                <h1>Werners I-phone 5s</h1>
+                <p><img src="https://swroellinghausen.de/wp-content/uploads/2021/05/default-profile.png" alt="Profil"></img>
+                    <br></br>
+                    Profil
+                </p>
+            </header>
+            <main>
+                <div id="Objekt">
+                    <li>Zustand: 60%</li>
+                    <li> Zimmer: Z902</li>
+                </div>
+                <div id="Objekt2">
+                    <li> Objekt Historie</li>
+                    <img src="https://www.refurbished.at/cache/images/refurbished-iphone-5s-space-gray_600x600_BGresize_16777215-tj.webp" alt="Objektbild"></img>
+                </div>
+                    <table className="Tabelle">
+                        <thead>
+                        <tr>
+                            <th>Ausgeliehen von</th>
+                            <th>Ausgeliehen am</th>
+                            <th>Rückgabe am</th>
+                            <th>Anmerkung</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <td>[User]</td>
+                        <td>[Borrowed Date]</td>
+                        <td>[Return Date]</td>
+                        <td>[Note]</td>
+                        </tbody>
                     </table>
-
-            </Container>
-
-            <Table Inventarliste>
-                <thead>
-                <tr>
-                    <th>Objekt</th>
-                    <th>Rückgabe bis</th>
-                    <th>Zimmer</th>
-                    <th>Schrank</th>
-                    <th>Fach</th>
-                    <th>Anmerkung</th>
-                    <th>#</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Werners IPhone5s</td>
-                    <td>20.12.2021</td>
-                    <td>Z902</td>
-                    <td>Schrank#1</td>
-                    <td>1 Links</td>
-                    <td></td>
-                    <td><Button variant="dark">Zurück</Button>{' '}</td>
-                </tr>
-                <tr>
-                    <td>Fernbedienung Beamer</td>
-                    <td>19.12.2021</td>
-                    <td>Z902</td>
-                    <td>Schrank#1</td>
-                    <td>2 Rechts</td>
-                    <td>OK Knopf reagiert schwer</td>
-                    <td><Button variant="Zurückgeben">Dark</Button>{' '}</td>
-                </tr>
-                </tbody>
-            </Table>
+            </main>
+            </body>
             </div>
+
         );
     }
 }

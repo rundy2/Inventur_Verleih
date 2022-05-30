@@ -29,7 +29,7 @@ export function GetAllObjectsInTable(){
     return(
         <table>
             <thead>
-            <tr>
+            <tr className="tableHeader">
                 <th>Object</th>
                 <th>Room</th>
                 <th>Locker</th>
@@ -44,7 +44,7 @@ export function GetAllObjectsInTable(){
                     //let room:Room = GetRoomById(object.roomId)
                     return (
                         <tbody>
-                        <tr key={object.id}>
+                        <tr key={object.id} className="data">
                             <td>{object.name}</td>
                             <td>{/*room.name*/ object.roomId}</td>
                             <td>{object.storageId}</td>

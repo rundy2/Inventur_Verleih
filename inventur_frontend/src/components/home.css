@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    align-items: center;
 }
 
 body{
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: left;
     align-items: center;
-    background: #fffdfd;
+    background: #111;
 }
 
 .form-group{
@@ -23,16 +25,67 @@ body{
     text-align: center;
 }
 
+.header{
+    color: #888;
+    font-size: 70px;
+}
+
+.list{
+    color: #888;
+    font-size: 50px;
+}
+
+.tableHeader{
+    color: #888;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.data{
+    color: #888;
+    font-size: 15px;
+}
+
+.input1{
+    width: 220px;
+    height: 35px;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+    transition-property: border-left, border-right, box-shadow;
+}
+
+.input1:hover, .input1:focus, .input1:active{
+    border-left: solid 8px #4285F4;
+    border-right: solid 8px #4285F4;
+    box-shadow: 0 0 100px rgba(66, 133, 244, 0.8);
+}
+
 .button {
-    font-family: "Poppins", sans-serif;
+    outline: none;
+    border: none;
+    width: 220px;
+    height: 45px;
+    background: #4285F4;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 5px;
     cursor: pointer;
-    border: 1px solid #1a202c;
-    padding: 8px;
-    min-width: 64px;
+    transition: 0.5s;
+    transition-property: border-left, border-right, box-shadow;
+}
 
-    background: transparent;
-
-    transition: all 0.1s ease-in;
+.button:hover{
+    border-left: solid 8px rgba(255, 255, 255, 0.5);
+    border-right: solid 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 100px rgba(66, 133, 244, 0.8);
 }
 
 
