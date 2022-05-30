@@ -17,12 +17,15 @@ constructor(props){
             <div className="Form-Group">
                 <Form>
                                 <p></p>
-                                <h2>Overview</h2>
+                                <h2 id="header" className="header">Overview</h2>
                                 <button className="button">Search</button>
                                 <h5>My lending list</h5>
-                                <table>
-                                    <thead>
-                                    <tr>
+
+                                <h5 id="list" className="list">My lending list</h5>
+                                <div className="topitems">
+                                    <table>
+                                        <thead>
+                                    <tr className="tableHeader">
                                         <th>Object</th>
                                         <th>Return Until</th>
                                         <th>Room</th>
@@ -31,9 +34,11 @@ constructor(props){
                                         <th>Note</th>
                                         <th></th>
                                     </tr>
+
                                     </thead>
                                     <tbody>
-                                    <tr>
+                                    <tr className="data">
+
                                         <td>[Object]</td>
                                         <td>[ReturnDate]</td>
                                         <td>[Room]</td>
@@ -44,7 +49,7 @@ constructor(props){
                                             <button className="button">Return</button>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr className="data">
                                         <td>[Object]</td>
                                         <td>[ReturnDate]</td>
                                         <td>[Room]</td>
@@ -55,7 +60,7 @@ constructor(props){
                                             <button className="button">Return</button>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr className="data">
                                         <td>[Object]</td>
                                         <td>[ReturnDate]</td>
                                         <td>[Room]</td>
@@ -69,15 +74,15 @@ constructor(props){
                                     </tbody>
                                 </table>
                                 <button className="button">Alle Elemente</button>
-
+                                </div>
 
                             <p></p>
-                                <h2>Search</h2>
-                                <div>Object Name:</div>
-                                <Input
+                                <h2 id="list" className="list">Search</h2>
+                                    <Input
                                         type="text"
-                                        className=""
+                                        className="input1"
                                         name="search"
+                                        placeholder="Object Name"
                                     />
                     <GetAllObjectsInTable/>
                 </Form>
