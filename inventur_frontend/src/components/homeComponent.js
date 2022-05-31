@@ -14,12 +14,13 @@ constructor(props){
 
     render(){
         return(
+
             <div className="Form-Group">
                 <Form>
                                 <p></p>
                                 <h2 id="header" className="header">Overview</h2>
                                 <button className="button">Search</button>
-                                <h5>My lending list</h5>
+
 
                                 <h5 id="list" className="list">My lending list</h5>
                                 <div className="topitems">
@@ -73,7 +74,7 @@ constructor(props){
                                     </tr>
                                     </tbody>
                                 </table>
-                                <button className="button">Alle Elemente</button>
+                                <button className="button">All Elements</button>
                                 </div>
 
                             <p></p>
@@ -87,6 +88,7 @@ constructor(props){
                     <GetAllObjectsInTable/>
                 </Form>
             </div>
+
         );
     }
 }

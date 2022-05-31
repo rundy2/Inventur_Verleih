@@ -39,7 +39,10 @@ body{
     color: #888;
     font-size: 20px;
     letter-spacing: 1px;
+    position: relative;
+    left: 30px;
 }
+
 
 .data{
     color: #888;
