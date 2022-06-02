@@ -11,6 +11,8 @@ import java.util.List;
 @Repository
 public interface ObjectRepository extends JpaRepository<Object, Integer> {
 
+    Object findById(int id);
+
     List<Object> findAllBySectionId(int sectionId);
 
     List<Object> findAll();
