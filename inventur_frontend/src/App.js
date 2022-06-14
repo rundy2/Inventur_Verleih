@@ -5,16 +5,14 @@ import "./App.css";
 import AuthService from "./services/authService";
 import Login from "./components/loginComponent";
 import Register from "./components/registerComponent";
-import Profile from "./components/profileComponent";
-import BoardUser from "./components/boardUserComponent";
-import BoardAdmin from "./components/boardAdminComponent";
+import Home from "./components/homeComponent";
+import {GetAllObjectsInArray} from "./model/objectFunctions";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.logOut = this.logOut.bind(this);
     this.state = {
-      showAdminBoard: false,
       currentUser: undefined,
     };
   }
@@ -22,8 +20,7 @@ class App extends Component {
     const user = AuthService.getCurrentUser();
     if(user){
       this.setState({
-        currentUser: user,
-        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+        currentUser: user
       });
     }
   }
@@ -31,12 +28,12 @@ class App extends Component {
     AuthService.logout();
   }
   render() {
-    const { currentUser, showAdminBoard } = this.state;
+    const { currentUser } = this.state;
     return (
         <div>
           <nav className="navbar navbar-expand navbar-dark bg-dark">
-            <Link to={"/"} className="navbar-brand">
-              bezKoder
+            <Link to={"/home"} className="navbar-brand">
+              Inventur
             </Link>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -44,28 +41,9 @@ class App extends Component {
                   Home
                 </Link>
               </li>
-              {showAdminBoard && (
-                  <li className="nav-item">
-                    <Link to={"/admin"} className="nav-link">
-                      Admin Board
-                    </Link>
-                  </li>
-              )}
-              {currentUser && (
-                  <li className="nav-item">
-                    <Link to={"/user"} className="nav-link">
-                      User
-                    </Link>
-                  </li>
-              )}
             </div>
             {currentUser ? (
                 <div className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <Link to={"/profile"} className="nav-link">
-                      {currentUser.email}
-                    </Link>
-                  </li>
                   <li className="nav-item">
                     <a href="/login" className="nav-link" onClick={this.logOut}>
                       LogOut
@@ -89,11 +67,9 @@ class App extends Component {
           </nav>
           <div className="container mt-3">
             <Routes>
-              <Route exact path="/login" component={<Login/>} href="/login"/>
-              <Route exact path="/register" component={<Register/>} />
-              <Route exact path="/profile" component={<Profile/>} />
-              <Route path="/user" component={<BoardUser/>} />
-              <Route path="/admin" component={<BoardAdmin/>} />
+              <Route path="/login" element={<Login/>} href="/login"/>
+              <Route path="/register" element={<Register/>} />
+              <Route path="/home" element={<Home/>} />
             </Routes>
           </div>
         </div>

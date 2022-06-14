@@ -1,53 +1,50 @@
-import {dummyObject, dummyRoom, Object, Room} from "../model/model";
+import {dummyObject, Object, ObjectState} from "../model/model";
 import ObjectService from "../services/objectService";
-import RoomService from "../services/roomService";
-import { GetRoomById } from "./roomFunctions";
-import axios, {AxiosResponse} from "axios";
-import {useState, useEffect} from "react";
-import React from "react";
+import AddService from "../services/AddService";
+import {AxiosResponse} from "axios";
+import React, {useEffect, useState} from "react";
+import objectService from "../services/objectService";
+import Home from "../components/homeComponent";
 
-export function GetAllObjectsInArray(){
-    const [objects, setObjects] = useState<Object[]>(dummyObject);
-    const [loaded, setLoaded] = useState<boolean>(false);
+export function SearchInObjects(searchWord:String){
+    let objects = GetAllObjectsInArray();
+    let newObjects = dummyObject;
+    let count = 0;
 
-    useEffect( () => {
-        if(loaded){return;}
-        ObjectService.getAllObjects().then((response: AxiosResponse<Object[]>) =>{
-            setLoaded(true)
-            setObjects(response.data)
-        }).catch((error) => {
-            console.error("error: ", error)
-        });
-        setLoaded(false);
+    for(let i = 0; i < objects.length; i++){
+        if(objects[i].name.toLowerCase().includes(searchWord.toLowerCase())){
+            newObjects[count] = objects[i];
+            count ++;
+        }
+    }
+    newObjects.length = count;
 
-    })
-    return objects;
-
-    /*const objects:Object[] = dummyObject;
-
-    useEffect(() => {
-        let isApiSubscribed = true;
-        ObjectService.getAllObjects().then((response: AxiosResponse<Object[]>) =>{
-            if(isApiSubscribed){
-                console.log(response.data);
-                let objects = Array.from(response.data.values()).slice();
-                console.log("return1: " + objects[0].name);
-            }
-            console.log("return2: " + objects[0].name);
-        })
-        return () => {
-            isApiSubscribed=false;
-            console.log("return3" + objects[0].name);
-        };
-    },[]);
-    console.log("return4: " + objects[0].name);
-    return objects;*/
+    return newObjects;
 }
 
-export function GetAllObjectsInTable(){
+export function GetAllObjectsInArray(){
+        const [objects, setObjects] = useState<Object[]>(() => dummyObject);
+        const [loaded, setLoaded] = useState<boolean>(() => false);
 
-    let objects:Object[] = GetAllObjectsInArray();
+        useEffect(() => {
+            if (loaded) {
+                return;
+            }
+            ObjectService.getAllObjects().then((response: AxiosResponse<Object[]>) => {
+                console.log(response.data);
+                setLoaded(true)
+                setObjects(response.data)
+            }).catch((error) => {
+                console.error("error: ", error)
+            });
+            setLoaded(false);
 
+        })
+
+        return objects;
+}
+
+export function GetObjectsInTable(objects:Object[]){
     return(
         <table>
             <thead>
@@ -70,9 +67,9 @@ export function GetAllObjectsInTable(){
                             <td>{object.roomName}</td>
                             <td>{object.storageName}</td>
                             <td>{object.sectionName}</td>
-                            <td>{object.state}</td>
+                            <td>{ObjectState[object.state]}</td>
                             <td>
-                                <button className="button">Borrow/Return</button>
+                                <button className="button" name="btnUpdateState" id={object.id.toString()}>Borrow/Return</button>
                             </td>
                             <td>
                                 <button className="button">Details</button>
@@ -86,4 +83,13 @@ export function GetAllObjectsInTable(){
 
 
     )
+}
+
+export function GetAllObjectsInTable(){
+
+    return(GetObjectsInTable(GetAllObjectsInArray()));
+}
+
+export function AddObject(object:Object){
+    return AddService.addObject(object);
 }

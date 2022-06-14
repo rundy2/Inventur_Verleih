@@ -2,14 +2,41 @@ import React, {Component} from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import ObjectService from "../services/objectService";
-import { GetAllObjectsInTable } from "../model/objectFunctions";
+import {GetAllObjectsInArray, GetAllObjectsInTable, GetObjectsInTable, SearchInObjects} from "../model/objectFunctions";
 
 import './home.css';
+import {dummyObject, Object, ObjectState} from "../model/model";
 
 export default class Home extends Component{
 
-constructor(props){
+constructor(props) {
     super(props);
+    this.onChangeSearchWord = this.onChangeSearchWord.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleUpdateState = this.handleUpdateState.bind(this);
+    this.state = {
+        searchWord: "",
+        objects: dummyObject, //GetAllObjectsInArray().slice(),
+        loading: false,
+    };
+}
+
+handleUpdateState(e){
+    if(this.state==ObjectState.FREE){
+        ObjectService.updateState(this.id, ObjectState.LEND);
+    }
+    else ObjectService.updateState(this.id, ObjectState.FREE);
+}
+
+onChangeSearchWord(e){
+    this.setState({
+        searchWord: e.target.value
+    });
+}
+
+handleSearch(e){
+    this.state.objects = SearchInObjects(this.state.searchWord);
+    return GetObjectsInTable(this.state.objects);
 }
 
     render(){
@@ -19,8 +46,6 @@ constructor(props){
                 <Form>
                                 <p></p>
                                 <h2 id="header" className="header">Overview</h2>
-                                <button className="button">Search</button>
-
 
                                 <h5 id="list" className="list">My lending list</h5>
                                 <div className="topitems">
@@ -76,19 +101,24 @@ constructor(props){
                                 </table>
                                 <button className="button">All Elements</button>
                                 </div>
+                </Form>
 
                             <p></p>
+                    <Form>
                                 <h2 id="list" className="list">Search</h2>
                                     <Input
                                         type="text"
                                         className="input1"
-                                        name="search"
+                                        name="searchWord"
                                         placeholder="Object Name"
+                                        onChange={this.onChangeSearchWord}
                                     />
-                    <GetAllObjectsInTable/>
-                </Form>
+                                <button className="button" onClick={this.handleSearch}>Search</button>
+                        <this.handleSearch/>
+                    </Form>
             </div>
 
         );
     }
 }
+//{GetObjectsInTable(this.state.objects)}

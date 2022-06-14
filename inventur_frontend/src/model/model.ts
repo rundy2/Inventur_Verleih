@@ -14,9 +14,9 @@ export interface Object{
 }
 
 export enum ObjectState{
-    LEND= "LEND",
-    FREE= "FREE",
-    RESERVED= "RESERVED"
+    LEND,
+    FREE,
+    RESERVED
 }
 
 export interface Room{
