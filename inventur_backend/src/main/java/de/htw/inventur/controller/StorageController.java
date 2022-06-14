@@ -22,4 +22,7 @@ public class StorageController {
     public List<Storage> index(@PathVariable("roomId") Integer roomId){
         return storageRepository.findAllByRoomId(roomId);
     }
+
+    @PostMapping("/add/storage")
+    public void addStorage(@RequestBody Storage storage){storageRepository.save(storage);}
 }
