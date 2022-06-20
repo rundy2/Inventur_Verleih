@@ -2,10 +2,13 @@ package de.htw.inventur.controller;
 
 import de.htw.inventur.entity.Object;
 import de.htw.inventur.repository.ObjectRepository;
+import de.htw.inventur.request.UpdateStateRequest;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 //Controller for objects
@@ -34,11 +37,12 @@ public class ObjectController {
     @PostMapping("/add/object")
     public void addObject(@RequestBody Object object){objectRepository.save(object);}
 
-    @PutMapping("/objects/{objectId}/updateState")
-    public Object updateState(@PathVariable("objectId") Integer objectId, @RequestBody Integer newState){
-        if(newState != 1) objectRepository.updateLendDate(objectId, LocalDate.now());
+    @PostMapping("/objects/{objectId}/updateState")
+    public int updateState(@PathVariable("objectId") Integer objectId, @RequestBody UpdateStateRequest newState){
+        if(newState.getState() != 1) objectRepository.updateLendDate(objectId, new Date());
         else objectRepository.deleteLendDate(objectId);
-        return objectRepository.updateState(objectId, newState);
+
+        return objectRepository.updateState(objectId, newState.getState());
     }
 
 }
