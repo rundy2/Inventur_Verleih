@@ -3,11 +3,10 @@ package de.htw.inventur.controller;
 import de.htw.inventur.entity.Object;
 import de.htw.inventur.repository.ObjectRepository;
 import de.htw.inventur.request.UpdateStateRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -15,6 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class ObjectController {
+
+    Logger logger = LoggerFactory.getLogger(ObjectController.class);
 
     private ObjectRepository objectRepository;
 
@@ -34,12 +35,14 @@ public class ObjectController {
         return objectRepository.findAll();
     }
 
+    //add object
     @PostMapping("/add/object")
     public void addObject(@RequestBody Object object){objectRepository.save(object);}
 
+    //update object state
     @PostMapping("/objects/{objectId}/updateState")
     public int updateState(@PathVariable("objectId") Integer objectId, @RequestBody UpdateStateRequest newState){
-        if(newState.getState() != 1) objectRepository.updateLendDate(objectId, new Date());
+        if(newState.getState() != 1) objectRepository.updateLendDate(objectId, new Date()); //if object state lend/reserved
         else objectRepository.deleteLendDate(objectId);
 
         return objectRepository.updateState(objectId, newState.getState());
