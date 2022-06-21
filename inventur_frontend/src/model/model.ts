@@ -11,6 +11,8 @@ export interface Object{
     state: ObjectState;
     lendBy: String;
     cond: number;
+    lendDate: Date;
+
 }
 
 export enum ObjectState{
@@ -57,7 +59,8 @@ export const dummyObject: Object[] = [
         isbn: 1234,
         state: ObjectState.FREE,
         lendBy: "nobody",
-        cond: 100
+        cond: 100,
+        lendDate:new Date("01-01-2000")
 
     }
 

@@ -4,32 +4,35 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import './objectDetails.css';
+import {GetObjectById, GetObjectsInTable} from "../model/objectFunctions";
+import {dummyObject} from "../model/model";
 
-export default class ObjectDetails extends Component{
+class ObjectDetails extends Component{
 
     constructor(props){
         super(props);
+        this.onLoad = this.onLoad.bind(this);
+        this.state = {
+            object:dummyObject[0],
+            loading:false,
+        }
     }
-
+onLoad(e){
+        this.state.object = GetObjectById(window.location.href.split('/')[4]);
+    return <div>loaded</div>
+}
     render(){
         return(
             <div id="Head">
-            <body>
             <header>
-                <h1>Werners I-phone 5s</h1>
-                <p><img src="https://swroellinghausen.de/wp-content/uploads/2021/05/default-profile.png" alt="Profil"></img>
-                    <br></br>
-                    Profil
-                </p>
+                <h1>Name: {this.state.object.name}</h1>
             </header>
             <main>
                 <div id="Objekt">
-                    <li>Zustand: 60%</li>
-                    <li> Zimmer: Z902</li>
+                    <li> Zimmer: {this.state.object.roomName}</li>
                 </div>
                 <div id="Objekt2">
                     <li> Objekt Historie</li>
-                    <img src="https://www.refurbished.at/cache/images/refurbished-iphone-5s-space-gray_600x600_BGresize_16777215-tj.webp" alt="Objektbild"></img>
                 </div>
                     <table className="Tabelle">
                         <thead>
@@ -41,16 +44,18 @@ export default class ObjectDetails extends Component{
                         </tr>
                         </thead>
                         <tbody>
-                        <td>[User]</td>
-                        <td>[Borrowed Date]</td>
-                        <td>[Return Date]</td>
-                        <td>[Note]</td>
+                            <tr>
+                                <td>[User]</td>
+                                <td>[LendDate]</td>
+                                <td>[Return Date]</td>
+                                <td>[Note]</td>
+                            </tr>
                         </tbody>
                     </table>
             </main>
-            </body>
             </div>
 
         );
     }
 }
+export default ObjectDetails;

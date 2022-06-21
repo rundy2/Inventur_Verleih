@@ -6,7 +6,7 @@ import AuthService from "./services/authService";
 import Login from "./components/loginComponent";
 import Register from "./components/registerComponent";
 import Home from "./components/homeComponent";
-import {GetAllObjectsInArray} from "./model/objectFunctions";
+import ObjectDetails from "./components/objectDetailsComponent";
 
 class App extends Component {
   constructor(props) {
@@ -70,6 +70,7 @@ class App extends Component {
               <Route path="/login" element={<Login/>} href="/login"/>
               <Route path="/register" element={<Register/>} />
               <Route path="/home" element={<Home/>} />
+              <Route path={"/details/:id"} element={<ObjectDetails/>}/>
             </Routes>
           </div>
         </div>

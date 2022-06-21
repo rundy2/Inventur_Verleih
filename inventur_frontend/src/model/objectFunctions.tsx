@@ -23,6 +23,28 @@ export function SearchInObjects(searchWord:String){
     return newObjects;
 }
 
+export function GetObjectById(id:number){
+    const [object, setObject] = useState<Object>(() => dummyObject[0]);
+    const [loaded, setLoaded] = useState<boolean>(() => false);
+
+    useEffect(() => {
+        if(loaded){
+            return;
+        }
+        ObjectService.getObjectById(id).then((response: AxiosResponse<Object>) =>{
+            console.log(response.data)
+            setLoaded(true)
+            setObject(response.data)
+        }).catch((error) => {
+            console.error("error: ",error)
+        });
+        setLoaded(false);
+    })
+    console.log("Return: ");
+    console.log(object);
+    return object;
+}
+
 export function GetAllObjectsInArray(){
         const [objects, setObjects] = useState<Object[]>(() => dummyObject);
         const [loaded, setLoaded] = useState<boolean>(() => false);
@@ -32,7 +54,6 @@ export function GetAllObjectsInArray(){
                 return;
             }
             ObjectService.getAllObjects().then((response: AxiosResponse<Object[]>) => {
-                console.log(response.data);
                 setLoaded(true)
                 setObjects(response.data)
             }).catch((error) => {
@@ -73,7 +94,7 @@ export function GetObjectsInTable(objects:Object[]){
                                 <button className="button" name="btnUpdateState" id={object.id.toString()} type="button" onClick={()=>handleUpdateState(object.id,object.state)}>Borrow/Return</button>
                             </td>
                             <td>
-                                <button className="button">Details</button>
+                                <button className="button" type="button" onClick={()=>handleObjectDetails(object.id)}>Details</button>
                             </td>
                         </tr>
                     )
@@ -84,6 +105,10 @@ export function GetObjectsInTable(objects:Object[]){
 
 
     )
+}
+
+function handleObjectDetails(id:number){
+    window.location.replace("/details/"+id);
 }
 
 function handleUpdateState(id:number, state:number){

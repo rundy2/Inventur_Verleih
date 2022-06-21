@@ -15,7 +15,7 @@ constructor(props) {
     this.handleSearch = this.handleSearch.bind(this);
     this.state = {
         searchWord: "",
-        objects: dummyObject, //GetAllObjectsInArray().slice(),
+        objects: dummyObject,
         loading: false,
     };
 }
