@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 //Controller for objects
 @RestController
@@ -27,6 +28,12 @@ public class ObjectController {
     @GetMapping("/room/{roomId}/storage/{storageId}/section/{sectionId}/object")
     public List<Object> index(@PathVariable("roomId") Integer roomId, @PathVariable("storageId") Integer storageId, @PathVariable("sectionId") Integer sectionId){
         return objectRepository.findAllBySectionId(sectionId);
+    }
+
+    //Get Object by Id
+    @GetMapping("/objects/{objectId}")
+    public Optional<Object> getObjectById(@PathVariable("objectId") Integer objectId){
+        return objectRepository.findById(objectId);
     }
 
     //Get all objects

@@ -11,13 +11,14 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 //Communication between Backend and Database
 //Spring will automatically generate SQL from function-name
 @Repository
 public interface ObjectRepository extends JpaRepository<Object, Integer> {
 
-    Object findById(int id);
+    Optional<Object> findById(int id);
 
     List<Object> findAllBySectionId(int sectionId);
 
