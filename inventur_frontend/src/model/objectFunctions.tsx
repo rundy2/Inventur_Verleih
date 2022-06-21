@@ -87,12 +87,18 @@ export function GetObjectsInTable(objects:Object[]){
 }
 
 function handleUpdateState(id:number, state:number){
-    console.log("Id: "+id);
-    console.log("State: "+state);
     if(state==1){
-        ObjectService.updateState(id, 0);
+        ObjectService.updateState(id, 0).then(
+            ()=>{
+                window.location.reload();
+            }
+        );
     }
-    else ObjectService.updateState(id, 1);
+    else ObjectService.updateState(id, 1).then(
+        ()=>{
+            window.location.reload();
+        }
+    );
 
     return 1;
 }
