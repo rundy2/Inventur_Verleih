@@ -7,8 +7,7 @@ class ObjectService{
         return axios.get(API_URL + "objects", {headers: authHeader()});
     }
     updateState(objectId, newState){
-        console.log(objectId);
-        return axios.put(API_URL + "objects/"+objectId+"/updateState",newState,{headers: authHeader()});
+        return axios.post(API_URL + "objects/"+objectId+"/updateState",{"state":newState},{headers: authHeader()});
     }
 }
 export default new ObjectService();

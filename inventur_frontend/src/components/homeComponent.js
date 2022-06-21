@@ -13,19 +13,11 @@ constructor(props) {
     super(props);
     this.onChangeSearchWord = this.onChangeSearchWord.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleUpdateState = this.handleUpdateState.bind(this);
     this.state = {
         searchWord: "",
         objects: dummyObject, //GetAllObjectsInArray().slice(),
         loading: false,
     };
-}
-
-handleUpdateState(e){
-    if(this.state==ObjectState.FREE){
-        ObjectService.updateState(this.id, ObjectState.LEND);
-    }
-    else ObjectService.updateState(this.id, ObjectState.FREE);
 }
 
 onChangeSearchWord(e){
@@ -114,7 +106,8 @@ handleSearch(e){
                                         onChange={this.onChangeSearchWord}
                                     />
                                 <button className="button" onClick={this.handleSearch}>Search</button>
-                        <this.handleSearch/>
+
+                            <this.handleSearch/>
                     </Form>
             </div>
 
