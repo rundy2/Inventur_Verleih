@@ -23,6 +23,62 @@ export function SearchInObjects(searchWord:String){
     return newObjects;
 }
 
+export function GetLendObjectsInTable(objects:Object[]){
+    return(
+        <table>
+            <thead>
+            <tr className="tableHeader">
+                <th>Object</th>
+                <th>Return Until</th>
+                <th>Room</th>
+                <th>Locker</th>
+                <th>Compartment</th>
+                <th>Note</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {
+                objects.map((object)=>{
+                    return(
+                <tr className="data" key={object.id.toString()}>
+
+                <td>{object.name}</td>
+                <td>[ReturnDate]</td>
+                <td>{object.roomName}</td>
+                <td>{object.storageName}</td>
+                <td>{object.sectionName}</td>
+                <td>[Note]</td>
+                <td>
+                <button className="button" type="button" onClick={()=>handleUpdateState(object.id,object.state)}>Return</button>
+                </td>
+                </tr>
+                )
+                })
+            }
+            </tbody>
+        </table>
+    );
+}
+
+export function GetMyLendObjects(){
+    const [objects, setObjects] = useState<Object[]>(()=>dummyObject);
+    const [loaded, setLoaded] = useState<boolean>(()=>false);
+
+    useEffect(()=>{
+        if(loaded){return;}
+        ObjectService.getObjectsByUser().then((response: AxiosResponse<Object[]>) =>{
+            setLoaded(true)
+            setObjects(response.data)
+        }).catch((error)=>{
+            console.error("error: ",error)
+        });
+        setLoaded(false);
+    })
+
+    return objects;
+}
+
 export function GetObjectById(id:number){
     const [object, setObject] = useState<Object>(() => dummyObject[0]);
     const [loaded, setLoaded] = useState<boolean>(() => false);
@@ -32,7 +88,6 @@ export function GetObjectById(id:number){
             return;
         }
         ObjectService.getObjectById(id).then((response: AxiosResponse<Object>) =>{
-            console.log(response.data)
             setLoaded(true)
             setObject(response.data)
         }).catch((error) => {

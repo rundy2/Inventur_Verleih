@@ -12,5 +12,8 @@ class ObjectService{
     getObjectById(objectId){
         return axios.get(API_URL + "objects/"+objectId,{headers: authHeader()});
     }
+    getObjectsByUser(){
+        return axios.post(API_URL + "objects/user",{"token":JSON.parse(localStorage.getItem('user'))}, {headers: authHeader()});
+    }
 }
 export default new ObjectService();
