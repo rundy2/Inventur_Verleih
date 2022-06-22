@@ -7,7 +7,7 @@ class ObjectService{
         return axios.get(API_URL + "objects", {headers: authHeader()});
     }
     updateState(objectId, newState){
-        return axios.post(API_URL + "objects/"+objectId+"/updateState",{"state":newState},{headers: authHeader()});
+        return axios.post(API_URL + "objects/"+objectId+"/updateState",{"state":newState, "token":JSON.parse(localStorage.getItem('user'))},{headers: authHeader()});
     }
     getObjectById(objectId){
         return axios.get(API_URL + "objects/"+objectId,{headers: authHeader()});

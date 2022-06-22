@@ -40,8 +40,6 @@ export function GetObjectById(id:number){
         });
         setLoaded(false);
     })
-    console.log("Return: ");
-    console.log(object);
     return object;
 }
 
@@ -105,6 +103,43 @@ export function GetObjectsInTable(objects:Object[]){
 
 
     )
+}
+
+export function GetObjectDetailsTable(object:Object){
+    console.log("LendDate: "+ object.lendDate);
+    return (
+        <div id="Head">
+            <header>
+                <h1>{object.name}</h1>
+            </header>
+            <main>
+                <div id="Objekt">
+                    <li> Room: {object.roomName}</li>
+                </div>
+                <div id="Objekt2">
+                    <li> Objekt Historie</li>
+                </div>
+                <table className="Tabelle">
+                    <thead>
+                    <tr>
+                        <th>Ausgeliehen von</th>
+                        <th>Ausgeliehen am</th>
+                        <th>Rückgabe am</th>
+                        <th>Anmerkung</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{object.lendBy}</td>
+                        <td>[Lend Date]</td>
+                        <td>[Return Date]</td>
+                        <td>[Note]</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    );
 }
 
 function handleObjectDetails(id:number){

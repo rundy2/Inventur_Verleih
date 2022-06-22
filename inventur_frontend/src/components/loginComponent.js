@@ -50,15 +50,7 @@ export default class Login extends Component{
         if(this.checkBtn.context._errors.length === 0){
             AuthService.login(this.state.email, this.state.password).then(
                 () => {
-                    /*ReactDOM.render(
-                        /*<BrowserRouter>
-                            <Home />
-                        </BrowserRouter>
-                        document.getElementById('root')
-                    );*/
                     window.location.replace("/home");
-                    //this.props.history.push(/objects);
-                    //window.location.reload();
                 },
                 error => {
                     const resMessage =
