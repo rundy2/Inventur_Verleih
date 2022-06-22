@@ -3,6 +3,7 @@ package de.htw.inventur.controller;
 import de.htw.inventur.entity.Object;
 import de.htw.inventur.repository.ObjectRepository;
 import de.htw.inventur.request.UpdateStateRequest;
+import de.htw.inventur.security.JwtTokenProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -19,9 +20,11 @@ public class ObjectController {
     Logger logger = LoggerFactory.getLogger(ObjectController.class);
 
     private ObjectRepository objectRepository;
+    private JwtTokenProvider jwtTokenProvider;
 
-    public ObjectController(ObjectRepository objectRepository) {
+    public ObjectController(ObjectRepository objectRepository, JwtTokenProvider jwtTokenProvider) {
         this.objectRepository = objectRepository;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
     //Get all objects from a special section
@@ -44,15 +47,23 @@ public class ObjectController {
 
     //add object
     @PostMapping("/add/object")
-    public void addObject(@RequestBody Object object){objectRepository.save(object);}
+    public int addObject(@RequestBody Object object){objectRepository.save(object); return 1;}
 
     //update object state
     @PostMapping("/objects/{objectId}/updateState")
     public int updateState(@PathVariable("objectId") Integer objectId, @RequestBody UpdateStateRequest newState){
-        if(newState.getState() != 1) objectRepository.updateLendDate(objectId, new Date()); //if object state lend/reserved
-        else objectRepository.deleteLendDate(objectId);
+        String user = jwtTokenProvider.getUserMailFromToken(newState.getToken());
+
+        if(newState.getState() != 1) { //if object state lend/reserved
+            objectRepository.updateLendDate(objectId, new Date());
+            objectRepository.updateCurrentUser(objectId, user);
+        }
+        else {
+            if(user.compareTo(objectRepository.getCurrentUserFromObject(objectId)) != 0) return -1;
+            objectRepository.deleteLendDate(objectId);
+            objectRepository.deleteCurrentUser(objectId);
+        }
 
         return objectRepository.updateState(objectId, newState.getState());
     }
-
 }

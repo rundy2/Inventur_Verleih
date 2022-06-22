@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,6 +25,9 @@ public interface ObjectRepository extends JpaRepository<Object, Integer> {
 
     List<Object> findAll();
 
+    @Query("SELECT o.lendBy FROM Object o WHERE o.id = :objectId")
+    String getCurrentUserFromObject(@Param("objectId")int objectId);
+
     @Transactional
     @Modifying
     @Query("UPDATE Object o SET o.state = :newState WHERE o.id = :objectId")
@@ -38,4 +42,14 @@ public interface ObjectRepository extends JpaRepository<Object, Integer> {
     @Modifying
     @Query("UPDATE Object o SET o.lendDate = NULL WHERE o.id = :objectId")
     int deleteLendDate(@Param("objectId")int objectId);
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE Object o SET o.lendBy = :user WHERE o.id = :objectId")
+    int updateCurrentUser(@Param("objectId")int objectId, @Param("user")String user);
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE Object o SET o.lendBy = NULL WHERE o.id = :objectId")
+    int deleteCurrentUser(@Param("objectId")int objectId);
 }

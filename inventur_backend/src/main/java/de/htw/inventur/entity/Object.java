@@ -155,6 +155,10 @@ public class Object {
         this.lendDate = lendDate;
     }
 
+    public String getLendBy(){return lendBy;}
+
+    public void setLendBy(String lendBy){this.lendBy = lendBy;}
+
     public void setId(int id) {
         this.id = id;
     }

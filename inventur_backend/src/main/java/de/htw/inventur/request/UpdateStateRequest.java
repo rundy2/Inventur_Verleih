@@ -5,4 +5,6 @@ import lombok.Data;
 @Data
 public class UpdateStateRequest {
     private int state;
+
+    private String token;
 }
