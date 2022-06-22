@@ -3,6 +3,7 @@ package de.htw.inventur.controller;
 import de.htw.inventur.entity.Object;
 import de.htw.inventur.repository.ObjectRepository;
 import de.htw.inventur.request.UpdateStateRequest;
+import de.htw.inventur.request.UserObjectsRequest;
 import de.htw.inventur.security.JwtTokenProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,11 @@ public class ObjectController {
     @GetMapping("/objects")
     public List<Object> allObjects(){
         return objectRepository.findAll();
+    }
+
+    @PostMapping("/objects/user")
+    public List<Object> getObjectsByUser(@RequestBody UserObjectsRequest userObjectsRequest){
+        return objectRepository.findAllByLendBy(jwtTokenProvider.getUserMailFromToken(userObjectsRequest.getToken()));
     }
 
     //add object

@@ -25,6 +25,8 @@ public interface ObjectRepository extends JpaRepository<Object, Integer> {
 
     List<Object> findAll();
 
+    List<Object> findAllByLendBy(String lendBy);
+
     @Query("SELECT o.lendBy FROM Object o WHERE o.id = :objectId")
     String getCurrentUserFromObject(@Param("objectId")int objectId);
 
