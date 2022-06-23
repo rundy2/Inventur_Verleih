@@ -100,9 +100,9 @@ export default class Register extends Component {
                         }}
                     >
                         {!this.state.successful && (
-                            <div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
+                            <div class="form">
+                                <div className="form-group" class="input">
+                                    <label htmlFor="email" class="label">Email</label>
                                     <Input
                                         type="text"
                                         className="form-control"
@@ -113,8 +113,8 @@ export default class Register extends Component {
                                         validations={[required, email]}
                                     />
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="password">Password</label>
+                                <div className="form-group" class="input">
+                                    <label htmlFor="password" class="label">Password</label>
                                     <Input
                                         type="password"
                                         className="form-control"

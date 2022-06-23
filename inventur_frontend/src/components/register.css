@@ -10,7 +10,7 @@ html, body {
 body{
     
     align-items: center;
-    background: #111;
+    background: white;
   }
 
 .form{
@@ -22,17 +22,23 @@ body{
 
 .input{
     width: 320px;
-    background: #111;
+    background: white;
 }
 
+.label {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+
+}
 .form .user-input{
     width: 320px;
     height: 55px;
     margin-bottom: 30px;
     outline: none;
     border: none;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: rgb(187, 184, 184);
+    color: black;
     font-size: 18px;
     text-align: center;
     border-radius: 5px;
