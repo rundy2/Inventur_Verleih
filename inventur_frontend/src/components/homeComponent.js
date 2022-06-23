@@ -63,7 +63,6 @@ handleMyLendObjects(e){
                                         placeholder="Object Name"
                                         onChange={this.onChangeSearchWord}
                                     />
-                                <button className="button" onClick={this.handleSearch}>Search</button>
 
                             <this.handleSearch/>
                     </Form>
