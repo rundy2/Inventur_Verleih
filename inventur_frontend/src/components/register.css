@@ -10,7 +10,7 @@ html, body {
 body{
     
     align-items: center;
-    background: white;
+    background: black;
   }
 
 .form{
@@ -22,7 +22,7 @@ body{
 
 .input{
     width: 320px;
-    background: white;
+    background: black;
 }
 
 .label {
