@@ -31,6 +31,8 @@ public class Object {
 
     private int cond;
 
+    private int isbn;
+
     private Date resDate;
 
     private Date backDate;
@@ -55,6 +57,7 @@ public class Object {
         this.backDate = backDate;
         this.lendDate = lendDate;
         this.lendBy = lendBy;
+        this.isbn=0;
     }
 
     public Object(String name, int sectionId, int storageId, int roomId) {
@@ -67,6 +70,15 @@ public class Object {
         this.resDate = null;
         this.backDate = null;
         this.lendDate = null;
+        this.isbn=0;
+    }
+
+    public int getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
     }
 
     public String getSectionName() {
