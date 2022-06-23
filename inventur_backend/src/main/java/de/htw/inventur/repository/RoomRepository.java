@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Integer> {
     Room findById(int roomId);
+
+    Room findByName(String name);
 }

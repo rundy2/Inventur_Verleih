@@ -1,6 +1,6 @@
 import {dummyObject, Object, ObjectState} from "../model/model";
 import ObjectService from "../services/objectService";
-import AddService from "../services/AddService";
+import AddService from "../services/addService";
 import {AxiosResponse} from "axios";
 import React, {useEffect, useState} from "react";
 import objectService from "../services/objectService";

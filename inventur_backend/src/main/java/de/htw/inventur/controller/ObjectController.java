@@ -1,7 +1,14 @@
 package de.htw.inventur.controller;
 
 import de.htw.inventur.entity.Object;
+import de.htw.inventur.entity.Room;
+import de.htw.inventur.entity.Section;
+import de.htw.inventur.entity.Storage;
 import de.htw.inventur.repository.ObjectRepository;
+import de.htw.inventur.repository.RoomRepository;
+import de.htw.inventur.repository.SectionRepository;
+import de.htw.inventur.repository.StorageRepository;
+import de.htw.inventur.request.AddObjectRequest;
 import de.htw.inventur.request.UpdateStateRequest;
 import de.htw.inventur.request.UserObjectsRequest;
 import de.htw.inventur.security.JwtTokenProvider;
@@ -21,10 +28,17 @@ public class ObjectController {
     Logger logger = LoggerFactory.getLogger(ObjectController.class);
 
     private ObjectRepository objectRepository;
+    private RoomRepository roomRepository;
+    private StorageRepository storageRepository;
+    private SectionRepository sectionRepository;
+
     private JwtTokenProvider jwtTokenProvider;
 
-    public ObjectController(ObjectRepository objectRepository, JwtTokenProvider jwtTokenProvider) {
+    public ObjectController(ObjectRepository objectRepository, JwtTokenProvider jwtTokenProvider, RoomRepository roomRepository, StorageRepository storageRepository, SectionRepository sectionRepository) {
         this.objectRepository = objectRepository;
+        this.roomRepository = roomRepository;
+        this.storageRepository = storageRepository;
+        this.sectionRepository = sectionRepository;
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
@@ -53,7 +67,41 @@ public class ObjectController {
 
     //add object
     @PostMapping("/add/object")
-    public int addObject(@RequestBody Object object){objectRepository.save(object); return 1;}
+    public int addObject(@RequestBody AddObjectRequest addObjectRequest){
+        Room room = roomRepository.findByName(addObjectRequest.getRoom());
+        Storage storage = storageRepository.findByName(addObjectRequest.getStorage());
+        Section section = sectionRepository.findByName(addObjectRequest.getSection());
+
+        if(room == null){
+            Room newRoom = new Room();
+            newRoom.setName(addObjectRequest.getRoom());
+            roomRepository.save(newRoom);
+            room = roomRepository.findByName(addObjectRequest.getRoom());
+        }
+        if(storage ==null){
+            Storage newStorage = new Storage();
+            newStorage.setRoomId(room.getId());
+            newStorage.setName(addObjectRequest.getStorage());
+            storageRepository.save(newStorage);
+            storage = storageRepository.findByName(addObjectRequest.getStorage());
+        }
+        if(section == null){
+            Section newSection = new Section();
+            newSection.setRoomId(room.getId());
+            newSection.setStorageId(storage.getId());
+            newSection.setName(addObjectRequest.getSection());
+            sectionRepository.save(newSection);
+            section = sectionRepository.findByName(addObjectRequest.getSection());
+        }
+
+        Object newObject = new Object(addObjectRequest.getName(), section.getId(), storage.getId(), room.getId());
+        newObject.setRoomName(addObjectRequest.getRoom());
+        newObject.setStorageName(addObjectRequest.getStorage());
+        newObject.setSectionName(addObjectRequest.getSection());
+
+        objectRepository.save(newObject);
+        return 1;
+    }
 
     //update object state
     @PostMapping("/objects/{objectId}/updateState")

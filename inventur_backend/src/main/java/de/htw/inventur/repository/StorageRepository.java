@@ -12,4 +12,6 @@ import java.util.List;
 public interface StorageRepository extends JpaRepository<Storage, Integer> {
 
     List<Storage> findAllByRoomId(int roomId);
+
+    Storage findByName(String name);
 }
