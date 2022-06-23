@@ -1,8 +1,4 @@
 import React, {Component} from "react";
-//import Jumbotron from "react-bootstrap/Jumbotron";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Table from "react-bootstrap/Table";
 import './objectDetails.css';
 import {GetObjectById, GetObjectDetailsTable} from "../model/objectFunctions";
 import {dummyObject} from "../model/model";
