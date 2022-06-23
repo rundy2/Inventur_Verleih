@@ -4,6 +4,8 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/authService";
+import './register.css';
+
 const required = value => {
     if (!value) {
         return (
@@ -104,6 +106,7 @@ export default class Register extends Component {
                                     <Input
                                         type="text"
                                         className="form-control"
+                                        class="user-input"
                                         name="email"
                                         value={this.state.email}
                                         onChange={this.onChangeEmail}
@@ -115,6 +118,7 @@ export default class Register extends Component {
                                     <Input
                                         type="password"
                                         className="form-control"
+                                        class="user-input"
                                         name="password"
                                         value={this.state.password}
                                         onChange={this.onChangePassword}
