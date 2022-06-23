@@ -4,6 +4,8 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import AuthService from "../services/authService";
+import './register.css';
+
 const required = value => {
     if (!value) {
         return (
@@ -91,11 +93,6 @@ export default class Register extends Component {
         return (
             <div className="col-md-12">
                 <div className="card card-container">
-                    <img
-                        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-                        alt="profile-img"
-                        className="profile-img-card"
-                    />
                     <Form
                         onSubmit={this.handleRegister}
                         ref={c => {
@@ -103,23 +100,25 @@ export default class Register extends Component {
                         }}
                     >
                         {!this.state.successful && (
-                            <div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
+                            <div class="form">
+                                <div className="form-group" class="input">
+                                    <label htmlFor="email" class="label">Email</label>
                                     <Input
                                         type="text"
                                         className="form-control"
+                                        class="user-input"
                                         name="email"
                                         value={this.state.email}
                                         onChange={this.onChangeEmail}
                                         validations={[required, email]}
                                     />
                                 </div>
-                                <div className="form-group">
-                                    <label htmlFor="password">Password</label>
+                                <div className="form-group" class="input">
+                                    <label htmlFor="password" class="label">Password</label>
                                     <Input
                                         type="password"
                                         className="form-control"
+                                        class="user-input"
                                         name="password"
                                         value={this.state.password}
                                         onChange={this.onChangePassword}

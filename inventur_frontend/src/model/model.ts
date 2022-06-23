@@ -1,18 +1,24 @@
 export interface Object{
     id: number;
     sectionId: number;
+    sectionName: string;
     storageId: number;
+    storageName: string;
     roomId: number;
+    roomName: string;
     name: string;
     isbn: number;
     state: ObjectState;
+    lendBy: String;
     cond: number;
+    lendDate: Date;
+
 }
 
 export enum ObjectState{
-    LEND= "LEND",
-    FREE= "FREE",
-    RESERVED= "RESERVED"
+    LEND,
+    FREE,
+    RESERVED
 }
 
 export interface Room{
@@ -44,12 +50,17 @@ export const dummyObject: Object[] = [
     {
         id: 4,
         sectionId: 3,
+        sectionName: "dummySection",
         storageId: 2,
+        storageName: "dummyStorage",
         roomId: 1,
+        roomName: "dummyRoom",
         name: "dummy",
         isbn: 1234,
         state: ObjectState.FREE,
-        cond: 100
+        lendBy: "nobody",
+        cond: 100,
+        lendDate:new Date("01-01-2000")
 
     }
 

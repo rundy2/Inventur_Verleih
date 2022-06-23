@@ -3,9 +3,6 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../services/authService";
-import Home from "./homeComponent"
-import {BrowserRouter, withRouter} from 'react-router-dom';
-import ReactDOM from "react-dom";
 import './login.css';
 
 const required = value =>{
@@ -50,14 +47,7 @@ export default class Login extends Component{
         if(this.checkBtn.context._errors.length === 0){
             AuthService.login(this.state.email, this.state.password).then(
                 () => {
-                    ReactDOM.render(
-                        <BrowserRouter>
-                            <Home />
-                        </BrowserRouter>,
-                        document.getElementById('root')
-                    );
-                    //this.props.history.push(/objects);
-                    //window.location.reload();
+                    window.location.replace("/home");
                 },
                 error => {
                     const resMessage =
@@ -98,7 +88,7 @@ export default class Login extends Component{
                                     className="form-control"
                                     class="user-input"
                                     name="email"
-                                    placeholder="Username"
+                                    placeholder="Email"
                                     value={this.state.email}
                                     onChange={this.onChangeEmail}
                                     validations={[required]}
@@ -120,7 +110,7 @@ export default class Login extends Component{
                                 <p id="forgot" class="forgot">Forgot your password?</p>
                             </div>
                             <div className="form-group">
-                                <button
+                                    <button
                                     className="btn btn-primary btn-block"
                                     disabled={this.state.loading}
                                 >
