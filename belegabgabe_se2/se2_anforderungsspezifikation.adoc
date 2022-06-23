@@ -1,0 +1,13 @@
+= Anforderungsspezifikationen
+
+Unsere Anwendung besteht aus 2 Teilen, dem Frontend und dem Backend. 
+Für das Entwickeln des Backends nutzen wir das SpringBoot Framework, da unser Team bereits einige Vorerfahrungen dazu hat und die Anbindung und Verwendung einer Datenbank damit einfach und flexibel ist.
+Für das Frontend verwenden wir die ReactJS Bibliothek, da diese eine Vielzahl von schönen Nutzerelementen mit verschiedenen Animationen und Layouts bereitstellt.
+        
+Die Hardwareanforderungen unserer Anwendung orientieren sich an den Anforderungen des von uns verwendeten Frameworks. Für SpringBoot ist mindestens Java 8 vorausgesetzt, empfohlen wird aber Java 11, woraus sich folgende Hardwareanforderungen ergeben:
+        
+        2 GHz Prozessor (min 1,4 GHz x64)
+        4 GB RAM
+        7 GB freier Festplattenspeicher
+        
+        Wir empfehlen die Nutzung unserer Anwendung unter einem Linux Ubuntu Betriebssystem, da wir die Anwendung unter diesem entwickelt haben. Die Anwendung sollte aber auch auf jedem anderen System laufen, welches Java unterstützt.

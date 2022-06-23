@@ -1,0 +1,258 @@
+// --- 1. Projektthema -------------------------
+
+= Projektbericht
+
+== SE ⅠⅠ - Belegabgabe: I6 Inventur Verleih
+
+Fabian Krähmer, Silko Grellmann, Felix Helmert, Nico Papke, Moritz Lehmann, Dominique Linzmajer
+
+
+
+:docs: ../docs
+include::../docs/_includes/default-attributes.inc.adoc[]
+// ---
+:doctype: book
+:toc:
+:toclevels: 2
+:toc-title: Inhaltsverzeichnis
+:sectnums:
+:icons: font
+:source-highlighter: highlightjs
+:source-highlighter: rouge
+:rouge-style: github
+:xrefstyle: full
+:experimental:
+:chapter-label:
+:figure-caption: Abbildung
+:table-caption: Tabelle
+:listing-caption: Listing
+:!example-caption:
+:experimental:
+
+
+
+= Inhaltsverzeichnis
+. <<Inventur Verleih - Digitale Inventur- und Verleihliste (I6)>>
+. <<Planung>>
+[arabic]
+.. <<Ausgangssituation in SE ⅠⅠ>>
+[arabic]
+... <<Teamaufstellung>>
+... <<Aufgabenstellung und Auftraggeber>>
+.. <<Projektorganisation>>
+[arabic]
+... <<Team>>
+... <<Rollenverteilung>>
+.. <<Ablauf der Kommunikation unter Verwendung von Tools>>
+.. <<Way of Working>>
+. <<Durchführung des Projekts>>
+[arabic]
+.. <<SE Ⅰ>>
+.. <<SE ⅠⅠ>>
+[arabic]
+... <<Start in das Neue Semester>>
+... <<Beginn der Implementierung>>
+... <<Entwicklung vorantreiben>>
+... <<System abschließen um Kunden Inkrement durchführen zu können>>
+... <<Systemoptimierung und Übergabe an den Kunden>>
+. <<Ergebnisse>>
+[arabic]
+.. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
+.. <<Weitere Ergebnisse>>
+.. <<Fehlerbehebung>>
+.. <<Begründung für das Nichterfüllen von Zielen>>
+.. <<Reflexionen der Teammitglieder>>
+[arabic]
+... <<1.Teammitglied>>
+... <<2.Teammitglied>>
+... <<3.Teammitglied>>
+... <<4.Teammitglied>>
+... <<5.Teammitglied>>
+... <<6.Teammitglied>>
+
+
+== Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
+Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2022 von 
+betreut. Der Projektbericht entstand als Gruppenarbeit
+aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
+
+== Planung 
+=== Ausgangssituation in SE ⅠⅠ
+==== Teamaufstellung
+Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
+Moritz Lehmann, Silko Grellmann. Geplant war das ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
+
+==== Aufgabenstellung und Auftraggeber
+Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
+Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese 
+erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt 
+werden, wodurch sich zum Beispiel Szenarien aus dem Bereich der vorausschauenden Wartung 
+realisieren lassen. Wartungsintervalle von Werkzeugen (mechanischer Verschleiß, das Wechseln von 
+Batterien oder Nachfüllen von Verbrauchsmaterialen) könnten so ihren statischen Charakter verlieren 
+und sich stattdessen an der realen (Ab-)Nutzung orientieren. 
+
+=== Projektorganisation
+==== Team
+Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
+einem guten Projektabschluss ist, haben wir auch in SE II daran festgehalten. Wir meinen mit
+"gutem Team" nicht, dass die einzelnen Teammitglieder über große Expertisen im Bereich Software
+Engineering oder andere IT bezogene Qualifikationen verfügen müssen, sondern, dass eine gute
+2
+Gruppendynamik und ein starker Zusammenhalt innerhalb der Gruppe vorhanden ist.
+Wir haben versucht, die Planung der einzelnen Teilaspekte so zu gestalten, dass die eben genannten Eigenschaften stets in hohem Ausmaß vorhanden sind.
+Im Folgenden sind eingesetzte Praktiken aufgelistet, die dazu beigetragen haben die Zusammenarbeit in unserem Team zu verbessern
+
+[cols="1,3"]
+|===
+| *Eingesetzte Praktik* | *Gewünschter Erfolg*
+| Risiko des Scheiterns miteinbeziehen | Die Priorisierung der Reihenfolge der Arbeitsschritte wurde stets
+so gewählt, dass ein auftretendes Problem nie die Arbeit der
+anderen Gruppenmitglieder behinderte. So sollte der Erfolgsdruck gemindert werden.
+| Aufgabengebiete weit streuen | Es wurde versucht, die einzelnen Gruppenmitglieder Rollenunabhänig, in allen Teilgebieten mit kleinen Aufgaben einzusetzen.
+Hintergrund dieser Strategie war, dass jedes Gruppenmitglied
+auch die Aufgaben der anderen Rollen kennlernen kann und so
+auch außerhalb der eigenen Rolle Erfahrungen sammeln konnte
+| Zeit für Austausch einplanen  | Durch geregelte Gruppendiskussionen kann jedes Mitglied seine
+Meinung oder Erfahrung bei Entscheidung einbringen und sollte
+dadurch auch mehr am Projekt beteiligt werden
+| Demokratische Entscheidungsfindung | Jede Entscheidung, die von uns getroffen werden konnte, wurde
+demokratisch und nicht autoritär entschieden. Dies sollte
+gewährleisten, dass alle Gruppenmitglieder mit der Entscheidung einverstanden sind und auch keine schlechten Entscheidungen, wie z.B. durch mangelhafte Expertise getroffen werden.
+| Pair Programming | Die Implementierung des Systems wurde vorrangig in einer
+Zweiergruppe angegangen. Diese bestand aus dem Hauptentwickler mit Ruby-Expertise und dem Architekten. Ihm wurde es
+möglich, dass erste Programmiererfahrungen in Ruby gesammelt
+werden konnten, ohne, dass der Zeitaufwand zu groß wurde.
+Außerdem konnten spontane Probleme so durchaus schneller
+gelöst werden, was auch den Developer entlastete.
+|===
+
+==== Rollenverteilung
+Die Aufgaben wurden hauptsächlich nach Interessen- und Expertisengebieten verteilt. Das Team
+einigte sich darauf, dass der Rollenverantwortliche sich hauptsächlich um die Dokumentationspflichten und Arbeitspriorisierung kümmerte, er aber immer von anderen Teammitglieder bei der
+eigentlichen Aufgabe unterstützt wird. So konnten wir eine perfekte Mischung aus Rollenspezialisierung und Informationsaustausch erreichen. Durch die starke Dezimierung des Teams in SE II
+waren wir gezwungen, dass einige Gruppenmitglieder mehrere Rollen ausüben mussten. Somit
+wandelte sich die Teamarbeit in den Bereichen Dokumentation und Organisation zu spezialisierter
+Einzelarbeit.Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
+erhalten.
+
+=== Ablauf der Kommunikation unter Verwendung von Tools 
+a während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
+WhatsApp für die direkte Kommunikation zwischen einzelnen Gruppenmitgliedern und zur
+schnellen Informationsübermittlung an alle Teammitglieder genutzt. Um Meetings zu realisieren,
+wurde zu erst ein Discord Server genutzt, im Laufe des Projekts dann aber auf Microsoft Teams
+gewechselt. Hintergrund hier war, dass Teams einige Zusatzfunktionen bot, wie z.B. "Polly", die für
+Umfragen genutzt wurden, die Discord leider nicht unterstütze. Des Weiteren konnte in Teams
+auch ein cloudbasiertes Datei-Mangement-Tool leicht verwendet werden, so mussten wir nicht
+mehr OneDrive nutzen, das privat von einem Gruppenmitglied gestellt wurde. Auch konnte in
+Teams eine bessere Rollenhierarchie genutzt werden, um Rollenspezifische Feed Anfragen zu nutzen, damit ein Brainstormeffekt entsteht. Die Dokumentation erfolgte geschlossen in ADOC Dateien,
+die über GitHub verwaltet wurden. Auch wurde über GitHub unsere Work-Item-List mit Hilfe der
+Issues verwirklicht. GitHub war der Schlüssel um Gruppen- und Parallelarbeiten zu organisieren
+und umzusetzen. Zur Überprüfung und zur Dokumentation unseres Projektfortschritts benutzten
+wir regelmäßig den Essence Navigator. Um mit dem Kunden in Kontakt treten zu können, wurden
+ausschließlich E-Mails, Microsoft Teams und Präsenz-Treffen genutzt. Die Präsenztreffen fanden
+erst in SE II statt, mit kompletter Einhaltung der Corona-Hygiene-Maßnahmen. Diese Änderung
+wurde von unserem Kunden sehr begrüßt, da er leider durch die eben genannten Techniken in seinem Workflow eher behindert als unterstützt wurde. +
+
+Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten erheblich, da nun
+4
+Fragen wie bspw. an welchem Ort das Treffen stattfinden könnte, ob dieser Ort auch zur gegebenen
+Zeit verfügbar ist oder wie lange die Anreise der einzelnen Mitglieder wohl wäre, nun alle obsolet
+waren. Es musste nun nur noch eine Uhrzeit gefunden werden, zu der alle verfügbar waren.
+
+=== Way of Working 
+Unsere Arbeitsweise war vom Open Unified Process geprägt. Wir haben stets versucht,
+alle vier Kernziele zu durchlaufen. Alternativ dazu haben wir auch versucht andere Praktiken aus
+anderen Bereichen zu verwenden, die wir aus eigener Erfahrung oder aus der Theorie kannten.
+Diese waren das QM oder die Puls-Checks. Wir haben mit Iterationen gearbeitet, die immer zwei
+Wochen andauerten. +
+
+Grundsätzlich war aber folgender Ablauf regelmäßig zu erkennen:
+
+. Planung der Iteration
+-  Zielsetzung anhand der Aufgabenpriorisierung des Kunden
+-  Die Ziele in Aufgaben unterteilen
+- Bewertung der Aufgaben
+-  Aufgabenverteilung an die Gruppenmitglieder
+. Durchführung der Iteration
+-  Die Aufgaben werden nach der Priorisierung unter Beachtung des Aufwands abgearbeitet
+-  Ständiger Austausch unter den Gruppenmitgliedern über den Status der Aufgabe
+.  Ende der Iteration
+-  Vorstellung der erledigten Aufgaben
+-  Iterationsnachbesprechung
+-   Lesson-Learned (wenn erforderlich)
+- Dokumentation der Iteration
+
+Wenn geplante Ziele oder Aufgaben nicht in der Iteration umgesetzt werden konnten, wurden diese
+in die nächste Iteration übernommen und versucht, die Aufwandsplanung anhand der neuen
+Erkenntnisse besser umzusetzen.
+
+== Durchführung des Projekts
+=== SE Ⅰ
+Das Hauptaugenmerk in SE I unseres Projektes war, eine gute und solide Grundlage für die Construction Phase in SE II zu schaffen. Deshalb bestand die erste Iteration hauptsächlich aus teamorganisatorischen Tätigkeiten und der Einarbeitung in das Projekt und die Aufgabenstellung. Hier
+haben wir auch zum ersten Mal Kontakt zum Kunden hergestellt. +
+
+Die Ziele der zweiten Iteration waren es, Einigkeit mit dem Kunden über die Vision herzustellen.
+Hierzu benutzten wir erstmals Wireframes, damit unserer Kunde sich unsere Ideen besser vorstellen konnte. Auch wurden hier die systemweiten Anforderungen aufgestellt und der GitHub Workshop abgehalten. +
+
+In Iteration 03 versuchten wir die Anforderungen genau zu spezifizieren, also die erstellten Wireframes genau mit dem Kunden durchzusprechen, um zu verifiziern ob alle Forderungen richtig verstanden wurden. Hier wurden auch die Test Cases zu den Use Cases erstellt. Der *LCO-Meilenstein*
+und der *LCA-Meilenstein* konnten hier abgeschlossen werden. +
+
+In der letzten Iteration von SE I fiel uns auf, dass wir mit den Dozenten, die einen großen Teil der
+Anwenderbasis darstellen, leider nie Kontakt aufgenommen haben. Das war zum einem unserem
+fehlenden Bewusstsein und zum anderen dem Wunsch des Kunden, Aufwand für die Dozenten zu
+vermeiden, zuzuschreiben. Um diesen Fehler zu beheben, versuchten wir die fehlenden Anforderungen zu ermitteln. Bei diesem Unterfangen bemerkten wir jedoch rechtzeitig, dass wir es zeitlich nicht mehr schaffen würden alle anwenderspezifischen Sichten richtig zu analysieren. Deswegen verschoben wir dieses Ziel in SE II. Auch wurden in
+dieser Iteration nochmals die Use Cases und die Testcases überarbeitet und das Abgabedokument
+angefertigt.
+
+=== SE ⅠⅠ
+==== Start in das Neue Semester 
+Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Als dann
+dem Team auch noch ein neues Mitglied zugewiesen wurde konnte das Team mit
+neuer Zuversicht die nächsten Schritte planen:
+
+- Altbelegkorrektur durchführen
+- Neues Teammitglied einarbeiten
+
+Parallel dazu wurde auch die Rollenverteilung überarbeitet. Hier mussten nun aufgrund von fehlenden Mitgliedern einige Rollen doppelt besetzt werden. Wir versuchten hier so logisch wie möglich vorzugehen. Das heißt Mitglieder, die eher technische Rollen besetzten, besetzen auch wieder
+eher technische Rollen und Mitglieder, die eher organisatorische Rollen innehatten, werden weitere organisatorische Aufgaben dazubekommen.
+
+*Altbelegkorrektur und neues Mitglied einarbeiten*
+
+Nach der Konsultation (28.04.2022) mit Robert RIngel, bezüglich des Beleges von SE I, wussten
+wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der implementierung wurde unmittelbar
+angegangen.
+Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Projekt gut zu nutzen.
+
+==== Beginn der Implementierung
+
+
+==== Entwicklung vorantreiben
+
+==== System abschließen um Kunden Inkrement durchführen zu können
+
+
+==== Systemoptimierung und Übergabe an den Kunden
+
+== Ergebnisse
+
+=== Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste
+
+==== Weitere Ergebnisse
+
+=== Fehlerbehebung
+
+=== Begründung für das Nichterfüllen von Zielen
+
+Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitglieder uns am
+Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
+fehlte uns die komplette Arbeitskraft über das Semester. Auch die Einarbeitungszeit des neuen Mitglieds konnte nicht produktiv für das Projekt genutzt werden. Auch die Korrektur des Belegs am Anfang des Semesters kostete viel Arbeitszeit, die aber für das System keine Fortschritte gebracht hat.
+
+
+=== Reflexionen der Teammitglieder
+
+==== 1.Teammitglied
+==== 2.Teammitglied
+==== 3.Teammitglied
+==== 4.Teammitglied
+==== 5.Teammitglied
+==== 6.Teammitglied

@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import App from "./App";
 import Login from "./components/loginComponent";
 import Home from "./components/homeComponent";
+import Reqister from "./components/registerComponent";
 import ObjectDetails from "./components/objectDetailsComponent";
 import reportWebVitals from './reportWebVitals';
 
