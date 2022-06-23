@@ -48,7 +48,6 @@ handleMyLendObjects(e){
                                 <h5 id="list" className="list">My lending list</h5>
                                 <div className="topitems">
                                 <this.handleMyLendObjects/>
-                                <button className="button">All Elements</button>
                                 </div>
                 </Form>
 
