@@ -15,8 +15,9 @@ class AddService{
         return axios.post(API_URL + "add/section", section, {headers: authHeader()});
     }
 
-    addObject(object){
-        return axios.post(API_URL + "add/object", object, {headers: authHeader()});
+    addObject(name, room, storage, section){
+        console.log(name+room+storage+section);
+        return axios.post(API_URL + "add/object", {"name":name,"room":room,"storage":storage,"section":section}, {headers: authHeader()});
     }
 }
 export default new AddService();

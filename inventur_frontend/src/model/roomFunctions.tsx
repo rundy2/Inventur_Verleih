@@ -1,6 +1,6 @@
 import {dummyObject, dummyRoom, Object, Room} from "../model/model";
 import RoomService from "../services/roomService";
-import AddService from "../services/AddService";
+import AddService from "../services/addService";
 import axios, {AxiosResponse} from "axios";
 import {useState, useEffect} from "react";
 import React from "react";

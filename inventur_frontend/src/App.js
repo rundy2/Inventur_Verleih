@@ -7,6 +7,7 @@ import Login from "./components/loginComponent";
 import Register from "./components/registerComponent";
 import Home from "./components/homeComponent";
 import ObjectDetails from "./components/objectDetailsComponent";
+import AddObject from "./components/addObjectComponent";
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,9 @@ class App extends Component {
             {currentUser ? (
                 <div className="navbar-nav ml-auto">
                   <li className="nav-item">
+                    <Link to={"/addObject"} className="nav-link">Add Object</Link>
+                  </li>
+                  <li className="nav-item">
                     <a href="/login" className="nav-link" onClick={this.logOut}>
                       LogOut
                     </a>
@@ -68,10 +72,11 @@ class App extends Component {
           <div className="container mt-3">
             <Routes>
               <Route path="/" element={<Home/>}/>
-              <Route path="/login" element={<Login/>} href="/login"/>
+              <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>} />
               <Route path="/home" element={<Home/>} />
               <Route path={"/details/:id"} element={<ObjectDetails/>}/>
+              <Route path={"/addObject"} element={<AddObject/>}/>
             </Routes>
           </div>
         </div>

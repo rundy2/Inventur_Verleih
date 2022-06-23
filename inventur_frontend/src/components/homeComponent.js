@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import ObjectService from "../services/objectService";
 import {GetLendObjectsInTable, GetMyLendObjects, GetObjectsInTable, SearchInObjects} from "../model/objectFunctions";
 
 import './home.css';
-import {dummyObject, Object, ObjectState} from "../model/model";
+import {dummyObject} from "../model/model";
+import {Button} from "react-bootstrap";
 
 export default class Home extends Component{
 
@@ -40,7 +40,6 @@ handleMyLendObjects(e){
 
     render(){
         return(
-
             <div className="Form-Group">
                 <Form>
                                 <p></p>
