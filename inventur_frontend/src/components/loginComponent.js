@@ -91,7 +91,7 @@ export default class Login extends Component{
                                     className="form-control"
                                     class="user-input"
                                     name="email"
-                                    placeholder="Username"
+                                    placeholder="Email"
                                     value={this.state.email}
                                     onChange={this.onChangeEmail}
                                     validations={[required]}
