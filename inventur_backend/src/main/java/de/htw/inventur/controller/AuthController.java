@@ -9,10 +9,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -37,6 +34,7 @@ public class AuthController {
     }
 
     //For register requests
+    @CrossOrigin(origins="*")
     @PostMapping(value = "/register")
     public ResponseEntity<User> register(@RequestBody AuthRequest authRequest){
         Optional<User> userOptional = userRepository.findByEmail(authRequest.getEmail());
@@ -57,6 +55,7 @@ public class AuthController {
     }
 
     //For login requests
+    @CrossOrigin(origins="*")
     @PostMapping(value = "/login")
     public ResponseEntity<String> login(@RequestBody AuthRequest authRequest){
         //Authenticate User from received Data
