@@ -11,7 +11,8 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 
 [arabic]
 . <<Startseite>>
-. <<Login>>
+. <<Login mit bereitgestellten Daten>>
+. <<Login erstellen/Sign Up>>
 . <<Ausleihen von Gegenständen>>
 . <<Rückgabe von Gegenständen>>
 . <<Anlegen von Gegenständen>>
@@ -26,7 +27,7 @@ Die Startseite ist folgendermaßen gegliedert:
 image:/images/Startseite.png[]
 . 
 
-== Login
+== Login mit bereitgestellten Daten
 
 . Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
 
@@ -37,6 +38,14 @@ image:/images/Startseite.png[]
 . Danach klicken Sie auf Login.
 
 . Es erscheint die Startseite und Sie sehen ihre ausgeliehen Gegenstände.
+
+== Login erstellen/Sign Up
+
+. Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
+
+. Es erscheint nun die Loginseite
+
+
 
 == Ausleihen von Gegenständen
 
