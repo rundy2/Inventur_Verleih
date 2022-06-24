@@ -9,6 +9,7 @@ import de.htw.inventur.repository.RoomRepository;
 import de.htw.inventur.repository.SectionRepository;
 import de.htw.inventur.repository.StorageRepository;
 import de.htw.inventur.request.AddObjectRequest;
+import de.htw.inventur.request.DeleteObjectRequest;
 import de.htw.inventur.request.UpdateStateRequest;
 import de.htw.inventur.request.UserObjectsRequest;
 import de.htw.inventur.security.JwtTokenProvider;
@@ -119,5 +120,12 @@ public class ObjectController {
         }
 
         return objectRepository.updateState(objectId, newState.getState());
+    }
+
+    @PostMapping("/objects/{objectId}/delete")
+    public int deleteObject(@RequestBody DeleteObjectRequest deleteObjectRequest){
+        objectRepository.deleteByObjectId(deleteObjectRequest.getObjectId());
+
+        return 1;
     }
 }

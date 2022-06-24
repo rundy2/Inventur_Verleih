@@ -15,5 +15,8 @@ class ObjectService{
     getObjectsByUser(){
         return axios.post(API_URL + "objects/user",{"token":JSON.parse(localStorage.getItem('user'))}, {headers: authHeader()});
     }
+    deleteObjectById(objectId){
+        return axios.post(API_URL + "objects/"+objectId+"/delete",{"objectId":objectId},{headers: authHeader()});
+    }
 }
 export default new ObjectService();

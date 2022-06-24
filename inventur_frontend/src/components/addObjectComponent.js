@@ -3,6 +3,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import {Button, FormLabel} from "react-bootstrap";
 import AddService from "../services/addService";
+import "./newobject.css";
 
 const required = value =>{
     if(!value){
@@ -52,10 +53,15 @@ export default class AddObject extends Component{
     }
 
     handleAddObject(e){
-        return AddService.addObject(this.state.oname,
+        AddService.addObject(this.state.oname,
                                     this.state.room,
                                     this.state.storage,
-                                    this.state.section);
+                                    this.state.section).then(
+            ()=>{
+                window.location.replace("/home");
+            }
+        );
+        return 1;
     }
 
     render(){
@@ -63,16 +69,16 @@ export default class AddObject extends Component{
         <div>
             <Form name="addObject">
                 <FormLabel>Name: </FormLabel>
-                <Input name="oname" validations={[required]} onChange={this.onNameChange}/>
+                <Input name="oname" className="input" validations={[required]} onChange={this.onNameChange}/>
 
                 <FormLabel>Room: </FormLabel>
-                <Input name="room" validations={[required]} onChange={this.onRoomChange}/>
+                <Input name="room" className="input" validations={[required]} onChange={this.onRoomChange}/>
 
                 <FormLabel>Storage</FormLabel>
-                <Input name="storage" validations={[required]} onChange={this.onStorageChange}/>
+                <Input name="storage" className="input" validations={[required]} onChange={this.onStorageChange}/>
 
                 <FormLabel>Section</FormLabel>
-                <Input name="section" validations={[required]} onChange={this.onSectionChange}/>
+                <Input name="section" className="input" validations={[required]} onChange={this.onSectionChange}/>
 
                 <br/>
                 <Button type="button" onClick={this.handleAddObject}>Add Object</Button>

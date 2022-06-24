@@ -97,29 +97,28 @@ export default class Register extends Component {
                         onSubmit={this.handleRegister}
                         ref={c => {
                             this.form = c;
-                        }}
-                    >
+                        }}>
                         {!this.state.successful && (
                             <div class="form">
                                 <div className="form-group" class="input">
-                                    <label htmlFor="email" class="label">Email</label>
                                     <Input
                                         type="text"
                                         className="form-control"
                                         class="user-input"
                                         name="email"
+                                        placeholder="Email"
                                         value={this.state.email}
                                         onChange={this.onChangeEmail}
                                         validations={[required, email]}
                                     />
                                 </div>
                                 <div className="form-group" class="input">
-                                    <label htmlFor="password" class="label">Password</label>
                                     <Input
                                         type="password"
                                         className="form-control"
                                         class="user-input"
                                         name="password"
+                                        placeholder="Password"
                                         value={this.state.password}
                                         onChange={this.onChangePassword}
                                         validations={[required, vpassword]}
