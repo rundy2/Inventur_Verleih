@@ -6,6 +6,7 @@ import React, {useEffect, useState} from "react";
 import objectService from "../services/objectService";
 import Home from "../components/homeComponent";
 import homeComponent from "../components/homeComponent";
+import {Button} from "react-bootstrap";
 
 export function SearchInObjects(searchWord:String){
     let objects = GetAllObjectsInArray();
@@ -160,6 +161,14 @@ export function GetObjectsInTable(objects:Object[]){
     )
 }
 
+export function handleDeleteObjectById(objectId:number){
+    objectService.deleteObjectById(objectId).then(
+        ()=>{
+            window.location.replace("/home");
+        }
+    )
+}
+
 export function GetObjectDetailsTable(object:Object){
     console.log("LendDate: "+ object.lendDate);
     return (
@@ -195,6 +204,8 @@ export function GetObjectDetailsTable(object:Object){
                     </tr>
                     </tbody>
                 </table>
+                <br/>
+                <Button onClick={()=>handleDeleteObjectById(object.id)}>Delete from Database</Button>
             </main>
         </div>
     );
