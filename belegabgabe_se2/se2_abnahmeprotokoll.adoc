@@ -8,6 +8,7 @@
 //Platzhalter für weitere Dokumenten-Attribute
 
 Autor: Fabian Krähmer, Version 1.2, 22.06.2022
+
 == Projektangaben
 Thema: Inventur Verleih Software (Gruppe I6)
 Zeitraum: Wintersemester 2021 + Sommersemester 2022
