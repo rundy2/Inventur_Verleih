@@ -19,7 +19,7 @@ Will die Ausleih- und Wartungshistorie eines Gegenstandes sowie dessen erste Auf
 === Standardablauf (Basic Flow)
 //Der Standardablauf definiert die Schritte für den Erfolgsfall ("Happy Path")
 
-. Der Use Case beginnt, wenn der Uer einen neuen Gegenstand in die Datenbank aufnimmt.
+. Der Use Case beginnt, wenn der User einen neuen Gegenstand in die Datenbank aufnimmt.
 . Der User nimmt eine Zustandsänderung an einem Gegenstand vor.
 . Die Zustandsänderungen werden in eine Historie geschrieben.
 . Der User wählt einen Gegenstand aus und ruft die Historie auf.
