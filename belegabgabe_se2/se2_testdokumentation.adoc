@@ -1,0 +1,55 @@
+= Testdokumentation (Deployment, Abgabe)
+
+[cols="3,3,1"]
+|===
+| Testcase | Art | Erfolg
+
+| Webseite ist erreichbar.
+| wird gezeigt
+| Nein, nur lokal lauffähig
+| Webseite ist von mobilen Geräten aus errreichbar.
+| wird gezeigt
+| Anpassung für mobiles Gerät im Browser gezeigt
+| Authentifizierung per Login funktioniert.
+| Login mit fehlerhaften Daten/ Login mit richtigen Daten
+| ja 
+| Englische Sprache auf der/den gesamten Webseite/-n.
+| Test durch manuelles lesen.
+| ja 
+| Inventarliste wird korrekt angezeigt.
+| wird gezeigt
+| ja
+| Scannen eines Gegenstands-Barcodes ist möglich.
+| ...
+| nein
+| Ein neuer Gegenstand kann aufgenommen werden.
+| wird gezeigt
+| ja
+| Gegenstand können ausgeliehen werden.
+| verschiedene Daten werden eingetragen
+| ja
+| Gegenstand kann zurückgegeben werden.
+| wird gezeigt
+| ja
+| Gegenstände können aus dem System deinventarisiert werden.
+| wird gezeigt
+| 
+| Admin kann Status eines Gegenstandes manuell ändern.
+| 
+| nein
+| Gegenstände können anhand von Suchkriterien in der Inventarliste gesucht werden.
+| Test mit falscher Schreibweise und richtiger Schreibweise
+| ja 
+| persistentes Speichern
+| Backend wird geschlossen und wieder geöffnet
+| ja
+| verschlüsselte Kommunikation zwichen Server und Clients
+| Konsolenausgabe wird geprüft
+| ja
+| Schutz der Daten auf dem Server vor unberechtigten Zugriff
+| Test ob Buttons unangemeldet funktionstüchtig
+| ja
+
+| ===
+
+
