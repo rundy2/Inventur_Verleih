@@ -144,7 +144,7 @@ export function GetObjectsInTable(objects:Object[]){
                             <td>{object.sectionName}</td>
                             <td className="state">{ObjectState[object.state]}</td>
                             <td>
-                                <button className="button" name="btnUpdateState" id={object.id.toString()} type="button" onClick={()=>handleUpdateState(object.id,object.state)}>Borrow/Return</button>
+                                <button className="button" name="btnUpdateState" id={object.id.toString()} type="button" onClick={()=>handleUpdateState(object.id,object.state)}>{(object.state == 1)? ("Borrow"):("Return")}</button>
                             </td>
                             <td>
                                 <button className="button" type="button" onClick={()=>handleObjectDetails(object.id)}>Details</button>
@@ -168,19 +168,22 @@ export function GetObjectDetailsTable(object:Object){
                 <h1>{object.name}</h1>
             </header>
             <main>
-                <div id="Objekt">
+                <div id="objectInfo">
                     <li> Room: {object.roomName}</li>
+                    <li> Locker: {object.storageName}</li>
+                    <li> Compartment: {object.sectionName}</li>
                 </div>
-                <div id="Objekt2">
-                    <li> Objekt Historie</li>
+                <br/>
+                <div id="objectHistory">
+                    <li>Object History</li>
                 </div>
-                <table className="Tabelle">
+                <table className="dataTable">
                     <thead>
                     <tr>
-                        <th>Ausgeliehen von</th>
-                        <th>Ausgeliehen am</th>
-                        <th>Rückgabe am</th>
-                        <th>Anmerkung</th>
+                        <th>Lend By</th>
+                        <th>Lend Date</th>
+                        <th>Return Date</th>
+                        <th>Notes</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -36,15 +36,13 @@ class App extends Component {
             <Link to={"/home"} className="navbar-brand">
               Inventur
             </Link>
-            <div className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link to={"/home"} className="nav-link">
-                  Home
-                </Link>
-              </li>
-            </div>
             {currentUser ? (
                 <div className="navbar-nav ml-auto">
+                  <li className="nav-item">
+                    <Link to={"/home"} className="nav-link">
+                      Home
+                    </Link>
+                  </li>
                   <li className="nav-item">
                     <Link to={"/addObject"} className="nav-link">Add Object</Link>
                   </li>

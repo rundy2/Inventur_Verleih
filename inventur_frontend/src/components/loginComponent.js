@@ -106,9 +106,6 @@ export default class Login extends Component{
                                     validations={[required]}
                                 />
                             </div>
-                            <div class="options-01">
-                                <p id="forgot" class="forgot">Forgot your password?</p>
-                            </div>
                             <div className="form-group">
                                     <button
                                     className="btn btn-primary btn-block"
