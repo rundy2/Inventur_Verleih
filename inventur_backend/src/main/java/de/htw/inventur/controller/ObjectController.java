@@ -44,29 +44,34 @@ public class ObjectController {
     }
 
     //Get all objects from a special section
+    @CrossOrigin(origins="*")
     @GetMapping("/room/{roomId}/storage/{storageId}/section/{sectionId}/object")
     public List<Object> index(@PathVariable("roomId") Integer roomId, @PathVariable("storageId") Integer storageId, @PathVariable("sectionId") Integer sectionId){
         return objectRepository.findAllBySectionId(sectionId);
     }
 
     //Get Object by Id
+    @CrossOrigin(origins="*")
     @GetMapping("/objects/{objectId}")
     public Optional<Object> getObjectById(@PathVariable("objectId") Integer objectId){
         return objectRepository.findById(objectId);
     }
 
     //Get all objects
+    @CrossOrigin(origins="*")
     @GetMapping("/objects")
     public List<Object> allObjects(){
         return objectRepository.findAll();
     }
 
+    @CrossOrigin(origins="*")
     @PostMapping("/objects/user")
     public List<Object> getObjectsByUser(@RequestBody UserObjectsRequest userObjectsRequest){
         return objectRepository.findAllByLendBy(jwtTokenProvider.getUserMailFromToken(userObjectsRequest.getToken()));
     }
 
     //add object
+    @CrossOrigin(origins="*")
     @PostMapping("/add/object")
     public int addObject(@RequestBody AddObjectRequest addObjectRequest){
         Room room = roomRepository.findByName(addObjectRequest.getRoom());
@@ -105,6 +110,7 @@ public class ObjectController {
     }
 
     //update object state
+    @CrossOrigin(origins="*")
     @PostMapping("/objects/{objectId}/updateState")
     public int updateState(@PathVariable("objectId") Integer objectId, @RequestBody UpdateStateRequest newState){
         String user = jwtTokenProvider.getUserMailFromToken(newState.getToken());
@@ -122,6 +128,7 @@ public class ObjectController {
         return objectRepository.updateState(objectId, newState.getState());
     }
 
+    @CrossOrigin(origins="*")
     @PostMapping("/objects/{objectId}/delete")
     public int deleteObject(@RequestBody DeleteObjectRequest deleteObjectRequest){
         objectRepository.deleteByObjectId(deleteObjectRequest.getObjectId());

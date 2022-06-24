@@ -19,11 +19,13 @@ public class SectionController {
     }
 
     //Get all sections from a special storage
+    @CrossOrigin(origins="*")
     @GetMapping("/room/{roomId}/storage/{storageId}/section")
     public List<Section> index(@PathVariable("roomId") Integer roomId, @PathVariable("storageId") Integer storageId){
         return sectionRepository.findAllByStorageId(storageId);
     }
 
+    @CrossOrigin(origins="*")
     @PostMapping("/add/section")
     public void addSection(@RequestBody Section section){sectionRepository.save(section);}
 }

@@ -24,8 +24,19 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 Bei Auruf der Seite http:// erscheint folgende Startseite
 
 Die Startseite ist folgendermaßen gegliedert:
-image:/images/Startseite.png[]
-. 
+
+Zeile oben: Home | Login | Sign Up
+
+Overview
+My lending list
+
+- Tabelle mit ausgeliehen Gegenständen des Nutzers, daneben die Möglichkeit zur Rückgabe
+
+Search
+- Eine interaktive Suchmaske, die die Datenbank nach den gewünschten Gegenständen durchsucht
+
+- Darunter die Tabelle mit den Gegenständen der Datenbank, sowie die Möglichkeit zur Rückgabe oder zum Ausleihen
+- Mit Klick auf Details, kommt man auf die Detailseite des jeweiligen Gegenstandes.
 
 == Login mit bereitgestellten Daten
 
@@ -49,11 +60,34 @@ image:/images/Startseite.png[]
 
 == Ausleihen von Gegenständen
 
+. Für das Ausleihen von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Um Gegenstände auszuleihen, betätigen Sie sich entweder der Suchmaske oder gehen direkt auf den besagten Gegenstand.
+
+. Rechts neben dem Gegenstand können Sie durch klicken auf den Button "Borrow/Return" den Gegenstand ausleihen
+
+. Ihr ausgeliehener Gegenstand erscheint nun in ihrer "My lending list"
 
 == Rückgabe von Gegenständen
 
+. Für die Rückgabe von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Um Gegenstände zurückzugeben, betätigen Sie sich entweder der Suchmaske oder gehen direkt auf den besagten Gegenstand in ihrer "My lending list".
+
+. Rechts neben dem Gegenstand können Sie durch klicken auf den Button "Return" den Gegenstand zurückgeben.
+
+. Ihr ausgeliehener Gegenstand ist nun wieder frei verfügbar.
 
 == Anlegen von Gegenständen
+
+. Für das Anlegen von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Gehen Sie in der oberen Leiste auf "AddObject".
+
+. Tragen Sie die gewünschten Eigenschaften des Objektes ein.
+
+. Klicken Sie nun den unteren Button "Add Object"
+
 
 
 == Glossar

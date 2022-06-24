@@ -79,6 +79,9 @@ main div img{
     margin-top: -10rem;
 }
 
+.table {
+    color: #888;
+}
 #objectHistory li{
     color: #888;
     font-size: 30px;
@@ -97,9 +100,25 @@ main div img{
     text-align: center;
 }
 
-.dataTable1{
+.dataTable1 {
     color: #888;
     max-width: 70%;
+}
+
+#dataTable{
+    color: white;
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.table thead tr {
+    color: #888;
+    background-color: black;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: relative;
+
 }
 
 .dataTable1 thead tr{
