@@ -77,10 +77,9 @@ main div img{
     margin-top: -10rem;
 }
 
-<<<<<<< HEAD
-.Tabelle{
+.table {
     color: #888;
-=======
+}
 #objectHistory li{
     color: white;
 }
@@ -91,25 +90,23 @@ main div img{
 
 #dataTable{
     color: white;
->>>>>>> 037836dd7c348edbce9b59b2578efdab75858c56
     overflow: hidden;
     max-width: 100%;
     font-size: 20px;
 }
-<<<<<<< HEAD
-.Tabelle thead tr{
+
+.table thead tr {
     color: #888;
     background-color: black;
     font-size: 25px;
     letter-spacing: 1px;
     position: relative;
 
-=======
+}
 
 #dataTable thead tr{
     color: white;
     background-color: grey;
->>>>>>> 037836dd7c348edbce9b59b2578efdab75858c56
 }
 
 #dataTable th,
