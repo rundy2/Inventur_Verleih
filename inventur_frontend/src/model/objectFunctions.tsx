@@ -7,6 +7,7 @@ import objectService from "../services/objectService";
 import Home from "../components/homeComponent";
 import homeComponent from "../components/homeComponent";
 import {Button} from "react-bootstrap";
+import {DatePipe, formatDate} from "@angular/common";
 
 export function SearchInObjects(searchWord:String){
     let objects = GetAllObjectsInArray();
@@ -198,7 +199,7 @@ export function GetObjectDetailsTable(object:Object){
                     <tbody>
                     <tr>
                         <td>{object.lendBy}</td>
-                        <td>[Lend Date]</td>
+                        <td>{(object.lendDate)?(object.lendDate.toString()):("")}</td>
                         <td>[Return Date]</td>
                         <td>[Note]</td>
                     </tr>
