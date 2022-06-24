@@ -9,6 +9,8 @@
 
 #Head {
     font-size: 10px;
+    color: #888;
+    background-color: black;
 }
 
 body {
@@ -78,27 +80,61 @@ main div img{
 }
 
 #objectHistory li{
-    color: white;
+    color: #888;
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    left: -45px;
+    text-align: center;
 }
 
 #objectInfo li{
-    color: white;
+    color: #888;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    left: -45px;
+    text-align: center;
 }
 
-#dataTable{
-    color: white;
-    overflow: hidden;
-    max-width: 80%;
+.dataTable1{
+    color: #888;
+    max-width: 70%;
 }
 
-#dataTable thead tr{
-    color: white;
-    background-color: grey;
+.dataTable1 thead tr{
+    color: #888;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    left: -50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
 }
 
-#dataTable th,
-#dataTable td{
-    color: white;
+.dataTable th {
+    color: #888;
+    text-align: center;
+    left: -50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.dataTable td{
+    color: #888;
     padding: 12px 16px;
     text-align: center;
+    position: relative;
+    left: -50px;
+    font-size: 15px;
+}
+
+.dataTable1 td{
+    color: #888;
+    padding: 12px 16px;
+    text-align: center;
+    position: relative;
+    left: -50px;
+    font-size: 15px;
 }

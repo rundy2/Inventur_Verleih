@@ -23,16 +23,19 @@ body{
     position: absolute;
     width: 320px;
     text-align: center;
+
 }
 
 .header{
     color: #888;
     font-size: 70px;
+
 }
 
 .list{
     color: #888;
     font-size: 50px;
+
 }
 
 .tableHeader{
@@ -40,13 +43,31 @@ body{
     font-size: 20px;
     letter-spacing: 1px;
     position: relative;
-    left: 30px;
+    left: 0px;
+    text-align: center;
+
 }
 
+.dataTable{
+    color: #888;
+    max-width: 70%;
+}
+
+.dataTable th{
+    color: #888;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    left: -50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+}
 
 .data{
     color: #888;
     font-size: 15px;
+
 }
 
 .input1{

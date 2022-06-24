@@ -186,7 +186,7 @@ export function GetObjectDetailsTable(object:Object){
                 <div id="objectHistory">
                     <li>Object History</li>
                 </div>
-                <table className="dataTable">
+                <table className="dataTable1">
                     <thead>
                     <tr>
                         <th>Lend By</th>
