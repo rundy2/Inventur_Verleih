@@ -8,6 +8,30 @@ Die Hardwareanforderungen unserer Anwendung orientieren sich an den Anforderunge
         
         2 GHz Prozessor (min 1,4 GHz x64)
         4 GB RAM
-        7 GB freier Festplattenspeicher
-        
+        7 GB freier Festplattenspeicher       
+
         Wir empfehlen die Nutzung unserer Anwendung unter einem Linux Ubuntu Betriebssystem, da wir die Anwendung unter diesem entwickelt haben. Die Anwendung sollte aber auch auf jedem anderen System laufen, welches Java unterstützt.
+
+== Organisatorische Randbedingungen
+//Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
+* Das System muss von geschultem Personal gepflegt und gewartet werden.
+* Neue User sollten mit der Software vor der ersten Nutzung vertraut gemacht werden.
+* Die Software ist nur in englischer Sprache gehalten.
+
+== Rechtliche Anforderungen
+//Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
+* Die Lizensierung der Anwendungen wird vorausgesetzt.
+* Die Einhaltung der DSGVO wird vorausgesetzt und ist vom Anwender zu prüfen.
+* Der Urheberrechtsschutz muss vom Anwender gewährleistet werden.
+
+* Das Produkt steht unter der MIT-Lizenz:
+        
+        Urheberrecht (c) 2022 I6 Inventur Verleih
+
+        Hiermit wird jeder Person, die eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die "Software") erhält, die kostenlose Erlaubnis erteilt,    diese Software und die zugehörigen Dokumentationsdateien (die "Software"), die Software ohne Einschränkung zu vertreiben, einschließlich und ohne Einschränkung der Rechte sie zu nutzen, zu kopieren, zu modifizieren, zusammenzuführen, zu veröffentlichen, zu vertreiben, zu unterlizenzieren und/oder zu verkaufen, vorbehaltlich der folgenden Bedingungen:
+        
+        Der obige Copyright-Hinweis und dieser Genehmigungshinweis müssen in allen Kopien oder wesentlichen Teilen der Software enthalten sein.
+        
+        DIE SOFTWARE WIRD "WIE BESEHEN" BEREITGESTELLT, OHNE JEGLICHE, AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT,
+        EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. IN KEINEM FALL SIND DIE AUTOREN ODER URHEBERRECHTSINHABER HAFTBAR FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER ÄHNLICHES, OB AUS VERTRAG, DELIKT ODER ANDERWEITIG ENTSTEHEND AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE, DER VERWENDUNG ODER ANDEREN HANDLUNGEN MIT DER SOFTWARE.
+
