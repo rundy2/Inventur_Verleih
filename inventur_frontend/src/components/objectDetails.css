@@ -77,14 +77,23 @@ main div img{
 }
 
 .Tabelle{
+    color: #888;
     overflow: hidden;
-    max-width: 80%;
+    max-width: 100%;
+    font-size: 20px;
 }
 .Tabelle thead tr{
-    background-color: grey;
+    color: #888;
+    background-color: black;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: relative;
+
 }
 .Tabelle th,
 .Tabelle td{
     padding: 12px 16px;
     text-align: center;
+    color: #888;
+    background-color: black;
 }
