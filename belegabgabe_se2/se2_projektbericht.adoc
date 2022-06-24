@@ -31,7 +31,7 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 
 
 
-= Inhaltsverzeichnis
+== Inhaltsverzeichnis
 . <<Inventur Verleih - Digitale Inventur- und Verleihliste (I6)>>
 . <<Planung>>
 [arabic]
@@ -132,7 +132,7 @@ einigte sich darauf, dass der Rollenverantwortliche sich hauptsächlich um die D
 eigentlichen Aufgabe unterstützt wird. So konnten wir eine perfekte Mischung aus Rollenspezialisierung und Informationsaustausch erreichen. Durch die starke Dezimierung des Teams in SE II
 waren wir gezwungen, dass einige Gruppenmitglieder mehrere Rollen ausüben mussten. Somit
 wandelte sich die Teamarbeit in den Bereichen Dokumentation und Organisation zu spezialisierter
-Einzelarbeit.Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
+Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
 erhalten.
 
 === Ablauf der Kommunikation unter Verwendung von Tools 
