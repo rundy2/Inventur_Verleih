@@ -1,6 +1,7 @@
 package de.htw.inventur.repository;
 
 import de.htw.inventur.entity.Object;
+import de.htw.inventur.request.DeleteObjectRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -8,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -54,4 +56,9 @@ public interface ObjectRepository extends JpaRepository<Object, Integer> {
     @Modifying
     @Query("UPDATE Object o SET o.lendBy = NULL WHERE o.id = :objectId")
     int deleteCurrentUser(@Param("objectId")int objectId);
+
+    @Transactional
+    @Modifying
+    @Query("DELETE FROM Object o WHERE o.id = :objectId")
+    int deleteByObjectId(int objectId);
 }
