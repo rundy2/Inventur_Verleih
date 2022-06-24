@@ -9,8 +9,7 @@
 
 Autor: Fabian Krähmer, Version 1.2, 22.06.2022
 == Projektangaben
-Thema:
-Inventur Verleih Software (Gruppe I6)
+Thema: Inventur Verleih Software (Gruppe I6)
 Zeitraum: Wintersemester 2021 + Sommersemester 2022
 
 GitHub Repository: https://github.com/rundy2/Inventur_Verleih
@@ -22,7 +21,7 @@ Datum: 24.06.2022
 
 Zeit: 15:00 Uhr
 
-Abnahmeumgebung: MS Teams in Konferenz, Präsentation auf VM-Server
+Abnahmeumgebung: MS Teams in Konferenz, Präsentation Lokal
 
 === Lieferumfang
 
@@ -31,7 +30,7 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation auf VM-Server
 * Betriebsanleitung
 * Anforderungsspezifikation
 * Entwicklerdokumentation (wird nachgeliefert)
-* Testdokumentation
+* Testdokumentation Deployment
 
 === Funktionalität
 [cols="4,1,5"]
@@ -63,8 +62,8 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation auf VM-Server
 | ja
 |...
 |UC9 / Systemmeldungen prüfen
-| ja
-|...
+| ja/nein
+|über die Konsole des Browsers
 |UC10 / Nutzungsverlauf anlegen
 | ja
 |...
@@ -98,7 +97,7 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation auf VM-Server
 | ja
 |...
 |NFA4 / Es werden pro Ansicht nur 6 Gegenstände angezeigt.
-| ja
+| nein
 |...
 |NFA5 / Ein Gegenstand, der sich im System befindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können.
 | ja
@@ -132,9 +131,10 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation auf VM-Server
 
 == Unterschriften
 
-Hiermit wird die Abnahme vollständig bestätigt.
+Hiermit wird die Abnahme mit Mängeln bestätigt.
 
 Bemerkungen: Gewünschte Funktionen welche durch fehlende Manpower nicht umgesetzt wurden; Adminverwaltung, Barcode Erstellung
+VM-Umgebung konnte nicht zum laufen gebracht werden, wird nachgeliefert. CSS Datei durch Upload beschädigt.
 
 [cols="1,1"]
 |===
