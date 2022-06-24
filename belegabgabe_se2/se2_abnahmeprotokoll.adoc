@@ -9,8 +9,7 @@
 
 Autor: Fabian Krähmer, Version 1.2, 22.06.2022
 == Projektangaben
-Thema:
-Inventur Verleih Software (Gruppe I6)
+Thema: Inventur Verleih Software (Gruppe I6)
 Zeitraum: Wintersemester 2021 + Sommersemester 2022
 
 GitHub Repository: https://github.com/rundy2/Inventur_Verleih
@@ -31,7 +30,7 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation Lokal
 * Betriebsanleitung
 * Anforderungsspezifikation
 * Entwicklerdokumentation (wird nachgeliefert)
-* Testdokumentation
+* Testdokumentation Deployment
 
 === Funktionalität
 [cols="4,1,5"]
@@ -135,7 +134,7 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation Lokal
 Hiermit wird die Abnahme mit Mängeln bestätigt.
 
 Bemerkungen: Gewünschte Funktionen welche durch fehlende Manpower nicht umgesetzt wurden; Adminverwaltung, Barcode Erstellung
-VM-Umgebung konnte nicht zum laufen gebracht werden, wird nachgeliefert.
+VM-Umgebung konnte nicht zum laufen gebracht werden, wird nachgeliefert. CSS Datei durch Upload beschädigt.
 
 [cols="1,1"]
 |===
