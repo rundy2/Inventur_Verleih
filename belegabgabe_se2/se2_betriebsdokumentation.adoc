@@ -1,0 +1,9 @@
+= Betriebsdokumentation
+
+== Vorwort
+
+Dieses Dokument dient der Wartung und Pflege des Programms "I6 - Inventur Verleih". Es ist für Administratoren bestimmt und setzt Fachkompetenz voraus.
+Die Gruppe I6 distanziert sich von jeglichen Fehlern oder Datenverlusten, welche durch Einstellungen entstehen, die ohne diese Dokumentation vorgenommen werden.
+
+== Inhaltsverzeichnis
+
