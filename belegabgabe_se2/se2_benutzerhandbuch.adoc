@@ -10,13 +10,21 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 == Inhaltsverzeichnis
 
 [arabic]
-. <<Login>>
 . <<Startseite>>
+. <<Login>>
 . <<Ausleihen von Gegenständen>>
 . <<Rückgabe von Gegenständen>>
 . <<Anlegen von Gegenständen>>
 . <<Glossar>>
 . <<Fehleranalyse>>
+
+== Startseite
+
+Bei Auruf der Seite http:// erscheint folgende Startseite
+
+Die Startseite ist folgendermaßen gegliedert:
+image:/images/Startseite.png[]
+. 
 
 == Login
 
@@ -29,12 +37,6 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 . Danach klicken Sie auf Login.
 
 . Es erscheint die Startseite und Sie sehen ihre ausgeliehen Gegenstände.
-
-== Startseite
-
-Die Startseite ist folgendermaßen gegliedert:
-
-. 
 
 == Ausleihen von Gegenständen
 
