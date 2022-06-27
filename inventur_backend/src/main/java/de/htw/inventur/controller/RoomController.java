@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 //Controller for rooms
+@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/")
 public class RoomController {
@@ -18,20 +19,17 @@ public class RoomController {
     }
 
     //Get all rooms
-    @CrossOrigin(origins="*")
     @GetMapping("/room")
     public List<Room> index(){
         return roomRepository.findAll();
     }
 
     //Get a special room
-    @CrossOrigin(origins="*")
     @GetMapping("/room/{roomId}")
     public Room getRoom(@PathVariable("roomId") int roomId){
         return roomRepository.findById(roomId);
     }
 
-    @CrossOrigin(origins="*")
     @PostMapping("/add/room")
     public void addRoom(@RequestBody Room room){roomRepository.save(room);}
 }

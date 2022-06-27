@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 //Controller for authentication
+@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -34,7 +35,6 @@ public class AuthController {
     }
 
     //For register requests
-    @CrossOrigin(origins="*")
     @PostMapping(value = "/register")
     public ResponseEntity<User> register(@RequestBody AuthRequest authRequest){
         Optional<User> userOptional = userRepository.findByEmail(authRequest.getEmail());
@@ -55,7 +55,6 @@ public class AuthController {
     }
 
     //For login requests
-    @CrossOrigin(origins="*")
     @PostMapping(value = "/login")
     public ResponseEntity<String> login(@RequestBody AuthRequest authRequest){
         //Authenticate User from received Data
