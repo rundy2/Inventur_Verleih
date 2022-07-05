@@ -72,15 +72,13 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
-Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2022 von 
-betreut. Der Projektbericht entstand als Gruppenarbeit
-aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
+Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2022 von Herrn Robert Ringel betreut. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
 == Planung 
 === Ausgangssituation in SE ⅠⅠ
 ==== Teamaufstellung
 Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
-Moritz Lehmann, Silko Grellmann. Geplant war das ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
+Moritz Lehmann, Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
 
 ==== Aufgabenstellung und Auftraggeber
 Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
@@ -219,7 +217,7 @@ eher technische Rollen und Mitglieder, die eher organisatorische Rollen innehatt
 *Altbelegkorrektur und neues Mitglied einarbeiten*
 
 Nach der Konsultation (28.04.2022) mit Robert RIngel, bezüglich des Beleges von SE I, wussten
-wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der implementierung wurde unmittelbar
+wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
 angegangen.
 Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Projekt gut zu nutzen.
 
