@@ -7,3 +7,88 @@ Die Gruppe I6 distanziert sich von jeglichen Fehlern oder Datenverlusten, welche
 
 == Inhaltsverzeichnis
 
+[arabic]
+. <<Systemvoraussetzungen>>
+. <<Systemeinrichtung>>
+. <<Systembetreuung>>
+
+
+== Systemvoraussetzungen
+
+Die Hardwareanforderungen orientieren sich an den von uns verwendeten Frameworks.
+
+. Hardware
+* min. 1,4GHz x64 Prozessor (empfohlen 2GHz)
+* 4 GB RAM
+* 7 GB freier Festplattenspeicher
+
+. Software
+* Betriebssystem: empfohlen Linux
+* min. Java 8 (empfohlen Version 11)
+* serve HTTP-Server (eventuell noch npm erforderlich)
+* Docker CE (empfohlen min. Version 19.0)
+* MySQL-Docker-Image Version 8.0
+
+
+== Systemeinrichtung
+
+Das Softwaresystem besteht aus drei Komponenten: die Datenbank, das Frontend und das Backend.
+Die Datenbank läuft in einem Docker-Container, welcher aus dem mysql:8.0-Image gebaut wird.
+Das (kompilierte) Frontend befindet sich in einem Ordner, bestehend aus CSS-, HTML-, und JS-Dateien, welcher in den serve-Server geladen wird.
+Das Backend besteht aus einer JAR-Datei, die in einen Tomcat-Server geladen wird.
+
+. Den Server/PC updaten und Java, Docker sowie serve (und npm) installieren.
+. Die Installation von Docker testen (Befehl: [sudo] docker info) und festlegen, dass Docker bei Systemstart auch mit gestartet wird.
+. Sich einen Ordner anlegen, in dem das Frontend, Backend und die Datenbank liegen sollen.
+. In diesen Ordner den Frontend-Ordner sowie die Backend-Jar-Datei kopieren.
+. In den Ordner einen weiteren Ordner anlegen, in die die Datenbank gespeichert wird; Bezeichnung beispielweise "persistenteDatenbankInventur".
+. Den Datenbankcontainer aus dem mysql:8.0-Image bauen. Dabei den Datenbanknamen auf "Inventur" setzen und den Ordner, in den die Datenbank gespeichert werden soll, mit als Environment-Variable angeben. Wichtig ist auch anzugeben, dass sich der Container immer selber automatisch startet. Empfehlenswert ist es auch die Ressourcen des Containers zu beschränken und eine markante Bezeichnung dem Container geben. +
+Beispiel: docker run --name [Name des Containers] -m 200m -v /home/sps_user/Documents/InventurApplication/persistenteDatenbankInventur:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=[Rootpasswort der Datenbank] -e MYSQL_DATABASE=Inventur -e MYSQL_USER=[Benutzername der Datenbank Inventur] -e MYSQL_PASSWORD=[Passwort des Benutzers der Datenbank Inventur] -d --restart always -d mysql:8.0
+. Mit "[sudo] docker ps" nachsehen, ob der Datenbankcontainer läuft.
+. Die IP-Adresse ermitteln, auf der der Datenbankcointainer erreichbar ist.
+. Die Zugangsdaten zur Datenbank in der JAR-Datei des Backends unter BOOT-INF/classes/application.properties eintragen und speichen.
+. Backend mit starten mittels "java -jar [Backenddatei] &" .
+. Frontend starten mittels "serve -s [Frontend-Ordner] &" .
+
+Nun ist die Applikation von jeden Client über dessen Webbrowser aus erreichbar, wenn er sich im HTW-Netz befindet.
+(http://[IP-Adresse des Servers/PC]:3000).
+
+
+== Systembetreuung
+
+=== Erstellung von Backups der Datenbank
+. In den Ordner, wo die Datenbank gespeichert ist (z.B. persistenteDatenbankInventur), mit Adminestratorenrechten bzw. als Superuser wechseln.
+. Den gesamten Ordner "Inventur" auf ein externes Speichermedium kopieren.
+
+=== Backups der Datenbank wiederherstellen
+. Den Dockercontainer, in der die Datenbank läuft, stoppen.
+. In den Ordner, wo die Datenbank gespeichert ist (z.B. persistenteDatenbankInventur), mit Adminestratorenrechten bzw. als Superuser wechseln.
+. Den Ordner "Inventur" durch den "Inventur"-Ordner des Backups vom externen Speichermedium ersetzen.
+. Den Container wieder starten.
+. Prüfen, ob der Container läuft.
+
+=== Abschalten der Applikation
+. Die Prozessnummern suchen, unter denen Front- und Backend läuft (unter Linux haben die beiden Prozesse die Namen "node" und "java").
+. Die beiden Prozesse beenden.
+. Optional Dockercontainer der Datenbank stoppen. 
+
+=== Fehleranalyse
+|===
+|Fehler |mgl. Ursache |Abhilfe
+
+| Abbruch beim Starten des Backends
+| Datenbankcontainer läuft nicht; +
+Zugangsdaten zur Datenbank sind inkorrekt
+| Datenbankcointainer starten; +
+Zugangsdaten in der JAR-Datei des Backends anpassen (Vorgehen siehe oben Systemeinrichtung Punkt 9)
+
+| die Applikation ist nicht erreichbar
+| falsche URL im Webbrowser eingegeben; +
+Endgerät des Benutzers befindet sich außerhalb des HTW-Netzes; +
+Frontend läuft nicht; +
+Backend läuft nicht;
+| URL überprüfen (http://[IP-Adresse des Servers/PC]:3000) und Seite neuladen; +
+mittels VPN sich zum HTW-Netz verbinden; +
+Front- und Backend erneut starten (Vorgehen siehe oben Systemeinrichtung Punkt 10 und 11)
+
+|===
