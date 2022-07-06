@@ -1,55 +1,152 @@
 = Testdokumentation (Deployment, Abgabe)
 
-[cols="3,3,1"]
-|===
-| Testcase | Art | Erfolg
+== Einleitung
+
+Bei dem vorliegenden Dokument handelt es sich um die Testdokumentation für das Projekt I6 Inventur Verleih, das von unseren Gruppe im Rahmen des Moduls Software Engineering 2 an der Hochschule für Technik und Wirtschaft Dresden bearbeitet wurde.
+
+In dieser Testdokumentation werden die angewendeten Teststrukturen dargestellt, um die Qualität unseres System nachzuweisen und zu überprüfen. 
+
+== Testkonzept
+
+=== Testobjekte
+
+* Webfrontend
+
+ Die wichtigste Testkomponente, da sie die Schnittstelle zwischen User und System darstellt. Die meisten Test wurden auf dem Frontend ausgeführt, da dort die funktionalen Anforderungen anschaulich werden und der Erfüllungsgrad der einzelnen Use Cases deutlich wird.
+
+* Backend
+ 
+ Das Backend läuft im Hintergrund und bildet die Verbindung zwischen Datenbank und Frontend und sorgt dafür, dass die Daten an der richtigen Stelle in der Datenbank landen und wieder von dort gelesen werden. Deswegen wurden auch hier ein paar Tests durchgeführt. 
+
+
+* Datenbank
+ 
+ Die Datenbank liegt ebenfalls im Hintergrund und hat keine direkte Interaktion mit dem User. Trotzdem bildet sie eine unabdingbare Komponente des gesamten Systems.  
+
+Um diese einzelnen Komponenten zu testen haben wir manuell per Hand getestet. Das hatte vor Allem den Grund, da der Großteil unserer Tests auf das Frontend bezogen war, weil die Geschäftslogik im Backend und somit das Abfangen und Verändern von HTTP-Requests keine Schwachstelle darstellt. Außerdem haben wir natürlich Qualitätssicherung des Codes durch statische Codeanalye der IDE (in unserem Fall IntelliJ) durchgeführt.
+
+=== Testdurchführungsplanung
+Alle Tests wurden von Silko Grellmann und Nico Papke durchgeführt. Der Zeitraum, in welchem die Tests durchgeführt wurden war die Woche vom 06. bis zum 12. Juni 2022.
+
+== Testfallbeschreibung
+=== Frontend
+
+[cols="3,3,3,3,3,3"]
+|====
+| Testcase | Vorbedingungen | Eingabedaten | Ablaufbeschreibung | erwartetes Ergebnis | Ergebnis
 
 | Webseite ist erreichbar.
-| wird gezeigt
-| Nein, nur lokal lauffähig
+| VPN Verbindung zum HTW Netzwerk besteht
+| http://141.56.180.173:3000/
+| Webseite wird über beliebigen Browser geöffnet
+| Webseite ist erreichbar, Login Page wird angezeigt
+| Login Page wird angezeigt
 | Webseite ist von mobilen Geräten aus errreichbar.
-| wird gezeigt
-| Anpassung für mobiles Gerät im Browser gezeigt
-| Authentifizierung per Login funktioniert.
-| Login mit fehlerhaften Daten/ Login mit richtigen Daten
-| ja 
+| Mobiles Gerät befindet sich in HTW Netzwerk / VPN
+| http://141.56.180.173:3000/
+| Webseite wird über beliebigen Browser geöffnet
+| Webseite ist erreichbar, Login Page wird angezeigt inklusive Anpassungen für mobiles Gerät
+| Login Page wird angezeigt inklusive Anpassungen für mobiles Gerät
+| Authentifizierung per Login mit korrekten Daten funktioniert.
+| Login Seite ist aufgerufen / ein korrekter Login ist angelegt
+| Mail: test@account.de
+      Pwd:  testtest
+| Login Daten werden in entsprechende Felder eingegeben und anschließend mit "Login" Button bestätigt
+| Automatische Weiterleitung zur Homepage
+| Automatische Weiterleitung zur Homepage
+| Authentifizierung per Login mit fehlerhaften Daten funktioniert nicht.
+| Login Seite ist aufgerufen
+| Mail: test@account.de
+      Pwd:  aaa
+| Login Daten werden in entsprechende Felder eingegeben und anschließend mit "Login" Button bestätigt
+| Anzeigen einer Fehlermeldung, dass Passwort und oder Mail nicht korrekt sind / Verharren auf der Login Page
+| Anzeigen einer Fehlermeldung aus der man keinen Kontext entnehmen kann / außerdem überdeckt Fehlermeldung das Mail Feld, sodass Neuladen der Seite erforderlich ist für einen erneuten Login Versuch / Verharren auf der Login Page
 | Englische Sprache auf der/den gesamten Webseite/-n.
+| Webseite erreichbar
+| keine
 | Test durch manuelles lesen.
-| ja 
+| Gesamte Webseiten auf englischer Sprache
+| Gesamte Webseiten auf englischer Sprache
 | Inventarliste wird korrekt angezeigt.
-| wird gezeigt
-| ja
-| Scannen eines Gegenstands-Barcodes ist möglich.
-| ...
-| nein
-| Ein neuer Gegenstand kann aufgenommen werden.
-| wird gezeigt
-| ja
-| Gegenstand können ausgeliehen werden.
-| verschiedene Daten werden eingetragen
-| ja
+| Homepage ist aufgerufen
+| keine
+| Manuelles Überprüfen, ob Inventarliste wie gewünschte angezeigt wird in Bezug auf Formatierung und Daten
+| Inventarliste wird korrekt angezeigt
+| Inventarliste wird korrekt angezeigt
+| Ein neuer Gegenstand kann in die Inventarliste aufgenommen werden.
+| Gegenstand existiert nicht bereits
+| Object: Test / Room: Testraum / Locker: Testlager / Compartment: Testabteilung / Availability: FREE
+| neuer Gegenstand wird angelegt, indem die entsprechenden Informationen eingetragen werden
+| neuer Gegenstand wurde angelegt und wird fortan in der Inventarliste angezeigt
+| neuer Gegenstand wurde angelegt und wird fortan in der Inventarliste angezeigt
+| Gegenstände können ausgeliehen werden.
+| Gegenstand ist nicht bereits ausgeliehen
+| keine
+| Über Button "Borrow" wird Gegenstand, welcher sich in der Inventarliste begfindet ausgeliehen
+| Gegenstand wird fortan als ausgeliehen angezeigt
+| Gegenstand wird fortan als ausgeliehen angezeigt
 | Gegenstand kann zurückgegeben werden.
-| wird gezeigt
-| ja
+| Gegenstand ist aktuell ausgeliehen
+| keine
+| Gegenstand wird über "Return" Button zurückgegeben
+| Gegenstand erscheint fortan nicht mehr als ausgeliehen
+| Gegenstand erscheint fortan nicht mehr als ausgeliehen
 | Gegenstände können aus dem System deinventarisiert werden.
-| wird gezeigt
-| 
-| Admin kann Status eines Gegenstandes manuell ändern.
-| 
-| nein
+| Gegenstand wird in der Inventarliste angezeigt.
+| keine
+| Über "Details" Button auf Homepage zur Detailansicht des Gegenstandes navigieren und dort über "Delte from Database" Button Gegenstand deinventarisieren
+| Gegenstand wird fortan nicht mehr in der Inventarliste gezeigt
+| Gegenstand wird fortan nicht mehr in der Inventarliste gezeigt 
 | Gegenstände können anhand von Suchkriterien in der Inventarliste gesucht werden.
-| Test mit falscher Schreibweise und richtiger Schreibweise
-| ja 
-| persistentes Speichern
-| Backend wird geschlossen und wieder geöffnet
-| ja
-| verschlüsselte Kommunikation zwichen Server und Clients
-| Konsolenausgabe wird geprüft
-| ja
-| Schutz der Daten auf dem Server vor unberechtigten Zugriff
-| Test ob Buttons unangemeldet funktionstüchtig
-| ja
+| Gesuchter Gegenstand ist in Inventarliste vorhanden
+| Testobjekt
+| "Testobjekt" in Search Feld auf der Homepage eintragen
+| entsprechender Gegenstand wird angezeigt
+| entsprechender Gegenstand wird angezeigt, jedoch ändert sich Formatierung der Webseite etwas beim Schreiben in Search Feld
+| Gegenstand mit falscher Schreibweise suchen.
+| Kein Gegenstand entspricht den Eingabedaten
+| Testobjektt
+| "Testobjektt" in Search Feld auf der Homepage eintragen
+| Kein Gegenstand wird angezeigt
+| Kein Gegenstand wird angezeigt, jedoch ändert sich Formatierung der Webseite etwas beim Schreiben in Search Feld
+|====
 
-| ===
+
+=== Backend
+
+[cols="3,3,3,3,3,3"]
+|====
+| Testcase | Vorbedingungen | Eingabedaten | Ablaufbeschreibung | erwartetes Ergebnis | Ergebnis
+| Test auf verschlüsselte Kommunikation zwichen Server und Clients
+| keine
+| keine
+| Konsolenausgabe wird geprüft
+| verschlüsselte Kommunikation möglich
+| verschlüsselte Kommunikation möglich
+| Schutz der Daten auf dem Server vor unberechtigtem Zugriff
+|keine
+|keine
+| ???
+| ???
+| ???
+|====
+
+=== Datenbank
+
+[cols="3,3,3,3,3,3"]
+|====
+| Testcase | Vorbedingungen | Eingabedaten | Ablaufbeschreibung | erwartetes Ergebnis | Ergebnis
+| persistentes Speichern der Daten möglich
+| Datenbank ist mit einigen Testdaten gefüllt
+| keine
+| Backend wird geschlossen und wieder geöffnet
+| Daten sind nach wie vor vollständig erhalten
+| Daten sind nach wie vor vollständig erhalten
+|====
+
+== Testergebnisse
+Die meisten unserer Tests haben die erwarteten Ergebnisse aufgezeigt. Jedoch konnten einige geplante Tests aufgrund fehlender Funktionen der Software nicht ausgeführt werden. Darunter fallen zum Beispiel das Testen ob das Scannen eines Gegenstands Barcodes funktioniert oder die Funktion, dass Admins den Status von Gegenständen manuell ändern können.
+Die meisten Abweichungen zwischen erwartetem Ergebniss und eingetroffenem Ergebnis beziehen sich auf die Formatierung der Webseiten, sowie auf Kleinigkeiten wie zum Beispiel das korrekte Anzeigen einer entsprechenden Fehlermeldung beim Verwenden falscher Login Daten. Die daraus entstehenden Konsequenzen sind so zu deuten, dass der Großteil der implementierten Funktionen ordnungsgemäß funktioniert, man jedoch an einigen kleinen Stellschrauben, die die Nutzererfahrung noch angenehmer und ansehnlicher gestalten, drehen kann.
+
 
 

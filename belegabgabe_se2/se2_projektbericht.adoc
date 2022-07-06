@@ -72,17 +72,16 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
-Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2022 von 
-betreut. Der Projektbericht entstand als Gruppenarbeit
-aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
+Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2021/2022 und Sommersemester 2022 bearbeitet. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
 == Planung 
 === Ausgangssituation in SE ⅠⅠ
 ==== Teamaufstellung
-Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
-Moritz Lehmann, Silko Grellmann. Geplant war das ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
+Am Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
+Moritz Lehmann und Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu Beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
 
-==== Aufgabenstellung und Auftraggeber
+
+==== Aufgabenstellung und Auftraggeber [FK]
 Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese 
 erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt 
@@ -91,16 +90,24 @@ realisieren lassen. Wartungsintervalle von Werkzeugen (mechanischer Verschleiß,
 Batterien oder Nachfüllen von Verbrauchsmaterialen) könnten so ihren statischen Charakter verlieren 
 und sich stattdessen an der realen (Ab-)Nutzung orientieren. 
 
+Unser Auftraggeber, die Arbeitsgruppe Smart Production Systems (kurz AG SPS) der HTW Dresden hatte bei Erstgespräch einen groben Plan wie die Umsetzung aussehen sollte, jedoch ohne nennenswerte Systemeinschränkungen, sodass wir uns in Programmierart und Sprache frei entfalten konnten.
+
+Im weiteren Gespräch mit den Auftraggebern, stellten sich schnell die wichtigsten Aspekte des Systems heraus.
+Es sollte möglichst einfach zu bedienen sein, hochverfügbar und von jedem Gerät zu steuern sein. 
+Wichtig war dabei ebenfalls, dass das System nur intern verwendbar ist und wir es als gepackte Datei zusätzlich zum aufgesetzten Server ausliefern sollten.
+
+Bei dem Projekt wurden wir von Herrn Robert Ringel als Mentor tatkräftig unterstützt, die wöchentlichen Vorlesungen von Prof. Dr. Anke und die Praktia halfen uns stetig dabei, den Blickwinkel auch mal zu ändern. 
+Von der AG SPS unterstützen uns Herr Till Haas, Eric Brandt und Felix Brandt. Alle drei waren immer gut erreichbar und für kurzfristige Meetings zu haben. Gerade weil Herr Ringel die AG SPS kannte, half er dabei die richtige Software entstehen zu lassen.
+
 === Projektorganisation
 ==== Team
 Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
-einem guten Projektabschluss ist, haben wir auch in SE II daran festgehalten. Wir meinen mit
+einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen. Wir meinen mit
 "gutem Team" nicht, dass die einzelnen Teammitglieder über große Expertisen im Bereich Software
 Engineering oder andere IT bezogene Qualifikationen verfügen müssen, sondern, dass eine gute
-2
 Gruppendynamik und ein starker Zusammenhalt innerhalb der Gruppe vorhanden ist.
-Wir haben versucht, die Planung der einzelnen Teilaspekte so zu gestalten, dass die eben genannten Eigenschaften stets in hohem Ausmaß vorhanden sind.
-Im Folgenden sind eingesetzte Praktiken aufgelistet, die dazu beigetragen haben die Zusammenarbeit in unserem Team zu verbessern
+Wir haben versucht, die Planung der einzelnen Teilaspekte so zu gestalten, dass die eben genannten Eigenschaften stets in hohem Ausmaß vorhanden sind. Leider ist dies gerade zum Anfang des Semster schwer gewesen, weil unsere beiden Softwarearchitekten nur schwierig zu erreichen waren. Das Projektmanagement probierte mehrere Methoden aus den Vorlesungen, doch scheiterte meist an der fehlenden Kommunikationsart. 
+Im Folgenden sind eingesetzte Praktiken aufgelistet, die dazu beigetragen haben die Zusammenarbeit in unserem Team zu verbessern sollten:
 
 [cols="1,3"]
 |===
@@ -127,16 +134,14 @@ gelöst werden, was auch den Developer entlastete.
 |===
 
 ==== Rollenverteilung
-Die Aufgaben wurden hauptsächlich nach Interessen- und Expertisengebieten verteilt. Das Team
-einigte sich darauf, dass der Rollenverantwortliche sich hauptsächlich um die Dokumentationspflichten und Arbeitspriorisierung kümmerte, er aber immer von anderen Teammitglieder bei der
-eigentlichen Aufgabe unterstützt wird. So konnten wir eine perfekte Mischung aus Rollenspezialisierung und Informationsaustausch erreichen. Durch die starke Dezimierung des Teams in SE II
-waren wir gezwungen, dass einige Gruppenmitglieder mehrere Rollen ausüben mussten. Somit
+Die Aufgaben wurden hauptsächlich nach Interessen- und Expertisengebieten verteilt. Das Team einigte sich darauf, dass der Rollenverantwortliche sich hauptsächlich um die Dokumentationspflichten und Arbeitspriorisierung kümmerte, er aber immer von anderen Teammitglieder bei der
+eigentlichen Aufgabe unterstützt wird. So konnten wir eine gute Mischung aus Rollenspezialisierung und Informationsaustausch erreichen. Durch die starke Dezimierung des Teams in SE II waren wir gezwungen, dass einige Gruppenmitglieder mehrere Rollen ausüben mussten. Somit
 wandelte sich die Teamarbeit in den Bereichen Dokumentation und Organisation zu spezialisierter
 Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
 erhalten.
 
 === Ablauf der Kommunikation unter Verwendung von Tools 
-a während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
+Da während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
 WhatsApp für die direkte Kommunikation zwischen einzelnen Gruppenmitgliedern und zur
 schnellen Informationsübermittlung an alle Teammitglieder genutzt. Um Meetings zu realisieren,
 wurde zu erst ein Discord Server genutzt, im Laufe des Projekts dann aber auf Microsoft Teams
@@ -153,10 +158,7 @@ ausschließlich E-Mails, Microsoft Teams und Präsenz-Treffen genutzt. Die Präs
 erst in SE II statt, mit kompletter Einhaltung der Corona-Hygiene-Maßnahmen. Diese Änderung
 wurde von unserem Kunden sehr begrüßt, da er leider durch die eben genannten Techniken in seinem Workflow eher behindert als unterstützt wurde. +
 
-Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten erheblich, da nun
-4
-Fragen wie bspw. an welchem Ort das Treffen stattfinden könnte, ob dieser Ort auch zur gegebenen
-Zeit verfügbar ist oder wie lange die Anreise der einzelnen Mitglieder wohl wäre, nun alle obsolet
+Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten erheblich, da nun viele Fragen wie bspw. an welchem Ort das Treffen stattfinden könnte, ob dieser Ort auch zur gegebenen Zeit verfügbar ist oder wie lange die Anreise der einzelnen Mitglieder wohl wäre, nun alle obsolet
 waren. Es musste nun nur noch eine Uhrzeit gefunden werden, zu der alle verfügbar waren.
 
 === Way of Working 
@@ -197,18 +199,15 @@ Hierzu benutzten wir erstmals Wireframes, damit unserer Kunde sich unsere Ideen 
 In Iteration 03 versuchten wir die Anforderungen genau zu spezifizieren, also die erstellten Wireframes genau mit dem Kunden durchzusprechen, um zu verifiziern ob alle Forderungen richtig verstanden wurden. Hier wurden auch die Test Cases zu den Use Cases erstellt. Der *LCO-Meilenstein*
 und der *LCA-Meilenstein* konnten hier abgeschlossen werden. +
 
-In der letzten Iteration von SE I fiel uns auf, dass wir mit den Dozenten, die einen großen Teil der
-Anwenderbasis darstellen, leider nie Kontakt aufgenommen haben. Das war zum einem unserem
-fehlenden Bewusstsein und zum anderen dem Wunsch des Kunden, Aufwand für die Dozenten zu
+In der letzten Iteration von SE I fiel uns auf, dass wir mit den Dozenten, die einen großen Teil der Anwenderbasis darstellen, leider nie Kontakt aufgenommen haben. Das war zum einem unserem fehlenden Bewusstsein und zum anderen dem Wunsch des Kunden, Aufwand für die Dozenten zu
 vermeiden, zuzuschreiben. Um diesen Fehler zu beheben, versuchten wir die fehlenden Anforderungen zu ermitteln. Bei diesem Unterfangen bemerkten wir jedoch rechtzeitig, dass wir es zeitlich nicht mehr schaffen würden alle anwenderspezifischen Sichten richtig zu analysieren. Deswegen verschoben wir dieses Ziel in SE II. Auch wurden in
 dieser Iteration nochmals die Use Cases und die Testcases überarbeitet und das Abgabedokument
 angefertigt.
 
 === SE ⅠⅠ
 ==== Start in das Neue Semester 
-Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Als dann
-dem Team auch noch ein neues Mitglied zugewiesen wurde konnte das Team mit
-neuer Zuversicht die nächsten Schritte planen:
+Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Des weiteren erlang das Team einen harten Motivationsverlust durch die unerwart schlechte Bewertung des Beleges aus SE I. Auch die Zuweisung eines neuen Teammitglieds zeigte schwerer als gedacht.
+Nico Papke wollte zwar sofort mit anpacken, jedoch musste sich das Team erstmal wiederfinden, dieser Prozess dauerte leider etwas zu lang, letztendlich landeten wir bei folgenden Anfangsarbeiten:
 
 - Altbelegkorrektur durchführen
 - Neues Teammitglied einarbeiten
@@ -216,12 +215,26 @@ neuer Zuversicht die nächsten Schritte planen:
 Parallel dazu wurde auch die Rollenverteilung überarbeitet. Hier mussten nun aufgrund von fehlenden Mitgliedern einige Rollen doppelt besetzt werden. Wir versuchten hier so logisch wie möglich vorzugehen. Das heißt Mitglieder, die eher technische Rollen besetzten, besetzen auch wieder
 eher technische Rollen und Mitglieder, die eher organisatorische Rollen innehatten, werden weitere organisatorische Aufgaben dazubekommen.
 
+Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
+
+|===
+|*Rolle* |*Name*
+|Teamleiter | Fabian Krähmer
+|Projektorganisation| Fabian Krähmer, Silko Grellmann 
+|Entwurf - Weboberfläche| Felix Helmert, Moritz Lehmann
+|Entwicklung - Frontend| Felix Helmert, Nico Papke, Dominique Linzmajer
+|Entwicklung - Backend| Dominique Linzmajer
+|Dokumentation| Fabian Krähmer, Silko Grellmann
+|Deployment/Test | Silko Grellmann, Nico Papke
+|===
+
 *Altbelegkorrektur und neues Mitglied einarbeiten*
 
 Nach der Konsultation (28.04.2022) mit Robert RIngel, bezüglich des Beleges von SE I, wussten
-wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der implementierung wurde unmittelbar
+wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
 angegangen.
 Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Projekt gut zu nutzen.
+Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige unentdeckte Mängel aufzeigte.
 
 ==== Beginn der Implementierung
 
