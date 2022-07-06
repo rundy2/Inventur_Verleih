@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 //Controller for rooms
-@CrossOrigin(origins="http://141.56.180.173:3000")
+//@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/")
 public class RoomController {

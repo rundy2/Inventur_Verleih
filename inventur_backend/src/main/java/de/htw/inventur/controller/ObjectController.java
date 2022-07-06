@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Optional;
 
 //Controller for objects
-@CrossOrigin(origins="http://141.56.180.173:3000")
+//@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/")
 public class ObjectController {

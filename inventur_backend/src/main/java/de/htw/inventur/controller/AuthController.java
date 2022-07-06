@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 //Controller for authentication
-@CrossOrigin(origins="http://141.56.180.173:3000")
+//@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
