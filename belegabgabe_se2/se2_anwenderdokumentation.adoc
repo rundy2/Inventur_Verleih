@@ -1,0 +1,142 @@
+= Anwenderdokumentation
+
+== Vorwort 
+
+Unsere Software wurde so gestaltet, dass jeder Use-Case eines Anwenders innerhalb von fünf Schritten durchgeführt werden kann.
+Somit ist die Software intuitiv gestaltet und selbsterklärend. Um Verwirrung zu vermeiden, gibt es hier allerdings die Funktion nochmal aufgelistet.
+
+Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf ein entsprechendes Feld gemeint.
+
+== Inhaltsverzeichnis
+
+[arabic]
+. <<Startseite>>
+. <<Login mit bereitgestellten Daten>>
+. <<Login erstellen/Sign Up>>
+. <<Ausleihen von Gegenständen>>
+. <<Rückgabe von Gegenständen>>
+. <<Anlegen von Gegenständen>>
+. <<Glossar>>
+. <<Fehleranalyse>>
+
+== Startseite
+
+Bei Auruf der Seite http:// erscheint folgende Startseite
+
+Die Startseite ist folgendermaßen gegliedert:
+
+Zeile oben: Home | Login | Sign Up
+
+Overview
+My lending list
+
+- Tabelle mit ausgeliehen Gegenständen des Nutzers, daneben die Möglichkeit zur Rückgabe
+
+Search
+- Eine interaktive Suchmaske, die die Datenbank nach den gewünschten Gegenständen durchsucht
+
+- Darunter die Tabelle mit den Gegenständen der Datenbank, sowie die Möglichkeit zur Rückgabe oder zum Ausleihen
+- Mit Klick auf Details, kommt man auf die Detailseite des jeweiligen Gegenstandes.
+
+== Login mit bereitgestellten Daten
+
+. Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
+
+. Es erscheint nun die Loginseite.
+
+. Bitte geben Sie ihre Daten ein, welche Sie von Ihrem Administrator bekommen haben.
+
+. Danach klicken Sie auf Login.
+
+. Es erscheint die Startseite und Sie sehen ihre ausgeliehen Gegenstände.
+
+== Login erstellen/Sign Up
+
+. Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
+
+. Es erscheint nun die Loginseite
+
+
+
+== Ausleihen von Gegenständen
+
+. Für das Ausleihen von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Um Gegenstände auszuleihen, betätigen Sie sich entweder der Suchmaske oder gehen direkt auf den besagten Gegenstand.
+
+. Rechts neben dem Gegenstand können Sie durch klicken auf den Button "Borrow/Return" den Gegenstand ausleihen
+
+. Ihr ausgeliehener Gegenstand erscheint nun in ihrer "My lending list"
+
+== Rückgabe von Gegenständen
+
+. Für die Rückgabe von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Um Gegenstände zurückzugeben, betätigen Sie sich entweder der Suchmaske oder gehen direkt auf den besagten Gegenstand in ihrer "My lending list".
+
+. Rechts neben dem Gegenstand können Sie durch klicken auf den Button "Return" den Gegenstand zurückgeben.
+
+. Ihr ausgeliehener Gegenstand ist nun wieder frei verfügbar.
+
+== Anlegen von Gegenständen
+
+. Für das Anlegen von Gegenständen müssen sie zwangsläufig eingeloggt sein.
+
+. Gehen Sie in der oberen Leiste auf "AddObject".
+
+. Tragen Sie die gewünschten Eigenschaften des Objektes ein.
+
+. Klicken Sie nun den unteren Button "Add Object"
+
+
+
+== Glossar
+[%header]
+|===
+| Begriff | Definition und Erläuterung | Synonyme
+//| Kommissionierung | Bereitstellung von Waren aus einem Lager entsprechend eines Kundenauftrags | (keine)
+
+| Anwender
+| Kann Lager einsehen, Zustand und Status des Inventars auslesen, Inventar ausleihen und zurückgeben.
+| User
+
+| Browser
+| Software zur grafischen Darstellung des Internets.
+| Internet Explorer (Eigenname)
+
+| Anmeldung
+| ... ist der Vorgang der Authentifizierung durch Benutzernamen und Passwort.
+| Loginseite
+
+| Startseite
+| diese ist die Seite welche nach dem Login erscheint
+| Index
+
+| Gegenstand
+| Gekennzeichnet durch eine eindeutige Nummer.
+| Objekt
+
+| Status
+| Beschreibt den Verfügbarkeitszustand eines Gegenstandes. +
+Kann die Werte verfügbar, ausgeliehen, in Wartung annehmen.
+Oder beschreibt den Verfügbarkeitszustand eines Lagerfachs. Kann die Werte Gegenstand in diesem Fach wurde ausgliehen, Gegenstand befindet sich in diesem Fach, leer annehmen. 
+| Zustand
+
+| Rechte
+| Regelt die verschiedenen Ebenen und Vererbungen diverser Rechte zum Anlegen, ändern und löschen des Inventars
+| Userrechte, Anwenderrechte
+|===
+
+== Fehleranalyse
+
+Bekannte Fehler und deren Lösungen lauten folgendermaßen:
+
+[%header, cols="2,1,3"]
+|===
+| Fehler | Auftretende Seite | Lösung
+
+| Login nicht erfolgreich | Loginseite | Bitte prüfen Sie ihr Benutzernamen und/oder Passwort oder wenden Sie sich an ihren Administrator.
+| Die Seite reagiert nicht | Alle Seiten | Bitte führen Sie den Klick nach 10sec erneut aus oder wenden Sie sich an ihren Administrator.
+| Das Ausleihen von Gegenständen ist nicht möglich | Oberfläche | Sie haben entweder zu viele Gegenstände bereits ausgeliehen oder ihr Account wurde gesperrt, bitte wenden Sie sich an ihren Administrator
+|===
+
