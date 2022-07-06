@@ -43,7 +43,9 @@ Das Backend besteht aus einer JAR-Datei, die in einen Tomcat-Server geladen wird
 . In diesen Ordner den Frontend-Ordner sowie die Backend-Jar-Datei kopieren.
 . In den Ordner einen weiteren Ordner anlegen, in die die Datenbank gespeichert wird; Bezeichnung beispielweise "persistenteDatenbankInventur".
 . Den Datenbankcontainer aus dem mysql:8.0-Image bauen. Dabei den Datenbanknamen auf "Inventur" setzen und den Ordner, in den die Datenbank gespeichert werden soll, mit als Environment-Variable angeben. Wichtig ist auch anzugeben, dass sich der Container immer selber automatisch startet. Empfehlenswert ist es auch die Ressourcen des Containers zu beschränken und eine markante Bezeichnung dem Container geben. +
-Beispiel: docker run --name [Name des Containers] -m 200m -v /home/sps_user/Documents/InventurApplication/persistenteDatenbankInventur:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=[Rootpasswort der Datenbank] -e MYSQL_DATABASE=Inventur -e MYSQL_USER=[Benutzername der Datenbank Inventur] -e MYSQL_PASSWORD=[Passwort des Benutzers der Datenbank Inventur] -d --restart always -d mysql:8.0
+[.underline]#*_Beispiel:_*# +
+[source]
+docker run --name [Name des Containers] -m 200m -v /home/sps_user/Documents/InventurApplication/persistenteDatenbankInventur:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=[Rootpasswort der Datenbank] -e MYSQL_DATABASE=Inventur -e MYSQL_USER=[Benutzername der Datenbank Inventur] -e MYSQL_PASSWORD=[Passwort des Benutzers der Datenbank Inventur] -d --restart always -d mysql:8.0
 . Mit "[sudo] docker ps" nachsehen, ob der Datenbankcontainer läuft.
 . Die IP-Adresse ermitteln, auf der der Datenbankcointainer erreichbar ist.
 . Die Zugangsdaten zur Datenbank in der JAR-Datei des Backends unter BOOT-INF/classes/application.properties eintragen und speichen.
