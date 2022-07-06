@@ -1,6 +1,6 @@
 import axios from "axios";
 import authHeader from "./authHeader";
-const API_URL = "http://localhost:8080/";
+const API_URL = "http://141.56.180.173:8080/";
 
 class ObjectService{
     getAllObjects(){
