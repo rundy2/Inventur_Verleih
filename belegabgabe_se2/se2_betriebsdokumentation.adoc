@@ -49,11 +49,16 @@ docker run --name [Name des Containers] -m 200m -v /home/sps_user/Documents/Inve
 . Mit "[sudo] docker ps" nachsehen, ob der Datenbankcontainer läuft.
 . Die IP-Adresse ermitteln, auf der der Datenbankcointainer erreichbar ist.
 . Die Zugangsdaten zur Datenbank in der JAR-Datei des Backends unter BOOT-INF/classes/application.properties eintragen und speichen.
-. Backend mit starten mittels "java -jar [Backenddatei] &" .
-. Frontend starten mittels "serve -s [Frontend-Ordner] &" .
+. Backend mit starten mittels "java -jar [Backenddatei] &" . +
+Nach erfolgreichem Start erneut die Taste "Enter" drücken.
+. Frontend starten mittels "serve -s [Frontend-Ordner] &" . +
+Nach erfolgreichem Start erneut die Taste "Enter" drücken.
 
 Nun ist die Applikation von jeden Client über dessen Webbrowser aus erreichbar, wenn er sich im HTW-Netz befindet.
 (http://[IP-Adresse des Servers/PC]:3000).
+
+[IMPORTANT]
+Auch wenn das in das Backend das Frontend nicht integriert ist, ist nach dem Backendstart Port 8080 systemweit belegt.
 
 
 == Systembetreuung
