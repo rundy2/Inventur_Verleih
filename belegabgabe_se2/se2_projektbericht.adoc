@@ -100,7 +100,7 @@ Bei dem Projekt wurden wir von Herrn Robert Ringel als Mentor tatkräftig unters
 Von der AG SPS unterstützen uns Herr Till Haas, Eric Brandt und Felix Brandt. Alle drei waren immer gut erreichbar und für kurzfristige Meetings zu haben. Gerade weil Herr Ringel die AG SPS kannte, half er dabei die richtige Software entstehen zu lassen.
 
 === Projektorganisation
-==== Team [FK]
+==== Team
 Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
 einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen. Wir meinen mit
 "gutem Team" nicht, dass die einzelnen Teammitglieder über große Expertisen im Bereich Software
@@ -139,19 +139,6 @@ eigentlichen Aufgabe unterstützt wird. So konnten wir eine gute Mischung aus Ro
 wandelte sich die Teamarbeit in den Bereichen Dokumentation und Organisation zu spezialisierter
 Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
 erhalten.
-
-Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
-
-|===
-|*Rolle* |*Name*
-|Teamleiter | Fabian Krähmer
-|Projektorganisation| Fabian Krähmer, Silko Grellmann 
-|Entwurf - Weboberfläche| Felix Helmert, Moritz Lehmann
-|Entwicklung - Frontend| Felix Helmert, Nico Papke, Dominique Linzmajer
-|Entwicklung - Backend| Dominique Linzmajer
-|Dokumentation| Fabian Krähmer, Silko Grellmann
-|Deployment/Test | Silko Grellmann, Nico Papke
-|===
 
 === Ablauf der Kommunikation unter Verwendung von Tools 
 Da während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
@@ -227,6 +214,19 @@ Nico Papke wollte zwar sofort mit anpacken, jedoch musste sich das Team erstmal 
 
 Parallel dazu wurde auch die Rollenverteilung überarbeitet. Hier mussten nun aufgrund von fehlenden Mitgliedern einige Rollen doppelt besetzt werden. Wir versuchten hier so logisch wie möglich vorzugehen. Das heißt Mitglieder, die eher technische Rollen besetzten, besetzen auch wieder
 eher technische Rollen und Mitglieder, die eher organisatorische Rollen innehatten, werden weitere organisatorische Aufgaben dazubekommen.
+
+Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
+
+|===
+|*Rolle* |*Name*
+|Teamleiter | Fabian Krähmer
+|Projektorganisation| Fabian Krähmer, Silko Grellmann 
+|Entwurf - Weboberfläche| Felix Helmert, Moritz Lehmann
+|Entwicklung - Frontend| Felix Helmert, Nico Papke, Dominique Linzmajer
+|Entwicklung - Backend| Dominique Linzmajer
+|Dokumentation| Fabian Krähmer, Silko Grellmann
+|Deployment/Test | Silko Grellmann, Nico Papke
+|===
 
 *Altbelegkorrektur und neues Mitglied einarbeiten*
 
