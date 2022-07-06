@@ -72,7 +72,7 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
-Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2022 von Herrn Robert Ringel betreut. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
+Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2021/2022 und Sommersemester 2022 bearbeitet. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
 == Planung 
 === Ausgangssituation in SE ⅠⅠ
@@ -80,7 +80,7 @@ Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste.
 Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
 Moritz Lehmann, Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
 
-==== Aufgabenstellung und Auftraggeber
+==== Aufgabenstellung und Auftraggeber [FK]
 Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese 
 erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt 
@@ -89,10 +89,19 @@ realisieren lassen. Wartungsintervalle von Werkzeugen (mechanischer Verschleiß,
 Batterien oder Nachfüllen von Verbrauchsmaterialen) könnten so ihren statischen Charakter verlieren 
 und sich stattdessen an der realen (Ab-)Nutzung orientieren. 
 
+Unser Auftraggeber, die Arbeitsgruppe Smart Production Systems (kurz AG SPS) der HTW Dresden hatte bei Erstgespräch einen groben Plan wie die Umsetzung aussehen sollte, jedoch ohne nennenswerte Systemeinschränkungen, sodass wir uns in Programmierart und Sprache frei entfalten konnten.
+
+Im weiteren Gespräch mit den Auftraggebern, stellten sich schnell die wichtigsten Aspekte des Systems heraus.
+Es sollte möglichst einfach zu bedienen sein, hochverfügbar und von jedem Gerät zu steuern sein. 
+Wichtig war dabei ebenfalls, dass das System nur intern verwendbar ist und wir es als gepackte Datei zusätzlich zum aufgesetzten Server ausliefern sollten.
+
+Bei dem Projekt wurden wir von Herrn Robert Ringel als Mentor tatkräftig unterstützt, die wöchentlichen Vorlesungen von Prof. Dr. Anke und die Praktia halfen uns stetig dabei, den Blickwinkel auch mal zu ändern. 
+Von der AG SPS unterstützen uns Herr Till Haas, Eric Brandt und Felix Brandt. Alle drei waren immer gut erreichbar und für kurzfristige Meetings zu haben. Gerade weil Herr Ringel die AG SPS kannte, half er dabei die richtige Software entstehen zu lassen.
+
 === Projektorganisation
-==== Team
+==== Team [FK]
 Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
-einem guten Projektabschluss ist, haben wir auch in SE II daran festgehalten. Wir meinen mit
+einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen. Wir meinen mit
 "gutem Team" nicht, dass die einzelnen Teammitglieder über große Expertisen im Bereich Software
 Engineering oder andere IT bezogene Qualifikationen verfügen müssen, sondern, dass eine gute
 2
