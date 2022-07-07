@@ -6,8 +6,6 @@
 
 Fabian Krähmer, Silko Grellmann, Felix Helmert, Nico Papke, Moritz Lehmann, Dominique Linzmajer
 
-
-
 :docs: ../docs
 include::../docs/_includes/default-attributes.inc.adoc[]
 // ---
@@ -262,7 +260,8 @@ Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige une
 
 Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitglieder uns am
 Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
-fehlte uns die komplette Arbeitskraft über das Semester. Auch die Einarbeitungszeit des neuen Mitglieds konnte nicht produktiv für das Projekt genutzt werden. Auch die Korrektur des Belegs am Anfang des Semesters kostete viel Arbeitszeit, die aber für das System keine Fortschritte gebracht hat.
+fehlte uns die komplette Arbeitskraft über das Semester. Auch die Einarbeitungszeit des neuen Mitglieds konnte erstmal nicht produktiv für das Projekt genutzt werden. Die Korrektur des Belegs am Anfang des Semesters kostete viel Arbeitszeit, die aber für das System keine Fortschritte gebracht hat. Ein großer Punkt war auch der Umgang mit ReactJS den wir uns durch das Spring Boot Camp im Wintersemester als deutlich einfacher erhofften als es letztendlich der Fall war. Würde man dieses Projekt noch einmal machen müssen, so würden wir mit unserem derzeitigen Wissensstand nicht auf ReactJS zurückgreifen.
+
 
 
 === Reflexionen der Teammitglieder
