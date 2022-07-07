@@ -110,25 +110,17 @@ Im Folgenden sind eingesetzte Praktiken aufgelistet, die dazu beigetragen haben 
 [cols="1,3"]
 |===
 | *Eingesetzte Praktik* | *Gewünschter Erfolg*
-| Risiko des Scheiterns miteinbeziehen | Die Priorisierung der Reihenfolge der Arbeitsschritte wurde stets
-so gewählt, dass ein auftretendes Problem nie die Arbeit der
-anderen Gruppenmitglieder behinderte. So sollte der Erfolgsdruck gemindert werden.
-| Aufgabengebiete weit streuen | Es wurde versucht, die einzelnen Gruppenmitglieder Rollenunabhänig, in allen Teilgebieten mit kleinen Aufgaben einzusetzen.
-Hintergrund dieser Strategie war, dass jedes Gruppenmitglied
-auch die Aufgaben der anderen Rollen kennlernen kann und so
-auch außerhalb der eigenen Rolle Erfahrungen sammeln konnte
+| Aufgabengebiete aufteilen | Es wurde versucht, die einzelnen Gruppenmitglieder nach gewünschten Rollen aufzuteilen und in allen Teilgebieten kleine Aufgaben an die Gruppenmitglieder zu geben.
+Dadurch sollte vermieden werden, dass nur ein Mitglied eine spezielle Aufgabe übernehmen kann und Ausfälle kompensiert werden können.
+| Risiko des Scheiterns in Betracht ziehen | Wir versuchten Arbeitsschritte so zu gestalten, dass sie unabhängig von anderen Personen erfüllbar sind und deshalb einen Stocken des Entwicklungsprozesses nicht auftreten sollte. Dadurch sollte ein "Leerlauf" von einzelnen Teammitgliedern vermieden werden.
 | Zeit für Austausch einplanen  | Durch geregelte Gruppendiskussionen kann jedes Mitglied seine
 Meinung oder Erfahrung bei Entscheidung einbringen und sollte
 dadurch auch mehr am Projekt beteiligt werden
-| Demokratische Entscheidungsfindung | Jede Entscheidung, die von uns getroffen werden konnte, wurde
+| Demokratische Entscheidungsfindung | Jede Entscheidung, welche von uns getroffen werden musste, wurde
 demokratisch und nicht autoritär entschieden. Dies sollte
 gewährleisten, dass alle Gruppenmitglieder mit der Entscheidung einverstanden sind und auch keine schlechten Entscheidungen, wie z.B. durch mangelhafte Expertise getroffen werden.
-| Pair Programming | Die Implementierung des Systems wurde vorrangig in einer
-Zweiergruppe angegangen. Diese bestand aus dem Hauptentwickler mit Ruby-Expertise und dem Architekten. Ihm wurde es
-möglich, dass erste Programmiererfahrungen in Ruby gesammelt
-werden konnten, ohne, dass der Zeitaufwand zu groß wurde.
-Außerdem konnten spontane Probleme so durchaus schneller
-gelöst werden, was auch den Developer entlastete.
+| Pair Programming | Die Implementierung des Systems, sowohl Frontend als auch Backend wurde vorrangig in einer
+Zweiergruppe angegangen. Diese bestand aus dem Hauptentwickler mit ReactJS und Spring Boot Erfahrung sowie dessen Ersatz, welcher ebenfalls am Spring Boot Camp teilgenommen hat. Für das Backend wählten wir den selben Ansatz, damit ein schnelle Implementierung fast unabhängig von den anderen Prozessen geschehen konnte.
 |===
 
 ==== Rollenverteilung
@@ -160,11 +152,10 @@ Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten e
 waren. Es musste nun nur noch eine Uhrzeit gefunden werden, zu der alle verfügbar waren.
 
 === Way of Working 
-Unsere Arbeitsweise war vom Open Unified Process geprägt. Wir haben stets versucht,
+Unsere Arbeitsweise war vom (UP) - Open Unified Process - geprägt. Wir haben stets versucht,
 alle vier Kernziele zu durchlaufen. Alternativ dazu haben wir auch versucht andere Praktiken aus
 anderen Bereichen zu verwenden, die wir aus eigener Erfahrung oder aus der Theorie kannten.
-Diese waren das QM oder die Puls-Checks. Wir haben mit Iterationen gearbeitet, die immer zwei
-Wochen andauerten. +
+Diese waren das QM oder die Puls-Checks. Wir haben mit Iterationen gearbeitet, die eine Aufwandsgeschätze Länge beinhalteten +
 
 Grundsätzlich war aber folgender Ablauf regelmäßig zu erkennen:
 
@@ -221,28 +212,54 @@ Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
 |Projektorganisation| Fabian Krähmer, Silko Grellmann 
 |Entwurf - Weboberfläche| Felix Helmert, Moritz Lehmann
 |Entwicklung - Frontend| Felix Helmert, Nico Papke, Dominique Linzmajer
-|Entwicklung - Backend| Dominique Linzmajer
+|Entwicklung - Backend| Dominique Linzmajer, in Ersatz Silko Grellmann
 |Dokumentation| Fabian Krähmer, Silko Grellmann
 |Deployment/Test | Silko Grellmann, Nico Papke
 |===
 
-*Altbelegkorrektur und neues Mitglied einarbeiten*
+==== *Altbelegkorrektur und neues Mitglied einarbeiten*
 
 Nach der Konsultation (28.04.2022) mit Robert Ringel, bezüglich des Beleges von SE I, wussten
 wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
 angegangen.
 Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Projekt gut zu nutzen.
 Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige unentdeckte Mängel aufzeigte.
+Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
-==== Beginn der Implementierung
+==== *Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)*
+
+Da die Semesterferien einen harten Cut zwischen Analyse, Entwurf und Entwicklung brachten, fiel es uns am Anfang sehr schwer, wieder zusammen zu finden. Natürlich wollten wir alle etwas machen, aber schon die Terminabsprache zu einem Gruppen-Meeting war schwerer als gedacht. Erschwerend kam hinzu, dass sich das Entwurfsteam, bestehend aus Jonas Koloska und Jamal Alkharrat nicht zu ihrer Position und Arbeitswilligkeit äußerten. Dies kostete wertvolle Zeit für die Entwicklung, was uns aber erst recht spät in vollem Umfang klar wurde.
+Durch die Aufgabenverteilung von Github wurde es uns zumindest ermöglicht mit dem vorhanden Entwurfsmodellen zu arbeiten. Dominique Linzmajer setze sich allein an die Entwicklung des Backends. Felix Helmert und Nico Papke frischten ihre Kenntnisse zu HTML und CSS Coding auf und versuchten sich an den drei benötigten Webseiten (Login, Übersicht und Detailseite), da die alten aus SE I durch ReactJS nicht den geplanten Funktionsumfang beinhalteten.
+Des weiteren kam die Corona-Pandemie als Multiplikator hinzu. Natürlich half uns in SE I, die technischen Möglichkeiten von Online-Meetings und Repositorys große Distanzen zu überwinden, was uns ind SE II aber etwas auf die Füße fiel, da wir uns noch nie vollständig in der Gruppe in der Realität gesehen hatten.
+Unser Coach Robert Ringel machte den ersten Schritt und schlug dies einmal vor. An der Umsetzung scheiterten wir zu erst, da wieder mal kein Termin für alle passte.
+
+Das Construction IOC (Iteration 04) sah wie folgt aus:
+
+. Frontend entwerfen/erweitern (SE I)
+.. Loginseite überarbeiten
+.. Übersichtsseite erstellen
+.. Use-Case "Passwort vergessen" implementieren
+. Backend entwerfen/erweitern (SE I)
+. Loginseite mit Nutzerdatenbank verknüpfen
+. Kundenmeeting
+
+*Frontend entwerfen/erweitern (SE I)*
+
+Aus SE I blieb uns das HTML-Gerüst für die Login- und Übersichtsseite. Leider war dies nicht mehr verwendbar, da wichtige ReactJS-Elemente fehlten. Hier setze sich Felix Helmert heran und brachte sie unter Anleitung von Dominique Linzmajer auf aktuellen Stand. Des weiteren wurde der Use-Case "Passwort vergessen" mit einem schlichten Trick "Bitte wenden sie sich an den Administrator" in der Loginseite implementiert.
+
+*Backend entwerfen/erweitern*
 
 
-==== Entwicklung vorantreiben
-
-==== System abschließen um Kunden Inkrement durchführen zu können
 
 
-==== Systemoptimierung und Übergabe an den Kunden
+==== Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel
+
+Iteration 04
+
+==== Use-Cases durchprogrammieren
+
+
+==== Deployment auf dem Kundenserver und Abnahme vom Kunden
 
 == Ergebnisse
 
@@ -277,7 +294,51 @@ Während ich das Backend entwickelte gab ich einem Teammitglied die Aufgabe das 
 Ich habe die Arbeit im Team kennen gelernt, wir haben es gemeinsam geschafft komplizierte, umfangreiche Probleme zu lösen und das Produkt könnte mit ein paar Verbesserungen sinnvoll genutzt werden. Trotz aller Schwierigkeiten haben wir mit unserem Programm ein solides Fundament geliefert auf das man weiter Aufbauen kann und dabei eine Menge gelernt.
 Ein großer Dank geht an meine Teamkollegen, die bis zum Schluss hart gearbeitet haben, immer ein offenes Ohr hatten und auf Bedürfnisse des einzelnen eingegangen sind. Wenn man Hilfe brauchte musste man es nur sagen und man bekam sie. Außerdem Danke ich unserem Coach, welcher uns ebenfalls bei Problemen half und gute Tipps für ein besseres weiterarbeiten gab. Besonders von Mitte bis Ende des Projektes gab er uns den nötigen Ansporn um das Projekt zum Abschluss zu bringen.
 
-
 ==== Felix Helmert
+
+
+
 ==== Moritz Lehmann
+
+
+
 ==== Nico Papke
+
+Die Module Software Engineering 1 und 2 werden mir noch lange im Gedächtnis bleiben und mir mit 
+Sicherheit bei zukünftigen Projekten, welche in der Wirtschaft stattfinden, einiges an Erfahrung bereitstellen.
+Nicht zuletzt, da ich das Modul Software Engineering 2 zum zweiten Mal belegt habe und somit an einem 
+weiteren Projekt mitgearbeitet habe. Dadurch fiel es mir leichter mich der bereits bestehenden Gruppe 
+anzuschließen und meinen Platz zu finden. Ich denke eine solche Integration in ein Team sollte für mich in 
+Zukunft noch unproblematischer werden und mir nochmals leichter fallen. Somit kann ich mit Stolz sagen, 
+dass ich mich als anfänglicher „Fremdkörper“ gut in das Projekt einfinden konnte und ein wichtiger Teil der 
+Entwicklung wurde. Ich wusste von den Fehlern, die zum Scheitern meines ersten SE Projekts geführt haben
+und konnte somit die Gruppe darauf aufmerksam machen, dass das Risikomanagement und eine 
+durchdachte Planung der einzelnen Iterationen maßgeblich den Erfolg des Projektes beeinflussen. Vor Allem
+das fehlende Know-How und die Expertise waren ebenfalls verantwortlich für den Misserfolg meines 
+vorherigen Projekts. Dazu kam die Unterschätzung des Lernaufwands für die eingesetzten Tools und 
+Sprachen. Diese Punkte waren jedoch im aktuellen Projekt nicht gegeben, da sich meiner Meinung nach alle
+gut mit der Software und den verwendeten Tools und Sprachen auskannten. Für mich selbst habe ich 
+hauptsächlich das agile Entwickeln der Software erfahren können und dahingehend viel für mich mitnehmen 
+können, da das leider beim vorherigen Projekt zu kurz kam. Auch das entwickeln als Team und die damit 
+verbundene interne Abstimmung und konkrete Aufgabenverteilung hat besser funktioniert als in meinem 
+alten Team. Da ich größtenteils für die Entwicklung des Frontends und fürs Testing zuständig war konnte ich 
+selbstverständlich auch dort meine Programmierkenntnisse verbessern und auf ein neues Level heben. 
+Darüber hinaus konnte ich meine Visual Studio Code Kenntnisse auffrischen und das Arbeiten mit einem 
+Versionsverwaltungstool wie GitHub weiter vertiefen.
+Trotz dessen lief natürlich auch in diesem Projekt nicht alles perfekt und ich denke das hat hauptsächlich 
+damit zu tun, dass uns als Team der Start ins neue Semester und die Wiederaufnahme der Arbeit an diesem 
+Thema anfangs etwas schwer fiel. Das resultierte darin, dass wir zu viel Zeit zu Beginn des Semesters 
+verschwendet haben und die Entwicklung der eigentlichen Software etwas verzögert wurde. Hier hätte man 
+sich schlichtweg eher einen Ruck geben müssen und die Arbeit beginnen müssen. Unabhängig davon hatten
+wir als Team das Problem zu meistern, dass zwei Mitglieder aus dem Projekt ausgeschieden sind. Da beide 
+jedoch eigentlich in die Arbeit eingeplant waren und durch unseren sowieso schon verzögerten Start nicht 
+direkt zu Beginn des Semesters klar wurde, dass uns zwei Mitglieder fehlen werden, hatten wir natürlich 
+Probleme die Manpower trotz des Verlustes abzudecken und konnten somit nicht alle Use Cases umsetzen 
+beziehungsweise ausreifen und verfeinern.
+Trotz der genannten Hindernisse haben wir das Projekt meiner Meinung nach den Umständen entsprechend
+gut gemeistert und uns dabei vor Allem an die Prinzipien der agilen Softwareentwicklung gehalten und diese 
+als Team gelebt.
+Ich habe also zwei Projekte in zwei unterschiedlichen Teams mit unterschiedlichen Problemen bearbeitet 
+und somit viel Erfahrung auf zwischenmenschlicher, als auch technischer, sowie organisatorischer Ebene 
+von Projekten dieser Art gesammelt und fühle mich demnach gut gewappnet weitere Themen und Aufgaben 
+der Informatik und des Software Engineerings in meinem Werdegang zu bearbeiten.
