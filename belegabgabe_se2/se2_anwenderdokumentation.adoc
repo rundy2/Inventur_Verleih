@@ -64,10 +64,10 @@ TIP: Wir empfehlen Chromium oder Firefox.
 
 . Geben Sie einen Benutzernamen ein 
 
-CAUTION: Benutzername muss unbedingt im E-Mail Format sein!
-
 . Geben Sie nun ein Passwort ein und drücken Sie auf Speichern.
 
+CAUTION: Benutzername muss unbedingt im E-Mail Format sein!
+        Passwort muss mindestens acht Zeichen lang sein!
 
 
 == Ausleihen von Gegenständen
