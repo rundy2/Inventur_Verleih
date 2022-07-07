@@ -23,9 +23,7 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 
 IMPORTANT: Die Software ist nur aus dem HTW Netz erreichbar, eine VPN Verbindung reicht aus.
 
-Bei Auruf der Seite http://141.56.180.173:3000 erscheint folgende Startseite
-
-Die Startseite ist folgendermaßen gegliedert:
+Bei Auruf der Seite http://141.56.180.173:3000 erscheint diese gegliederte Startseite:
 
 Zeile oben: Home | Login | Sign Up
 
@@ -96,7 +94,7 @@ CAUTION: Benutzername muss unbedingt im E-Mail Format sein!
 
 . Für das Anlegen von Gegenständen müssen sie zwangsläufig eingeloggt sein.
 
-. Gehen Sie in der oberen Leiste auf "AddObject".
+. Gehen Sie in der oberen Leiste auf "Add Object".
 
 . Tragen Sie die gewünschten Eigenschaften des Objektes ein.
 
