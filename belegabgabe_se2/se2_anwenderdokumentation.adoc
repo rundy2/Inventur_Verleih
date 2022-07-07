@@ -21,7 +21,9 @@ Grundsätzlich ist mit "klicken" immer die Betätigung der linken Maustaste auf 
 
 == Startseite
 
-Bei Auruf der Seite http:// erscheint folgende Startseite
+IMPORTANT: Die Software ist nur aus dem HTW Netz erreichbar, eine VPN Verbindung reicht aus.
+
+Bei Auruf der Seite http://141.56.180.173:3000 erscheint folgende Startseite
 
 Die Startseite ist folgendermaßen gegliedert:
 
@@ -40,7 +42,9 @@ Search
 
 == Login mit bereitgestellten Daten
 
-. Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
+. Geben Sie in Ihrem handelsüblichen Browser die Seite http://141.56.180.173:3000 an 
+
+TIP: Wir empfehlen Chromium oder Firefox.
 
 . Es erscheint nun die Loginseite.
 
@@ -52,9 +56,19 @@ Search
 
 == Login erstellen/Sign Up
 
-. Geben Sie in Ihrem handelsüblichen Browser die Seite ... an (Wir empfehlen Chromium oder Firefox).
+. Geben Sie in Ihrem handelsüblichen Browser die Seite http://141.56.180.173:3000 an 
+
+TIP: Wir empfehlen Chromium oder Firefox.
 
 . Es erscheint nun die Loginseite
+
+. Gehen Sie bitte auf die Schaltfläche "Sign Up" oben links
+
+. Geben Sie einen Benutzernamen ein 
+
+CAUTION: Benutzername muss unbedingt im E-Mail Format sein!
+
+. Geben Sie nun ein Passwort ein und drücken Sie auf Speichern.
 
 
 
@@ -98,7 +112,7 @@ Search
 
 | Anwender
 | Kann Lager einsehen, Zustand und Status des Inventars auslesen, Inventar ausleihen und zurückgeben.
-| User
+| User, Benutzer
 
 | Browser
 | Software zur grafischen Darstellung des Internets.
