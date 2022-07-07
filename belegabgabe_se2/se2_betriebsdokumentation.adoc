@@ -85,9 +85,15 @@ Auch wenn das in das Backend das Frontend nicht integriert ist, ist nach dem Bac
 
 | Abbruch beim Starten des Backends
 | Datenbankcontainer läuft nicht; +
-Zugangsdaten zur Datenbank sind inkorrekt
+Zugangsdaten zur Datenbank sind inkorrekt; +
+Port 8080 ist bereits durch einen anderen Prozess belegt
 | Datenbankcointainer starten; +
-Zugangsdaten in der JAR-Datei des Backends anpassen (Vorgehen siehe oben Systemeinrichtung Punkt 9)
+Zugangsdaten in der JAR-Datei des Backends anpassen (Vorgehen siehe oben Systemeinrichtung Punkt 9); +
+den Prozess beenden, der Port 8080 belegt
+
+| Abbruch beim Start des Frontends
+| Port 3000 ist bereits durch einen anderen Prozess belegt
+| den Prozess beenden, der Port 3000 belegt
 
 | die Applikation ist nicht erreichbar
 | falsche URL im Webbrowser eingegeben; +
@@ -97,5 +103,18 @@ Backend läuft nicht;
 | URL überprüfen (http://[IP-Adresse des Servers/PC]:3000) und Seite neuladen; +
 mittels VPN sich zum HTW-Netz verbinden; +
 Front- und Backend erneut starten (Vorgehen siehe oben Systemeinrichtung Punkt 10 und 11)
+
+| die Applikation zeigt nur Dummy-Objekte an
+| man ist nicht angemeldet; +
+Accesstoken ist abgelaufen; +
+Backend läuft nicht
+| anmelden; +
+abmelden und erneut anmelden; +
+Backend erneut starten (Vorgehen siehe oben Systemeinrichtung Punkt 10)
+
+
+| Netzwerkfehler bei Anmeldung
+| Backend läuft nicht
+| Backend erneut starten (Vorgehen siehe oben Systemeinrichtung Punkt 10)
 
 |===
