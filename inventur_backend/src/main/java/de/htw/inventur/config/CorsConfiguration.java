@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-//Configuration to enable CORS between Front- and Backend
+/**Configuration to enable CORS between Front- and Backend*/
 @Configuration
 @EnableWebMvc
 public class CorsConfiguration implements WebMvcConfigurer {

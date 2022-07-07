@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//Controller for storages
+/**Controller for storages*/
 //@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/")
@@ -18,12 +18,13 @@ public class StorageController {
         this.storageRepository = storageRepository;
     }
 
-    //Get all storages from a special room
+    /**Get all storages from a special room*/
     @GetMapping("/room/{roomId}/storage")
     public List<Storage> index(@PathVariable("roomId") Integer roomId){
         return storageRepository.findAllByRoomId(roomId);
     }
 
+    /**add storage to database*/
     @PostMapping("/add/storage")
     public void addStorage(@RequestBody Storage storage){storageRepository.save(storage);}
 }

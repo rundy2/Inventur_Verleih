@@ -16,8 +16,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-//Communication between Backend and Database
-//Spring will automatically generate SQL from function-name
+/**Communication between Backend and Database*/
+/**Spring will automatically generate SQL from function-name*/
 @Repository
 public interface ObjectRepository extends JpaRepository<Object, Integer> {
 

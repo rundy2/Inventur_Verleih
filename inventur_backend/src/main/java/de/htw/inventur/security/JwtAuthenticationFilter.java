@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//Filter for requests
+/**Filter for requests*/
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     @Autowired
@@ -23,7 +23,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     private InventurUserDetailsService inventurUserDetailsService;
 
-    //For each request this functions will proof for authentication except '/auth/*' requests
+    /**For each request this functions will proof for authentication except '/auth/*' requests*/
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String jwt = getJwtFromRequest(request);
@@ -40,7 +40,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    //Gets security-token from request-header
+    /**Gets security-token from request-header*/
     private String getJwtFromRequest(HttpServletRequest request){
         String bearerToken = request.getHeader("Authorization");
 
