@@ -24,7 +24,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 *Abhängigkeiten:*
 
-- Wir sind von dem HTW Server und von unserer Datenbank abhängig.
+- Wir sind von der Verfügbarkeit des Servers und von der Datenbank abhängig.
 
 == Architektur-relevante Anforderungen
 
@@ -49,10 +49,9 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
  - *NFRR-1:* Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. +
 
-- *NFRR-2:* Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
+- *NFRR-2:* Ein neuer Benutzername darf keinen bereits vergebenen Namen erhalten.
 
 - *NFRR-3:* Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden. +
-
 
 - *NFRR-4:* Das System sollte eine Verfügbarkeit von 95% gewährleisten. +
 
@@ -62,7 +61,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 . Wir nutzen MySQL Datenbanksystem, damit wir Datentypen gut abbilden können.
 
-. Wir nutzen React beim Frontend (User-Interface)
+. Wir nutzen ReactJS beim Frontend (User-Interface)
 
 . Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern.
 
@@ -78,7 +77,9 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 . Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Damit kein ungewollte Zugriff auf unsere Anwendung und deren Daten hat, müssen sich Nutzer zunächst mit ihrer Email und einem Passwort registrieren. Die Email und das Passwort werden in der Datenbank gespeichert, wobei das Passwort verschlüsselt wird, also nicht im Klartext in der Datenbank steht. Wenn sich ein registrierter Nutzer dann einloggt generiert unsere Anwendung einen Sicherheitstoken, welcher einen Tag gültig sein wird. Wir haben uns für die Verwendung des Bearer Tokens entschieden. Die Dauer der Gültigkeit des Sicherheitstoken kann ggf. angepasst werden. Dieser Token wird bei Abfragen von Daten mit an das Backend geschickt welches seine Gültigkeit prüft. Ist der Token gültig werden die Daten an das Frontend bzw. an den Nutzer gesendet. Wenn der Token ungültig ist wird eine entsprechende Fehlermeldung ausgegeben.
 
 
-. Beim User-Interface haben wir uns für React entschieden, weil React eine Vielzahl von Funktionen und schöne User-Elemente bietet. Außerdem ist es kostenlos und einfach zu verwenden.
+. Beim User-Interface haben wir uns für ReactJS entschieden, weil ReactJS eine Vielzahl von Funktionen und schöne User-Elemente bietet. Außerdem ist es kostenlos und einfach zu verwenden.
+
+. Das Backend wurde mit Spring Boot implementiert um eine einfache, schnelle und sichere Übergabe vom Frontend (ReactJS) und MySQL gewährleisten zu könnenn.
 
 
 == Wesentliche Abstraktionen
