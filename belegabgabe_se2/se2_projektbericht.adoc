@@ -300,6 +300,13 @@ Ein großer Dank geht an meine Teamkollegen, die bis zum Schluss hart gearbeitet
 
 ==== Moritz Lehmann
 
+In dem Projekt war ich in SE I bei der Implementierung tätig und habe in SE II den Entwurf für die Weboberfläche übernommen aufgrund dessen, dass das Team neu strukturiert wurde. Ich musste mir dazu Wissen zu einem Teil zu den Frameworks Spring Boot und ReactJS aneignen, als auch mit der Entwicklung einer Weboberfläche vertraut machen. Das Erlernen von solchen Sachen geht aber meistens nicht so schnell vonstatten, wie man sich es wünscht. Das ist auch schwer in dem ohnehin schon knappen Zeitraum des Projekts als schwierig herausstellt.
+
+Das wichtigste was ich im Verlauf des Projekts gelernt habe ist wie wichtig die Kommunikation ist, damit ist nicht nur die Kommunikation mit den Themenstellern oder den Coaches gemeint es ist auch die Kommunikation innerhalb des Teams wichtig. Ich konnte dadurch auch ein paar meiner Probleme leicht mit Hilfe des Teams lösen, mit welchen ich allein Schwierigkeiten hatte sie zu lösen. 
+
+Für mich war die Gruppenarbeit in einem Projekt was Neues und ich fand sie auch sehr angenehm. Dadurch konnte ich lernen, wie ein Projekt abläuft, wie wichtig die Dokumentation der Ergebnisse ist und wie wichtig das Zeitliche Management und die Aufgabenteilung des Teams ist. Die wöchentlich stattfindenden Meetings haben auch geholfen den aktuellen Stand der einzelnen Teammitglieder und den Fortschritt des Projektes deutlich zu machen. Das Project brachte auch viele neue Dinge mit, z.B. die Arbeit als Team mit GitHub und verschiedene neue Programme, wie IntelliJ oder Visual Paradigm. Diese vereinfachten die Teamarbeit und brachten mir persönlich auch einen guten Einblick welche Programme für die Teamarbeit und die Kommunikation gut sind.
+Das größte Problem was wir mit dem Projekt hatten war der Mangel an ausreichender Zeit, der daran geschuldet war, dass wir mit ReactJS uns neu einfinden mussten und wenig Kenntnisse dazu im Vorhinein hatten. Das führte zum einen dazu, dass wir nicht alle Use Cases implementieren konnten.
+Letztendlich bin ich mit den Ergebnissen des Projektes zufriedenen. Ich konnte die Arbeit im Team und den Ablauf eines Projektes kennen lernen, sowie mit dem Team Probleme zu lösen. Wir konnten trotz den ganzen Problemen ein gutes Programm liefern das bestimmt noch verbessert werden könnte, aber ein gutes erstes Programm für des erste Projekt liefert. Ich konnte aus dem Projekt viele Kenntnisse gewinnen, welche ich später auch anwenden kann und bei dem nächsten Projekt einbringen kann.
 
 
 ==== Nico Papke
