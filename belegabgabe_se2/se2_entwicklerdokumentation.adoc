@@ -1,0 +1,122 @@
+= Entwicklerdokumentation
+
+:imagesdir: images
+include::../docs/_includes/default-attributes.inc.adoc[]
+
+== Zweck
+
+Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Begründungen, wesentliche Elemente und andere übergreifende Aspekte des Systems, die Einfluss auf Entwurf und Implementierung haben. Es dient als Dokumentation warum wir welchen Weg genommen haben und soll kommenden (Weiter-)Entwicklungen der Software helfen.
+
+== Architekturziele und Philosophie
+
+Das System ist für die Verwaltung der Inventur konzipiert. Die Anwendung ist mit HTW Login zugänglich. Das System ermöglicht den Mitarbeitenden eine bessere Orginisation der Gegenständen sowie Verbrauchsmaterialen. 
+
+Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfache Bedienbarkeit erforderlich.
+
+== Annahmen und Abhängigkeiten
+*Annahmen:*
+
+- Jeder Benutzer besitzt eine stabile Internetverbindung und eine ausreichende Bandbreite.
+
+- Jeder Benutzer hat Grundkenntnisse im Umgang mit Webseiten.
+
+- Jeder Benutzer stellt die ausgeliehenen Artikel am richtigen Ort zurück.  
+
+*Abhängigkeiten:*
+
+- Wir sind von dem HTW Server und von unserer Datenbank abhängig.
+
+== Architektur-relevante Anforderungen
+
+
+*Funktion:*
+
+- *SWFR-1:* Das System muss alle Inventar-, Ausleih- und Benutzerdaten persistent speichern. +
+
+- *SWFR-2:* Die Kommunikation zwischen Clients und Server muss verschlüsselt sein. +
+
+- *SWFR-3:* Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren.+
+
+- *SWFR-4:* Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein. +
+
+- *SWFR-5:* Die Passwörter zu den Useraccounts müssen serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher gespeichert werden. +
+
+*Effizienz (Performance):*
+
+- *NFRP-1:* 10 User müssen gleichzeitig das System nutzen können. +
+
+*Zuverlässigkeit (Reliability):*
+
+ - *NFRR-1:* Es darf kein falscher Benutzername oder falsches Passwort angegeben werden. +
+
+- *NFRR-2:* Ein neuer Benutzername darf kein breits vergeben Namen erhalten.
+
+- *NFRR-3:* Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden. +
+
+
+- *NFRR-4:* Das System sollte eine Verfügbarkeit von 95% gewährleisten. +
+
+
+
+== Entscheidungen, Nebenbedingungen und Begründungen
+
+. Wir nutzen MySQL Datenbanksystem, damit wir Datentypen gut abbilden können.
+
+. Wir nutzen React beim Frontend (User-Interface)
+
+. Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern.
+
+. Wir definieren Typen, um eine einfache Erweiterbarkeit zu ermöglichen
+
+
+
+== Architekturmechanismen
+https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/concepts/arch_mechanism_2932DFB6.html[Doku "Concept: Architectural Mechanism"]
+
+. Wir haben in der Analyse die Entscheidung getroffen, dass unsere Daten persistent (SWFR-1) sein müssen. Auf der Grundlage dieser Ausgangspunkte hatten wir im Entwurf verschiedene Möglichkeiten, unsere Daten zu speichern. Von den drei Möglichkeiten SQL-Datenbanken, NoSQL-Datenbanken oder einfache Dateien entschieden wir uns für eine SQL-Datenbank, da dies unsere Datentypen gut abbilden kann und wir bereits Erfahrung mit diesen haben. In der Implementierung hatten wir die Wahl zwischen verschiedenen Datenbanken. Wir haben uns für MySQL entschieden, da diese Open Source ist.
+
+. Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Damit kein ungewollte Zugriff auf unsere Anwendung und deren Daten hat, müssen sich Nutzer zunächst mit ihrer Email und einem Passwort registrieren. Die Email und das Passwort werden in der Datenbank gespeichert, wobei das Passwort verschlüsselt wird, also nicht im Klartext in der Datenbank steht. Wenn sich ein registrierter Nutzer dann einloggt generiert unsere Anwendung einen Sicherheitstoken, welcher einen Tag gültig sein wird. Wir haben uns für die Verwendung des Bearer Tokens entschieden. Die Dauer der Gültigkeit des Sicherheitstoken kann ggf. angepasst werden. Dieser Token wird bei Abfragen von Daten mit an das Backend geschickt welches seine Gültigkeit prüft. Ist der Token gültig werden die Daten an das Frontend bzw. an den Nutzer gesendet. Wenn der Token ungültig ist wird eine entsprechende Fehlermeldung ausgegeben.
+
+
+. Beim User-Interface haben wir uns für React entschieden, weil React eine Vielzahl von Funktionen und schöne User-Elemente bietet. Außerdem ist es kostenlos und einfach zu verwenden.
+
+
+== Wesentliche Abstraktionen
+
+*Typen:* Typen werden gebildet, um die Daten, die zur Laufzeit im Programm benötigt werden, zur Verfügung zu haben und zwar an unterschiedlichen Stellen im System.
+
+- Room: enthält der Name des entsprechenden Raums an der Hochschule.
+
+- Storage: enthält die Bezeichnung des Lagerplatzes.
+
+- Section: enthält die genauere Beschreibung, wo die Artikel gelagert sind.
+
+- Object: enthält alle relevante Informationen zum Artikel.
+
+*Services:* Services werden genutzt, um die Verarbeitung von Daten zu übernehmen. Dies geschieht optimalerweise für jeden Typen separat, um eine möglichst geringe Kopplung zu erhalten.
+
+*Workflows:* Workflows beschreiben den Arbeitsablauf des Programms und bilden die Reihenfolge ab, mit welcher in einem Programm gearbeitet wird.
+
+== Architektur-Framework
+
+- Frontend -> Backend -> Datenbanksystem 
+
+== Architekturschichten (C4-Modell)
+
+Folgende Schichten wurden implementiert:
+
+=== Schicht
+
+image::Schicht1.png[]
+
+=== Schicht
+
+image::Schicht2.png[]
+
+=== Schicht
+
+image::Schicht3.png[]
+
+
+
+
