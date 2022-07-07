@@ -106,7 +106,7 @@ einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen.
 "gutem Team" nicht, dass die einzelnen Teammitglieder über große Expertisen im Bereich Software
 Engineering oder andere IT bezogene Qualifikationen verfügen müssen, sondern, dass eine gute
 Gruppendynamik und ein starker Zusammenhalt innerhalb der Gruppe vorhanden ist.
-Wir haben versucht, die Planung der einzelnen Teilaspekte so zu gestalten, dass die eben genannten Eigenschaften stets in hohem Ausmaß vorhanden sind. Leider ist dies gerade zum Anfang des Semster schwer gewesen, weil unsere beiden Softwarearchitekten nur schwierig zu erreichen waren. Das Projektmanagement probierte mehrere Methoden aus den Vorlesungen, doch scheiterte meist an der fehlenden Kommunikationsart. 
+Wir haben versucht, die Planung der einzelnen Teilaspekte so zu gestalten, dass die eben genannten Eigenschaften stets in hohem Ausmaß vorhanden sind. Leider ist dies gerade zum Anfang des Semester schwer gewesen, weil unsere beiden Softwarearchitekten nur schwierig zu erreichen waren. Das Projektmanagement probierte mehrere Methoden aus den Vorlesungen, doch scheiterte meist an der fehlenden Kommunikationsart. 
 Im Folgenden sind eingesetzte Praktiken aufgelistet, die dazu beigetragen haben die Zusammenarbeit in unserem Team zu verbessern sollten:
 
 [cols="1,3"]
@@ -230,7 +230,7 @@ Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
 
 *Altbelegkorrektur und neues Mitglied einarbeiten*
 
-Nach der Konsultation (28.04.2022) mit Robert RIngel, bezüglich des Beleges von SE I, wussten
+Nach der Konsultation (28.04.2022) mit Robert Ringel, bezüglich des Beleges von SE I, wussten
 wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
 angegangen.
 Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Projekt gut zu nutzen.
@@ -250,11 +250,15 @@ Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige une
 
 === Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste
 
-==== Weitere Ergebnisse
+==== Motivation
 
-=== Fehlerbehebung
+==== Produktergebnis
 
-=== Begründung für das Nichterfüllen von Zielen
+==== Bewertung
+
+==== Fehlerbehebung
+
+==== Begründung für das Nichterfüllen von Zielen
 
 Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitglieder uns am
 Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
@@ -263,9 +267,18 @@ fehlte uns die komplette Arbeitskraft über das Semester. Auch die Einarbeitungs
 
 === Reflexionen der Teammitglieder
 
-==== 1.Teammitglied
-==== 2.Teammitglied
-==== 3.Teammitglied
-==== 4.Teammitglied
-==== 5.Teammitglied
-==== 6.Teammitglied
+==== Fabian Krähmer
+==== Silko Grellmann
+==== Dominique Linzmajer
+
+Im vergangenen Semester freute ich mich sehr auf das Projekt in Software Engineering, da dieses mir einen Einblick in die Softwareentwicklung im Team geben konnte, welche ich zuvor noch nicht kannte und ich durch praktische Aufgaben den besten Lernerfolg erzielen kann. So lernte ich neben neuen, teilweise sehr engagierten Leuten auch die Möglichkeiten und Probleme der Webanwendungsentwicklung kennen. Da ich mich sehr für die Programmierung interessiere übernahm ich in meinem Team die Rolle des Entwicklers. Zu beginn eignete ich mir im Rahmen eines Spring Boot Camps viele Voraussetzungen für die erfolgreiche technische Umsetzung unseres Projektes an. Als Hauptentwickler war es meine Aufgabe mich tiefer in die Frameworks Spring Boot und React einzulesen und mein Wissen mit den anderen zu teilen. Ich hatte viel Spaß dabei zu zeigen und zu erklären was ich gelernt hatte. 
+
+Während ich das Backend entwickelte gab ich einem Teammitglied die Aufgabe das User Interface ohne weitere Funktionalitäten zu bauen. Leider bekam ich nach einigen Wochen keine Ergebnisse, da das Mitglied kurzfristig die Gruppe verlassen hatte. Das kostete uns sehr viel Zeit, so das der Erfolg des Projektes gefährdet war und wir die Rollen des Teams neu strukturieren mussten. So hatten nun zwei weitere Mitglieder die Aufgabe das User Interface zu erstellen, welche dann auch zügig erste Ergebnisse lieferten, so dass ich mit dem einbinden der Daten beginnen konnte. Das einbinden der Daten stellte sich als deutlich schwieriger heraus als ich zu beginn Annahm. React bringt eine Menge an Regeln mit, von denen ich zu diesem Zeitpunkt noch nichts wusste, da ich mich überwiegend mit Spring Boot beschäftigt hatte. So war es zum Beispiel wichtig, dass die Daten immer in der selben Reihenfolge geladen und gerendert werden, was mir die Möglichkeit nahm, beliebig Funktionen zu erstellen und bei Bedarf zu verwenden. Mir ging sehr viel Zeit verloren bei der Suche nach Problemlösungen für die verschiedensten Probleme, was mir deutlich machte, dass ich die Arbeit mit unbekannten Verfahren bzw. Frameworks nicht unterschätzen sollte. Der Umgang mit React war für mich definitiv die größte Herausforderung, welche mich am meisten Nerven kostete. Ohne weitere Kurse würde ich für künftige Projekte ein anderes Framework bevorzugen. Nahe dem Ende war es natürlich wichtig unsere Software auf der Virtual Machine des Kunden zum laufen zu bringen, wobei auch hier neue unerwartete Probleme auftraten. Mit Hilfe einiger Teammitglieder konnten wir zum Glück einen Großteil der Probleme lösen, so dass sich unsere Software nun endlich funktionsfähig beim Kunden befindet. Auf Grund zahlreicher Rückschläge konnten wir leider nicht all unsere Use Cases implementieren und dennoch bin ich mit dem Ergebnis des Projektes zufrieden. 
+
+Ich habe die Arbeit im Team kennen gelernt, wir haben es gemeinsam geschafft komplizierte, umfangreiche Probleme zu lösen und das Produkt könnte mit ein paar Verbesserungen sinnvoll genutzt werden. Trotz aller Schwierigkeiten haben wir mit unserem Programm ein solides Fundament geliefert auf das man weiter Aufbauen kann und dabei eine Menge gelernt.
+Ein großer Dank geht an meine Teamkollegen, die bis zum Schluss hart gearbeitet haben, immer ein offenes Ohr hatten und auf Bedürfnisse des einzelnen eingegangen sind. Wenn man Hilfe brauchte musste man es nur sagen und man bekam sie. Außerdem Danke ich unserem Coach, welcher uns ebenfalls bei Problemen half und gute Tipps für ein besseres weiterarbeiten gab. Besonders von Mitte bis Ende des Projektes gab er uns den nötigen Ansporn um das Projekt zum Abschluss zu bringen.
+
+
+==== Felix Helmert
+==== Moritz Lehmann
+==== Nico Papke
