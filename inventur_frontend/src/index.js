@@ -14,27 +14,7 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root')
 );
-/*
-<Route>
-            <Route exact path='/login' component={Login}>Login</Route>
-            <Route exact path='/home' component={Home}>Home</Route>
-        </Route>
-if(JSON.parse(localStorage.getItem('user'))){
-    ReactDOM.render(
-        <BrowserRouter>
-            <Home/>
-        </BrowserRouter>,
-    document.getElementById('root')
-    );
-} else {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Login/>
-        </BrowserRouter>,
-        document.getElementById('root')
-    );
-}
- */
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
