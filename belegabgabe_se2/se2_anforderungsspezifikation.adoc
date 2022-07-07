@@ -136,12 +136,8 @@ personenbezogenen Daten und Gefahrstoffen
 
 
 | Anwender (User)
-| Jeder Mitarbeiter der als User im System Regestriert ist
+| Jeder Mitarbeiter der als User im System Registriert ist
 | Einfache Ausleihe / Rückgabe von Gegenständen
-
-// | Reperatur Dienstleister
-// | 
-// | Zurücksetzung/Neusetzen vom Wartungstermin
 
 |===
 
@@ -218,12 +214,140 @@ Endgeräten lauffähig sein | mittel | Sommersemester 2022
 
 
 
+== Identifizierte Use Cases
+// Liste aller identifizierten Use Cases (priorisiert)
+*für Akteur User:*
 
+* *UC01*: Gegenstände ausleihen 
+* *UC02*: Gegenstände zurückgeben 
+* *UC03*: neue Gegenstände aufnehmen
+// und leeres Fach finden
+* *UC04*: Gegenstände deinventarisieren 
+* *UC05*: Status manuell ändern
+* *UC06*: Gegenstände suchen
+* *UC07*: Übersicht anzeigen
+* *UC08*: Übersicht für Wartung anzeigen
+* *UC09*: Systemmeldungen prüfen
+* *UC10*: Nutzungsverlauf anlegen
+* *UC11*: Anmeldung ermöglichen
+* *UC12*: User verwalten
+* *UC13*: Backup erstellen
+//* *UC12*: User anlegen
+//* *UC13*: Userrechte bearbeiten
+//* *UC14*: User bearbeiten
+//* *UC15*: User löschen
+//* *UC16*: Backup erstellen
+
+//*Allgemein*
+
+//* *UC17*: Authentifikation der Clients
+//* *UC18*: Verschlüsselung der Kommunikation zwischen DB und WebAnwendung
+
+
+== Use Case Diagramm
+image::../docs/requirements/images/Use_Case_Model_v2.jpg[]
+
+//Fügen Sie nachfolgend alle detailierten Use-Cases per Include ein.
+//Dafür sollten Sie pro Use-Case eine Datei anlegen, die auf dem use_case_01.inc.adoc Template basiert.
+<<<
+include::../docs/requirements/use_case_01.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_02.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_03.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_04.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_05.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_06.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_07.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_08.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_09.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_10.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_11.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_12.inc.adoc[]
+<<<
+include::../docs/requirements/use_case_13.inc.adoc[]
+
+
+== Systemweite funktionale Anforderungen
+//Angabe von system-weiten funktionalen Anforderungen, die nicht als Use Cases ausgedrückt werden können. Beispiele sind Drucken, Berichte, Authentifizierung, Änderungsverfolgung (Auditing), zeitgesteuerte Aktivitäten (Scheduling), Sicherheit / Maßnahmen zum Datenschutz
+
+- *SWFR-1: Das System muss alle Inventar-, Ausleih- und Benutzerdaten persistent speichern.* +
+Test: Die Datenbank(en) wird/werden mit Testdaten gefüllt. Anschließend wird das System aus­-
+geschaltet. Die Daten müssen bei Wiederinbetriebnahme vollständig vorhanden sein.
+
+- *SWFR-2: Die Kommunikation zwischen Clients und Server muss verschlüsselt sein.* +
+Test: Vorhandensein von (TLS) Bei einem MitM-Angriff dürfen keine Daten in Klartext lesbar sein.
+
+- *SWFR-3: Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren.* +
+Test: Werden Security-Token verwendet, ist dies sicher gegen Session-Hijacking?
+
+- *SWFR-4: Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein.* +
+Test: Das Ausführen von SQL-Injections darf nicht möglich sein.
+
+- *SWFR-5: Die Passwörter der Useraccounts müssen sicher und verschlüsselt in der Datenbank gespeichert werden.* +
+Test: in der Datenbank nach Passwörtern suchen (sollten nicht in Klartext zu finden sein)
+
+
+== Qualitätsanforderungen für das Gesamtsystem
+//Qualitätsanforderungen repräsentieren das "URPS" im FURPS+ zu Klassifikation von Anforderungen
+
+=== Benutzbarkeit (Usability)
+//Beschreiben Sie Anforderungen für Eigenschaften wie einfache Bedienung, einfaches Erlernen, Standards für die Benutzerfreundlichkeit, Lokalisierung (landesspezifische Anpassungen von Sprache, Datumsformaten, Währungen usw.)
+- *NFRU-1: Die Sprache der Benutzeroberfläche ist Englisch.*
+- *NFRU-2: Die Startseite soll alle möglichen Aktionen anzeigen, für die der Benutzer die Rechte hat.* +
+Test: Unterschiedliche Personen (Admin/ normaler Benutzer) werden unterschiedliche Aktionen auf der Startseite angezeigt. 
+- *NFRU-3: Die Eingaben bei der Suchfunktion werden durch Vorschläge unterstützt.* + 
+Test: Eingabe von nur den ersten 3 Buchstaben eines Gegenstandes in die Suchfunktion. Es wird überprüft, ob der vollständige Name des Gegenstandes angezeigt wird. 
+// Frage: ist das zu viel Arbeit? wollen wird so was überhaupt? 
+- *NFRU-4: Es werden pro Ansicht nur 6 Gegenstände angezeigt.* +
+// um eine Touchbedienung z.B. auf dem Smartphone zu ermöglichen 
+Test: Es werden mindestens 7 Gegenstände im System eingeführt. Es wird überprüft, wie viele Gegenstände auf der Ansicht dargestellt werden. 
+- *NFRU-5: Ein Gegenstand, der sich im System befindet, soll mit 5 Klicks oder weniger ausgeliehen oder zurückgegeben werden können.* + 
+Test: Unterschiedliche Gegenstände werden ausgeliehen oder zurückgegeben und die Klicks werden gezählt. 
+- *NFRU-6: Alle im System befindlichen Daten (Rückgabedatum, Wartungsdatum etc.) sollen in folgendem Format angezeigt werden: DD.MM.JJJJ.* +
+Test: Es werden einige Anwendungsfällen mit Datumseingabe, durchgeführt. Anschließend wird kontrolliert, ob das System das Datum im richtigen Format gespeichert hat. 
+- *NFRU-7: Die Gegenstände müssen über einen Barcode gefunden werden können.* + 
+Test: Ein Objekt durch scannen eines Barcodes finden.
+
+=== Zuverlässigkeit (Reliability)
+
+- *NFRR-1: Es darf kein falscher Benutzername oder falsches Passwort angegeben werden.* +
+Test: Zur Überprüfung wird getestet, ob in diesen Anwendungsfällenin entsprechender Hinweistext angezeigt wird.
+
+- *NFRR-2: Ein neuer Benutzername darf keinen bereits vergebenen Namen erhalten.*
+
+- *NFRR-3: Alle Daten müssen in der Datenbank konstistent nach dem ACID-Prinzip gespeichert werden.* +
+Test: Überprüfung auf Inkonsistenz der Daten.
+
+- *NFRR-4: Das System sollte eine Verfügbarkeit von 95% gewährleisten.* +
+Test: System gezielt zum Absturz bringen, Zeit bis System wieder verfügbar messen
+
+=== Effizienz (Performance)
+
+- *NFRP-1: 10 User müssen gleichzeitig das System nutzen können.* +
+Test: Mehr Nutzerzugriffe gleichzeitig ausführen.
+
+=== Wartbarkeit (Supportability)
+
+- *NFRS-1: Vorliegen einer Bedienungsanleitung* +
+Test: Ausführen/Starten des Servers von einer projektfremden Person.
+
+== Zusätzliche Anforderungen
+
+=== Einschränkungen
+//Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
 Unsere Anwendung besteht aus 2 Teilen, dem Frontend und dem Backend. 
 Für das Entwickeln des Backends nutzen wir das SpringBoot Framework, da unser Team bereits einige Vorerfahrungen dazu hat und die Anbindung und Verwendung einer Datenbank damit einfach und flexibel ist.
 Für das Frontend verwenden wir die ReactJS Bibliothek, da diese eine Vielzahl von schönen Nutzerelementen mit verschiedenen Animationen und Layouts bereitstellt.
-
-
 
 == Organisatorische Randbedingungen
 //Angaben ergänzen, nicht relevante Unterpunkte streichen oder auskommentieren
@@ -247,4 +371,5 @@ Für das Frontend verwenden wir die ReactJS Bibliothek, da diese eine Vielzahl v
         
         DIE SOFTWARE WIRD "WIE BESEHEN" BEREITGESTELLT, OHNE JEGLICHE, AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT,
         EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND NICHTVERLETZUNG VON RECHTEN DRITTER. IN KEINEM FALL SIND DIE AUTOREN ODER URHEBERRECHTSINHABER HAFTBAR FÜR JEGLICHE ANSPRÜCHE, SCHÄDEN ODER ÄHNLICHES, OB AUS VERTRAG, DELIKT ODER ANDERWEITIG ENTSTEHEND AUS ODER IM ZUSAMMENHANG MIT DER SOFTWARE, DER VERWENDUNG ODER ANDEREN HANDLUNGEN MIT DER SOFTWARE.
+
 
