@@ -296,6 +296,16 @@ Ein großer Dank geht an meine Teamkollegen, die bis zum Schluss hart gearbeitet
 
 ==== Felix Helmert
 
+Als Mitglied des Teams I6 arbeitete ich an der Umsetzung des Projektes „Inventur und Verleih“ im Fach Software Engineering.
+Das Projekt im 3. Semester verlief zügig und erfolgreich in der Zusammenarbeit innerhalb unserer Gruppe. Zu Beginn des 4. Semesters nutzten wir den Elan der Startphase nicht weiter und verloren wertvolle Zeit. Nachdem ich im ersten Teil mit der Analyse betraut war, beschäftigte ich mich nun in Phase 2 mit der Entwicklung der Weboberfläche.
+An dem Workshop zu Springboot der Firma OSP nahmen Studenten meiner Gruppe teil. Aufgrund der interessanten Vorstellung entschied sich unser Team zur Umsetzung der Verleihsoftware mit dem Produkt ReactJS.
+Nach den ersten Schritten ergaben sich Schwierigkeiten mit der Nutzung von React, da das Frontend React keine Einbindung von HTML und JavaScript zulässt. Daraufhin arbeitet ich mich in Typescript ein, da einfache HTML-Oberflächen nicht unterstützt werden. Die finale Darstellung der Webseite gestaltete ich mit CSS.
+Die Installation einer funktionierenden Entwicklungsumgebung bei allen Teammitgliedern auf deren privaten Rechnern mit unterschiedlichen Betriebssystemen kostete unserem Team ebenfalls sehr viel Zeit, da hauptsächlich der Hauptentwickler bei der Konfiguration behilflich sein musste. Seine verfügbare Zeit für das Projekt wurde dadurch reduziert. Hier wäre eine Verteilung innerhalb des Teams wichtig gewesen.  Für künftige Projekte würde ich empfehlen, ein System zu nutzen, welches einfacher in einer Entwicklungsumgebung zu nutzen ist. Die Entwicklung direkt auf einem Server in einer Virtuellen Maschine durchzuführen, wäre ebenso eine Alternative. Für uns war die Nutzung einer VM nicht möglich, es gab technische Schwierigkeiten bei der Installation.
+Das Ausscheiden von mehreren Teammitgliedern ohne deren Rückmeldung stellte eine erhebliche Belastung für unser Team dar. Wie ich schon in Phase 1 reflektierte, ist die Zusammenarbeit und Verbindlichkeit im Team eine wesentliche Voraussetzung für das Gelingen eines Projektes.
+Mir hat das Projekt sehr gut gefallen, ich habe sehr viel gelernt. Die Theorie, wie arbeitet man in Software Engineering, und wie kann ich es ganz konkret in einer Praxisaufgabe anwenden. Damit ergänzten sich die Inhalte der aktuellen Vorlesung sehr gut mit den Anforderungen und Meilensteinen in unserer Projektgruppe.
+Als Erkenntnis aus meinen Erfahrungen bei der Realisierung dieses Projektes würde ich ein Produkt, das einfach zu verstehen bzw. lernen ist, einsetzen und kein Nischenprodukt ist. In unserem Fall fokussierte sich die Entwicklungsarbeit überwiegend auf eine wissende Person. Eine zügige Einarbeitung für weitere Studenten war zu komplex. Ich würde die Nutzung von Docker favorisieren.
+Für ein optimaleres Zeitmanagement ist Kontinuität und ein Projektzeitplan mit Meilensteinen, die verfolgt werden, notwendig.
+Das Gespräch mit unserem Coach zum kritischen Entwicklungsstand gab uns gegen Ende des Projektes den nötigen Ansporn, um das Projekt zum Abschluss zu bringen.
 
 
 ==== Moritz Lehmann
