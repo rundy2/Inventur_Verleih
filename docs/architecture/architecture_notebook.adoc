@@ -34,7 +34,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 *Abhängigkeiten:*
 
-- Wir sind von der HTW Server und von unserer Datenbank abhängig.
+- Wir sind von dem HTW Server und von unserer Datenbank abhängig.
 //[List the assumptions and dependencies that drive architectural decisions. This could include sensitive or critical areas, dependencies on legacy interfaces, the skill and experience of the team, the availability of important resources, and so forth]
 
 
@@ -145,4 +145,10 @@ image::logische_sicht.jpeg[]
 === Physische Sicht (Betriebssicht)
 //Beschreibt die physischen Knoten (Rechner) des Systems, der Prozesse, Threads und Komponenten, die in diesen Knoten ausgeführt werden. Diese Sicht wird nicht benötigt, wenn das System in einem einzelnen Prozess oder Thread ausgeführt wird.
 
-- Server-Client
+- Benutzer -> Client (Mobiles Endgerät, PC o.ä.) -> Browser -> Frontend -> Backend -> Datenbank
+
+=== C4-Modell
+
+==== 1. Schicht
+
+
