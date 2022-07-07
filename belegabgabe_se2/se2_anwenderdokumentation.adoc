@@ -66,7 +66,7 @@ TIP: Wir empfehlen Chromium oder Firefox.
 
 . Geben Sie nun ein Passwort ein und drücken Sie auf Speichern.
 
-CAUTION: Benutzername muss unbedingt im E-Mail Format sein! +
+CAUTION: Benutzername muss unbedingt im E-Mail Format sein! (es findet aber keine Gültigkeitsprüfung statt) +
 Passwort muss mindestens acht Zeichen lang sein!
 
 
