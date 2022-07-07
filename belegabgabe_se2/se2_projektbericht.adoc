@@ -63,12 +63,12 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 .. <<Begründung für das Nichterfüllen von Zielen>>
 .. <<Reflexionen der Teammitglieder>>
 [arabic]
-... <<1.Teammitglied>>
-... <<2.Teammitglied>>
-... <<3.Teammitglied>>
-... <<4.Teammitglied>>
-... <<5.Teammitglied>>
-... <<6.Teammitglied>>
+... <<Fabian Krähmer>>
+... <<Silko Grellmann>>
+... <<Dominique Linzmajer>>
+... <<Felix Helmert>>
+... <<Moritz Lehmann>>
+... <<Nico Papke>>
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
