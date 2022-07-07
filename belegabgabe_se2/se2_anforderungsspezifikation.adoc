@@ -79,7 +79,7 @@ Unser fachliche Motivation besteht darin, der AG SPS die Lagerhaltung zu vereinf
 
 [cols="1,3"]
 |===
-| Das Problem | die Lagerverwaltung und Inventarisierung der SBS
+| Das Problem | die Lagerverwaltung und Inventarisierung der SPS
 | betrifft | Arbeitsgruppe Smart Production System
 | die Auswirkung davon ist | umständliche und aufwändige Lagerhaltung mit Hilfe einer Excel Liste
 | eine erfolgreiche Lösung wäre | eine webbasierte Anwendung für die vereinfachte Lagerverwaltung geräteunabhängig zu realisieren
