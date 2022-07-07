@@ -12,7 +12,7 @@ In dieser Testdokumentation werden die angewendeten Teststrukturen dargestellt, 
 
 * Webfrontend
 
- Die wichtigste Testkomponente, da sie die Schnittstelle zwischen User und System darstellt. Die meisten Test wurden auf dem Frontend ausgeführt, da dort die funktionalen Anforderungen anschaulich werden und der Erfüllungsgrad der einzelnen Use Cases deutlich wird.
+ Die wichtigste Testkomponente, da sie die Schnittstelle zwischen User und System darstellt. Die meisten Tests wurden auf dem Frontend ausgeführt, da dort die funktionalen Anforderungen anschaulich werden und der Erfüllungsgrad der einzelnen Use Cases deutlich wird.
 
 * Backend
  
@@ -123,12 +123,6 @@ Alle Tests wurden von Silko Grellmann und Nico Papke durchgeführt. Der Zeitraum
 | Konsolenausgabe wird geprüft
 | verschlüsselte Kommunikation möglich
 | verschlüsselte Kommunikation möglich
-| Schutz der Daten auf dem Server vor unberechtigtem Zugriff
-|keine
-|keine
-| ???
-| ???
-| ???
 |====
 
 === Datenbank
