@@ -101,7 +101,7 @@ Da zum Beginn von Software Engineering I noch viele Corona bedingte Einschränku
 
 Unsere Dokumentation des Projekts erfolgte fast ausschließlich mittels adoc-Dateien, welche wir zusammen mit unserem Programmcode mittels der Versionsverwaltungssoftware Git und dem Remoterepository GitHub verwalteten. In unserem GitHub-Repository wurden Issues angelegt, um die Aufgabenverteilung zu vereinfachen und sich spezifisch zu bestimmten Aufgaben über die Kommentarfunktion austauschen zu können. Ebenfalls haben wir mehrere Branches angelegt, um eine bessere Struktur erreichen zu können und im Notfall ein Backup zu haben. Dateien, die zu groß für GitHub waren, haben wir mittels einer privaten OneDrive Cloud administriert. +
 
-Um die Dokumentation im adoc-Format zu verfassen, verwendeten wir das Programm Visual Code. Unserer Wireframes und UseCase-Diagramme haben wir mit Visual Paradigm erstellt. Das C4-Diagramm mit draw.io. „Gecodet“ wurde mittels der IntelliJ Idea (Vollversion) und in der Implementierungsphase kam der Datenbankserver XAMPP zum Einsatz. Außerdem setzten wir den Paketmanager npm ein. Am Ende wurden unsere Entwicklerdokumentationen mit JavaDoc und JSDoc erstellt.
+Um die Dokumentation im adoc-Format zu verfassen, verwendeten wir das Programm Visual Studio Code. Unserer Wireframes und UseCase-Diagramme haben wir mit Visual Paradigm erstellt. Das C4-Diagramm mit draw.io. „Gecodet“ wurde mittels der IntelliJ Idea (Vollversion) und in der Implementierungsphase kam der Datenbankserver XAMPP zum Einsatz. Außerdem setzten wir den Paketmanager npm ein. Am Ende wurden unsere Entwicklerdokumentationen mit JavaDoc und JSDoc erstellt.
 
 
 === Way of Working 
