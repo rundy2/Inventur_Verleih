@@ -97,25 +97,12 @@ Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen auf
 erhalten.
 
 === Ablauf der Kommunikation unter Verwendung von Tools 
-Da während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
-WhatsApp für die direkte Kommunikation zwischen einzelnen Gruppenmitgliedern und zur
-schnellen Informationsübermittlung an alle Teammitglieder genutzt. Um Meetings zu realisieren,
-wurde zu erst ein Discord Server genutzt, im Laufe des Projekts dann aber auf Microsoft Teams
-gewechselt. Hintergrund hier war, dass Teams einige Zusatzfunktionen bot, wie z.B. "Polly", die für
-Umfragen genutzt wurden, die Discord leider nicht unterstütze. Des Weiteren konnte in Teams
-auch ein cloudbasiertes Datei-Mangement-Tool leicht verwendet werden, so mussten wir nicht
-mehr OneDrive nutzen, das privat von einem Gruppenmitglied gestellt wurde. Auch konnte in
-Teams eine bessere Rollenhierarchie genutzt werden, um Rollenspezifische Feed Anfragen zu nutzen, damit ein Brainstormeffekt entsteht. Die Dokumentation erfolgte geschlossen in ADOC Dateien,
-die über GitHub verwaltet wurden. Auch wurde über GitHub unsere Work-Item-List mit Hilfe der
-Issues verwirklicht. GitHub war der Schlüssel um Gruppen- und Parallelarbeiten zu organisieren
-und umzusetzen. Zur Überprüfung und zur Dokumentation unseres Projektfortschritts benutzten
-wir regelmäßig den Essence Navigator. Um mit dem Kunden in Kontakt treten zu können, wurden
-ausschließlich E-Mails, Microsoft Teams und Präsenz-Treffen genutzt. Die Präsenztreffen fanden
-erst in SE II statt, mit kompletter Einhaltung der Corona-Hygiene-Maßnahmen. Diese Änderung
-wurde von unserem Kunden sehr begrüßt, da er leider durch die eben genannten Techniken in seinem Workflow eher behindert als unterstützt wurde. +
+Da zum Beginn von Software Engineering I noch viele Corona bedingte Einschränkungen herrschten, haben wir unsere Kommunikationswege ins digitale verlegt. Unsere Hauptkommunikationskanal im Team war Discord. Hier haben wir unseren Server in verschiedene Unterthemen gegliedert, in denen sich über Aufgabenstellungen, Terminabsprachen oder Allgemeines unterhalten wurde. Ebenfalls gab es mehrere Besprechungsräume, in denen unsere teaminternen Meetings stattfanden oder sich Kleingruppen zur Absprache getroffen hatten. Mit der Zeit hat sich auch eine Kommunikation über WhatsApp etabliert. Diese wurde hauptsächlich bei zeitkritischen Antworten oder zur Erinnerung eingesetzt, wenn jemand über Discord nicht erreichbar war. Für unsere Außenkommunikation mit Auftragstellern und Coach haben wir Microsoft Teams oder E-Mail verwendet. Das hat den Vorteil, dass jeder einen MS Teams Login bereits besitzt und eine Hochschulmailadresse sowieso. Außerdem bietet es mehr Komfortfunktionen für digitale Meetings. Unsere Meetingprotokolle konnten wir durch die integrierten Bearbeitungswerkzeuge gleich bearbeiten und immer wieder ergänzen; somit konnten keine Inkonsistenzen entstehen. Trotz der Annehmlichkeiten durch die digitalen Möglichkeiten, wie zum Beispiel nicht an einen physischen Ort gebunden zu sein, gestaltete sich die Terminvereinbarung für gruppeninterne Meetings schwierig. Im Sommersemester 2022 hatten wir auch ein Meeting in der Hochschule mit unserem betreuenden Professor und unserem Coach. +
 
-Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten erheblich, da nun viele Fragen wie bspw. an welchem Ort das Treffen stattfinden könnte, ob dieser Ort auch zur gegebenen Zeit verfügbar ist oder wie lange die Anreise der einzelnen Mitglieder wohl wäre, nun alle obsolet
-waren. Es musste nun nur noch eine Uhrzeit gefunden werden, zu der alle verfügbar waren.
+Unsere Dokumentation des Projekts erfolgte fast ausschließlich mittels adoc-Dateien, welche wir zusammen mit unserem Programmcode mittels der Versionsverwaltungssoftware Git und dem Remoterepository GitHub verwalteten. In unserem GitHub-Repository wurden Issues angelegt, um die Aufgabenverteilung zu vereinfachen und sich spezifisch zu bestimmten Aufgaben über die Kommentarfunktion austauschen zu können. Ebenfalls haben wir mehrere Branches angelegt, um eine bessere Struktur erreichen zu können und im Notfall ein Backup zu haben. Dateien, die zu groß für GitHub waren, haben wir mittels einer privaten OneDrive Cloud administriert. +
+
+Um die Dokumentation im adoc-Format zu verfassen, verwendeten wir das Programm Visual Studio Code. Unserer Wireframes und UseCase-Diagramme haben wir mit Visual Paradigm erstellt. Das C4-Diagramm mit draw.io. „Gecodet“ wurde mittels der IntelliJ Idea (Vollversion) und in der Implementierungsphase kam der Datenbankserver XAMPP sowie der API Client Insomnia zum Einsatz. Außerdem setzten wir den Paketmanager npm ein. Am Ende wurden unsere Entwicklerdokumentationen mit JavaDoc und JSDoc erstellt.
+
 
 === Way of Working 
 Unsere Arbeitsweise war vom (UP) - Open Unified Process - geprägt. Wir haben stets versucht,
@@ -196,7 +183,7 @@ Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
 Da die Semesterferien einen harten Cut zwischen Analyse, Entwurf und Entwicklung brachten, fiel es uns am Anfang sehr schwer, wieder zusammen zu finden. Natürlich wollten wir alle etwas machen, aber schon die Terminabsprache zu einem Gruppen-Meeting war schwerer als gedacht. Erschwerend kam hinzu, dass sich das Entwurfsteam, bestehend aus Jonas Koloska und Jamal Alkharrat nicht zu ihrer Position und Arbeitswilligkeit äußerten. Dies kostete wertvolle Zeit für die Entwicklung, was uns aber erst recht spät in vollem Umfang klar wurde.
 Durch die Aufgabenverteilung von Github wurde es uns zumindest ermöglicht mit dem vorhanden Entwurfsmodellen zu arbeiten. Dominique Linzmajer setze sich allein an die Entwicklung des Backends. Felix Helmert und Nico Papke frischten ihre Kenntnisse zu HTML und CSS Coding auf und versuchten sich an den drei benötigten Webseiten (Login, Übersicht und Detailseite), da die alten aus SE I durch ReactJS nicht den geplanten Funktionsumfang beinhalteten.
-Des weiteren kam die Corona-Pandemie als Multiplikator hinzu. Natürlich half uns in SE I, die technischen Möglichkeiten von Online-Meetings und Repositorys große Distanzen zu überwinden, was uns ind SE II aber etwas auf die Füße fiel, da wir uns noch nie vollständig in der Gruppe in der Realität gesehen hatten.
+Des weiteren kam die Corona-Pandemie als Multiplikator hinzu. Natürlich half uns in SE I, die technischen Möglichkeiten von Online-Meetings und Repositorys große Distanzen zu überwinden, was uns in SE II aber etwas auf die Füße fiel, da wir uns noch nie vollständig in der Gruppe in der Realität gesehen hatten.
 Unser Coach Robert Ringel machte den ersten Schritt und schlug dies einmal vor. An der Umsetzung scheiterten wir zu erst, da wieder mal kein Termin für alle passte.
 
 Das Construction IOC (Iteration 04) sah wie folgt aus:
@@ -223,14 +210,14 @@ Das Wegfallen der Adminverwaltung (aus Zeitmangel/fehlender Manpower nicht umset
 
 *Kundenkontakt* 
 
-Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschlägen und Fortschritte zu hinzuweisen. In Absprache mit den Themenerstellern wurden dann die Use-Cases "Adminverwaltung" und "Barcode Erstellung" rausgekürzt.
+Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschlägen und Fortschritte zu hinzuweisen. In Absprache mit den Themenerstellern wurden dann die Use-Cases "Adminverwaltung" und "Barcode Erstellung" herausgekürzt.
 Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
 
 ==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel 
 
 Iteration 04 (20.05.2022-04.06.2022) startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
-Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwicklen, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
+Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwickeln, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
 
 Klare Ziele dieses Meetings waren:
 
@@ -241,7 +228,7 @@ Klare Ziele dieses Meetings waren:
 
 *Use-Cases abstecken*
 
-Die fortschreitende Zeit machte es notwendig, dass wir einige Use-Cases rauskürzen mussten. In einem Gruppenmeeting beschlossen wir, welche der Zeit zum Opfer fallen würden. Das Projektmanagement und Entwicklerteam wurde sich da schnell einig, da gerade die Adminverwaltung und Barcodeverwaltung viel Zeit in Anspruch nehmen würden und deren Erfolg sowieso nicht gewährleistet war, da noch keine konsistente Datenbank bestand.
+Die fortschreitende Zeit machte es notwendig, dass wir einige Use-Cases herauskürzen mussten. In einem Gruppenmeeting beschlossen wir, welche der Zeit zum Opfer fallen würden. Das Projektmanagement und Entwicklerteam wurde sich da schnell einig, da gerade die Adminverwaltung und Barcodeverwaltung viel Zeit in Anspruch nehmen würden und deren Erfolg sowieso nicht gewährleistet war, da noch keine konsistente Datenbank bestand.
 
 *Teammitglieder konsolidieren*
 
@@ -347,7 +334,6 @@ Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang ent
 
 Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
 S
-
 
 == Ergebnisse
 

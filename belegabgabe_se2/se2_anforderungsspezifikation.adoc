@@ -57,15 +57,28 @@ Oder beschreibt den Verfügbarkeitszustand eines Lagerfachs. Kann die Werte Gege
 
 | Anmeldedaten
 | Zusammensetzung von Benutzername und Passwort.
-| String
-| Emailadresse muss `@`-Zeichen und `.` Punkt enthalten.
+| JSON
+| Emailadresse muss `@`-Zeichen und `.` Punkt enthalten. +
+Mindestlänge Passwort 8 Zeichen.
 | Login
 
-| xx
-| xx
-| xx
-| xx
-| xx
+| Eigenschaften von Objekten (Frontend)
+| id: number; +
+sectionId: number; +
+sectionName: string; +
+storageId: number; +
+storageName: string; +
+roomId: number; +
+roomName: string; +
+name: string; +
+isbn: number; +
+state: ObjectState; +
+lendBy: String; +
+cond: number; +
+lendDate: Date
+| JSON
+| Muss die angegebenen Datentypen besitzen.
+| Object
 |===
 
 
