@@ -269,6 +269,64 @@ Iteration 04
 
 ==== Produktergebnis
 
+image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten.jpg[]
+
+|===
+|Use Case (priorisiert) |umgesetzt ? | Bemerkung(en)
+
+| UC01: Gegenstände ausleihen
+| ja
+| ohne Barcode; ohne scannen
+
+| UC02: Gegenstände zurückgeben
+| ja
+| ohne Barcode; ohne scannen
+
+| UC03: neue Gegenstände aufnehmen/umlagern
+| ja
+| ohne umlagern; ohne Barcode; ohne Scannen; ohne Raumvorschlag
+
+| UC05: Status ändern
+| ja
+| ohne manuelles Ändern durch Admin
+
+| UC04: Gegenstände deinventarisieren
+| ja
+| ---
+
+| UC07: Übersicht anzeigen
+| ja
+| ohne Sortierfunktion
+
+| UC11: Anmeldung ermöglichen
+| ja
+| ---
+
+| UC06: Gegenstände suchen
+| ja
+| nur nach Bezeichnung; keine unscharfe Suche bei inkorrekter Bezeichnung
+
+| UC09: Systemmeldungen prüfen
+| nein
+| nur Fehlermeldung bei Login/Sign up, ansonsten in Netzwerkanalyse und Konsole des Browsers
+
+| UC13: Backups erstellen
+| ja
+| muss manuell durchgeführt werden durch kopieren eines Ordners
+
+| UC12: User verwalten
+| nein
+| kein Rechtesystem implementiert; jeder Benutzer kann sich eigenständig ein Login geben
+
+| UC10: Nutzungsverlauf anlegen
+| nein
+| ---
+
+| UC08: Übersicht für Wartung anzeigen
+| nein
+| ---
+|===
+
 ==== Bewertung
 
 ==== Fehlerbehebung
