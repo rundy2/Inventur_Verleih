@@ -335,7 +335,6 @@ Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang ent
 Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
 
 
-
 == Ergebnisse
 
 === Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste [FK]
