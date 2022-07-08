@@ -43,10 +43,12 @@ Oder beschreibt den Verfügbarkeitszustand eines Lagerfachs. Kann die Werte Gege
 
 |===
 
+.benutzte Abkürzungen
+[%header]
 |===
 | Abkürzung | Bedeutung | Erläuterung
 | UP | Unified Process | Vorgehensmodell für die Softwareentwicklung
-| AG SPS | Arbeitsgruppe Smart Production Systems | Unser Auftraggeber
+| AG SPS | Arbeitsgruppe Smart Production Systems | Unser Auftraggeber, Kunde oder Themenersteller
 | HTW | Hochschule für Technik und Wirtschaft Dresden | Übergeordente Institution in welcher unsere Anwendung laufen soll
 |===
 
