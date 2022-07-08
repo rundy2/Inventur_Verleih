@@ -9,7 +9,7 @@ Dieses Dokument beschreibt die Philosophie, Entscheidungen, Nebenbedingungen, Be
 
 == Architekturziele und Philosophie
 
-Das System ist für die Verwaltung der Inventur konzipiert. Die Anwendung ist mit HTW Login zugänglich. Das System ermöglicht den Mitarbeitenden eine bessere Orginisation der Gegenständen sowie Verbrauchsmaterialen. 
+Das System ist für die Verwaltung der Inventur konzipiert. Die Anwendung ist mit einm Login zugänglich. Das System ermöglicht den Mitarbeitenden eine bessere Orginisation der Gegenständen sowie Verbrauchsmaterialen. 
 
 Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfache Bedienbarkeit erforderlich.
 
@@ -26,7 +26,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 - Wir sind von der Verfügbarkeit des Servers und von der Datenbank abhängig.
 
-== Architektur-relevante Anforderungen
+== Architekturrelevante Anforderungen
 
 
 *Funktion:*
@@ -61,9 +61,9 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 . Wir nutzen MySQL Datenbanksystem, damit wir Datentypen gut abbilden können.
 
-. Wir nutzen ReactJS beim Frontend (User-Interface)
+. Wir nutzen ReactJS, HTML, TypeScript und CSS beim Frontend (User-Interface)
 
-. Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern.
+. Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern, sowie CRSF-Token, falls der Bearer Token gestohlen wird.
 
 . Wir definieren Typen, um eine einfache Erweiterbarkeit zu ermöglichen
 
