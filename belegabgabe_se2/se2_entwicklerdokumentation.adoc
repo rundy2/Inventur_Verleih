@@ -163,4 +163,10 @@ image::Wireframe_Detailansicht.jpg[]
 
 == Dokumentation zu Entwicklercode
 
+=== Frontend
+
+<<../JSDoc_Frontend/index.html, Code unter JSDoc_Frontend/index.html>>
+
+=== Backend
+
 <<../JavaDoc_Backend/index.html,Code unter JavaDoc_Backend/index.html>> 

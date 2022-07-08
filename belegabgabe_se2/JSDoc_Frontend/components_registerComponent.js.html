@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/registerComponent.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/registerComponent.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { Component } from "react";
+import Form from "react-validation/build/form";
+import Input from "react-validation/build/input";
+import CheckButton from "react-validation/build/button";
+import { isEmail } from "validator";
+import AuthService from "../services/authService";
+import './register.css';
+
+const required = value => {
+    if (!value) {
+        return (
+            &lt;div className="alert alert-danger" role="alert">
+                This field is required!
+            &lt;/div>
+        );
+    }
+};
+const email = value => {
+    if (!isEmail(value)) {
+        return (
+            &lt;div className="alert alert-danger" role="alert">
+                This is not a valid email.
+            &lt;/div>
+        );
+    }
+};
+const vpassword = value => {
+    if (value.length &lt; 6 || value.length > 40) {
+        return (
+            &lt;div className="alert alert-danger" role="alert">
+                The password must be between 6 and 40 characters.
+            &lt;/div>
+        );
+    }
+};
+
+/**this component handles the registration*/
+export default class Register extends Component {
+    constructor(props) {
+        super(props);
+        this.handleRegister = this.handleRegister.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.state = {
+            email: "",
+            password: "",
+            successful: false,
+            message: ""
+        };
+    }
+    onChangeEmail(e) {
+        this.setState({
+            email: e.target.value
+        });
+    }
+    onChangePassword(e) {
+        this.setState({
+            password: e.target.value
+        });
+    }
+    /**button register clicked*/
+    handleRegister(e) {
+        e.preventDefault();
+        this.setState({
+            message: "",
+            successful: false
+        });
+        this.form.validateAll();
+        if (this.checkBtn.context._errors.length === 0) {
+            AuthService.register(
+                this.state.email,
+                this.state.password
+            ).then(
+                response => {
+                    this.setState({
+                        message: response.data.message,
+                        successful: true
+                    });
+                },
+                error => {
+                    const resMessage =
+                        (error.response &amp;&amp;
+                            error.response.data &amp;&amp;
+                            error.response.data.message) ||
+                        error.message ||
+                        error.toString();
+                    this.setState({
+                        successful: false,
+                        message: resMessage
+                    });
+                }
+            );
+        }
+    }
+    /**here is what you see*/
+    render() {
+        return (
+            &lt;div className="col-md-12">
+                &lt;div className="card card-container">
+                    &lt;Form
+                        onSubmit={this.handleRegister}
+                        ref={c => {
+                            this.form = c;
+                        }}>
+                        {!this.state.successful &amp;&amp; (
+                            &lt;div class="form">
+                                &lt;div className="form-group" class="input">
+                                    &lt;Input
+                                        type="text"
+                                        className="form-control"
+                                        class="user-input"
+                                        name="email"
+                                        placeholder="Email"
+                                        value={this.state.email}
+                                        onChange={this.onChangeEmail}
+                                        validations={[required, email]}
+                                    />
+                                &lt;/div>
+                                &lt;div className="form-group" class="input">
+                                    &lt;Input
+                                        type="password"
+                                        className="form-control"
+                                        class="user-input"
+                                        name="password"
+                                        placeholder="Password"
+                                        value={this.state.password}
+                                        onChange={this.onChangePassword}
+                                        validations={[required, vpassword]}
+                                    />
+                                &lt;/div>
+                                &lt;div className="form-group">
+                                    &lt;button className="btn btn-primary btn-block">Sign Up&lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        )}
+                        {this.state.message &amp;&amp; (
+                            &lt;div className="form-group">
+                                &lt;div
+                                    className={
+                                        this.state.successful
+                                            ? "alert alert-success"
+                                            : "alert alert-danger"
+                                    }
+                                    role="alert"
+                                >
+                                    {this.state.message}
+                                &lt;/div>
+                            &lt;/div>
+                        )}
+                        &lt;CheckButton
+                            style={{ display: "none" }}
+                            ref={c => {
+                                this.checkBtn = c;
+                            }}
+                        />
+                    &lt;/Form>
+                &lt;/div>
+            &lt;/div>
+        );
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AddService.html">AddService</a></li><li><a href="App.html">App</a></li><li><a href="AuthService.html">AuthService</a></li><li><a href="module.html#.exports">exports</a></li><li><a href="ObjectDetails.html">ObjectDetails</a></li><li><a href="ObjectService.html">ObjectService</a></li><li><a href="RoomService.html">RoomService</a></li><li><a href="UserService.html">UserService</a></li></ul><h3>Global</h3><ul><li><a href="global.html#handleAddObject">handleAddObject</a></li><li><a href="global.html#handleLogin">handleLogin</a></li><li><a href="global.html#handleMyLendObjects">handleMyLendObjects</a></li><li><a href="global.html#handleRegister">handleRegister</a></li><li><a href="global.html#handleSearch">handleSearch</a></li><li><a href="global.html#render">render</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jul 08 2022 16:07:27 GMT+0200 (Mitteleuropäische Sommerzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
