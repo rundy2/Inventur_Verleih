@@ -241,7 +241,7 @@ Das Construction IOC (Iteration 04) sah wie folgt aus:
 .. Use-Case "Passwort vergessen" implementieren
 . Backend entwerfen/erweitern (SE I)
 . Loginseite mit Nutzerdatenbank verknüpfen
-. Kundenmeeting
+. Kundenkontakt
 
 *Frontend entwerfen/erweitern (SE I)*
 
@@ -249,17 +249,77 @@ Aus SE I blieb uns das HTML-Gerüst für die Login- und Übersichtsseite. Leider
 
 *Backend entwerfen/erweitern*
 
-Das Backend war grundsätzlich schon in SEI auf einem guten Stand, so dass wir es nur um ein paar Funktionen erweitern mussten, in dieser Iteration schafften wir es, die Rückgabe und den Verleih zu realisieren 
+Das Backend war grundsätzlich schon in SEI auf einem guten Stand, so dass wir es nur um ein paar Funktionen erweitern mussten, in dieser Iteration schafften wir es, die Rückgabe und den Verleih zu realisieren.
+
+*Loginseite mit Nutzerdatenbank verknüpfen*
+
+Das Wegfallen der Adminverwaltung (aus Zeitmangel/fehlender Manpower nicht umsetzbar) setzte uns vor ein neues Problem der Nutzerverwaltung. Wir gehen nun den Weg der selbstständigen Nutzerverwaltung. Das heißt, wir lassen sich Nutzer selbst registrieren und legen sie dann in einer Datenbank an. Diese wird mit Erstellen des Servers neu geschaffen und mit der Eingabe der Nutzer gefüllt und abgeglichen.
+
+*Kundenkontakt* 
+
+Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschlägen und Fortschritte zu hinzuweisen. In Absprache mit den Themenerstellern wurden dann die Use-Cases "Adminverwaltung" und "Barcode Erstellung" rausgekürzt.
+Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
 
-==== Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel
+==== *Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022 - 04.06.2022)*
 
-Iteration 04
+Iteration 04 startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
+Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwicklen, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
 
-==== Use-Cases durchprogrammieren
+Klare Ziele dieses Meetings waren:
+
+. Use-Cases abstecken
+. Teammitglieder konsolidieren (wer hat Interesse das Projekt zu finalisieren)
+. Iteration verkürzen
+. Dokumentation pflegen
+
+*Use-Cases abstecken*
+
+Die fortschreitende Zeit machte es notwendig, dass wir einige Use-Cases rauskürzen mussten. In einem Gruppenmeeting beschlossen wir, welche der Zeit zum Opfer fallen würden. Das Projektmanagement und Entwicklerteam wurde sich da schnell einig, da gerade die Adminverwaltung und Barcodeverwaltung viel Zeit in Anspruch nehmen würden und deren Erfolg sowieso nicht gewährleistet war, da noch keine konsistente Datenbank bestand.
+
+*Teammitglieder konsolidieren*
+
+Das Projektmanagement machte eine konkrete Ansage zur Teilnahme am Projekt, das Meeting am 19.05.2022 galt als Schlüsselfaktor, jedes Gruppenmitglied, welches sich nicht meldete oder nicht teilnahm, wurde zwangsläufig ausgeschlossen. Jonas Koloska meldete sein ausscheiden schon vorher, Jamal Alkaharrat nahm nicht teil und wurde somit ausgeschlossen. Dieser Schritt war notwendig, da man sonst zu sehr auf Aufgaben wartete, welche letztendlich nicht erfüllt wurden.
+
+*Iteration verkürzen*
+
+Die variable Länge der Iteration war auch ein Grund, warum wir hinter dem Plan waren. Wir legten die Iterationslänge nun auf zwei Wochen fest um ein Gelingen des Projektes zu Gewährleisten.
 
 
-==== Deployment auf dem Kundenserver und Abnahme vom Kunden
+
+*Dokumentation pflegen*
+
+Uns wurde ebenfalls klar, dass uns die Dokumentation des Projektes am Ende auf die Füße fallen würde, wenn wir dies nicht schon im Laufe der Entwicklung pflegen würden. Somit wurde ein C4-Modell mit 3 Schichten erstellt und der Code mit Kommentaren versehen. Auch die Präsentationen in den Praktika von SE II waren dafür hilfreich.
+
+==== Use-Cases durchprogrammieren (05.06.2022 - 19.06.2022)
+
+Da das durchprogrammieren der Loginseite sowohl zeitlich als auch funktionell war, entschieden wir uns kurzer Hand jeden Use-Case nun als Schritt durchzuprogrammieren, ebenfalls wurde die VM der Auftraggeber vorbereitet und Test-Cases entworfen. 
+
+Die Hauptziele dieser Iteration 05 waren wie folgt:
+
+. Use-Cases welche ähnlich sind zusammen implementieren
+.. UC05/07 
+.. UC03/04
+.. UC01/02
+.. UC06
+.. UC11
+.. UC13
+. Test-Cases
+. Vorbereitung für Deployment
+
+*Use-Cases implementieren*
+
+===== UC05/07
+
+Den Status zu ändern und die Übersicht anzuzeigen waren die ersten Use-Cases die wir in dieser Iteration realisieren mussten, da alle anderen darauf aufbauten. Wir nahmen eine leere Datenbank und befüllten diese mit Beispieldateien um das Ergebnis sehen zu können
+
+===== UC01/02
+
+Gegenstände auszuleihen und zurückzugeben erwies sich im Code als relativ schnell realisierbar, so wurde ein eine einfaches ReactJS geschrieben, welcher per Spring Boot an unsere Datenbank übergeben wurde. Dabei wurden die Ablageorte als String definiert, welche aber nicht doppelt belegt wurden konnten, dies führte zur Sicherstellung des korrekten Ablageortes. In späteren Entwicklungen könnte man dann Ablageorte festlegen, falls keine mehr ergänzt werden müssen. 
+
+image::../images/Wireframe_Startseite.png[]
+
+==== Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)
 
 //Moritz, Nico, Felix Einstiegspunkt
 == Ergebnisse
