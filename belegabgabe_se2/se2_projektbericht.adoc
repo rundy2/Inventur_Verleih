@@ -57,17 +57,23 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 . <<Ergebnisse>>
 [arabic]
 .. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
-.. <<Weitere Ergebnisse>>
-.. <<Fehlerbehebung>>
+... <<Gegenstände ausleihen und zurückgeben>>
+... <<Neue Gegenstände aufnehmen/umlagern und deinventarisieren>>
+... <<Status ändern>>
+... <<Gegenstände suchen und Übersicht anzeigen>>
+... <<Anmeldung ermöglichen>>
+... <<Backups erstellen>>
+.. <<Motivation>>
+.. <<Produktergebnis und Bewertung>>
 .. <<Begründung für das Nichterfüllen von Zielen>>
-.. <<Reflexionen der Teammitglieder>>
+. <<Reflexionen der Teammitglieder>>
 [arabic]
-... <<Fabian Krähmer>>
-... <<Silko Grellmann>>
-... <<Dominique Linzmajer>>
-... <<Felix Helmert>>
-... <<Moritz Lehmann>>
-... <<Nico Papke>>
+.. <<Fabian Krähmer>>
+.. <<Silko Grellmann>>
+.. <<Dominique Linzmajer>>
+.. <<Felix Helmert>>
+.. <<Moritz Lehmann>>
+.. <<Nico Papke>>
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
@@ -414,13 +420,15 @@ Die Login Seite erscheint gleich bei dem Aufruf der Webseite es kann dann die An
 
 Das Ziel wurde erfüllt, es muss jedoch manuell durch kopieren eines Ordners durchgeführt werden. 
 
-==== Motivation
+=== Motivation
 
 Eine gute Organisation und eine eindeutige Platzzuweisung von Gegenständen sowie Verbrauchsmaterialen im Büro oder in Werkstatt erleichtert – besonders beim kollaborativen Arbeiten 
 – den Arbeitsalltag und kann zu einer besseren Produktivität der Mitarbeitenden führen. Nicht jedes Spezialwerkzeug oder technisches Equipment wird täglich benötigt, allerdings ist dies für die Erfüllung der täglichen Arbeitsprozesse in einer guten Qualität unerlässlich. 
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt werden, wodurch sich zum Beispiel Szenarien aus dem Bereich der vorausschauenden Wartung realisieren lassen.
 
-==== Produktergebnis
+=== Produktergebnis und Bewertung
+
+Insgesamt wurden vier von dreizehn analysierten Use-Cases nicht umgesetzt. Dies war vor allem auf die fehlende Manpower zurückzuführen. Insgesamt stellt unsere Software aber die Möglichkeit weitere Funktionen zu implementieren.
 
 image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten.jpg[]
 
@@ -480,11 +488,9 @@ image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten
 | ---
 |===
 
-==== Bewertung
+Die Themenersteller waren mit diesem Ergebnis aber durchaus zufrieden, da es deutlich ansprechender und einfacher ist als die Ausgangssituation vor SE I. Als Gruppe denken wir, dass wir auch einen guten Ansatz für kommende Teams geschaffen haben, dort weiterzumachen wo wir aufhören mussten. 
 
-==== Fehlerbehebung
-
-==== Begründung für das Nichterfüllen von Zielen
+=== Begründung für das Nichterfüllen von Zielen
 
 Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitglieder uns am
 Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
