@@ -24,7 +24,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 *Abhängigkeiten:*
 
-- Wir sind von der Verfügbarkeit des Servers und von der Datenbank abhängig.
+- Wir sind von der Verfügbarkeit der VM, des HTW-Netzwerks, des Frontendservers auf der VM, des Backendservers auf der VM und dem Datenbankcontainer auf der VM abhängig.
 
 == Architekturrelevante Anforderungen
 
@@ -35,7 +35,7 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 - *SWFR-2:* Die Kommunikation zwischen Clients und Server muss verschlüsselt sein. +
 
-- *SWFR-3:* Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren.+
+- *SWFR-3:* Nach dem Aufrufen der Anwendung müssen sich die Clients/User am Server durch die Eingabe von Benutzernamen und Passwort authentifizieren. +
 
 - *SWFR-4:* Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt sein. +
 
@@ -59,13 +59,13 @@ Für die Akzeptanz des Systems bei den Kunden ist eine gute und vor allem einfac
 
 == Entscheidungen, Nebenbedingungen und Begründungen
 
-. Wir nutzen MySQL Datenbanksystem, damit wir Datentypen gut abbilden können.
+. Wir nutzen MySQL Datenbanksystem, weil es open-source ist, weit verbreitet und eines der Datenbankssysteme ist, die von Spring Boot unterstützt werden.
 
-. Wir nutzen ReactJS, HTML, TypeScript und CSS beim Frontend (User-Interface)
+. Wir nutzen ReactJS, HTML, TypeScript und CSS im Frontend (User-Interface). HTML wird benötigt, damit der Webbrowser Daten anzeigen kann. ReactJS verwenden wir, weil es einen großen Funktionsumfang sowie schöne Userinterface Elemente bietet. Damit das funktioniert und die angeforderten Daten gefetcht werden können, benötigen wir TypeScript. Für die Formatierung der Inhalte sorgt CSS.
 
 . Wir nutzen Bearer Tokens beim Einloggen, um unberechtigte Zugriffe auf unsere Daten zu verhindern, sowie CRSF-Token, falls der Bearer Token gestohlen wird.
 
-. Wir definieren Typen, um eine einfache Erweiterbarkeit zu ermöglichen
+. Wir nutzen Docker zur Bereitstellung des Datenbankservers, weil es eine gute und einfache Portabilität und Einrichtung bietet.
 
 
 
@@ -74,7 +74,7 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 
 . Wir haben in der Analyse die Entscheidung getroffen, dass unsere Daten persistent (SWFR-1) sein müssen. Auf der Grundlage dieser Ausgangspunkte hatten wir im Entwurf verschiedene Möglichkeiten, unsere Daten zu speichern. Von den drei Möglichkeiten SQL-Datenbanken, NoSQL-Datenbanken oder einfache Dateien entschieden wir uns für eine SQL-Datenbank, da dies unsere Datentypen gut abbilden kann und wir bereits Erfahrung mit diesen haben. In der Implementierung hatten wir die Wahl zwischen verschiedenen Datenbanken. Wir haben uns für MySQL entschieden, da diese Open Source ist.
 
-. Wir haben die Entscheidung getroffen, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig durch die Verwendung von Hashfunktionen, Salt, Pepper und Stretching sicher (SWFR-5) gespeichert werden. Damit kein ungewollte Zugriff auf unsere Anwendung und deren Daten hat, müssen sich Nutzer zunächst mit ihrer Email und einem Passwort registrieren. Die Email und das Passwort werden in der Datenbank gespeichert, wobei das Passwort verschlüsselt wird, also nicht im Klartext in der Datenbank steht. Wenn sich ein registrierter Nutzer dann einloggt generiert unsere Anwendung einen Sicherheitstoken, welcher einen Tag gültig sein wird. Wir haben uns für die Verwendung des Bearer Tokens entschieden. Die Dauer der Gültigkeit des Sicherheitstoken kann ggf. angepasst werden. Dieser Token wird bei Abfragen von Daten mit an das Backend geschickt welches seine Gültigkeit prüft. Ist der Token gültig werden die Daten an das Frontend bzw. an den Nutzer gesendet. Wenn der Token ungültig ist wird eine entsprechende Fehlermeldung ausgegeben.
+. Eine Anforderung ist, dass die Kommunikation zwischen Clients und Server verschlüsselt (SWFR-2) sein muss, haben die Umsetzung aber zeitlich nicht mehr geschafft. Die Daten müssen auf dem Server vor unberechtigten Zugriff geschützt (SWFR-4) sein. Schließlich müssen die Passwörter zu den Useraccounts serverseitig sicher (SWFR-5) gespeichert werden. Damit kein ungewollte Zugriff auf unsere Anwendung und deren Daten hat, müssen sich Nutzer zunächst mit ihrer Email und einem Passwort registrieren. Die Email und das Passwort werden in der Datenbank gespeichert, wobei das Passwort verschlüsselt wird, also nicht im Klartext in der Datenbank steht. Wenn sich ein registrierter Nutzer dann einloggt generiert unsere Anwendung einen Sicherheitstoken, welcher sieben Tag gültig sein wird. Wir haben uns für die Verwendung des Bearer Tokens entschieden. Die Dauer der Gültigkeit des Sicherheitstoken kann ggf. angepasst werden. Dieser Token wird bei Abfragen von Daten mit an das Backend geschickt welches seine Gültigkeit prüft. Ist der Token gültig werden die Daten an das Frontend bzw. an den Nutzer gesendet. Wenn der Token ungültig ist wird eine entsprechende Fehlermeldung ausgegeben.
 
 
 . Beim User-Interface haben wir uns für ReactJS entschieden, weil ReactJS eine Vielzahl von Funktionen und schöne User-Elemente bietet. Außerdem ist es kostenlos und einfach zu verwenden.
@@ -94,13 +94,33 @@ https://www2.htw-dresden.de/~anke/openup/core.tech.common.extend_supp/guidances/
 
 - Object: enthält alle relevante Informationen zum Artikel.
 
+- User: enthält Logininformationen über die Benutzer.
+
 *Services:* Services werden genutzt, um die Verarbeitung von Daten zu übernehmen. Dies geschieht optimalerweise für jeden Typen separat, um eine möglichst geringe Kopplung zu erhalten.
 
 *Workflows:* Workflows beschreiben den Arbeitsablauf des Programms und bilden die Reihenfolge ab, mit welcher in einem Programm gearbeitet wird.
 
+== Architekturmuster
+
+In der Implementierung haben wir uns hauptsächlich durch das Architekturmuster der Model View Controller (MVC) leiten lassen. Dabei stellt die View die Abbildung der Daten der Modelle dar, die dem Benutzer im Browser als grafische Oberfläche angezeigt werden. Model sind die Daten, die einerseits vom Browser angezeigt werden und andererseits vom Backend verarbeitet und gespeichert werden. Controller verarbeiten auf der Seite des Backends HTTP-Anfragen 	und stellen die Models dem Frontend zur Verfügung.
+
 == Architektur-Framework
 
-- Frontend -> Backend -> Datenbanksystem 
+- Frontend -> Backend -> Datenbanksystem
+
+
+== Sichten
+
+=== Physische Sicht
+
+- Benutzer -> Client(mobiles Engerät, PC, o.ä.) -> Frontend -> Backend -> Datenbank
+
+=== Logische Sicht
+- request: gibt die Form eines Requests vor
+- security: prüft ob der Nutzer befugt für entsprechende Anfrage ist
+- conntroller: leitet bestimmte Funktion anhand der Anfrage ein (Daten abfragen/ändern/löschen)
+- repository: Kommunikation mit Datenbank
+- entity: Abbildung der realen Objekte mit denen die Anwendung arbeiten soll
 
 == Architekturschichten (C4-Modell)
 
@@ -118,6 +138,27 @@ image::Schicht2.png[]
 
 image::Schicht3.png[]
 
+== Datenbankschema
+
+image::DB_Schema.png[]
+
+Die Tabellen in der Datenbank werden von Spring Boot nach den Schemata der Entities des Backends erstellt. Aktuell bestehen keine (Fremdschlüssel-)Beziehungen zwischen den Tabellen, was nicht von Vorteil ist und einem guten Datenbankschema widerspricht. Wenn man das Schema nachträglich verändern möchte, sehen wir nur die Möglichkeit, die Tabellen der Datenbank und die Enteties des Backends manuell zu ändern oder auf eine neue Datenbank umziehen.
+
+== Wireframes
+
+Ursprünglich war das Design und Aufbau der Seiten wie folgt geplant: +
+
+- Homepage
+
+image::Wireframe_Hompage.jpg[]
+
+- Lendinglist
+
+image::Wireframe_Lendinglist.jpg[]
+
+- Detailansicht
+
+image::Wireframe_Detailansicht.jpg[]
 
 == Dokumentation zu Entwicklercode
 
