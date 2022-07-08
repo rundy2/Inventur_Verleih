@@ -1,0 +1,7 @@
+de.htw.inventur
+de.htw.inventur.config
+de.htw.inventur.controller
+de.htw.inventur.entity
+de.htw.inventur.repository
+de.htw.inventur.request
+de.htw.inventur.security

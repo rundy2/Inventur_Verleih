@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"de.htw.inventur"},{"l":"de.htw.inventur.config"},{"l":"de.htw.inventur.controller"},{"l":"de.htw.inventur.entity"},{"l":"de.htw.inventur.repository"},{"l":"de.htw.inventur.request"},{"l":"de.htw.inventur.security"}];updateSearchResults();
