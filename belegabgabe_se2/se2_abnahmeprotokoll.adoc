@@ -26,7 +26,7 @@ Abnahmeumgebung: MS Teams in Konferenz, Präsentation Lokal
 
 === Lieferumfang
 
-* Software in folgender Form: Bereitgestellter VM-Server http://iiot173:3000/, Jar-Installationsdatei
+* Software in folgender Form: Bereitgestellter VM-Server http://iiot173:3000/ bzw. http://141.56.180.173:3000, Jar-Installationsdatei
 * Benutzeranleitung
 * Betriebsanleitung
 * Anforderungsspezifikation

@@ -33,11 +33,11 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 . <<Inventur Verleih - Digitale Inventur- und Verleihliste (I6)>>
 . <<Planung>>
 [arabic]
-.. <<Ausgangssituation in SE ⅠⅠ>>
+.. <<Ausgangssituation in SE ⅠⅠ [FK]>>
 [arabic]
 ... <<Teamaufstellung>>
 ... <<Aufgabenstellung und Auftraggeber>>
-.. <<Projektorganisation>>
+.. <<Projektorganisation [FK]>>
 [arabic]
 ... <<Team>>
 ... <<Rollenverteilung>>
@@ -45,8 +45,8 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 .. <<Way of Working>>
 . <<Durchführung des Projekts>>
 [arabic]
-.. <<SE Ⅰ>>
-.. <<SE ⅠⅠ>>
+.. <<SE Ⅰ [ML]>>
+.. <<SE ⅠⅠ [FK]>>
 [arabic]
 ... <<Start in das Neue Semester>>
 ... <<Beginn der Implementierung>>
@@ -73,13 +73,13 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2021/2022 und Sommersemester 2022 bearbeitet. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
 == Planung 
-=== Ausgangssituation in SE ⅠⅠ
+=== Ausgangssituation in SE ⅠⅠ [FK]
 ==== Teamaufstellung
 Am Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
 Moritz Lehmann und Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu Beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
 
 
-==== Aufgabenstellung und Auftraggeber [FK]
+==== Aufgabenstellung und Auftraggeber
 Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese 
 erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt 
@@ -97,7 +97,7 @@ Wichtig war dabei ebenfalls, dass das System nur intern verwendbar ist und wir e
 Bei dem Projekt wurden wir von Herrn Robert Ringel als Mentor tatkräftig unterstützt, die wöchentlichen Vorlesungen von Prof. Dr. Anke und die Praktia halfen uns stetig dabei, den Blickwinkel auch mal zu ändern. 
 Von der AG SPS unterstützen uns Herr Till Haas, Eric Brandt und Felix Brandt. Alle drei waren immer gut erreichbar und für kurzfristige Meetings zu haben. Gerade weil Herr Ringel die AG SPS kannte, half er dabei die richtige Software entstehen zu lassen.
 
-=== Projektorganisation
+=== Projektorganisation [FK]
 ==== Team
 Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
 einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen. Wir meinen mit
@@ -178,7 +178,7 @@ in die nächste Iteration übernommen und versucht, die Aufwandsplanung anhand d
 Erkenntnisse besser umzusetzen.
 
 == Durchführung des Projekts
-=== SE Ⅰ
+=== SE Ⅰ [ML]
 Das Hauptaugenmerk in SE I unseres Projektes war, eine gute und solide Grundlage für die Construction Phase in SE II zu schaffen. Deshalb bestand die erste Iteration hauptsächlich aus teamorganisatorischen Tätigkeiten und der Einarbeitung in das Projekt und die Aufgabenstellung. Hier
 haben wir auch zum ersten Mal Kontakt zum Kunden hergestellt. +
 
@@ -193,7 +193,7 @@ vermeiden, zuzuschreiben. Um diesen Fehler zu beheben, versuchten wir die fehlen
 dieser Iteration nochmals die Use Cases und die Testcases überarbeitet und das Abgabedokument
 angefertigt.
 
-=== SE ⅠⅠ
+=== SE ⅠⅠ [FK]
 ==== Start in das Neue Semester 
 Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Des weiteren erlang das Team einen harten Motivationsverlust durch die unerwart schlechte Bewertung des Beleges aus SE I. Auch die Zuweisung eines neuen Teammitglieds zeigte schwerer als gedacht.
 Nico Papke wollte zwar sofort mit anpacken, jedoch musste sich das Team erstmal wiederfinden, dieser Prozess dauerte leider etwas zu lang, letztendlich landeten wir bei folgenden Anfangsarbeiten:
@@ -299,8 +299,8 @@ Die Hauptziele dieser Iteration 05 waren wie folgt:
 
 . Use-Cases welche ähnlich sind zusammen implementieren
 .. UC05/07 
-.. UC03/04
 .. UC01/02
+.. UC03/04
 .. UC06
 .. UC11
 .. UC13
@@ -313,13 +313,74 @@ Die Hauptziele dieser Iteration 05 waren wie folgt:
 
 Den Status zu ändern und die Übersicht anzuzeigen waren die ersten Use-Cases die wir in dieser Iteration realisieren mussten, da alle anderen darauf aufbauten. Wir nahmen eine leere Datenbank und befüllten diese mit Beispieldateien um das Ergebnis sehen zu können
 
+.Wireframe zur Startseite
+image::../belegabgabe_se2/images/Wireframe_Startseite.png[Wireframe zur Startseite, 800]
+
+.Endgültige Startseite
+image::../belegabgabe_se2/images/Startseite.png[Startseite, 800]
+
 ===== UC01/02
 
 Gegenstände auszuleihen und zurückzugeben erwies sich im Code als relativ schnell realisierbar, so wurde ein eine einfaches ReactJS geschrieben, welcher per Spring Boot an unsere Datenbank übergeben wurde. Dabei wurden die Ablageorte als String definiert, welche aber nicht doppelt belegt wurden konnten, dies führte zur Sicherstellung des korrekten Ablageortes. In späteren Entwicklungen könnte man dann Ablageorte festlegen, falls keine mehr ergänzt werden müssen. 
 
-image::../images/Wireframe_Startseite.png[]
+===== UC03/04
+
+Neue Gegenstände realisierten wir mit einer einzelnen Funktion, welche es per Spring Boot ermöglichte, die Datenbank zu erweitern, außerdem konnten wir in der Detailseite einen Button hinzufügen welcher per Funktion das Objekt auch wieder aus der Datenbank entfernen konnte.
+
+===== UC06
+
+Gegenstände zu suchen wurde mit einer Suchleiste im Frontend realisiert welche dann eine Stringübergabe per ReactJS an die Datenbank weitergibt. Dadurch lassen sich ähnliche Artikel auch finden, wenn man nicht die genaue Bezeichnung weiß.
+
+===== UC11
+
+Die Anmeldung wurde bereits in der letzten Iteration ermöglicht, nun wurde aber die Übergabe zwischen Front- und Backend realisiert, da man nun nicht ohne Authentifizierung etwas entleihen oder anlegen kann.
+
+===== UC13
+
+Eine Implementierung einer Sicherung war Hauptaugenmerk für unsere Software, wir überlegten uns einen guten und sicheren Weg um dies zu realiseren. Die Datenbank läuft unabhängig von der eigentliche Software und kann somit jederzeit händisch gesichert werden. Hier könnte man im folgenden anknüpfen und einen Button direkt in der Software implementieren
+
+===== Test-Cases
+
+Um den gekürzten Funktionsumfang unserer Software zu überprüfen, mussten wir uns ein paar Testfälle ausdenken, die meisten davon konnte man nicht mit UnitTest realisieren und das Testteam musste sie mit einem Protokoll durchführen.
+Dazu wurden die Test-Cases angelegt und vorbereitet.
+
+===== Vorbereitung für das Deployment
+
+Parallel zur Implementierung setzte sich das Projektmanagement an die Vorbereitung des eigentliches Servers und installierte die benötigten Kompomenenten. Der Test zum Verbindungsaufbau wurde erfolgreich gemeistert (nur intern verwendbar, nicht von außen angreifbar).
 
 ==== Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)
+
+Wir befanden uns in Iteration 06 nun in der heißen Phase des Projektes, die letzten Schritte und Anpassungen für die Software standen an und das Deployment musste erfolgen. Als Ziele dieser Iteration setzen wir folgende Schritte:
+
+. CSS Dateien endgültig anpassen
+. Software in JAR Datei packen
+. Software auf Server aufsetzen
+. Deployment-Test
+. Abnahme
+
+*CSS Dateien endgültig anpassen*
+
+Im Zuge der letzten Iteration bemerkten wir, das die Anpassung der Webseite an verschieden Nutzerumstände (Bildschirmauflösungen) stark von einander abwichen. Die Lösung war alle CSS Dateien erneut zu korrigieren und teilweise von Pixel auf eM zu gehen. Leider bemerkten wir zu spät, dass auch ein Stylesheet ausreichen würde, um eine gleiche Formatierung für alle Webseiten zu gewährleisten.
+
+*Software in JAR Datei packen*
+
+Um die Software auch an anderen Lokationen benutzen zu können, war es ein Wunsch der Themenersteller, eine JAR-Datei zu bekommen um diese dann eben selbst aufsetzen zu können. Leider schafften wir es nicht, ein komplettes Paket für Datenbank und Software zu packen. Dadurch ist die Software selbst aber kompatibel zu diversen Datenbankformaten.
+Das Entpacken erfolgt nun in den Schritten: Datenbank, danach Back- und Frontend. Die Datenbank läuft dabei in Docker.
+Für das Packen benutzten wir Maven, da es einer freien Lizenz unterworfen ist und einfach zu bedienen.
+
+*Software auf Server aufsetzen*
+
+Mit dem Aufsetzen der Software hatten wir mehr Probleme als gedacht, wir hatten lang einen Cors-Fehler, welchen wir aber letztendlich durch die Hilfe des OSP-Teams lösen konnten. Zum Glück hatten wir hierbei etwas mehr Zeit eingeplant, womit der Abnahmetermin nur um zwei Tage verschoben werden musste.
+
+*Deployment-Test*
+
+Die Deployment Tests ergaben noch kleine Fehler, welche wir aber ohne weitere Verzögerungen beheben konnten.
+Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang entsprach unseren abwandelten Use-Cases.
+
+*Abnahme*
+
+Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
+
 
 //Moritz, Nico, Felix Einstiegspunkt
 == Ergebnisse
