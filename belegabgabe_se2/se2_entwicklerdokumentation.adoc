@@ -121,4 +121,4 @@ image::Schicht3.png[]
 
 == Dokumentation zu Entwicklercode
 
-<<../belegabgabe_se2/JavaDoc_Backend/index.html,Code>>
+<<../JavaDoc_Backend/index.html,Code unter JavaDoc_Backend/index.html>> 
