@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-//Communication between Backend and Database
-//Spring will automatically generate SQL from function-name
+/**Communication between Backend and Database*/
+/**Spring will automatically generate SQL from function-name*/
 @Repository
 public interface StorageRepository extends JpaRepository<Storage, Integer> {
 

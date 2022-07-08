@@ -1,12 +1,16 @@
 import axios from "axios";
-const API_URL = "http://localhost:8080/auth/";
+import authHeader from "./authHeader";
+const API_URL = "http://141.56.180.173:8080/auth/";
+
+/** communication with backend */
+/** sends requests for authentication */
 class AuthService{
     login(email, password){
         return axios.post(
             API_URL + "login", {
                 email,
                 password
-            }).then(response => {
+            },{headers: authHeader()}).then(response => {
                 if(response.data){
                     localStorage.setItem("user", JSON.stringify(response.data));
                 }
@@ -20,7 +24,7 @@ class AuthService{
         return axios.post(API_URL+"register", {
             email,
             password
-        });
+        }, {headers: authHeader()});
     }
     getCurrentUser(){
         return JSON.parse(localStorage.getItem("user"));

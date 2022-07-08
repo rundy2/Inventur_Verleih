@@ -21,7 +21,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-//Controller for objects
+/**Controller for objects*/
+//@CrossOrigin(origins="http://141.56.180.173:3000")
 @RestController
 @RequestMapping("/")
 public class ObjectController {
@@ -43,35 +44,31 @@ public class ObjectController {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
-    //Get all objects from a special section
-    @CrossOrigin(origins="*")
+    /**Get all objects from a special section*/
     @GetMapping("/room/{roomId}/storage/{storageId}/section/{sectionId}/object")
     public List<Object> index(@PathVariable("roomId") Integer roomId, @PathVariable("storageId") Integer storageId, @PathVariable("sectionId") Integer sectionId){
         return objectRepository.findAllBySectionId(sectionId);
     }
 
-    //Get Object by Id
-    @CrossOrigin(origins="*")
+    /**Get Object by Id*/
     @GetMapping("/objects/{objectId}")
     public Optional<Object> getObjectById(@PathVariable("objectId") Integer objectId){
         return objectRepository.findById(objectId);
     }
 
-    //Get all objects
-    @CrossOrigin(origins="*")
+    /**Get all objects*/
     @GetMapping("/objects")
     public List<Object> allObjects(){
         return objectRepository.findAll();
     }
 
-    @CrossOrigin(origins="*")
+    /**Get objects lend by a specific user*/
     @PostMapping("/objects/user")
     public List<Object> getObjectsByUser(@RequestBody UserObjectsRequest userObjectsRequest){
         return objectRepository.findAllByLendBy(jwtTokenProvider.getUserMailFromToken(userObjectsRequest.getToken()));
     }
 
-    //add object
-    @CrossOrigin(origins="*")
+    /**add object*/
     @PostMapping("/add/object")
     public int addObject(@RequestBody AddObjectRequest addObjectRequest){
         Room room = roomRepository.findByName(addObjectRequest.getRoom());
@@ -109,8 +106,7 @@ public class ObjectController {
         return 1;
     }
 
-    //update object state
-    @CrossOrigin(origins="*")
+    /**update object state*/
     @PostMapping("/objects/{objectId}/updateState")
     public int updateState(@PathVariable("objectId") Integer objectId, @RequestBody UpdateStateRequest newState){
         String user = jwtTokenProvider.getUserMailFromToken(newState.getToken());
@@ -128,7 +124,7 @@ public class ObjectController {
         return objectRepository.updateState(objectId, newState.getState());
     }
 
-    @CrossOrigin(origins="*")
+    /**delete object from database*/
     @PostMapping("/objects/{objectId}/delete")
     public int deleteObject(@RequestBody DeleteObjectRequest deleteObjectRequest){
         objectRepository.deleteByObjectId(deleteObjectRequest.getObjectId());

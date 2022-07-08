@@ -11,7 +11,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
-//Collects all functions about security-token
+/**Collects all functions about security-token*/
 @Component
 @Slf4j
 public class JwtTokenProvider {
@@ -21,7 +21,7 @@ public class JwtTokenProvider {
 
     public String generateToken(String userEmail){
         Instant now = Instant.now();
-        Instant expiration = now.plus(7, ChronoUnit.DAYS);
+        Instant expiration = now.plus(7, ChronoUnit.DAYS);  /**period of validity (7 days)*/
         return Jwts.builder()
                 .setSubject(userEmail)
                 .setIssuedAt(Date.from(now))

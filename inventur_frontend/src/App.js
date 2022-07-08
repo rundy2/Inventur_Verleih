@@ -9,6 +9,7 @@ import Home from "./components/homeComponent";
 import ObjectDetails from "./components/objectDetailsComponent";
 import AddObject from "./components/addObjectComponent";
 
+/** all components are rendered in this App Component*/
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,7 @@ class App extends Component {
       currentUser: undefined,
     };
   }
+  /**checks if already logged in*/
   componentDidMount() {
     const user = AuthService.getCurrentUser();
     if(user){
@@ -28,6 +30,7 @@ class App extends Component {
   logOut(){
     AuthService.logout();
   }
+  /**here is what you see*/
   render() {
     const { currentUser } = this.state;
     return (

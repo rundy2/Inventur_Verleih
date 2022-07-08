@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import UserService from "../services/userService";
+
+/**not in use*/
 export default class BoardUser extends Component{
     constructor(props) {
         super(props);
