@@ -1,17 +1,10 @@
-// --- 1. Projektthema -------------------------
-
-= Projektbericht
-
-== SE ⅠⅠ - Belegabgabe: I6 Inventur Verleih
-
-Fabian Krähmer, Silko Grellmann, Felix Helmert, Nico Papke, Moritz Lehmann, Dominique Linzmajer
-
 :docs: ../docs
+
 include::../docs/_includes/default-attributes.inc.adoc[]
-// ---
+
 :doctype: book
 :toc:
-:toclevels: 2
+:toclevels: 3
 :toc-title: Inhaltsverzeichnis
 :sectnums:
 :icons: font
@@ -27,61 +20,26 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 :!example-caption:
 :experimental:
 
-
-
-== Inhaltsverzeichnis
-. <<Inventur Verleih - Digitale Inventur- und Verleihliste (I6)>>
-. <<Planung>>
-[arabic]
-.. <<Ausgangssituation in SE ⅠⅠ [FK]>>
-[arabic]
-... <<Teamaufstellung>>
-... <<Aufgabenstellung und Auftraggeber>>
-.. <<Projektorganisation [FK]>>
-[arabic]
-... <<Team>>
-... <<Rollenverteilung>>
-.. <<Ablauf der Kommunikation unter Verwendung von Tools>>
-.. <<Way of Working>>
-. <<Durchführung des Projekts>>
-[arabic]
-.. <<SE Ⅰ [ML]>>
-.. <<SE ⅠⅠ [FK]>>
-[arabic]
-... <<Start in das Neue Semester>>
-... <<Altbelegkorrektur und neues Mitglied einarbeiten>>
-... <<Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)>>
-... <<Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)>>
-... <<Use-Cases durchprogrammieren (05.06.2022-19.06.2022)>>
-... <<Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)>>
-. <<Ergebnisse>>
-[arabic]
-.. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
-[arabic]
-... <<Gegenstände ausleihen und zurückgeben>>
-... <<Neue Gegenstände aufnehmen/umlagern und deinventarisieren>>
-... <<Status ändern>>
-... <<Gegenstände suchen und Übersicht anzeigen>>
-... <<Anmeldung ermöglichen>>
-... <<Backups erstellen>>
-.. <<Motivation>>
-.. <<Produktergebnis und Bewertung>>
-.. <<Begründung für das Nichterfüllen von Zielen>>
-. <<Reflexionen der Teammitglieder>>
-[arabic]
-.. <<Fabian Krähmer>>
-.. <<Silko Grellmann>>
-.. <<Dominique Linzmajer>>
-.. <<Felix Helmert>>
-.. <<Moritz Lehmann>>
-.. <<Nico Papke>>
+= *Projektbericht* Inventur- und Verleihsoftware (I6) 
+Fabian Krähmer, Silko Grellmann, Felix Helmert, Nico Papke, Moritz Lehmann, Dominique Linzmajer
+08. Juli 2022
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
 Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2021/2022 und Sommersemester 2022 bearbeitet. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
+|===
+|*Namen* | *verwendete Namenskürzel*
+|Fabian Krähmer | FK
+|Silko Grellmann | SG
+|Dominique Linzmajer| DL
+|Felix Helmert| FH
+|Moritz Lehmann| ML
+|Nico Papke| NP
+|===
+
 == Planung 
-=== Ausgangssituation in SE ⅠⅠ [FK]
+=== Ausgangssituation in SE II [FK]
 ==== Teamaufstellung
 Am Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
 Moritz Lehmann und Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu Beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
@@ -186,7 +144,7 @@ in die nächste Iteration übernommen und versucht, die Aufwandsplanung anhand d
 Erkenntnisse besser umzusetzen.
 
 == Durchführung des Projekts
-=== SE Ⅰ [ML]
+=== SE I [ML]
 Das Hauptaugenmerk in SE I unseres Projektes war, eine gute und solide Grundlage für die Construction Phase in SE II zu schaffen. Deshalb bestand die erste Iteration hauptsächlich aus teamorganisatorischen Tätigkeiten und der Einarbeitung in das Projekt und die Aufgabenstellung. Hier
 haben wir auch zum ersten Mal Kontakt zum Kunden hergestellt. +
 
@@ -201,7 +159,7 @@ vermeiden, zuzuschreiben. Um diesen Fehler zu beheben, versuchten wir die fehlen
 dieser Iteration nochmals die Use Cases und die Testcases überarbeitet und das Abgabedokument
 angefertigt.
 
-=== SE ⅠⅠ [FK]
+=== SE II [FK]
 ==== Start in das Neue Semester 
 Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Des weiteren erlang das Team einen harten Motivationsverlust durch die unerwart schlechte Bewertung des Beleges aus SE I. Auch die Zuweisung eines neuen Teammitglieds zeigte schwerer als gedacht.
 Nico Papke wollte zwar sofort mit anpacken, jedoch musste sich das Team erstmal wiederfinden, dieser Prozess dauerte leider etwas zu lang, letztendlich landeten wir bei folgenden Anfangsarbeiten:
@@ -269,9 +227,9 @@ Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschläge
 Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
 
-==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)
+==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel 
 
-Iteration 04 startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
+Iteration 04 (20.05.2022-04.06.2022) startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
 Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwicklen, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
 
 Klare Ziele dieses Meetings waren:
@@ -390,44 +348,46 @@ Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang ent
 Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
 
 
-// Nico, Felix Einstiegspunkt
+
 == Ergebnisse
 
-=== Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste
+=== Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste [FK]
 
-==== Gegenstände ausleihen und zurückgeben
+Das grundlegende Ziel - eine Erleichterung der Inventarisierung und die Möglichkeit ein Verleih durchzuführen - wurde entsprechend der oben genannten Use-Cases umgesetzt. Die Themenersteller sind erleichtert, nun eine Möglichkeit zu haben, nicht auf die Excel-Liste angewiesen zu sein, welche zum Start dieses Projektes als "Verwaltung" diente. 
+In den unten genannten Zielen gehen wir nochmals auf die speziellen Funktionen unserer Software ein.
 
-Dises Ziel wurde ereicht, jedoch ist es nicht möglich Gegenstände mit dem Barcodescanner zu scannen und so auszuwählen. Es ist mit dem System möglich die Gegenstände auszuleihen und diese auch wieder zurückzugeben. 
+==== Gegenstände ausleihen und zurückgeben [ML]
+
+Dieses Ziel wurde erreicht, jedoch ist es nicht möglich Gegenstände mit dem Barcodescanner zu scannen und diese damit auszuwählen. Es ist mit dem System möglich die Gegenstände auszuleihen und diese auch wieder zurückzugeben. 
 Es wird dafür nach dem Gegenstand gesucht oder er wird manuell ausgewählt und diesen kann man mit den entsprechenden Button entweder ausleihen oder zurückgeben.
 
-==== Neue Gegenstände aufnehmen/umlagern und deinventarisieren
+==== Neue Gegenstände aufnehmen/umlagern und deinventarisieren [ML]
 
-Dieses Ziel wurde Grundlegend umgesetzt jedoch wurde dabei nicht das umlagern des Gegenstandes, das erstellen eines neuen Barcodes oder der Raumvorschlag für den Gegenstand umgesetzt. Das Programm kann ein Gegenstand hinzufügen, was auch die Eigenschaften des Gegenstandes beinhält und Objekte können auch wieder entfernt werden.
+Dieses Ziel wurde Grundlegend umgesetzt jedoch wurde dabei nicht das umlagern des Gegenstandes, das Erstellen eines neuen Barcodes oder der Raumvorschlag für den Gegenstand umgesetzt. Das Programm kann ein Gegenstand hinzufügen, was auch die Eigenschaften des Gegenstandes beinhaltet und Objekte können auch wieder entfernt werden.
 
-==== Status ändern
+==== Status ändern [ML]
 
 Dieses Ziel wurde ereicht, aber es fehlt die Funktion den Status manuell durch den Admin zu ändern. Der Status wird automatisch geändert wenn ein Gegenstand ausgeliehen oder zurückgegeben wird.
 
-==== Gegenstände suchen und Übersicht anzeigen
+==== Gegenstände suchen und Übersicht anzeigen [ML]
 
 Ein weiteres Ziel was wir erreicht haben, bestand in der Suche von Gegenständen und die Übersicht von Gegenständen anzuzeigen. Bei der Suche ist jedoch keine unscharfe Suche möglich ,es muss als nach der exakten Bezeichnung gesucht werden. Die Übersicht anzuzeigen erhält außerdem keine Sortierfunktion und es werden die Gegenstände unsortiert angezeigt. Dieses Ziel wird mit dem Programm durch die Suche dargestellt oder des kann auch manuell dannach gesucht werden.
 
-==== Anmeldung ermöglichen
+==== Anmeldung ermöglichen [ML]
 
-Dieses Ziel wurde erreicht. Es ist mit dem Programm möglich sich einzuloggen und verschiedene User 
-Die Login Seite erscheint gleich bei dem Aufruf der Webseite es kann dann die Anmeldung stattfinden oder es kann auch ein Benutzer erstellt werden. Nachdem die Anmeldung erfolgreich war wird man auf die Startseite weitergeleitet.
+Dieses Ziel wurde erreicht. Es ist mit dem Programm möglich sich einzuloggen und verschiedene User anzulegen.
+Die Login Seite erscheint gleich bei dem Aufruf der Webseite, es kann dann die Anmeldung stattfinden oder es kann auch ein Benutzer erstellt werden. Nachdem die Anmeldung erfolgreich war, wird man auf die Startseite weitergeleitet.
 
-==== Backups erstellen
+==== Backups erstellen [ML]
 
 Das Ziel wurde erfüllt, es muss jedoch manuell durch kopieren eines Ordners durchgeführt werden. 
 
-=== Motivation
+=== Motivation [ML]
 
-Eine gute Organisation und eine eindeutige Platzzuweisung von Gegenständen sowie Verbrauchsmaterialen im Büro oder in Werkstatt erleichtert – besonders beim kollaborativen Arbeiten 
-– den Arbeitsalltag und kann zu einer besseren Produktivität der Mitarbeitenden führen. Nicht jedes Spezialwerkzeug oder technisches Equipment wird täglich benötigt, allerdings ist dies für die Erfüllung der täglichen Arbeitsprozesse in einer guten Qualität unerlässlich. 
+Eine gute Organisation und eine eindeutige Platzzuweisung von Gegenständen sowie Verbrauchsmaterialen im Büro oder in Werkstatt erleichtert – besonders beim kollaborativen Arbeiten – den Arbeitsalltag und kann zu einer besseren Produktivität der Mitarbeitenden führen. Nicht jedes Spezialwerkzeug oder technisches Equipment wird täglich benötigt, allerdings ist dies für die Erfüllung der täglichen Arbeitsprozesse in einer guten Qualität unerlässlich. 
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt werden, wodurch sich zum Beispiel Szenarien aus dem Bereich der vorausschauenden Wartung realisieren lassen.
 
-=== Produktergebnis und Bewertung
+=== Produktergebnis und Bewertung [SG]
 
 Insgesamt wurden vier von dreizehn analysierten Use-Cases nicht umgesetzt. Dies war vor allem auf die fehlende Manpower zurückzuführen. Insgesamt stellt unsere Software aber die Möglichkeit weitere Funktionen zu implementieren.
 
