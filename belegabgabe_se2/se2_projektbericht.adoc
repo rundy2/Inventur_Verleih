@@ -57,6 +57,7 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 . <<Ergebnisse>>
 [arabic]
 .. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
+[arabic]
 ... <<Gegenstände ausleihen und zurückgeben>>
 ... <<Neue Gegenstände aufnehmen/umlagern und deinventarisieren>>
 ... <<Status ändern>>
