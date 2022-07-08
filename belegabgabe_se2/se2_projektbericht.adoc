@@ -139,25 +139,12 @@ Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen auf
 erhalten.
 
 === Ablauf der Kommunikation unter Verwendung von Tools 
-Da während des Projekts die Corona Pandemie Deutschland beherrschte, wurde versucht, sämtliche Kommunikation online durchzuführen. Um dies umzusetzen, wurde der Messenger-Dienst
-WhatsApp für die direkte Kommunikation zwischen einzelnen Gruppenmitgliedern und zur
-schnellen Informationsübermittlung an alle Teammitglieder genutzt. Um Meetings zu realisieren,
-wurde zu erst ein Discord Server genutzt, im Laufe des Projekts dann aber auf Microsoft Teams
-gewechselt. Hintergrund hier war, dass Teams einige Zusatzfunktionen bot, wie z.B. "Polly", die für
-Umfragen genutzt wurden, die Discord leider nicht unterstütze. Des Weiteren konnte in Teams
-auch ein cloudbasiertes Datei-Mangement-Tool leicht verwendet werden, so mussten wir nicht
-mehr OneDrive nutzen, das privat von einem Gruppenmitglied gestellt wurde. Auch konnte in
-Teams eine bessere Rollenhierarchie genutzt werden, um Rollenspezifische Feed Anfragen zu nutzen, damit ein Brainstormeffekt entsteht. Die Dokumentation erfolgte geschlossen in ADOC Dateien,
-die über GitHub verwaltet wurden. Auch wurde über GitHub unsere Work-Item-List mit Hilfe der
-Issues verwirklicht. GitHub war der Schlüssel um Gruppen- und Parallelarbeiten zu organisieren
-und umzusetzen. Zur Überprüfung und zur Dokumentation unseres Projektfortschritts benutzten
-wir regelmäßig den Essence Navigator. Um mit dem Kunden in Kontakt treten zu können, wurden
-ausschließlich E-Mails, Microsoft Teams und Präsenz-Treffen genutzt. Die Präsenztreffen fanden
-erst in SE II statt, mit kompletter Einhaltung der Corona-Hygiene-Maßnahmen. Diese Änderung
-wurde von unserem Kunden sehr begrüßt, da er leider durch die eben genannten Techniken in seinem Workflow eher behindert als unterstützt wurde. +
+Da zum Beginn von Software Engineering I noch viele Corona bedingte Einschränkungen herrschten, haben wir unsere Kommunikationswege ins digitale verlegt. Unsere Hauptkommunikationskanal im Team war Discord. Hier haben wir unseren Server in verschiedene Unterthemen gegliedert, in denen sich über Aufgabenstellungen, Terminabsprachen oder Allgemeines unterhalten wurde. Ebenfalls gab es mehrere Besprechungsräume, in denen unsere teaminternen Meetings stattfanden oder sich Kleingruppen zur Absprache getroffen hatten. Mit der Zeit hat sich auch eine Kommunikation über WhatsApp etabliert. Diese wurde hauptsächlich bei zeitkritischen Antworten oder zur Erinnerung eingesetzt, wenn jemand über Discord nicht erreichbar war. Für unsere Außenkommunikation mit Auftragstellern und Coach haben wir Microsoft Teams oder E-Mail verwendet. Das hat den Vorteil, dass jeder einen MS Teams Login bereits besitzt und eine Hochschulmailadresse sowieso. Außerdem bietet es mehr Komfortfunktionen für digitale Meetings. Unsere Meetingprotokolle konnten wir durch die integrierten Bearbeitungswerkzeuge gleich bearbeiten und immer wieder ergänzen; somit konnten keine Inkonsistenzen entstehen. Trotz der Annehmlichkeiten durch die digitalen Möglichkeiten, wie zum Beispiel nicht an einen physischen Ort gebunden zu sein, gestaltete sich die Terminvereinbarung für gruppeninterne Meetings schwierig. Im Sommersemester 2022 hatten wir auch ein Meeting in der Hochschule mit unserem betreuenden Professor und unserem Coach. +
 
-Die Online-Situation erleichterte die Planung von Meetings und Gruppenarbeiten erheblich, da nun viele Fragen wie bspw. an welchem Ort das Treffen stattfinden könnte, ob dieser Ort auch zur gegebenen Zeit verfügbar ist oder wie lange die Anreise der einzelnen Mitglieder wohl wäre, nun alle obsolet
-waren. Es musste nun nur noch eine Uhrzeit gefunden werden, zu der alle verfügbar waren.
+Unsere Dokumentation des Projekts erfolgte fast ausschließlich mittels adoc-Dateien, welche wir zusammen mit unserem Programmcode mittels der Versionsverwaltungssoftware Git und dem Remoterepository GitHub verwalteten. In unserem GitHub-Repository wurden Issues angelegt, um die Aufgabenverteilung zu vereinfachen und sich spezifisch zu bestimmten Aufgaben über die Kommentarfunktion austauschen zu können. Ebenfalls haben wir mehrere Branches angelegt, um eine bessere Struktur erreichen zu können und im Notfall ein Backup zu haben. Dateien, die zu groß für GitHub waren, haben wir mittels einer privaten OneDrive Cloud administriert. +
+
+Um die Dokumentation im adoc-Format zu verfassen, verwendeten wir das Programm Visual Code. Unserer Wireframes und UseCase-Diagramme haben wir mit Visual Paradigm erstellt. Das C4-Diagramm mit draw.io. „Gecodet“ wurde mittels der IntelliJ Idea (Vollversion) und in der Implementierungsphase kam der Datenbankserver XAMPP zum Einsatz. Außerdem setzten wir den Paketmanager npm ein. Am Ende wurden unsere Entwicklerdokumentationen mit JavaDoc und JSDoc erstellt.
+
 
 === Way of Working 
 Unsere Arbeitsweise war vom (UP) - Open Unified Process - geprägt. Wir haben stets versucht,
