@@ -9,7 +9,7 @@ import Home from "./components/homeComponent";
 import ObjectDetails from "./components/objectDetailsComponent";
 import AddObject from "./components/addObjectComponent";
 
-/** all components were rendered in this App Component*/
+/** all components are rendered in this App Component*/
 class App extends Component {
   constructor(props) {
     super(props);

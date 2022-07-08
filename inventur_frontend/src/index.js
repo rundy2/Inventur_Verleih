@@ -9,7 +9,7 @@ import ObjectDetails from "./components/objectDetailsComponent";
 import reportWebVitals from './reportWebVitals';
 
 /**entry point*/
-/**each component were rendered in the App Component, which is rendered in the <div> element with id='root' in index.html (../public/) */
+/**each component is rendered in the App Component, which is rendered in the <div> element with id='root' in index.html (../public/) */
 ReactDOM.render(
     <BrowserRouter>
         <App/>
