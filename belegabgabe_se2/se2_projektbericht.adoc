@@ -179,6 +179,10 @@ Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Proje
 Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige unentdeckte Mängel aufzeigte.
 Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
+*Bewertungsstand im Essence Navigator*
+
+image::Essence1.png[]
+
 ==== Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)
 
 Da die Semesterferien einen harten Cut zwischen Analyse, Entwurf und Entwicklung brachten, fiel es uns am Anfang sehr schwer, wieder zusammen zu finden. Natürlich wollten wir alle etwas machen, aber schon die Terminabsprache zu einem Gruppen-Meeting war schwerer als gedacht. Erschwerend kam hinzu, dass sich das Entwurfsteam, bestehend aus Jonas Koloska und Jamal Alkharrat nicht zu ihrer Position und Arbeitswilligkeit äußerten. Dies kostete wertvolle Zeit für die Entwicklung, was uns aber erst recht spät in vollem Umfang klar wurde.
@@ -195,6 +199,7 @@ Das Construction IOC (Iteration 04) sah wie folgt aus:
 . Backend entwerfen/erweitern (SE I)
 . Loginseite mit Nutzerdatenbank verknüpfen
 . Kundenkontakt
+. Bewertung im Essence Navigator
 
 *Frontend entwerfen/erweitern (SE I)*
 
@@ -213,6 +218,9 @@ Das Wegfallen der Adminverwaltung (aus Zeitmangel/fehlender Manpower nicht umset
 Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschlägen und Fortschritte zu hinzuweisen. In Absprache mit den Themenerstellern wurden dann die Use-Cases "Adminverwaltung" und "Barcode Erstellung" herausgekürzt.
 Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
+*Bewertungsstand im Essence Navigator*
+
+image::Essence2.png[]
 
 ==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel 
 
@@ -225,6 +233,7 @@ Klare Ziele dieses Meetings waren:
 . Teammitglieder konsolidieren (wer hat Interesse das Projekt zu finalisieren)
 . Iteration verkürzen
 . Dokumentation pflegen
+. Bewertungsstand im Essence Navigator
 
 *Use-Cases abstecken*
 
@@ -238,11 +247,13 @@ Das Projektmanagement machte eine konkrete Ansage zur Teilnahme am Projekt, das 
 
 Die variable Länge der Iteration war auch ein Grund, warum wir hinter dem Plan waren. Wir legten die Iterationslänge nun auf zwei Wochen fest um ein Gelingen des Projektes zu Gewährleisten.
 
-
-
 *Dokumentation pflegen*
 
 Uns wurde ebenfalls klar, dass uns die Dokumentation des Projektes am Ende auf die Füße fallen würde, wenn wir dies nicht schon im Laufe der Entwicklung pflegen würden. Somit wurde ein C4-Modell mit 3 Schichten erstellt und der Code mit Kommentaren versehen. Auch die Präsentationen in den Praktika von SE II waren dafür hilfreich.
+
+*Bewertungsstand im Essence Navigator*
+
+image::Essence3.png[]
 
 ==== Use-Cases durchprogrammieren (05.06.2022-19.06.2022)
 
@@ -250,7 +261,7 @@ Da das durchprogrammieren der Loginseite sowohl zeitlich als auch funktionell wa
 
 Die Hauptziele dieser Iteration 05 waren wie folgt:
 
-. Use-Cases welche ähnlich sind zusammen implementieren
+. Use-Cases implementieren (ähnliche zusammen packen)
 .. UC05/07 
 .. UC01/02
 .. UC03/04
@@ -259,6 +270,7 @@ Die Hauptziele dieser Iteration 05 waren wie folgt:
 .. UC13
 . Test-Cases
 . Vorbereitung für Deployment
+. Bewertung im Essence Navigator
 
 *Use-Cases implementieren*
 
@@ -292,14 +304,18 @@ Die Anmeldung wurde bereits in der letzten Iteration ermöglicht, nun wurde aber
 
 Eine Implementierung einer Sicherung war Hauptaugenmerk für unsere Software, wir überlegten uns einen guten und sicheren Weg um dies zu realiseren. Die Datenbank läuft unabhängig von der eigentliche Software und kann somit jederzeit händisch gesichert werden. Hier könnte man im folgenden anknüpfen und einen Button direkt in der Software implementieren
 
-===== Test-Cases
+*Test-Cases*
 
 Um den gekürzten Funktionsumfang unserer Software zu überprüfen, mussten wir uns ein paar Testfälle ausdenken, die meisten davon konnte man nicht mit UnitTest realisieren und das Testteam musste sie mit einem Protokoll durchführen.
 Dazu wurden die Test-Cases angelegt und vorbereitet.
 
-===== Vorbereitung für das Deployment
+*Vorbereitung für das Deployment*
 
 Parallel zur Implementierung setzte sich das Projektmanagement an die Vorbereitung des eigentliches Servers und installierte die benötigten Kompomenenten. Der Test zum Verbindungsaufbau wurde erfolgreich gemeistert (nur intern verwendbar, nicht von außen angreifbar).
+
+*Bewertung im Essence Navigator*
+
+image::Essence4.png[]
 
 ==== Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)
 
@@ -310,6 +326,7 @@ Wir befanden uns in Iteration 06 nun in der heißen Phase des Projektes, die let
 . Software auf Server aufsetzen
 . Deployment-Test
 . Abnahme
+. Bewertung im Essence Navigator
 
 *CSS Dateien endgültig anpassen*
 
@@ -333,7 +350,10 @@ Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang ent
 *Abnahme*
 
 Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
-S
+
+*Bewertungsstand im Essence Navigator*
+
+image::Essence5.png[]
 
 == Ergebnisse
 
