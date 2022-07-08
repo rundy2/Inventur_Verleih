@@ -26,7 +26,7 @@ In dieser Testdokumentation werden die angewendeten Teststrukturen dargestellt, 
 Um diese einzelnen Komponenten zu testen haben wir manuell per Hand getestet. Das hatte vor Allem den Grund, da der Großteil unserer Tests auf das Frontend bezogen war, weil die Geschäftslogik im Backend und somit das Abfangen und Verändern von HTTP-Requests keine Schwachstelle darstellt. Außerdem haben wir natürlich Qualitätssicherung des Codes durch statische Codeanalye der IDE (in unserem Fall IntelliJ) durchgeführt.
 
 === Testdurchführungsplanung
-Alle Tests wurden von Silko Grellmann und Nico Papke durchgeführt. Der Zeitraum, in welchem die Tests durchgeführt wurden war die Woche vom 06. bis zum 12. Juni 2022.
+Alle Tests wurden von Silko Grellmann und Nico Papke durchgeführt. Der Zeitraum, in welchem die Tests durchgeführt wurden war die Woche vom 18. bis zum 24. Juni 2022.
 
 == Testfallbeschreibung
 === Frontend

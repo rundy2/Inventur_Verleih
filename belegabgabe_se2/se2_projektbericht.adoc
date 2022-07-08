@@ -224,7 +224,7 @@ Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen 
 
 image::../belegabgabe_se2/images/Essence2.png[]
 
-==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel 
+==== Entwicklung stockt - Meeting mit Prof. Dr. Anke und Coach Robert Ringel 
 
 Iteration 04 (20.05.2022-04.06.2022) startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
 Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwickeln, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
@@ -458,6 +458,12 @@ image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten
 |===
 
 Die Themenersteller waren mit diesem Ergebnis aber durchaus zufrieden, da es deutlich ansprechender und einfacher ist als die Ausgangssituation vor SE I. Als Gruppe denken wir, dass wir auch einen guten Ansatz für kommende Teams geschaffen haben, dort weiterzumachen wo wir aufhören mussten. 
+
+*Bewertungsstand des Essence Navigators am Ende des Projektes*
+
+Nach der letzten Iteration wurden die Dokumente nochmals gepflegt (ab 24.06.2022), weswegen der Essence Navigator erweitert werden musste.
+
+image::../belegabgabe_se2/images/Essence6.png[]
 
 === Begründung für das Nichterfüllen von Zielen
 
