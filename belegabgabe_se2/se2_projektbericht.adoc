@@ -33,11 +33,11 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 . <<Inventur Verleih - Digitale Inventur- und Verleihliste (I6)>>
 . <<Planung>>
 [arabic]
-.. <<Ausgangssituation in SE ⅠⅠ>>
+.. <<Ausgangssituation in SE ⅠⅠ [FK]>>
 [arabic]
 ... <<Teamaufstellung>>
 ... <<Aufgabenstellung und Auftraggeber>>
-.. <<Projektorganisation>>
+.. <<Projektorganisation [FK]>>
 [arabic]
 ... <<Team>>
 ... <<Rollenverteilung>>
@@ -45,41 +45,49 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 .. <<Way of Working>>
 . <<Durchführung des Projekts>>
 [arabic]
-.. <<SE Ⅰ>>
-.. <<SE ⅠⅠ>>
+.. <<SE Ⅰ [ML]>>
+.. <<SE ⅠⅠ [FK]>>
 [arabic]
 ... <<Start in das Neue Semester>>
-... <<Beginn der Implementierung>>
-... <<Entwicklung vorantreiben>>
-... <<System abschließen um Kunden Inkrement durchführen zu können>>
-... <<Systemoptimierung und Übergabe an den Kunden>>
+... <<Altbelegkorrektur und neues Mitglied einarbeiten>>
+... <<Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)>>
+... <<Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)>>
+... <<Use-Cases durchprogrammieren (05.06.2022-19.06.2022)>>
+... <<Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)>>
 . <<Ergebnisse>>
 [arabic]
 .. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
-.. <<Weitere Ergebnisse>>
-.. <<Fehlerbehebung>>
-.. <<Begründung für das Nichterfüllen von Zielen>>
-.. <<Reflexionen der Teammitglieder>>
 [arabic]
-... <<Fabian Krähmer>>
-... <<Silko Grellmann>>
-... <<Dominique Linzmajer>>
-... <<Felix Helmert>>
-... <<Moritz Lehmann>>
-... <<Nico Papke>>
+... <<Gegenstände ausleihen und zurückgeben>>
+... <<Neue Gegenstände aufnehmen/umlagern und deinventarisieren>>
+... <<Status ändern>>
+... <<Gegenstände suchen und Übersicht anzeigen>>
+... <<Anmeldung ermöglichen>>
+... <<Backups erstellen>>
+.. <<Motivation>>
+.. <<Produktergebnis und Bewertung>>
+.. <<Begründung für das Nichterfüllen von Zielen>>
+. <<Reflexionen der Teammitglieder>>
+[arabic]
+.. <<Fabian Krähmer>>
+.. <<Silko Grellmann>>
+.. <<Dominique Linzmajer>>
+.. <<Felix Helmert>>
+.. <<Moritz Lehmann>>
+.. <<Nico Papke>>
 
 
 == Inventur Verleih - Digitale Inventur- und Verleihliste (I6)
 Dies ist der Projekt Bericht des Themas I6: Digitale Inventur- und Verleihliste. Das Projekt wurde im Wintersemester 2021/2022 und Sommersemester 2022 bearbeitet. Der Projektbericht entstand als Gruppenarbeit aller Teammitglieder. Hierfür wurde ein Pull Request im GitHub geöffnet an dem parallel gearbeitet werden konnte.
 
 == Planung 
-=== Ausgangssituation in SE ⅠⅠ
+=== Ausgangssituation in SE ⅠⅠ [FK]
 ==== Teamaufstellung
 Am Anfang des Projekts bestand das Team aus acht Mitgliedern. Anja Claus, Felix Helmert, Jamal Alkharrat, Dominique Linzmajer, Jonas Koloska, 
 Moritz Lehmann und Silko Grellmann. Geplant war das Ausscheiden von Anja Claus zu SE II, jedoch wurde unser Team leider zusätzlich von Jonas Koloska und Jamal Alkharrat verlassen. Deshalb wurde uns Nico Papke zur Verstärkung zugewiesen. Dadurch haben wir zu Beginn von SE II eine neue Einteilung der Rollen des Teams durchgeführt. Mehr dazu findet man in der Rollenverteilung.
 
 
-==== Aufgabenstellung und Auftraggeber [FK]
+==== Aufgabenstellung und Auftraggeber
 Das Hauptziel unseres Projekts war es eine Digitale Inventur- und Verleihliste zu entwickeln.
 Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese 
 erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt 
@@ -97,7 +105,7 @@ Wichtig war dabei ebenfalls, dass das System nur intern verwendbar ist und wir e
 Bei dem Projekt wurden wir von Herrn Robert Ringel als Mentor tatkräftig unterstützt, die wöchentlichen Vorlesungen von Prof. Dr. Anke und die Praktia halfen uns stetig dabei, den Blickwinkel auch mal zu ändern. 
 Von der AG SPS unterstützen uns Herr Till Haas, Eric Brandt und Felix Brandt. Alle drei waren immer gut erreichbar und für kurzfristige Meetings zu haben. Gerade weil Herr Ringel die AG SPS kannte, half er dabei die richtige Software entstehen zu lassen.
 
-=== Projektorganisation
+=== Projektorganisation [FK]
 ==== Team
 Da wir schon früh in SE I die Erfahrung gemacht haben, dass ein gutes Team der Schlüssel zu
 einem guten Projektabschluss ist, wollten wir dies auch in SE II so fortführen. Wir meinen mit
@@ -178,7 +186,7 @@ in die nächste Iteration übernommen und versucht, die Aufwandsplanung anhand d
 Erkenntnisse besser umzusetzen.
 
 == Durchführung des Projekts
-=== SE Ⅰ
+=== SE Ⅰ [ML]
 Das Hauptaugenmerk in SE I unseres Projektes war, eine gute und solide Grundlage für die Construction Phase in SE II zu schaffen. Deshalb bestand die erste Iteration hauptsächlich aus teamorganisatorischen Tätigkeiten und der Einarbeitung in das Projekt und die Aufgabenstellung. Hier
 haben wir auch zum ersten Mal Kontakt zum Kunden hergestellt. +
 
@@ -193,7 +201,7 @@ vermeiden, zuzuschreiben. Um diesen Fehler zu beheben, versuchten wir die fehlen
 dieser Iteration nochmals die Use Cases und die Testcases überarbeitet und das Abgabedokument
 angefertigt.
 
-=== SE ⅠⅠ
+=== SE ⅠⅠ [FK]
 ==== Start in das Neue Semester 
 Der Start in das neue Semester verlief leider nicht optimal, da uns zwei Teammitglieder zusätzlich verließen. Des weiteren erlang das Team einen harten Motivationsverlust durch die unerwart schlechte Bewertung des Beleges aus SE I. Auch die Zuweisung eines neuen Teammitglieds zeigte schwerer als gedacht.
 Nico Papke wollte zwar sofort mit anpacken, jedoch musste sich das Team erstmal wiederfinden, dieser Prozess dauerte leider etwas zu lang, letztendlich landeten wir bei folgenden Anfangsarbeiten:
@@ -217,7 +225,7 @@ Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
 |Deployment/Test | Silko Grellmann, Nico Papke
 |===
 
-==== *Altbelegkorrektur und neues Mitglied einarbeiten*
+==== Altbelegkorrektur und neues Mitglied einarbeiten
 
 Nach der Konsultation (28.04.2022) mit Robert Ringel, bezüglich des Beleges von SE I, wussten
 wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
@@ -226,7 +234,7 @@ Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Proje
 Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige unentdeckte Mängel aufzeigte.
 Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
-==== *Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)*
+==== Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)
 
 Da die Semesterferien einen harten Cut zwischen Analyse, Entwurf und Entwicklung brachten, fiel es uns am Anfang sehr schwer, wieder zusammen zu finden. Natürlich wollten wir alle etwas machen, aber schon die Terminabsprache zu einem Gruppen-Meeting war schwerer als gedacht. Erschwerend kam hinzu, dass sich das Entwurfsteam, bestehend aus Jonas Koloska und Jamal Alkharrat nicht zu ihrer Position und Arbeitswilligkeit äußerten. Dies kostete wertvolle Zeit für die Entwicklung, was uns aber erst recht spät in vollem Umfang klar wurde.
 Durch die Aufgabenverteilung von Github wurde es uns zumindest ermöglicht mit dem vorhanden Entwurfsmodellen zu arbeiten. Dominique Linzmajer setze sich allein an die Entwicklung des Backends. Felix Helmert und Nico Papke frischten ihre Kenntnisse zu HTML und CSS Coding auf und versuchten sich an den drei benötigten Webseiten (Login, Übersicht und Detailseite), da die alten aus SE I durch ReactJS nicht den geplanten Funktionsumfang beinhalteten.
@@ -261,7 +269,7 @@ Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschläge
 Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
 
-==== *Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022 - 04.06.2022)*
+==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)
 
 Iteration 04 startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
 Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwicklen, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
@@ -291,7 +299,7 @@ Die variable Länge der Iteration war auch ein Grund, warum wir hinter dem Plan 
 
 Uns wurde ebenfalls klar, dass uns die Dokumentation des Projektes am Ende auf die Füße fallen würde, wenn wir dies nicht schon im Laufe der Entwicklung pflegen würden. Somit wurde ein C4-Modell mit 3 Schichten erstellt und der Code mit Kommentaren versehen. Auch die Präsentationen in den Praktika von SE II waren dafür hilfreich.
 
-==== Use-Cases durchprogrammieren (05.06.2022 - 19.06.2022)
+==== Use-Cases durchprogrammieren (05.06.2022-19.06.2022)
 
 Da das durchprogrammieren der Loginseite sowohl zeitlich als auch funktionell war, entschieden wir uns kurzer Hand jeden Use-Case nun als Schritt durchzuprogrammieren, ebenfalls wurde die VM der Auftraggeber vorbereitet und Test-Cases entworfen. 
 
@@ -299,8 +307,8 @@ Die Hauptziele dieser Iteration 05 waren wie folgt:
 
 . Use-Cases welche ähnlich sind zusammen implementieren
 .. UC05/07 
-.. UC03/04
 .. UC01/02
+.. UC03/04
 .. UC06
 .. UC11
 .. UC13
@@ -313,22 +321,115 @@ Die Hauptziele dieser Iteration 05 waren wie folgt:
 
 Den Status zu ändern und die Übersicht anzuzeigen waren die ersten Use-Cases die wir in dieser Iteration realisieren mussten, da alle anderen darauf aufbauten. Wir nahmen eine leere Datenbank und befüllten diese mit Beispieldateien um das Ergebnis sehen zu können
 
+.Wireframe zur Startseite
+image::../belegabgabe_se2/images/Wireframe_Startseite.png[Wireframe zur Startseite, 800]
+
+.Endgültige Startseite
+image::../belegabgabe_se2/images/Startseite.png[Startseite, 800]
+
 ===== UC01/02
 
 Gegenstände auszuleihen und zurückzugeben erwies sich im Code als relativ schnell realisierbar, so wurde ein eine einfaches ReactJS geschrieben, welcher per Spring Boot an unsere Datenbank übergeben wurde. Dabei wurden die Ablageorte als String definiert, welche aber nicht doppelt belegt wurden konnten, dies führte zur Sicherstellung des korrekten Ablageortes. In späteren Entwicklungen könnte man dann Ablageorte festlegen, falls keine mehr ergänzt werden müssen. 
 
-image::../images/Wireframe_Startseite.png[]
+===== UC03/04
+
+Neue Gegenstände realisierten wir mit einer einzelnen Funktion, welche es per Spring Boot ermöglichte, die Datenbank zu erweitern, außerdem konnten wir in der Detailseite einen Button hinzufügen welcher per Funktion das Objekt auch wieder aus der Datenbank entfernen konnte.
+
+===== UC06
+
+Gegenstände zu suchen wurde mit einer Suchleiste im Frontend realisiert welche dann eine Stringübergabe per ReactJS an die Datenbank weitergibt. Dadurch lassen sich ähnliche Artikel auch finden, wenn man nicht die genaue Bezeichnung weiß.
+
+===== UC11
+
+Die Anmeldung wurde bereits in der letzten Iteration ermöglicht, nun wurde aber die Übergabe zwischen Front- und Backend realisiert, da man nun nicht ohne Authentifizierung etwas entleihen oder anlegen kann.
+
+===== UC13
+
+Eine Implementierung einer Sicherung war Hauptaugenmerk für unsere Software, wir überlegten uns einen guten und sicheren Weg um dies zu realiseren. Die Datenbank läuft unabhängig von der eigentliche Software und kann somit jederzeit händisch gesichert werden. Hier könnte man im folgenden anknüpfen und einen Button direkt in der Software implementieren
+
+===== Test-Cases
+
+Um den gekürzten Funktionsumfang unserer Software zu überprüfen, mussten wir uns ein paar Testfälle ausdenken, die meisten davon konnte man nicht mit UnitTest realisieren und das Testteam musste sie mit einem Protokoll durchführen.
+Dazu wurden die Test-Cases angelegt und vorbereitet.
+
+===== Vorbereitung für das Deployment
+
+Parallel zur Implementierung setzte sich das Projektmanagement an die Vorbereitung des eigentliches Servers und installierte die benötigten Kompomenenten. Der Test zum Verbindungsaufbau wurde erfolgreich gemeistert (nur intern verwendbar, nicht von außen angreifbar).
 
 ==== Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)
 
-//Moritz, Nico, Felix Einstiegspunkt
+Wir befanden uns in Iteration 06 nun in der heißen Phase des Projektes, die letzten Schritte und Anpassungen für die Software standen an und das Deployment musste erfolgen. Als Ziele dieser Iteration setzen wir folgende Schritte:
+
+. CSS Dateien endgültig anpassen
+. Software in JAR Datei packen
+. Software auf Server aufsetzen
+. Deployment-Test
+. Abnahme
+
+*CSS Dateien endgültig anpassen*
+
+Im Zuge der letzten Iteration bemerkten wir, das die Anpassung der Webseite an verschieden Nutzerumstände (Bildschirmauflösungen) stark von einander abwichen. Die Lösung war alle CSS Dateien erneut zu korrigieren und teilweise von Pixel auf eM zu gehen. Leider bemerkten wir zu spät, dass auch ein Stylesheet ausreichen würde, um eine gleiche Formatierung für alle Webseiten zu gewährleisten.
+
+*Software in JAR Datei packen*
+
+Um die Software auch an anderen Lokationen benutzen zu können, war es ein Wunsch der Themenersteller, eine JAR-Datei zu bekommen um diese dann eben selbst aufsetzen zu können. Leider schafften wir es nicht, ein komplettes Paket für Datenbank und Software zu packen. Dadurch ist die Software selbst aber kompatibel zu diversen Datenbankformaten.
+Das Entpacken erfolgt nun in den Schritten: Datenbank, danach Back- und Frontend. Die Datenbank läuft dabei in Docker.
+Für das Packen benutzten wir Maven, da es einer freien Lizenz unterworfen ist und einfach zu bedienen.
+
+*Software auf Server aufsetzen*
+
+Mit dem Aufsetzen der Software hatten wir mehr Probleme als gedacht, wir hatten lang einen Cors-Fehler, welchen wir aber letztendlich durch die Hilfe des OSP-Teams lösen konnten. Zum Glück hatten wir hierbei etwas mehr Zeit eingeplant, womit der Abnahmetermin nur um zwei Tage verschoben werden musste.
+
+*Deployment-Test*
+
+Die Deployment Tests ergaben noch kleine Fehler, welche wir aber ohne weitere Verzögerungen beheben konnten.
+Insgesamt lief die Software so stabil wie gewünscht und der Funktionsumfang entsprach unseren abwandelten Use-Cases.
+
+*Abnahme*
+
+Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber leider am 21.06.2022 noch nicht gelöst, weswegen die Projektleitung den Termin auf 24.06.2022 verschob. Die Abnahme selbst war zufriedenstellend, da der Themenersteller mit dem Ergebnis zufrieden war. Im Abnahmeprotokoll wurde vermerkt, welche Dinge zeitlich nicht implementiert werden konnten.
+
+
+// Nico, Felix Einstiegspunkt
 == Ergebnisse
 
 === Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste
 
-==== Motivation
+==== Gegenstände ausleihen und zurückgeben
 
-==== Produktergebnis
+Dises Ziel wurde ereicht, jedoch ist es nicht möglich Gegenstände mit dem Barcodescanner zu scannen und so auszuwählen. Es ist mit dem System möglich die Gegenstände auszuleihen und diese auch wieder zurückzugeben. 
+Es wird dafür nach dem Gegenstand gesucht oder er wird manuell ausgewählt und diesen kann man mit den entsprechenden Button entweder ausleihen oder zurückgeben.
+
+==== Neue Gegenstände aufnehmen/umlagern und deinventarisieren
+
+Dieses Ziel wurde Grundlegend umgesetzt jedoch wurde dabei nicht das umlagern des Gegenstandes, das erstellen eines neuen Barcodes oder der Raumvorschlag für den Gegenstand umgesetzt. Das Programm kann ein Gegenstand hinzufügen, was auch die Eigenschaften des Gegenstandes beinhält und Objekte können auch wieder entfernt werden.
+
+==== Status ändern
+
+Dieses Ziel wurde ereicht, aber es fehlt die Funktion den Status manuell durch den Admin zu ändern. Der Status wird automatisch geändert wenn ein Gegenstand ausgeliehen oder zurückgegeben wird.
+
+==== Gegenstände suchen und Übersicht anzeigen
+
+Ein weiteres Ziel was wir erreicht haben, bestand in der Suche von Gegenständen und die Übersicht von Gegenständen anzuzeigen. Bei der Suche ist jedoch keine unscharfe Suche möglich ,es muss als nach der exakten Bezeichnung gesucht werden. Die Übersicht anzuzeigen erhält außerdem keine Sortierfunktion und es werden die Gegenstände unsortiert angezeigt. Dieses Ziel wird mit dem Programm durch die Suche dargestellt oder des kann auch manuell dannach gesucht werden.
+
+==== Anmeldung ermöglichen
+
+Dieses Ziel wurde erreicht. Es ist mit dem Programm möglich sich einzuloggen und verschiedene User 
+Die Login Seite erscheint gleich bei dem Aufruf der Webseite es kann dann die Anmeldung stattfinden oder es kann auch ein Benutzer erstellt werden. Nachdem die Anmeldung erfolgreich war wird man auf die Startseite weitergeleitet.
+
+==== Backups erstellen
+
+Das Ziel wurde erfüllt, es muss jedoch manuell durch kopieren eines Ordners durchgeführt werden. 
+
+=== Motivation
+
+Eine gute Organisation und eine eindeutige Platzzuweisung von Gegenständen sowie Verbrauchsmaterialen im Büro oder in Werkstatt erleichtert – besonders beim kollaborativen Arbeiten 
+– den Arbeitsalltag und kann zu einer besseren Produktivität der Mitarbeitenden führen. Nicht jedes Spezialwerkzeug oder technisches Equipment wird täglich benötigt, allerdings ist dies für die Erfüllung der täglichen Arbeitsprozesse in einer guten Qualität unerlässlich. 
+Zudem erlaubt eine digitale Dokumentation eine bessere Qualitätssicherung, bzw. ermöglicht diese erst. Mit den erfassten Ein- und Auslagerungsprozessen kann eine Historie eines Gegenstandes erzeugt werden, wodurch sich zum Beispiel Szenarien aus dem Bereich der vorausschauenden Wartung realisieren lassen.
+
+=== Produktergebnis und Bewertung
+
+Insgesamt wurden vier von dreizehn analysierten Use-Cases nicht umgesetzt. Dies war vor allem auf die fehlende Manpower zurückzuführen. Insgesamt stellt unsere Software aber die Möglichkeit weitere Funktionen zu implementieren.
 
 image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten.jpg[]
 
@@ -388,11 +489,9 @@ image::../docs/requirements/images/Use_Case_Model_v2_Erfüllungsgrad_geschnitten
 | ---
 |===
 
-==== Bewertung
+Die Themenersteller waren mit diesem Ergebnis aber durchaus zufrieden, da es deutlich ansprechender und einfacher ist als die Ausgangssituation vor SE I. Als Gruppe denken wir, dass wir auch einen guten Ansatz für kommende Teams geschaffen haben, dort weiterzumachen wo wir aufhören mussten. 
 
-==== Fehlerbehebung
-
-==== Begründung für das Nichterfüllen von Zielen
+=== Begründung für das Nichterfüllen von Zielen
 
 Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitglieder uns am
 Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
