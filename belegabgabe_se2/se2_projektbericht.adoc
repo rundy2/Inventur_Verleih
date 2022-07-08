@@ -379,7 +379,7 @@ Dieses Ziel wurde ereicht, aber es fehlt die Funktion den Status manuell durch d
 
 ==== Gegenstände suchen und Übersicht anzeigen [ML]
 
-Ein weiteres Ziel was wir erreicht haben, bestand in der Suche von Gegenständen und die Übersicht von Gegenständen anzuzeigen. Bei der Suche ist jedoch keine unscharfe Suche möglich ,es muss als nach der exakten Bezeichnung gesucht werden. Die Übersicht anzuzeigen erhält außerdem keine Sortierfunktion und es werden die Gegenstände unsortiert angezeigt. Dieses Ziel wird mit dem Programm durch die Suche dargestellt oder des kann auch manuell dannach gesucht werden.
+Ein weiteres Ziel was wir erreicht haben, bestand in der Suche von Gegenständen und die Übersicht von Gegenständen anzuzeigen. Bei der Suche ist jedoch keine unscharfe Suche möglich, es muss als nach der exakten Bezeichnung gesucht werden. Die Übersicht anzuzeigen erhält außerdem keine Sortierfunktion und es werden die Gegenstände unsortiert angezeigt. Dieses Ziel wird mit dem Programm durch die Suche dargestellt oder des kann auch manuell dannach gesucht werden.
 
 ==== Anmeldung ermöglichen [ML]
 
