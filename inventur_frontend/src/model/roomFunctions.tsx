@@ -5,6 +5,9 @@ import axios, {AxiosResponse} from "axios";
 import {useState, useEffect} from "react";
 import React from "react";
 
+/** a collection of functions that do anything with Room class objects and requires typescript*/
+
+/** returns a room by his ID */
 export function GetRoomById(id: number){
 
     const [room, setRoom] = useState<Room[]>(dummyRoom)
@@ -24,6 +27,7 @@ export function GetRoomById(id: number){
     return room[0];
 }
 
+/** save a given room */
 export function AddRoom(room:Room){
     return AddService.addRoom(room);
 }

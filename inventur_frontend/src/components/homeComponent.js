@@ -7,6 +7,7 @@ import './home.css';
 import {dummyObject} from "../model/model";
 import {Button} from "react-bootstrap";
 
+/**this component is for the Homepage*/
 export default class Home extends Component{
 
 constructor(props) {
@@ -28,16 +29,19 @@ onChangeSearchWord(e){
     });
 }
 
+/**returns table with objects which contains the searchword*/
+/**if no search word then returns all objects*/
 handleSearch(e){
     this.state.objects = SearchInObjects(this.state.searchWord);
     return GetObjectsInTable(this.state.objects);
 }
 
+/**returns table with objects lend by the current user*/
 handleMyLendObjects(e){
     this.state.lendObjects = GetMyLendObjects();
     return GetLendObjectsInTable(this.state.lendObjects);
 }
-
+/**here is what you see*/
     render(){
         return(
             <div className="Form-Group">

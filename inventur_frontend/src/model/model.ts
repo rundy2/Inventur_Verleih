@@ -1,3 +1,4 @@
+/**simple classes (interfaces) for various objects(Object, Room, ...)*/
 export interface Object{
     id: number;
     sectionId: number;

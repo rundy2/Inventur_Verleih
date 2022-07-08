@@ -15,6 +15,7 @@ const required = value =>{
     }
 };
 
+/**Component to save new Objects*/
 export default class AddObject extends Component{
     constructor(props) {
         super(props);
@@ -52,6 +53,7 @@ export default class AddObject extends Component{
         });
     }
 
+    /**gives the data of the new object to AddService*/
     handleAddObject(e){
         AddService.addObject(this.state.oname,
                                     this.state.room,
@@ -64,6 +66,7 @@ export default class AddObject extends Component{
         return 1;
     }
 
+    /**here is what you see*/
     render(){
     return(
         <div>

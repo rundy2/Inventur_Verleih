@@ -14,6 +14,7 @@ const required = value =>{
         );
     }
 };
+/**this component handles the login*/
 export default class Login extends Component{
     constructor(props) {
         super(props);
@@ -37,6 +38,7 @@ export default class Login extends Component{
             password: e.target.value
         });
     }
+    /** button login clicked*/
     handleLogin(e){
         e.preventDefault();
         this.setState({
@@ -47,6 +49,7 @@ export default class Login extends Component{
         if(this.checkBtn.context._errors.length === 0){
             AuthService.login(this.state.email, this.state.password).then(
                 () => {
+                    /**when successful goto homepage*/
                     window.location.replace("/home");
                 },
                 error => {
@@ -72,6 +75,7 @@ export default class Login extends Component{
     Forgot Funktion
     document.getElementById("forgot").addEventListener("click", function(){alert("If you have forgotten your password, please write an email to @htw-dresden.de");});
     */
+    /**here is what you see*/
     render(){
         return (
             <div className="col-md-12">

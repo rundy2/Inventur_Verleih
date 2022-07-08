@@ -33,6 +33,8 @@ const vpassword = value => {
         );
     }
 };
+
+/**this component handles the registration*/
 export default class Register extends Component {
     constructor(props) {
         super(props);
@@ -56,6 +58,7 @@ export default class Register extends Component {
             password: e.target.value
         });
     }
+    /**button register clicked*/
     handleRegister(e) {
         e.preventDefault();
         this.setState({
@@ -89,6 +92,7 @@ export default class Register extends Component {
             );
         }
     }
+    /**here is what you see*/
     render() {
         return (
             <div className="col-md-12">

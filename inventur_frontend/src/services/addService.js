@@ -2,6 +2,8 @@ import axios from "axios";
 import authHeader from "./authHeader";
 const API_URL = "http://141.56.180.173:8080/";
 
+/** communication with backend */
+/** sends requests to save data-objects*/
 class AddService{
     addRoom(room){
         return axios.post(API_URL + "add/room", room, {headers: authHeader()});

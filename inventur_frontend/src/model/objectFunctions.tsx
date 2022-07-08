@@ -9,6 +9,9 @@ import homeComponent from "../components/homeComponent";
 import {Button} from "react-bootstrap";
 import {DatePipe, formatDate} from "@angular/common";
 
+/** a collection of functions that do anything with Object class objects and requires typescript*/
+
+/** returns an array of objects which match with the searchword*/
 export function SearchInObjects(searchWord:String){
     let objects = GetAllObjectsInArray();
     let newObjects = dummyObject;
@@ -25,6 +28,7 @@ export function SearchInObjects(searchWord:String){
     return newObjects;
 }
 
+/**returns a table of given objects, in LendingList format*/
 export function GetLendObjectsInTable(objects:Object[]){
     return(
         <table>
@@ -63,6 +67,7 @@ export function GetLendObjectsInTable(objects:Object[]){
     );
 }
 
+/**returns an array of objects which are lend by the current user*/
 export function GetMyLendObjects(){
     const [objects, setObjects] = useState<Object[]>(()=>dummyObject);
     const [loaded, setLoaded] = useState<boolean>(()=>false);
@@ -81,6 +86,7 @@ export function GetMyLendObjects(){
     return objects;
 }
 
+/** returns an object by his ID */
 export function GetObjectById(id:number){
     const [object, setObject] = useState<Object>(() => dummyObject[0]);
     const [loaded, setLoaded] = useState<boolean>(() => false);
@@ -100,6 +106,7 @@ export function GetObjectById(id:number){
     return object;
 }
 
+/** returns all objects in an array*/
 export function GetAllObjectsInArray(){
         const [objects, setObjects] = useState<Object[]>(() => dummyObject);
         const [loaded, setLoaded] = useState<boolean>(() => false);
@@ -121,6 +128,7 @@ export function GetAllObjectsInArray(){
         return objects;
 }
 
+/** returns a table with given objects, in Overview format */
 export function GetObjectsInTable(objects:Object[]){
     return(
         <table id="dataTable">
@@ -162,6 +170,7 @@ export function GetObjectsInTable(objects:Object[]){
     )
 }
 
+/**deletes an object by his ID */
 export function handleDeleteObjectById(objectId:number){
     objectService.deleteObjectById(objectId).then(
         ()=>{
@@ -170,6 +179,7 @@ export function handleDeleteObjectById(objectId:number){
     )
 }
 
+/** returns a table of a given object, in Details format */
 export function GetObjectDetailsTable(object:Object){
     console.log("LendDate: "+ object.lendDate);
     return (
@@ -212,10 +222,12 @@ export function GetObjectDetailsTable(object:Object){
     );
 }
 
+/** open Details Page of an object by his ID */
 function handleObjectDetails(id:number){
     window.location.replace("/details/"+id);
 }
 
+/**change the state of an given object(ID) to a given state*/
 function handleUpdateState(id:number, state:number){
     if(state==1){
         ObjectService.updateState(id, 0).then(
@@ -233,11 +245,13 @@ function handleUpdateState(id:number, state:number){
     return 1;
 }
 
+/** returns a table of all objects, in Overview format */
 export function GetAllObjectsInTable(){
 
     return(GetObjectsInTable(GetAllObjectsInArray()));
 }
 
+/** save a given object */
 export function AddObject(object:Object){
     return AddService.addObject(object);
 }
