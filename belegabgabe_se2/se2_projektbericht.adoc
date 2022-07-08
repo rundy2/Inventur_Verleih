@@ -96,7 +96,7 @@ wandelte sich die Teamarbeit in den Bereichen Dokumentation und Organisation zu 
 Einzelarbeit. Der Informationsaustausch wurde durch wöchentliche Nachfragen aufrecht
 erhalten.
 
-=== Ablauf der Kommunikation unter Verwendung von Tools 
+=== Ablauf der Kommunikation unter Verwendung von Tools [SG]
 Da zum Beginn von Software Engineering I noch viele Corona bedingte Einschränkungen herrschten, haben wir unsere Kommunikationswege ins digitale verlegt. Unsere Hauptkommunikationskanal im Team war Discord. Hier haben wir unseren Server in verschiedene Unterthemen gegliedert, in denen sich über Aufgabenstellungen, Terminabsprachen oder Allgemeines unterhalten wurde. Ebenfalls gab es mehrere Besprechungsräume, in denen unsere teaminternen Meetings stattfanden oder sich Kleingruppen zur Absprache getroffen hatten. Mit der Zeit hat sich auch eine Kommunikation über WhatsApp etabliert. Diese wurde hauptsächlich bei zeitkritischen Antworten oder zur Erinnerung eingesetzt, wenn jemand über Discord nicht erreichbar war. Für unsere Außenkommunikation mit Auftragstellern und Coach haben wir Microsoft Teams oder E-Mail verwendet. Das hat den Vorteil, dass jeder einen MS Teams Login bereits besitzt und eine Hochschulmailadresse sowieso. Außerdem bietet es mehr Komfortfunktionen für digitale Meetings. Unsere Meetingprotokolle konnten wir durch die integrierten Bearbeitungswerkzeuge gleich bearbeiten und immer wieder ergänzen; somit konnten keine Inkonsistenzen entstehen. Trotz der Annehmlichkeiten durch die digitalen Möglichkeiten, wie zum Beispiel nicht an einen physischen Ort gebunden zu sein, gestaltete sich die Terminvereinbarung für gruppeninterne Meetings schwierig. Im Sommersemester 2022 hatten wir auch ein Meeting in der Hochschule mit unserem betreuenden Professor und unserem Coach. +
 
 Unsere Dokumentation des Projekts erfolgte fast ausschließlich mittels adoc-Dateien, welche wir zusammen mit unserem Programmcode mittels der Versionsverwaltungssoftware Git und dem Remoterepository GitHub verwalteten. In unserem GitHub-Repository wurden Issues angelegt, um die Aufgabenverteilung zu vereinfachen und sich spezifisch zu bestimmten Aufgaben über die Kommentarfunktion austauschen zu können. Ebenfalls haben wir mehrere Branches angelegt, um eine bessere Struktur erreichen zu können und im Notfall ein Backup zu haben. Dateien, die zu groß für GitHub waren, haben wir mittels einer privaten OneDrive Cloud administriert. +
@@ -104,7 +104,7 @@ Unsere Dokumentation des Projekts erfolgte fast ausschließlich mittels adoc-Dat
 Um die Dokumentation im adoc-Format zu verfassen, verwendeten wir das Programm Visual Studio Code. Unserer Wireframes und UseCase-Diagramme haben wir mit Visual Paradigm erstellt. Das C4-Diagramm mit draw.io. „Gecodet“ wurde mittels der IntelliJ Idea (Vollversion) und in der Implementierungsphase kam der Datenbankserver XAMPP sowie der API Client Insomnia zum Einsatz. Außerdem setzten wir den Paketmanager npm ein. Am Ende wurden unsere Entwicklerdokumentationen mit JavaDoc und JSDoc erstellt.
 
 
-=== Way of Working 
+=== Way of Working [ML]
 Unsere Arbeitsweise war vom (UP) - Open Unified Process - geprägt. Wir haben stets versucht,
 alle vier Kernziele zu durchlaufen. Alternativ dazu haben wir auch versucht andere Praktiken aus
 anderen Bereichen zu verwenden, die wir aus eigener Erfahrung oder aus der Theorie kannten.
@@ -129,6 +129,8 @@ Grundsätzlich war aber folgender Ablauf regelmäßig zu erkennen:
 Wenn geplante Ziele oder Aufgaben nicht in der Iteration umgesetzt werden konnten, wurden diese
 in die nächste Iteration übernommen und versucht, die Aufwandsplanung anhand der neuen
 Erkenntnisse besser umzusetzen.
+
+Wir versuchten auch GitHub so gut wie möglich zu nutzen, dabei half es uns es insgesamt in drei Branches zu teilen: Main, Development und Backup, damit ein Datenverlust auf jeden Fall vermieden wird. 
 
 == Durchführung des Projekts
 === SE I [ML]
@@ -181,7 +183,7 @@ Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
 *Bewertungsstand im Essence Navigator*
 
-image::Essence1.png[]
+image::../belegabgabe_se2/images/Essence1.png[]
 
 ==== Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)
 
@@ -220,7 +222,7 @@ Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen 
 
 *Bewertungsstand im Essence Navigator*
 
-image::Essence2.png[]
+image::../belegabgabe_se2/images/Essence2.png[]
 
 ==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel 
 
@@ -253,7 +255,7 @@ Uns wurde ebenfalls klar, dass uns die Dokumentation des Projektes am Ende auf d
 
 *Bewertungsstand im Essence Navigator*
 
-image::Essence3.png[]
+image::../belegabgabe_se2/images/Essence3.png[]
 
 ==== Use-Cases durchprogrammieren (05.06.2022-19.06.2022)
 
@@ -315,7 +317,7 @@ Parallel zur Implementierung setzte sich das Projektmanagement an die Vorbereitu
 
 *Bewertung im Essence Navigator*
 
-image::Essence4.png[]
+image::../belegabgabe_se2/images/Essence4.png[]
 
 ==== Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)
 
@@ -353,7 +355,7 @@ Die Abnahme war zuerst für den 22.06.2022 terminiert, das CORS-Problem war aber
 
 *Bewertungsstand im Essence Navigator*
 
-image::Essence5.png[]
+image::../belegabgabe_se2/images/Essence5.png[]
 
 == Ergebnisse
 
@@ -463,6 +465,7 @@ Wir hatten nicht genug Zeit alle Ziele zu erfüllen. Dadurch, dass zwei Teammitg
 Anfang des Semesters verlassen haben und uns nur ein neues Teammitglied hinzugefügt wurde,
 fehlte uns die komplette Arbeitskraft über das Semester. Auch die Einarbeitungszeit des neuen Mitglieds konnte erstmal nicht produktiv für das Projekt genutzt werden. Die Korrektur des Belegs am Anfang des Semesters kostete viel Arbeitszeit, die aber für das System keine Fortschritte gebracht hat. Ein großer Punkt war auch der Umgang mit ReactJS den wir uns durch das Spring Boot Camp im Wintersemester als deutlich einfacher erhofften als es letztendlich der Fall war. Würde man dieses Projekt noch einmal machen müssen, so würden wir mit unserem derzeitigen Wissensstand nicht auf ReactJS zurückgreifen.
 
+Außerdem hat uns die Unzuverlässigkeiten bei manchen Gruppenmitgliedern unnötig Zeit im Projekt gekostet, dies hätte man durch bessere Kommunikation und Teilnahme an den Meetings verhindern können. Am Anfang war dies aber noch durch Selbstüberschätzung nicht ersichtlich. Dadurch war die Lastverteilung am Ende ungleich und somit gab es einzelne Inselkonstrukte, die einfach überfordert wurden. Das Backend wurde im Alleingang entwickelt, die Meetings fanden teilweise nur zu dritt statt. Die Dokumentation 
 
 
 === Reflexionen der Teammitglieder
