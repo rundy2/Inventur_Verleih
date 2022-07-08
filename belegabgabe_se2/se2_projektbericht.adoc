@@ -249,7 +249,7 @@ Aus SE I blieb uns das HTML-Gerüst für die Login- und Übersichtsseite. Leider
 
 *Backend entwerfen/erweitern*
 
-
+Das Backend war grundsätzlich schon in SEI auf einem guten Stand, so dass wir es nur um ein paar Funktionen erweitern mussten, in dieser Iteration schafften wir es, die Rückgabe und den Verleih zu realisieren 
 
 
 ==== Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel
@@ -261,6 +261,7 @@ Iteration 04
 
 ==== Deployment auf dem Kundenserver und Abnahme vom Kunden
 
+//Moritz, Nico, Felix Einstiegspunkt
 == Ergebnisse
 
 === Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste
