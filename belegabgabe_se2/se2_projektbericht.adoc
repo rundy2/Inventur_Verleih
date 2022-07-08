@@ -49,10 +49,11 @@ include::../docs/_includes/default-attributes.inc.adoc[]
 .. <<SE ⅠⅠ [FK]>>
 [arabic]
 ... <<Start in das Neue Semester>>
-... <<Beginn der Implementierung>>
-... <<Entwicklung vorantreiben>>
-... <<System abschließen um Kunden Inkrement durchführen zu können>>
-... <<Systemoptimierung und Übergabe an den Kunden>>
+... <<Altbelegkorrektur und neues Mitglied einarbeiten>>
+... <<Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)>>
+... <<Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)>>
+... <<Use-Cases durchprogrammieren (05.06.2022-19.06.2022)>>
+... <<Deployment auf dem Kundenserver und Abnahme vom Kunden (18.06.2022-24.06.2022)>>
 . <<Ergebnisse>>
 [arabic]
 .. <<Ziel: Inventurprogramm zur Digitalen Inventur- und Verleihliste>>
@@ -217,7 +218,7 @@ Die grobe Rollenverteilung sah zum zweiten Drittel des Semesters wie folgt aus:
 |Deployment/Test | Silko Grellmann, Nico Papke
 |===
 
-==== *Altbelegkorrektur und neues Mitglied einarbeiten*
+==== Altbelegkorrektur und neues Mitglied einarbeiten
 
 Nach der Konsultation (28.04.2022) mit Robert Ringel, bezüglich des Beleges von SE I, wussten
 wir, was im Abgabedokument aus SE I korrigiert werden musste. Diese Aufgabe und mit der Implementierung wurde unmittelbar
@@ -226,7 +227,7 @@ Mit dieser Arbeitsweise schafften wir es, die Einarbeitungszeit für unser Proje
 Die Projektplanung wurde ebenfalls überarbeitet, da sie in SE I doch einige unentdeckte Mängel aufzeigte.
 Dies wurde später als Iteration 03 im Projektplan festgesetzt.
 
-==== *Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)*
+==== Construction IOC / Übergang von SE I zu SE II (22.03.2022-20.05.2022)
 
 Da die Semesterferien einen harten Cut zwischen Analyse, Entwurf und Entwicklung brachten, fiel es uns am Anfang sehr schwer, wieder zusammen zu finden. Natürlich wollten wir alle etwas machen, aber schon die Terminabsprache zu einem Gruppen-Meeting war schwerer als gedacht. Erschwerend kam hinzu, dass sich das Entwurfsteam, bestehend aus Jonas Koloska und Jamal Alkharrat nicht zu ihrer Position und Arbeitswilligkeit äußerten. Dies kostete wertvolle Zeit für die Entwicklung, was uns aber erst recht spät in vollem Umfang klar wurde.
 Durch die Aufgabenverteilung von Github wurde es uns zumindest ermöglicht mit dem vorhanden Entwurfsmodellen zu arbeiten. Dominique Linzmajer setze sich allein an die Entwicklung des Backends. Felix Helmert und Nico Papke frischten ihre Kenntnisse zu HTML und CSS Coding auf und versuchten sich an den drei benötigten Webseiten (Login, Übersicht und Detailseite), da die alten aus SE I durch ReactJS nicht den geplanten Funktionsumfang beinhalteten.
@@ -261,7 +262,7 @@ Wir kommunizierte mit unseren Auftraggebern per Mail um auf unsere Rückschläge
 Dies brachte uns einen Zeitbonus, den wir in der nächsten Iteration gut nutzen konnten.
 
 
-==== *Entwicklung stockt, Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022 - 04.06.2022)*
+==== Entwicklung stockt - Meeting mit Prof. Anke und Coach Robert Ringel (20.05.2022-04.06.2022)
 
 Iteration 04 startete mit einem Meeting, welches über MS Teams von Herr Ringel initiiert wurde. Dieser wies uns darauf hin, dass wir im Zeitplan doch deutlich hinterher hängen und uns einen klaren Plan machen müssen. Er schlug uns einen Durchschnitt durch einen Use-Case (Login) vor, welchen wir bis 19.05.2022 implementieren sollten. Für den Projektleiter war dies der Zeitpunkt an dem er die Zügel etwas straffer ziehen musste und zwangsläufig härter Entscheidungen treffen sollte. Herr Ringel bestand auf ein Gruppenmeeting in der HTW zusammen mit Prof. Anke und ihm.
 Am 19.05.2022 saßen wir nun alle zusammen und konnten durch die Motivation und Erfahrung von unserem Coach und Herrn Prof. Dr. Anke einen guten Plan entwicklen, wie wir die 6 Wochen bis zur Abgabe noch ein lauffähiges Programm entwickeln können.
@@ -291,7 +292,7 @@ Die variable Länge der Iteration war auch ein Grund, warum wir hinter dem Plan 
 
 Uns wurde ebenfalls klar, dass uns die Dokumentation des Projektes am Ende auf die Füße fallen würde, wenn wir dies nicht schon im Laufe der Entwicklung pflegen würden. Somit wurde ein C4-Modell mit 3 Schichten erstellt und der Code mit Kommentaren versehen. Auch die Präsentationen in den Praktika von SE II waren dafür hilfreich.
 
-==== Use-Cases durchprogrammieren (05.06.2022 - 19.06.2022)
+==== Use-Cases durchprogrammieren (05.06.2022-19.06.2022)
 
 Da das durchprogrammieren der Loginseite sowohl zeitlich als auch funktionell war, entschieden wir uns kurzer Hand jeden Use-Case nun als Schritt durchzuprogrammieren, ebenfalls wurde die VM der Auftraggeber vorbereitet und Test-Cases entworfen. 
 
